@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Footer Figma</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===== Footer Style ===== */
+    body {
+      margin: 0;
+      font-family: "Brfirma", sans-serif;
+      background: #fff;
+      color: #000;
+    }
+
+    footer {
+      width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+      background: #fff;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+      padding-bottom: 30px;
+    }
+
+    /* Khung trên */
+    .footer-top {
+      max-width: 1185px;
+      width: 100%;
+      height: 68px;
+      background: #fff;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .footer-top a.logo {
+      width: 150px;
+      height: 68px;
+      background: #fff;
+      text-align: center;
+      line-height: 68px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #000;
+      font-size: 28px;
+    }
+
+    .footer-top a.logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      /* 🧩 giữ nguyên tỉ lệ, không bị cắt */
+      display: block;
+      /* xoá khoảng trắng dưới ảnh */
+    }
+
+    /* Khối chính */
+    .footer-main {
+      display: flex;
+      justify-content: space-evenly;
+      /*max-width: 1400px;*/
+      width: 100%;
+      margin: 40px auto 0;
+    }
+
+    .footer-col {
+      height: 221px;
+    }
+
+    .footer-col h3 {
+      font-size: 32px;
+      margin-bottom: 15px;
+    }
+
+    .footer-col a {
+      display: block;
+      text-decoration: none;
+      color: #000;
+      font-size: 20px;
+      margin-bottom: 8px;
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .footer-col:last-child {
+      width: 339px;
+    }
+
+    /* Input + Button cùng hàng */
+    .footer-col .subscribe {
+      display: flex;
+      align-items: center;
+      margin-top: 10px;
+      width: 100%;
+      max-width: 420px;
+      /* tổng chiều ngang input + nút */
+    }
+
+    .footer-col input[type="email"] {
+      flex: 1;
+      height: 50px;
+      padding: 0 12px;
+      border: none;
+      background: #000;
+      color: #fff;
+      font-size: 18px;
+    }
+
+    .footer-col button {
+      height: 50px;
+      padding: 0 22px;
+      border: none;
+      background: #000;
+      color: #fff;
+      cursor: pointer;
+      font-size: 20px;
+      /* chữ to hơn */
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .footer-col button:hover {
+      background: #333;
+    }
+
+    /* Icon tròn */
+    .footer-col .icons {
+      margin-top: 25px;
+      width: 100%;
+      max-width: 420px;
+      /* khớp đúng với chiều ngang của subscribe */
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer-col .icons a {
+      display: flex;
+      /* 🔥 Dùng flex để căn giữa */
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: transparent;
+      /* không che ảnh */
+      overflow: hidden;
+      /* 🔥 đảm bảo ảnh không tràn khung */
+    }
+
+    .footer-col .icons a:hover {
+      background: transparent;
+      /* không đổi màu khi hover */
+      transform: scale(1.05);
+      /* (tuỳ chọn) thêm hiệu ứng phóng nhẹ, nhìn vẫn có phản hồi */
+    }
+
+
+
+    /* Phần dưới cùng */
+    .footer-bottom {
+      display: flex;
+      /* ✅ thêm */
+      align-items: center;
+      /* ✅ thêm */
+      justify-content: center;
+      /* ✅ thêm */
+      gap: 20px;
+      /* ✅ thêm khoảng cách giữa line và chữ */
+      margin-top: 120px;
+      text-align: center;
+
+    }
+
+    .footer-bottom .line {
+      flex: 1;
+      height: 2px;
+      background: #000;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .footer-bottom span {
+      font-family: "Bree Serif", serif;
+      font-size: 16px;
+      margin: 0 20px;
+      font-weight: 600;
+    }
+
+    .footer-col .icons a img {
+      width: 70%;
+      height: 70%;
+      border-radius: 0;
+      object-fit: contain;
+    }
+  </style>
+</head>
+
+<body>
+
+  <footer>
+    <div class="footer-top">
+      <a href="#" class="logo"><img src="/dự án nhóm/BTL/asset/img/header_footer/FLEAURLOGOBLACK.png" alt="Logo"></a>
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-col">
+        <h3>Sản phẩm</h3>
+        <a href="/dự án nhóm/BTL/sanpham/loaisanpham.html">Váy bồng xòe</a>
+        <a href="/dự án nhóm/BTL/sanpham/loaisanpham.html">Váy đuôi cá</a>
+        <a href="/dự án nhóm/BTL/sanpham/loaisanpham.html">Váy chữ A</a>
+        <a href="/dự án nhóm/BTL/sanpham/loaisanpham.html">Váy ngắn</a>
+        <a href="/dự án nhóm/BTL/sanpham/loaisanpham.html">Áo dài cưới</a>
+        <a href="/dự án nhóm/BTL/sanpham/loaisanpham.html">Phụ kiện</a>
+      </div>
+      <div class="footer-col">
+        <h3>Công ty</h3>
+        <a href="/dự án nhóm/BTL/gioithieu.html">Giới thiệu</a>
+        <a href="/dự án nhóm/BTL/doitac.html">Đối tác</a>
+        <a href="/dự án nhóm/BTL/tintuc.html">Tin tức</a>
+      </div>
+      <div class="footer-col">
+        <h3>Hỗ trợ</h3>
+        <a href="/dự án nhóm/BTL/hotro.html">Trung tâm hỗ trợ</a>
+      </div>
+      <div class="footer-col">
+        <h3>Đăng ký nhận ưu đãi và tin tức mới nhất!</h3>
+        <div class="subscribe">
+          <input type="email" placeholder="Nhập email">
+          <button>Subscribe</button>
+        </div>
+        <div class="icons">
+          <a href="#"><img src="/dự án nhóm/BTL/asset/img/header_footer/IGLOGO.png" alt="Icon 1"></a>
+          <a href="#"><img src="/dự án nhóm/BTL/asset/img/header_footer/FBLOGO.png" alt="Icon 2"></a>
+          <a href="#"><img src="/dự án nhóm/BTL/asset/img/header_footer/YTBLOGO.png" alt="Icon 3"></a>
+          <a href="#"><img src="/dự án nhóm/BTL/asset/img/header_footer/TIKLOGO.png" alt="Icon 4"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="line"></div>
+      <span>2025 @ All rights reserved</span>
+      <div class="line"></div>
+    </div>
+
+
+  </footer>
+
+</body>
+
+</html>

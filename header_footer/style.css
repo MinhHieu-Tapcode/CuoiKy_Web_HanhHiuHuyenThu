@@ -1,0 +1,92 @@
+ @media (max-width: 1024px) {
+     header {
+         padding: 15px 20px;
+     }
+
+     nav a {
+         margin-left: 15px;
+     }
+
+     footer {
+         width: 100%;
+         padding: 20px;
+     }
+
+     .footer-top,
+     .footer-main {
+         width: 100%;
+         flex-wrap: wrap;
+     }
+
+     .footer-main {
+         justify-content: space-around;
+         gap: 40px;
+     }
+
+     .footer-col {
+         flex: 1 1 200px;
+     }
+
+     .footer-bottom .line {
+         width: 200px;
+     }
+ }
+
+ @media (max-width: 768px) {
+     header {
+         flex-direction: column;
+         text-align: center;
+     }
+
+     nav {
+         margin-top: 10px;
+     }
+
+     .footer-main {
+         flex-direction: column;
+         align-items: center;
+         text-align: center;
+         gap: 30px;
+     }
+
+     .footer-col .subscribe {
+         flex-direction: column;
+         align-items: stretch;
+     }
+
+     .footer-col input[type="email"],
+     .footer-col button {
+         width: 100%;
+     }
+
+     .footer-col .icons {
+         justify-content: center;
+         gap: 10px;
+     }
+
+     .footer-bottom {
+         margin-top: 40px;
+     }
+
+     .footer-bottom .line {
+         display: none;
+     }
+
+     .footer-bottom span {
+         display: block;
+         margin: 10px 0;
+     }
+ }
+
+
+
+ html,
+ body {
+     max-width: 100%;
+     height: 100%;
+     overflow-x: hidden;
+     /* Ngăn cuộn ngang */
+     flex-direction: column;
+     /* sắp xếp header, main, footer theo cột */
+ }
+

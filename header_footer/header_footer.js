@@ -1,5 +1,13 @@
+// === XÁC ĐỊNH ĐƯỜNG DẪN CHUNG ===
+let basePath = "";
+if (window.location.pathname.includes("/header_footer/")) {
+  basePath = "./";
+} else {
+  basePath = "./header_footer/";
+}
+
 // === TẢI HEADER ===
-fetch("./header_footer/header.html")
+fetch(basePath + "header.html")
   .then(res => {
     if (!res.ok) throw new Error("Không tải được header.html: " + res.status);
     return res.text();
@@ -8,7 +16,6 @@ fetch("./header_footer/header.html")
     const container = document.getElementById("header");
     container.innerHTML = html;
 
-    // Lấy các phần tử bên trong header vừa chèn
     const headerEl = container.querySelector("#main-header");
     const searchIcon = container.querySelector(".icon-search");
     const searchOverlay = container.querySelector(".search-overlay");
@@ -17,27 +24,19 @@ fetch("./header_footer/header.html")
     const menuToggle = container.querySelector(".menu-toggle");
     const navLinks = container.querySelector(".nav-links");
 
-    // ⚡️ 0) CHỪA KHOẢNG TRỐNG CHO HEADER CỐ ĐỊNH
-    if (headerEl) {
-      const headerHeight = headerEl.offsetHeight;
-      document.body.style.paddingTop = headerHeight + "px";
-    }
+    if (headerEl) document.body.style.paddingTop = headerEl.offsetHeight + "px";
 
-    // 1) Search overlay
     if (searchIcon && searchOverlay && closeSearch) {
       searchIcon.addEventListener("click", (e) => {
         e.stopPropagation();
         searchOverlay.classList.add("active");
       });
       closeSearch.addEventListener("click", () => searchOverlay.classList.remove("active"));
-
-      // đóng overlay khi click ngoài input
       searchOverlay.addEventListener("click", (e) => {
         if (e.target === searchOverlay) searchOverlay.classList.remove("active");
       });
     }
 
-    // 2) Heart icon toggle
     if (heartIcon) {
       heartIcon.addEventListener("click", () => {
         heartIcon.classList.toggle("far");
@@ -46,12 +45,10 @@ fetch("./header_footer/header.html")
       });
     }
 
-    // 3) Mobile menu toggle
     if (menuToggle && navLinks) {
       menuToggle.addEventListener("click", () => navLinks.classList.toggle("show"));
     }
 
-    // 4) Hide/show header khi scroll (ẩn cả header-top + header-bottom)
     if (headerEl) {
       let lastScrollY = window.scrollY;
       let ticking = false;
@@ -73,9 +70,8 @@ fetch("./header_footer/header.html")
   })
   .catch(err => console.error(err));
 
-
 // === TẢI FOOTER ===
-fetch("./header_footer/footer.html")
+fetch(basePath + "footer.html")
   .then(res => {
     if (!res.ok) throw new Error("Không tải được footer.html: " + res.status);
     return res.text();
@@ -83,7 +79,6 @@ fetch("./header_footer/footer.html")
   .then(html => {
     document.getElementById("footer").innerHTML = html;
 
-    // Gắn sự kiện sau khi footer load
     const subscribeBtn = document.querySelector(".footer-col button");
     const emailInput = document.querySelector(".footer-col input[type='email']");
 

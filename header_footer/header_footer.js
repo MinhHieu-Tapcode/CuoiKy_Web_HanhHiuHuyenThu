@@ -1,22 +1,30 @@
-// === XÁC ĐỊNH ĐƯỜNG DẪN CHUNG (CHẠY LOCAL & GITHUB, DÙ FILE NẰM Ở THƯ MỤC CON) ===
+// === XÁC ĐỊNH ĐƯỜNG DẪN CHUNG ===
 let basePath = "";
 const origin = window.location.origin;
 const pathname = window.location.pathname;
 
-// Kiểm tra nếu đang chạy local (VD: Live Server, localhost)
-const isLocal = origin.includes("127.0.0.1") || origin.includes("localhost");
+// Kiểm tra đang chạy local (Live Server hoặc mở file trực tiếp)
+const isLocal = origin.includes("127.0.0.1") || origin.includes("localhost") || origin === "null" || origin === "";
 
+// Nếu chạy local
 if (isLocal) {
-  // --- LOCAL: tự động tính số cấp thư mục để quay về gốc ---
-  const depth = pathname.split("/").length - 2;
-  basePath = "../".repeat(depth) + "header_footer/";
+  // Lấy vị trí của file hiện tại (VD: /BTL/pages/home.html)
+  // => tách các cấp thư mục để tính đường dẫn tương đối về "header_footer"
+  const pathParts = pathname.split("/");
+  const idx = pathParts.indexOf("header_footer");
+  if (idx === -1) {
+    // Tính xem file hiện tại nằm sâu mấy cấp → quay về bấy nhiêu lần
+    const depth = pathParts.length - 2;
+    basePath = "../".repeat(depth) + "header_footer/";
+  } else {
+    basePath = "./";
+  }
 } else {
-  // --- GITHUB PAGES: luôn dùng đường dẫn tuyệt đối ---
+  // Nếu chạy trên GitHub Pages (đường dẫn tuyệt đối)
   basePath = "/CuoiKy_Web_HanhHiuHuyenThu/header_footer/";
 }
 
 console.log("Base path:", basePath);
-
 // === TẢI HEADER ===
 fetch(basePath + "header.html")
   .then(res => {

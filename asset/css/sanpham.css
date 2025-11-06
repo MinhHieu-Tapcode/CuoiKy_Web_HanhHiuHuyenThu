@@ -1,0 +1,233 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #000;
+}
+
+.collections {
+  text-align: center;
+  padding: 60px 5%;
+}
+
+.breadcrumb {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.breadcrumb a {
+  color: #0f0f0f;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.collections h2 {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.collection-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  justify-content: center;
+}
+
+.collection-item {
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.collection-item img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+/* Gói chứa 2 ảnh */
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 620px;
+  overflow: hidden;
+  border-radius: 0px;
+}
+
+.img-wrapper .main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+  display: block;
+}
+
+/* anh hover*/
+.img-wrapper .hover-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+/* Hover: ảnh chính mờ đi, ảnh hover hiện lên */
+.img-wrapper:hover .main-img {
+  opacity: 0;
+}
+
+.img-wrapper:hover .hover-img {
+  opacity: 1;
+}
+
+/* Icon trái tim */
+.img-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.logoheart-icon {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 20px;   /* nhỏ gọn hơn */
+  height: 20px;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0.8;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.logoheart-icon:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+
+/* Hiệu ứng khi hover icon */
+.logoheart-icon:hover {
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.collection-item h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 5px 0 20px 0;
+}
+
+.item-count {
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
+  margin: 0 auto;
+  max-width: 250px;
+}
+.bst1 {
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+/* Dấu gạch chân ban đầu */
+.bst1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1.5px;
+  background-color: #000;
+  transform: translateX(0);
+  opacity: 1;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Khi hover: trượt sang trái và mờ dần */
+.bst1:hover::after {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+/* Khi hover ra: trượt ngược lại từ phải qua trái */
+.bst1::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 1.5px;
+  background-color: #000;
+  transform: translateX(100%);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.bst1:hover::before {
+  transform: translateX(0);
+  opacity: 1;
+}
+.collection-link {
+  text-decoration: none;
+  color: #000;
+}
+.collection-title:hover {
+  color:#000
+}
+.collection-title {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 20px 0 5px 0;
+  color: #000;
+  text-transform: none;
+  transition: color 0.3s ease;
+}
+
+/* Thanh ngang ẩn ban đầu */
+.collection-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+
+/* Khi hover vào chữ → thanh hiện ra */
+.collection-title:hover::after {
+  width: 100%;
+}
+
+/* Optional: đổi màu chữ khi hover */
+.collection-title:hover {
+  color: #333;
+}
+

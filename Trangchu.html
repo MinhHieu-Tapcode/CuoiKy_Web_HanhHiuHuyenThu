@@ -6,9 +6,9 @@
 <title>Fleur Official</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap&subset=vietnamese" rel="stylesheet">
-<link rel="icon" type="image/png" href="logobe.png">
+<link rel="icon" type="image/png" href="asset/img/trangchu/logobe.png">
 <style>
- @import url(tong.css);
+ @import url('asset/css/main.css');
 /**video đầu trang**/
     .video-section {
      position: relative;
@@ -32,18 +32,7 @@
      font-size: 2rem;
      letter-spacing: 2px;
      font-weight: 300;
-     animation: slideIn 3s ease-out;
      z-index: 2;
-    }
-    @keyframes slideIn {
-     0% {
-      opacity: 0;
-      transform: translateY(40px);
-     }
-     100% {
-      opacity: 1;
-      transform: translateY(0);
-     }
     }
 /**intro-section**/
     .intro-section {
@@ -81,12 +70,11 @@
     }
     .btn-more {
      display: inline-block;
-     font-family: "Montserrat", sans-serif;
+     font-family: 'Montserrat', sans-serif;
      background-color: #e3e3e3;
      border-radius: 5px;
      padding: 6px 12px;
      font-weight: 500;
-     transition: 0.3s;
     }
     .btn-more:hover {
       background-color: beige;
@@ -143,20 +131,6 @@
     }
     .dark .collection-container{
       flex-direction: row;
-
-      opacity: 0;
-      transform: translateX(200px);
-      animation: slideFromRight 3s ease-out forwards;
-    }
-    @keyframes slideFromRight {
-     from {
-       opacity: 0;
-       transform: translateX(200px);
-      }
-     to {
-       opacity: 1;
-       transform: translateX(0);
-      }
     }
     .dark .collection-content{
       margin-left: 700px;
@@ -174,20 +148,6 @@
     }
     .light .collection-container{
       flex-direction: row-reverse;
-
-      opacity: 0;
-      transform: translateX(-200px);
-      animation: slideFromLeft 3s ease-out forwards;
-    }
-    @keyframes slideFromLeft {
-     from {
-       opacity: 0;
-       transform: translateX(-200px);
-      }
-     to {
-       opacity: 1;
-       transform: translateX(0);
-      }
     }
     .light .collection-content{
       margin-right: 700px;
@@ -253,7 +213,7 @@
       width: 200px; /* Kích thước logo */
       height: auto;
       margin-right: 15px;
-    }
+    } 
     .branding-text{
       font-size: 0.9em;
       line-height: 1.3;
@@ -306,7 +266,6 @@
       cursor: pointer;
       font-size: 16px;
       letter-spacing: 1px;
-      transition: all 0.3s ease;
     }
     .fomula-section .btn-more:hover{
       background-color: gray;
@@ -391,11 +350,11 @@
       position: relative;
     }
     .slider-progress {
-      width: 25%; /* ban đầu thể hiện 1/4 vì có 4 blog */
+      width: 50%;
       height: 100%;
       background: #fff;
       border-radius: 5px;
-      transition: width 0.3s ease;
+      transition: width 1.2s ease;
 } 
 /**insta-section**/
     .insta-section{
@@ -409,30 +368,24 @@
       font-size: 25px;
       margin-bottom: 5px;
     }
-    .insta-slider {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      position: relative;
-      margin: 5px 30px;
-      overflow-x: auto;
-      white-space: nowrap;
-      scroll-behavior: smooth;
-      scrollbar-width: none;
-    }
-    .insta-slider::-webkit-scrollbar {
-      display: none;
-    }
     .insta-feed {
      display: flex;
      justify-content: center;
      align-items: center;
-     margin-bottom: 5px;
+     overflow-x: auto;
+     scroll-behavior: smooth;
+     padding: 5px 50px;
     }
-    .snapwidget-widget iframe{
-      display: flex;
-      flex-direction: column;
+    .insta-feed::-webkit-scrollbar {
+      display: none;
+    }
+    .snapwidget-widget{
+      width: 2000px !important;  /* tăng chiều ngang */
+      height: 250px !important;  /* tăng chiều cao */
+      transform-origin: center;     /* phóng ra giữa, không lệch */
+      margin: 0 15px;               /* khoảng cách giữa các khung ảnh */
       flex-shrink: 0;
+      border: none;
     }
     .arrow {
       background: rgba(0,0,0,0.5);
@@ -466,12 +419,11 @@
     .insta-section .btn-more{
       background-color: #2b2b2b;
       color: #e3e3e3;
-      padding: 12px 40px;
+      padding: 5px 40px;
       border: none;
       cursor: pointer;
       font-size: 16px;
       letter-spacing: 1px;
-      transition: all 0.3s ease;
     }
     .insta-section .btn-more:hover{
       background-color: gray;
@@ -561,7 +513,27 @@
   .submit-btn:hover {
     background-color: #555555;
   }
-
+  /**phục vụ cho script*/
+  [data-animate] {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1.2s ease;
+    will-change: transform, opacity;
+    overflow: visible;
+  }
+  [data-animate].show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  [data-animate="slide-in"] {
+   transform: translateY(50px);
+  }
+  [data-animate="slide-left"] {
+   transform: translateX(-50px);
+  }
+  [data-animate="slide-right"] {
+   transform: translateX(50px);
+  }
 
 </style>
 </head>
@@ -569,17 +541,17 @@
 <body>
  <div class="video-section">
    <video autoplay muted loop>
-    <source src="Video_trangchu.mp4" type="video/mp4">
+    <source src="asset/img/trangchu/Video_trangchu.mp4" type="video/mp4">
     Fleur - Video đầu trang
    </video>
-   <div class="overlay-text">
+   <div class="overlay-text" data-animate="slide-in">
     Fleur - Thiên đường váy cưới
    </div>
  </div>
 
  <section class="intro-section">
-     <h1 class="intro-title">Fleur Bridal House</h1>
-      <div class="intro-content">
+     <h1 class="intro-title" data-animate>Fleur Bridal House</h1>
+      <div class="intro-content" data-animate>
      <div class="intro-left">
       <h3>Giới thiệu</h3>
      </div>
@@ -594,13 +566,13 @@
       <button class="btn-more">Xem thêm</button>
      </div>
      </div>
-  <h1 >Bộ sưu tập tại Fleur</h1>
+  <h1 data-animate>Bộ sưu tập tại Fleur</h1>
  </section>
 
  <section class="collection-section dark">
-  <div class="collection-container">
+  <div class="collection-container" data-animate="slide-right">
     <div class="collection-image">
-      <img src="Bst1.png" alt="Bộ sưu tập Fleur">
+      <img src="asset/img/trangchu/Bst1.png" alt="Bộ sưu tập Fleur">
     </div>
     <div class="collection-content">
     <h2>Hương sắc Á Đông - Nét duyên Việt chạm vào từng sợi lụa</h2>
@@ -618,9 +590,9 @@
 </section>
 
 <section class="collection-section light">
-  <div class="collection-container">
+  <div class="collection-container" data-animate="slide-left">
     <div class="collection-image">
-      <img src="Bst2.png" alt="Bộ sưu tập Fleur">
+      <img src="asset/img/trangchu/Bst2.png" alt="Bộ sưu tập Fleur">
     </div>
     <div class="collection-content">
     <h2>Thanh âm của tình yêu - Mỗi nếp váy là một giai điệu, ngân nga bản tình ca của hạnh phúc</h2>
@@ -637,9 +609,9 @@
 </section>
 
 <section class="collection-section dark">
-  <div class="collection-container">
+  <div class="collection-container" data-animate="slide-right">
     <div class="collection-image">
-      <img src="Bst3.png" alt="Bộ sưu tập Fleur">
+      <img src="asset/img/trangchu/Bst3.png" alt="Bộ sưu tập Fleur">
     </div>
     <div class="collection-content">
     <h2>Hẹn ước trăm năm - Bởi có những lời hứa không cần nói, chỉ cần cùng nhau đi đến cuối con đường</h2>
@@ -656,9 +628,9 @@
 </section>
 
 <section class="collection-section light">
-  <div class="collection-container">
+  <div class="collection-container" data-animate="slide-left">
     <div class="collection-image">
-      <img src="Bst4.png" alt="Bộ sưu tập Fleur">
+      <img src="asset/img/trangchu/Bst4.png" alt="Bộ sưu tập Fleur">
     </div>
     <div class="collection-content">
     <h2>Lời thì thầm hoa sương - Giọt sương khẽ rơi trên cánh hoa, như tình yêu dịu dàng thì thầm trong nắng sớm </h2>
@@ -674,9 +646,9 @@
 </section>
 
 <section class="collection-section dark">
-  <div class="collection-container">
+  <div class="collection-container" data-animate="slide-right">
     <div class="collection-image">
-      <img src="Bst5.png" alt="Bộ sưu tập Fleur">
+      <img src="asset/img/trangchu/Bst5.png" alt="Bộ sưu tập Fleur">
     </div>
     <div class="collection-content">
     <h2>Ánh bình minh - Nắng đầu ngày chạm nhẹ lên vai, khởi đầu cho một hành trình yêu thương rạng rỡ</h2>
@@ -693,9 +665,9 @@
 </section>
 
 <section class="collection-section light">
-  <div class="collection-container">
+  <div class="collection-container" data-animate="slide-left">
     <div class="collection-image">
-      <img src="Bst6.png" alt="Bộ sưu tập Fleur">
+      <img src="asset/img/trangchu/Bst6.png" alt="Bộ sưu tập Fleur">
     </div>
     <div class="collection-content">
     <h2>Khúc hẹn yêu - Giữa ngàn ánh nhin, ta gặp nhau, bản tình ca khẽ cất lên từ trái tim</h2>
@@ -714,10 +686,10 @@
 
 <section class="branding-section">
  <div class="branding-container">
-  <div class="branding-left">
+  <div class="branding-left" data-animate>
   <h1 class="branding-title">Giới thiệu</h1>
   <div class="branding-USP">
-  <img src ="logo.png" alt="Logo" class="branding-logo">
+  <img src ="asset/img/trangchu/logo.png" alt="Logo" class="branding-logo">
   <p class="branding-text">
     FLEUR <br>
     Thương hiệu váy cưới cao cấp <br>
@@ -725,7 +697,7 @@
   </p>
   </div>
   </div>
-  <div class="branding-description">
+  <div class="branding-description" data-animate>
     <p>
       <i>Fleur Bridal House</i> được thành lập với một khát vọng duy nhất: kiến tạo nên những chiếc 
       váy cưới như những tác phẩm nghệ thuật, dành riêng cho cô dâu Việt Nam mang phong cách 
@@ -746,8 +718,8 @@
 </section>
 
 <section class="fomula-section">
-  <h2>Fleur - Công thức cho cô dâu hoàn hảo</h2>
-  <div class="fomula-items">
+  <h2 data-animate>Fleur - Công thức cho cô dâu hoàn hảo</h2>
+  <div class="fomula-items" data-animate>
     <div class="fomula-item">
       <p>VÁY TIỆC CHÍNH</p>
     </div>
@@ -760,37 +732,37 @@
   </div>
   <div class="fomula-line">
     <span class="line"></span>
-  <button class="btn-more">Khám phá thêm</button>
+  <button class="btn-more" data-animate>Khám phá thêm</button>
     <span class="line"></span>
   </div>
 </section>
 
 <section class="blog-section">
-  <div class="blog-header">
+  <div class="blog-header" data-animate>
     <h2>Tin tức mới nhất đến từ Fleur Bridal House</h2>
     <a href="#" class="btn-more">Xem tất cả</a>
   </div>
   <div class="blog-items">
     <div class="blog-item">
-      <img src="blog1.jpg" alt="Blog 1">
+      <img src="asset/img/trangchu/blog1.jpg" alt="Blog 1">
       <p class="date">25 tháng 10, 2024</p>
       <h3>5 xu hướng váy cưới hot nhất năm 2024 không thể bỏ qua</h3>
       <a href="#" class="btn-more">Đọc thêm</a>
     </div>
     <div class="blog-item">
-      <img src="blog2.jpg" alt="Blog 2">
+      <img src="asset/img/trangchu/blog2.jpg" alt="Blog 2">
       <p class="date">14 tháng 2, 2025</p>
       <h3>Làm thế nào để chọn váy cưới phù hợp với dáng người?</h3>
       <a href="#" class="btn-more">Đọc thêm</a>
     </div>
     <div class="blog-item">
-      <img src="blog3.jpg" alt="Blog 3">
+      <img src="asset/img/trangchu/blog3.jpg" alt="Blog 3">
       <p class="date">30 tháng 3, 2025</p>
       <h3>Bí quyết chăm sóc váy cưới sau ngày trọng đại</h3>
       <a href="#" class="btn-more">Đọc thêm</a>
     </div>
     <div class="blog-item">
-      <img src="blog4.jpg" alt="Blog 4">
+      <img src="asset/img/trangchu/blog4.jpg" alt="Blog 4">
       <p class="date">10 tháng 10, 2025</p>
       <h3>Phụ kiện cưới không thể thiếu cho cô dâu hiện đại</h3>
       <a href="#" class="btn-more">Đọc thêm</a>
@@ -802,21 +774,18 @@
 </section>
 
 <section class="insta-section">
-  <span class="icon">
-    <img src="logoinsta.png" alt="logoinsta" text-align="center" width="60px" height="40px">
+  <span class="icon" data-animate>
+    <img src="asset/img/trangchu/logoinsta.png" alt="logoinsta" text-align="center" width="60px" height="40px">
   </span>
-  <h2><i class="fa-brands fa-instagram"></i> Instagram</h2>
+  <h2 data-animate><i class="fa-brands fa-instagram"></i> Instagram</h2>
     <button class="arrow left">&#10094;</button>
-  <div class="insta-slider">
-  <!-- SnapWidget -->
  <div class="insta-feed">
 <iframe src="https://snapwidget.com/embed/1111983" class="snapwidget-widget" allowtransparency="true" 
 frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:1845px; height:278.33166666666665px" 
 title="Posts from Instagram"></iframe>
  </div>
-  </div>
    <button class="arrow right">&#10095;</button>
- <div class="btn-more">
+ <div class="btn-more" data-animate>
     <a href="https://www.instagram.com/fleurbridalhouse/" target="_blank">
       THEO DÕI CHÚNG TÔI
     </a>
@@ -904,6 +873,6 @@ title="Posts from Instagram"></iframe>
 
     </div>
 </section>
-
+<script src="asset/js/trangchu.js" defer></script>
 </body>
 </html>

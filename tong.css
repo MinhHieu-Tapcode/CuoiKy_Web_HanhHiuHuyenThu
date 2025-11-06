@@ -1,0 +1,89 @@
+@charset "UTF-8"; 
+
+* {
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    /*xóa margin,padding mặc định của trình duyệt do trình duyệt thường tự thêm
+    khoảng cách cho các phần tử, xóa giúp kiểm soát layout chính xác.
+    border-box giúp tính CR/CC dễ hơn khi thêm border/padding */
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px; 
+  line-height: 1.6;
+  color: #111;
+  background-color: #fff;
+  overflow: auto;
+  /* height/width: 100% => CC/CR bằng 100% CC/CR phần tử cha
+  => html,body phủ kín CC/ngang của cửa sổ trình duyệt
+  line-height 1.6 giúp văn bản thoáng dễ đọc. */
+} 
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #111;
+    margin-bottom: 1rem;
+}
+p {
+    font-weight: 300;
+    color: #333;
+    margin-bottom: 1em;
+ /* Tiêu đề in hoa, khoảng cách chữ letter- spacing 1px
+ đoạn văn độ in đậm 300 để dễ đọc, 
+ margin-bottom là khoảng cách dưới mỗi đoạn sẽ là 1em */
+}
+a { 
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+a:hover {
+    color: #b3985a;
+} 
+/*các liên kết không gạch chân (text-decoration), có màu với những chữ xung quanh, 
+khi rê chuột đổi sang màu vàng*/
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    /* chiếm 90% chiều rộng màn hình, ko dính sát mép
+    giới hạn tối đa chiều rộng là 1200px, màn to hơn ko nở thêm,
+    căn giữa theo chiều ngang, 0 trên dưới, auto trái phải */
+}
+section {
+padding: 80px 0;
+/* khoảng cách trên dưới 80px, 2 bên 0px, 
+tạo khoảng trống dọc giữa các section */
+}
+header, footer {
+    width: 100%; 
+    background: #fff;
+    position: relative; 
+    z-index: 100; /*giúp header, footer nằm trên các phần khác */
+} 
+header {
+    border-bottom: 1px solid #eee;
+}
+footer {
+    border-top: 1px solid #eee; /*viền ngăn footer với ndung bên trên*/
+    padding: 40px 0;
+    text-align: center;
+    font-size: 14px; 
+    color: #666;
+}
+@media (max-width: 786px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+    section {
+        padding: 40px 0; 
+    }
+/*áp dụng khi màn hình là điện thoại, ipad, 
+do đó giảm kích thước của h1, và section để phù hợp với màn nhỏ */
+}

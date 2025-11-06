@@ -1,336 +1,363 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="UTF-8">
-<title>Cửa hàng</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap&subset=vietnamese" rel="stylesheet">
-<link rel="icon" type="png" href="logo.png">
-<style>
-@import url(asset/css/main.css);
-strong {
-    font-weight: bold !important;
-}
+    <meta charset="UTF-8">
+    <title>Cửa hàng</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap&subset=vietnamese"
+        rel="stylesheet">
+    <link rel="icon" type="png" href="logo.png">
+    <style>
+        @import url(asset/css/main.css);
 
-.content-box-fixed {
-    position: relative; 
-    width: calc(100% + 40px); 
-    max-width: none;
-   margin: 0 -20px 2rem -20px; 
-    padding: 30px 20px; 
-    box-sizing: border-box;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
-    border: 1px solid #ddd;
-    border-radius: 1.25rem; 
-}
+        strong {
+            font-weight: bold !important;
+        }
 
-.content-box-fixed p {
-    text-align: left; 
-    padding: 0 15px;
-    max-width: none;
-    margin: 0;
-    line-height: 1.6;
-    color: inherit; 
-}
+        .content-box-fixed {
+            position: relative;
+            width: calc(100% + 40px);
+            max-width: none;
+            margin: 0 -20px 2rem -20px;
+            padding: 30px 20px;
+            box-sizing: border-box;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+            border-radius: 1.25rem;
+        }
 
-.dark-background {
-    background-color: #2b2b2b;
-    border-color: #555;
-    color: #fff
-    ;
-} 
+        .content-box-fixed p {
+            text-align: left;
+            padding: 0 15px;
+            max-width: none;
+            margin: 0;
+            line-height: 1.6;
+            color: inherit;
+        }
 
-.khung-toan-trang {
-     
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    padding: 2.5rem 1rem; 
-    box-sizing: border-box;
-}
+        .dark-background {
+            background-color: #2b2b2b;
+            border-color: #555;
+            color: #fff;
+        }
 
-.khung-chinh {
-    width: 100%;
-    max-width: 76rem; 
-    margin: 0 auto; 
-    padding: 0; 
-}
+        .khung-toan-trang {
 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2.5rem 1rem;
+            box-sizing: border-box;
+        }
 
-.tieu-de-chinh {
-    margin-top: -1rem; 
-    margin-bottom: 6.5rem; 
-    text-align: center;
-    color: #1a202c; 
-}
+        .khung-chinh {
+            width: 100%;
+            max-width: 76rem;
+            margin: 0 auto;
+            padding: 0;
+        }
 
 
-.khung-danh-sach {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr)); 
-    gap: 1.5rem; 
-    padding: 0 1rem; 
-    margin-bottom: 2rem; 
-}
+        .tieu-de-chinh {
+            margin-top: -1rem;
+            margin-bottom: 6.5rem;
+            text-align: center;
+            color: #1a202c;
+        }
 
 
-@media (min-width: 640px) { 
-    .khung-danh-sach {
-        grid-template-columns: repeat(2, minmax(0, 1fr)); 
-    }
-}
+        .khung-danh-sach {
+            display: grid;
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+            gap: 1.5rem;
+            padding: 0 1rem;
+            margin-bottom: 2rem;
+        }
 
 
-@media (min-width: 1024px) { 
-    .khung-danh-sach {
-        grid-template-columns: repeat(3, minmax(0, 1fr)); 
-    }
-}
+        @media (min-width: 640px) {
+            .khung-danh-sach {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+
+        @media (min-width: 1024px) {
+            .khung-danh-sach {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
 
 
 
-.khung-chi-nhanh {
-    background-color: #ffffff;
-    padding: 2rem; 
-    border: 1px solid #e5e7eb; 
-    border-radius: 1.25rem; 
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); 
-    transition: all 0.3s ease;
-    height: 100%; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.khung-chi-nhanh:hover {
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
-    transform: translateY(-5px);
-}
+        .khung-chi-nhanh {
+            background-color: #ffffff;
+            padding: 2rem;
+            border: 1px solid #e5e7eb;
+            border-radius: 1.25rem;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .khung-chi-nhanh:hover {
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
 
 
-.tieu-de-cua-hang {
-    font-size: 1.5rem; 
-    font-weight: 700;
-    color: #2b2b2b; 
-    margin-bottom: 0.5rem;
-    line-height: 1.2;
-}
+        .tieu-de-cua-hang {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2b2b2b;
+            margin-bottom: 0.5rem;
+            line-height: 1.2;
+        }
 
 
-.vung-dia-chi {
-    margin-bottom: 1.5rem;
-    border-left: 3px solid #9e9b9c; 
-    padding-left: 1rem;
-}
-.dia-chi-chi-tiet {
-    font-size: 1rem;
-    color: #4b5563;
-    margin-top: 0.25rem;
-    line-height: 1.4;
-}
+        .vung-dia-chi {
+            margin-bottom: 1.5rem;
+            border-left: 3px solid #9e9b9c;
+            padding-left: 1rem;
+        }
+
+        .dia-chi-chi-tiet {
+            font-size: 1rem;
+            color: #4b5563;
+            margin-top: 0.25rem;
+            line-height: 1.4;
+        }
 
 
-.khung-nut {
-    display: flex;
-    flex-direction: column; 
-    gap: 0.75rem; 
-    margin-top: auto; 
-}
+        .khung-nut {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            margin-top: auto;
+        }
 
 
-@media (min-width: 640px) { 
-    .khung-nut {
-        flex-direction: row; 
-    }
-}
+        @media (min-width: 640px) {
+            .khung-nut {
+                flex-direction: row;
+            }
+        }
 
 
-.nut-chung {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    column-gap: 0.5rem;
-    font-size: 0.9rem; 
-    font-weight: 600; 
-    padding: 0.75rem 1rem; 
-    border-radius: 0.75rem; 
-    transition: all 0.2s ease;
-    width: 100%; 
-    text-decoration: none;
-    text-align: center;
-    
-}
+        .nut-chung {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            transition: all 0.2s ease;
+            width: 100%;
+            text-decoration: none;
+            text-align: center;
 
-@media (min-width: 640px) {
-     .nut-chung {
-         flex-grow: 1; 
-         width: auto; 
-    }
-}
+        }
+
+        @media (min-width: 640px) {
+            .nut-chung {
+                flex-grow: 1;
+                width: auto;
+            }
+        }
 
 
-.nut-ban-do {
-    background-color: #f3eeee; 
-    color: #000; 
-    border: 1px solid rgb(196, 193, 194);
-}
-.nut-ban-do:hover {
-    background-color: #ffffff; 
-     
-}
+        .nut-ban-do {
+            background-color: #f3eeee;
+            color: #000;
+            border: 1px solid rgb(196, 193, 194);
+        }
 
-.nut-chi-duong {
-    background-color: #2b2b2b; 
-    color: #ffffff;
-    box-shadow: 0 4px 6px rgba(86, 84, 85, 0.4);
-}
-.nut-chi-duong:hover {
-    background-color: #0000; 
-    box-shadow: 0 6px 10px rgba(177, 175, 176, 0.6);
-}
+        .nut-ban-do:hover {
+            background-color: #ffffff;
 
-</style> 
+        }
+
+        .nut-chi-duong {
+            background-color: #2b2b2b;
+            color: #ffffff;
+            box-shadow: 0 4px 6px rgba(86, 84, 85, 0.4);
+        }
+
+        .nut-chi-duong:hover {
+            background-color: #0000;
+            box-shadow: 0 6px 10px rgba(177, 175, 176, 0.6);
+        }
+    </style>
 </head>
+
 <body>
     <!-- Nơi header sẽ được chèn -->
-  <div id="header"></div>
-<main class="khung-toan-trang" style="padding: 60px 20px;">
-    <div class="khung-chinh">
-        
-        <h1 class="tieu-de-chinh">CỬA HÀNG</h1>
-        <div class="content-box-fixed dark-background">
-            <p>
-                Cô dâu thân mến, chúng tôi rất vui mừng khi bạn dành sự quan tâm cho những thiết kế váy cưới của Fleur.
-                Tại mục <strong>“Cửa hàng” </strong>, bạn có thể dễ dàng khám phá các bộ sưu tập độc quyền của chúng tôi.
-                Hãy chọn quốc gia và thành phố gần bạn nhất để tìm thấy showroom Fleur phù hợp, nơi đội ngũ tư vấn chuyên nghiệp luôn sẵn sàng đồng hành cùng bạn trong hành trình tìm kiếm chiếc váy cưới hoàn hảo.
-                Đừng quên đặt lịch hẹn thử váy tại cửa hàng mà bạn yêu thích – để Fleur giúp bạn tỏa sáng như nàng thơ trong chính câu chuyện tình yêu của mình
-            </p>
-        </div>
+    <div id="header"></div>
+    <main class="khung-toan-trang" style="padding: 60px 20px;">
+        <div class="khung-chinh">
 
-        <div class="content-box-fixed dark-background" style="margin-bottom: 3rem;">
-            <h2 style="text-align: center; color: #ffffff;">Hệ thống cửa hàng FLeur tại Việt Nam</h2>        
-            <p style="text-align: center;"> Khám phá 6 chi nhánh trải dài từ Bắc vào Nam của chúng tôi.</p>
-        </div>
-
-        <!-- Danh sách cửa hàng (GRID) -->
-        <div id="danh-sach-chi-nhanh" class="khung-danh-sach"> 
-            <!-- CHI NHÁNH 1: HÀ NỘI (Trường Chinh) -->
-            <div class="khung-chi-nhanh">
-                <div>
-                    <h3 class="tieu-de-cua-hang">Hà Nội</h3>
-                    <div class="vung-dia-chi">
-                        <p class="dia-chi-chi-tiet font-semibold">Fleur Bridal </p>
-                        <p class="dia-chi-chi-tiet">Số 281, Đ. Trường Chinh, P. Phương Liệt, Hà Nội</p>
-                    </div>
-                </div>
-                
-                <div class="khung-nut">
-                    <a href="https://maps.app.goo.gl/p2PygcGSmgHCavA99" target="_blank" class="nut-chung nut-ban-do">
-                        <span>Xem Bản Đồ</span>
-                    </a>
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=281+Trường+Chinh,+Phương+Liệt,+Hà+Nội" target="_blank" class="nut-chung nut-chi-duong">
-                        <span>Chỉ Đường</span>
-                    </a>
-                </div>
-            </div>
-            <!-- CHI NHÁNH 3: Hồ Chí Minh -->
-            <div class="khung-chi-nhanh">
-                <div>
-                    <h3 class="tieu-de-cua-hang">TP.Hồ Chí Minh</h3>
-                    <div class="vung-dia-chi">
-                        <p class="dia-chi-chi-tiet font-semibold">Fleur Bridal House</p>
-                        <p class="dia-chi-chi-tiet">32 Nguyễn Đình Chiểu, Quận 1, TP. Hồ Chí Minh</p>
-                    </div>
-                </div>
-                
-                <div class="khung-nut">
-                    <a href="https://maps.app.goo.gl/FWVVAVR8HGSyc3ub7" target="_blank" class="nut-chung nut-ban-do">
-                        <span>Xem Bản Đồ</span>
-                    </a>
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=32+Nguyễn+Đình+Chiểu,+Quận+1,+TP.+Hồ+Chí+Minh" target="_blank" class="nut-chung nut-chi-duong">
-                        <span>Chỉ Đường</span>
-                    </a>
-                </div>
-            </div>
-               <!-- CHI NHÁNH 5: Đà nẵng -->
-            <div class="khung-chi-nhanh">
-                <div>
-                    <h3 class="tieu-de-cua-hang">Đà Nẵng</h3>
-                    <div class="vung-dia-chi">
-                        <p class="dia-chi-chi-tiet font-semibold">Fleur Bridal Offical</p>
-                        <p class="dia-chi-chi-tiet">20 Điện Biên Phủ,P.Thanh Khê Đông, Q.Thanh Khê, Đà Nẵng</p>
-                    </div>
-                </div>
-                
-                <div class="khung-nut">
-                    <a href="https://maps.app.goo.gl/6qnnSijSrX9BEPhLA" target="_blank" class="nut-chung nut-ban-do">
-                        <span>Xem Bản Đồ</span>
-                    </a>
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=20+Điện+Biên+Phủ,+P.+Thanh+Khê+Đông,+Q+Thanh+Khê,+Đà+Nẵng" target="_blank" class="nut-chung nut-chi-duong">
-                        <span>Chỉ Đường</span>
-                    </a>
-                </div>
-            </div>
-            <!-- CHI NHÁNH 2: HÀ NỘI (Tây Hồ) -->
-            <div class="khung-chi-nhanh">
-                <div>
-                    <h3 class="tieu-de-cua-hang">Hà Nội</h3>
-                    <div class="vung-dia-chi">
-                        <p class="dia-chi-chi-tiet font-semibold">Fleur Bridal Lotte Mall</p>
-                        <p class="dia-chi-chi-tiet">Tầng 2, Lotte Mall Tây Hồ, Hà Nội</p>
-                    </div>
-                </div>
-                
-                <div class="khung-nut">
-                    <a href="https://maps.app.goo.gl/p2PygcGSmgHCavA99" target="_blank" class="nut-chung nut-ban-do">
-                        <span>Xem Bản Đồ</span>
-                    </a>
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=281+Trường+Chinh,+Phương+Liệt,+Hà+Nội" target="_blank" class="nut-chung nut-chi-duong">
-                        <span>Chỉ Đường</span>
-                    </a>
-                </div>
-            </div>            
-            <!-- CHI NHÁNH 4: TP.HCM (Quận 1) -->
-            <div class="khung-chi-nhanh">
-                <div>
-                    <h3 class="tieu-de-cua-hang">TP.Hồ Chí Minh</h3>
-                    <div class="vung-dia-chi">
-                        <p class="dia-chi-chi-tiet font-semibold">Fleur Bridal Saigon Centre</p>
-                        <p class="dia-chi-chi-tiet">Tòa nhà Saigon Centre, Quận 1, TPHCM</p>
-                    </div>
-                </div>
-                
-                <div class="khung-nut">
-                    <a href="https://maps.app.goo.gl/FWVVAVR8HGSyc3ub7" target="_blank" class="nut-chung nut-ban-do">
-                        <span>Xem Bản Đồ</span>
-                    </a>
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=32+Nguyễn+Đình+Chiểu,+Quận+1,+TP.+Hồ+Chí+Minh" target="_blank" class="nut-chung nut-chi-duong">
-                        <span>Chỉ Đường</span>
-                    </a>
-                </div>
+            <h1 class="tieu-de-chinh">CỬA HÀNG</h1>
+            <div class="content-box-fixed dark-background">
+                <p>
+                    Cô dâu thân mến, chúng tôi rất vui mừng khi bạn dành sự quan tâm cho những thiết kế váy cưới của
+                    Fleur.
+                    Tại mục <strong>“Cửa hàng” </strong>, bạn có thể dễ dàng khám phá các bộ sưu tập độc quyền của chúng
+                    tôi.
+                    Hãy chọn quốc gia và thành phố gần bạn nhất để tìm thấy showroom Fleur phù hợp, nơi đội ngũ tư vấn
+                    chuyên nghiệp luôn sẵn sàng đồng hành cùng bạn trong hành trình tìm kiếm chiếc váy cưới hoàn hảo.
+                    Đừng quên đặt lịch hẹn thử váy tại cửa hàng mà bạn yêu thích – để Fleur giúp bạn tỏa sáng như nàng
+                    thơ trong chính câu chuyện tình yêu của mình
+                </p>
             </div>
 
-            <!-- CHI NHÁNH 6: Đà Nẵng -->
-            <div class="khung-chi-nhanh">
-                <div>
-                    <h3 class="tieu-de-cua-hang">Đà Nẵng</h3>
-                    <div class="vung-dia-chi">
-                        <p class="dia-chi-chi-tiet font-semibold">Fleur Bridal Võ Văn Tần</p>
-                        <p class="dia-chi-chi-tiet">40 Võ Văn Tần, Quận 3, TPHCM</p>
+            <div class="content-box-fixed dark-background" style="margin-bottom: 3rem;">
+                <h2 style="text-align: center; color: #ffffff;">Hệ thống cửa hàng FLeur tại Việt Nam</h2>
+                <p style="text-align: center;"> Khám phá 6 chi nhánh trải dài từ Bắc vào Nam của chúng tôi.</p>
+            </div>
+
+            <!-- Danh sách cửa hàng (GRID) -->
+            <div id="danh-sach-chi-nhanh" class="khung-danh-sach">
+                <!-- CHI NHÁNH 1: HÀ NỘI (Trường Chinh) -->
+                <div class="khung-chi-nhanh">
+                    <div>
+                        <h3 class="tieu-de-cua-hang">Hà Nội</h3>
+                        <div class="vung-dia-chi">
+                            <p class="dia-chi-chi-tiet font-semibold">Fleur Bridal </p>
+                            <p class="dia-chi-chi-tiet">Số 281, Đ. Trường Chinh, P. Phương Liệt, Hà Nội</p>
+                        </div>
+                    </div>
+
+                    <div class="khung-nut">
+                        <a href="https://maps.app.goo.gl/p2PygcGSmgHCavA99" target="_blank"
+                            class="nut-chung nut-ban-do">
+                            <span>Xem Bản Đồ</span>
+                        </a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=281+Trường+Chinh,+Phương+Liệt,+Hà+Nội"
+                            target="_blank" class="nut-chung nut-chi-duong">
+                            <span>Chỉ Đường</span>
+                        </a>
                     </div>
                 </div>
-                
-                <div class="khung-nut">
-                    <a href="https://maps.app.goo.gl/6qnnSijSrX9BEPhLA" target="_blank" class="nut-chung nut-ban-do">
-                        <span>Xem Bản Đồ</span>
-                    </a>
-                    <a href="https://www.google.com/maps/dir/?api=1&destination=20+Điện+Biên+Phủ,+P.+Thanh+Khê+Đông,+Q+Thanh+Khê,+Đà+Nẵng" target="_blank" class="nut-chung nut-chi-duong">
-                        <span>Chỉ Đường</span>
-                    </a>
+                <!-- CHI NHÁNH 3: Hồ Chí Minh -->
+                <div class="khung-chi-nhanh">
+                    <div>
+                        <h3 class="tieu-de-cua-hang">TP.Hồ Chí Minh</h3>
+                        <div class="vung-dia-chi">
+                            <p class="dia-chi-chi-tiet font-semibold">Fleur Bridal House</p>
+                            <p class="dia-chi-chi-tiet">32 Nguyễn Đình Chiểu, Quận 1, TP. Hồ Chí Minh</p>
+                        </div>
+                    </div>
+
+                    <div class="khung-nut">
+                        <a href="https://maps.app.goo.gl/FWVVAVR8HGSyc3ub7" target="_blank"
+                            class="nut-chung nut-ban-do">
+                            <span>Xem Bản Đồ</span>
+                        </a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=32+Nguyễn+Đình+Chiểu,+Quận+1,+TP.+Hồ+Chí+Minh"
+                            target="_blank" class="nut-chung nut-chi-duong">
+                            <span>Chỉ Đường</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- CHI NHÁNH 5: Đà nẵng -->
+                <div class="khung-chi-nhanh">
+                    <div>
+                        <h3 class="tieu-de-cua-hang">Đà Nẵng</h3>
+                        <div class="vung-dia-chi">
+                            <p class="dia-chi-chi-tiet font-semibold">Fleur Bridal Offical</p>
+                            <p class="dia-chi-chi-tiet">20 Điện Biên Phủ,P.Thanh Khê Đông, Q.Thanh Khê, Đà Nẵng</p>
+                        </div>
+                    </div>
+
+                    <div class="khung-nut">
+                        <a href="https://maps.app.goo.gl/6qnnSijSrX9BEPhLA" target="_blank"
+                            class="nut-chung nut-ban-do">
+                            <span>Xem Bản Đồ</span>
+                        </a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=20+Điện+Biên+Phủ,+P.+Thanh+Khê+Đông,+Q+Thanh+Khê,+Đà+Nẵng"
+                            target="_blank" class="nut-chung nut-chi-duong">
+                            <span>Chỉ Đường</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- CHI NHÁNH 2: HÀ NỘI (Tây Hồ) -->
+                <div class="khung-chi-nhanh">
+                    <div>
+                        <h3 class="tieu-de-cua-hang">Hà Nội</h3>
+                        <div class="vung-dia-chi">
+                            <p class="dia-chi-chi-tiet font-semibold">Fleur Bridal Lotte Mall</p>
+                            <p class="dia-chi-chi-tiet">Tầng 2, Lotte Mall Tây Hồ, Hà Nội</p>
+                        </div>
+                    </div>
+
+                    <div class="khung-nut">
+                        <a href="https://maps.app.goo.gl/p2PygcGSmgHCavA99" target="_blank"
+                            class="nut-chung nut-ban-do">
+                            <span>Xem Bản Đồ</span>
+                        </a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=281+Trường+Chinh,+Phương+Liệt,+Hà+Nội"
+                            target="_blank" class="nut-chung nut-chi-duong">
+                            <span>Chỉ Đường</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- CHI NHÁNH 4: TP.HCM (Quận 1) -->
+                <div class="khung-chi-nhanh">
+                    <div>
+                        <h3 class="tieu-de-cua-hang">TP.Hồ Chí Minh</h3>
+                        <div class="vung-dia-chi">
+                            <p class="dia-chi-chi-tiet font-semibold">Fleur Bridal Saigon Centre</p>
+                            <p class="dia-chi-chi-tiet">Tòa nhà Saigon Centre, Quận 1, TPHCM</p>
+                        </div>
+                    </div>
+
+                    <div class="khung-nut">
+                        <a href="https://maps.app.goo.gl/FWVVAVR8HGSyc3ub7" target="_blank"
+                            class="nut-chung nut-ban-do">
+                            <span>Xem Bản Đồ</span>
+                        </a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=32+Nguyễn+Đình+Chiểu,+Quận+1,+TP.+Hồ+Chí+Minh"
+                            target="_blank" class="nut-chung nut-chi-duong">
+                            <span>Chỉ Đường</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- CHI NHÁNH 6: Đà Nẵng -->
+                <div class="khung-chi-nhanh">
+                    <div>
+                        <h3 class="tieu-de-cua-hang">Đà Nẵng</h3>
+                        <div class="vung-dia-chi">
+                            <p class="dia-chi-chi-tiet font-semibold">Fleur Bridal Võ Văn Tần</p>
+                            <p class="dia-chi-chi-tiet">40 Võ Văn Tần, Quận 3, TPHCM</p>
+                        </div>
+                    </div>
+
+                    <div class="khung-nut">
+                        <a href="https://maps.app.goo.gl/6qnnSijSrX9BEPhLA" target="_blank"
+                            class="nut-chung nut-ban-do">
+                            <span>Xem Bản Đồ</span>
+                        </a>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=20+Điện+Biên+Phủ,+P.+Thanh+Khê+Đông,+Q+Thanh+Khê,+Đà+Nẵng"
+                            target="_blank" class="nut-chung nut-chi-duong">
+                            <span>Chỉ Đường</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
+    <!-- Nơi footer sẽ được chèn -->
+    <div id="footer"></div>
+    <!-- Script để load header + footer và gắn sự kiện -->
+    <script src="./header_footer/header_footer.js"></script>
 </body>
+
 </html>

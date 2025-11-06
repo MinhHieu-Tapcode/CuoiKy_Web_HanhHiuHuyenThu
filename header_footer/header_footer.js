@@ -1,10 +1,21 @@
-// === XÁC ĐỊNH ĐƯỜNG DẪN CHUNG ===
+// === XÁC ĐỊNH ĐƯỜNG DẪN CHUNG (CHẠY LOCAL & GITHUB, DÙ FILE NẰM Ở THƯ MỤC CON) ===
 let basePath = "";
-if (window.location.pathname.includes("/header_footer/")) {
-  basePath = "./";
+const origin = window.location.origin;
+const pathname = window.location.pathname;
+
+// Kiểm tra nếu đang chạy local (VD: Live Server, localhost)
+const isLocal = origin.includes("127.0.0.1") || origin.includes("localhost");
+
+if (isLocal) {
+  // --- LOCAL: tự động tính số cấp thư mục để quay về gốc ---
+  const depth = pathname.split("/").length - 2;
+  basePath = "../".repeat(depth) + "header_footer/";
 } else {
-  basePath = "./header_footer/";
+  // --- GITHUB PAGES: luôn dùng đường dẫn tuyệt đối ---
+  basePath = "/CuoiKy_Web_HanhHiuHuyenThu/header_footer/";
 }
+
+console.log("Base path:", basePath);
 
 // === TẢI HEADER ===
 fetch(basePath + "header.html")

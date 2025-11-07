@@ -122,35 +122,30 @@
             color: #333;
         }
 
-        .dark-background {
-            background-color: #2b2b2b;
-            border-color: #555;
-            color: #fff;
-        }
-
-        .dark-background h2,
-        .dark-background p {
-            color: #fff;
-        }
-
-        .full-page-center-wrapper {
-            height: 70vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .center-content-section {
-            max-width: 800px;
-            width: 60%;
-            text-align: center;
-            margin: 0;
-            margin-top: 0;
-            padding-top: 0;
-
-        }
-
-        .center-content-section h2 {
+.dark-background {
+    background-color: #2b2b2b;
+    border-color: #555;
+    color: #fff;
+}
+.dark-background h2, .dark-background p {
+    color: #fff;
+} 
+.full-page-center-wrapper {
+    height: 70vh;           
+    display: flex;           
+    justify-content: center; 
+    align-items: center;    
+   }
+.center-content-section {
+    max-width: 800px;        
+    width: 60%;
+    text-align: center;      
+     margin: 0 ;
+    margin-top: 0;
+    padding-top: 0;
+    
+}
+.center-content-section h2 {
             font-size: 2em;
             margin-bottom: 0.2em;
         }
@@ -635,9 +630,8 @@
         </section>
         <section class="bg-gray-50 font-sans p-4 sm:p-8">
             <section class="max-w-7xl mx-auto mt-0">
-                <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-10"
-                    style="text-align: center; margin-bottom: 10px;"> Cô Dâu Của Fleur </h1>
-                <!-- 
+        <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-10" style="text-align: center; margin-bottom: 10px;"> Cô Dâu Của Fleur </h1>
+        <!-- 
             - flex: Kích hoạt flex.
             - overflow-x-auto: Tạo thanh cuộn ngang khi nội dung tràn ra.
             - flex-nowrap: Quan trọng để giữ tất cả item trên 1 hàng.
@@ -678,7 +672,7 @@
         </section>
 
         <section>
-            <h1 style="text-align: center;">Đội ngũ của chúng tôi</h1>
+            <h1 class="tieu-de-chinh">Đội ngũ của chúng tôi</h1>
             <div class="precise-overlay-container layout-left">
 
                 <div class="image-column-fixed">
@@ -766,37 +760,32 @@
                 </a>
             </section>
 
+</div>
+   
+    <div class="precise-overlay-container layout-left" >
+    <div class="image-column-fixed">
+    <h2 style="text-align: center;">Cửa hàng FLEUR</h2>
+    <img src="asset/img/gioithieu/gioithieu6.jpg" alt="GT6">
+    </div>
+     <div class= "non-overlay-content-box">
+            <p>Bộ sưu tập váy cưới của Fleur mang đến những thiết kế tinh xảo, tôn vinh vẻ đẹp thanh lịch của cô dâu hiện đại.
+Đội ngũ tư vấn và stylist chuyên nghiệp của Fleur sẽ giúp bạn hoàn thiện phong cách với phụ kiện, giày và trang sức hài hòa cho ngày trọng đại.</p>
+                <a href="bosuutap.html" class="bst" alt="bosuutap"><h3 style="font-weight: normal;">XEM THÊM</h3></a>
+          </div>
+    
+</div>
+<section class="contact-form-section">
+    
+    <div class="form-wrapper">
+        <div class="form-header">
+            <a href="#store-form" class="tab-link active" data-target="store-form">CỬA HÀNG</a>
+            <a href="#bride-form" class="tab-link" data-target="bride-form">KHÁCH HÀNG</a>
+            <a href="#feedback-form" class="tab-link" data-target="feedback-form">ĐÁNH GIÁ</a>
         </div>
-
-        <div class="precise-overlay-container layout-left">
-            <div class="image-column-fixed">
-                <h2 style="text-align: center;">Cửa hàng FLEUR</h2>
-                <img src="asset/img/gioithieu/gioithieu6.jpg" alt="GT6">
-            </div>
-            <div class="non-overlay-content-box">
-                <p>Bộ sưu tập váy cưới của Fleur mang đến những thiết kế tinh xảo, tôn vinh vẻ đẹp thanh lịch của cô dâu
-                    hiện đại.
-                    Đội ngũ tư vấn và stylist chuyên nghiệp của Fleur sẽ giúp bạn hoàn thiện phong cách với phụ kiện,
-                    giày
-                    và trang sức hài hòa cho ngày trọng đại.</p>
-                <a href="bosuutap.html" class="bst" alt="bosuutap">
-                    <h3 style="font-weight: normal;">XEM THÊM</h3>
-                </a>
-            </div>
-
-        </div>
-        <section class="contact-form-section">
-
-            < class="form-wrapper">
-                <div class="form-header">
-                    <a href="#store-form" class="tab-link active" data-target="store-form">CỬA HÀNG</a>
-                    <a href="#bride-form" class="tab-link" data-target="bride-form">KHÁCH HÀNG</a>
-                    <a href="#feedback-form" class="tab-link" data-target="feedback-form">ĐÁNH GIÁ</a>
-                </div>
-
-                <form class="contact-form active-form" id="store-form">
-                    <label for="store_salon">Tên Cửa hàng*</label>
-                    <input type="text" id="store_salon" name="salon" required>
+        
+        <form class="contact-form active-form" id="store-form">
+            <label for="store_salon">Tên Cửa hàng*</label>
+            <input type="text" id="store_salon" name="salon" required>
 
                     <label for="store_country">Quốc gia*</label>
                     <input type="text" id="store_country" name="country" required>

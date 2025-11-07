@@ -1,44 +1,51 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html lang="vi">
 
 <head>
-<meta charset="utf-8">
-<title>Fleur Official</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap&subset=vietnamese" rel="stylesheet">
-<link rel="icon" type="image/png" href="asset/img/trangchu/logobe.png">
-<style>
- @import url('asset/css/main.css');
-/**video đầu trang**/
+  <meta charset="utf-8">
+  <title>Fleur Official</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap&subset=vietnamese"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="asset/img/trangchu/logobe.png">
+  <style>
+    @import url('asset/css/main.css');
+
+    /**video đầu trang**/
     .video-section {
-     position: relative;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;;
-     z-index: 0;
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      ;
+      z-index: 0;
     }
-   .video-section video {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     display: block;
+
+    .video-section video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
+
     .overlay-text {
-     position: absolute;
-     bottom: 60px;
-     left: 80px;
-     color: white;
-     font-size: 2rem;
-     letter-spacing: 2px;
-     font-weight: 300;
-     z-index: 2;
+      position: absolute;
+      bottom: 60px;
+      left: 80px;
+      color: white;
+      font-size: 2rem;
+      letter-spacing: 2px;
+      font-weight: 300;
+      z-index: 2;
     }
-/**intro-section**/
+
+    /**intro-section**/
     .intro-section {
       text-align: center;
       padding: 40px 0;
     }
+
     .intro-title {
       background-color: #fff;
       font-size: 36px;
@@ -47,6 +54,7 @@
       padding: 40px 0;
       border-bottom: 1px;
     }
+
     .intro-content {
       display: flex;
       justify-content: space-between;
@@ -55,31 +63,36 @@
       padding: 40px 40px;
       border-top: 1px;
     }
+
     .intro-left h3 {
       margin: 0;
       font-size: 16px;
       font-weight: 500;
       color: #fff;
     }
-    .intro-middle p{
-     flex: 1;
-     margin: 0 20px;
-     text-align: left;
-     line-height: 1.4;
-     color: #fff;
+
+    .intro-middle p {
+      flex: 1;
+      margin: 0 20px;
+      text-align: left;
+      line-height: 1.4;
+      color: #fff;
     }
+
     .btn-more {
-     display: inline-block;
-     font-family: 'Montserrat', sans-serif;
-     background-color: #e3e3e3;
-     border-radius: 5px;
-     padding: 6px 12px;
-     font-weight: 500;
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #e3e3e3;
+      border-radius: 5px;
+      padding: 6px 12px;
+      font-weight: 500;
     }
+
     .btn-more:hover {
       background-color: beige;
     }
-    .intro-section h1{
+
+    .intro-section h1 {
       background-color: #fff;
       font-size: 36px;
       font-weight: 600;
@@ -87,93 +100,111 @@
       padding: 40px 0;
       border-bottom: 1px;
     }
-/**collection-section**/
- /**phần chung**/
-    .collection-section{
+
+    /**collection-section**/
+    /**phần chung**/
+    .collection-section {
       height: 100vh;
     }
-    .collection-container{
+
+    .collection-container {
       position: relative;
       display: flex;
       align-items: flex-start;
       max-width: 1200px;
       margin: 0 auto;
     }
-    .collection-image{
+
+    .collection-image {
       flex: 0 0 70%;
       z-index: 1;
       height: 600px;
       overflow: hidden;
     }
-    .collection-image img{
+
+    .collection-image img {
       width: 100%;
       height: 100%;
       display: block;
       object-fit: cover;
     }
-    .collection-content{
+
+    .collection-content {
       position: absolute;
       flex: 0 0 40%;
       width: 50%;
       padding: 40px;
       z-index: 2;
-      border: 1px solid rgba(0, 0, 0, 0.1); 
+      border: 1px solid rgba(0, 0, 0, 0.1);
       margin-top: 50px;
       margin-left: 0;
       margin-right: 0;
     }
-/**phần riêng**/
-    .collection-section.dark{
+
+    /**phần riêng**/
+    .collection-section.dark {
       background-color: #2b2b2b;
     }
-    .collection-section.light{
+
+    .collection-section.light {
       background-color: #e3e3e3;
     }
-    .dark .collection-container{
+
+    .dark .collection-container {
       flex-direction: row;
     }
-    .dark .collection-content{
+
+    .dark .collection-content {
       margin-left: 700px;
       background-color: #e3e3e3;
       color: #2b2b2b;
     }
-    .dark .collection-btn{
+
+    .dark .collection-btn {
       padding: 10px 20px;
       background-color: #2b2b2b;
       color: #e3e3e3;
       border-radius: 5px;
     }
-    .dark .collection-btn:hover{
+
+    .dark .collection-btn:hover {
       background-color: gray;
     }
-    .light .collection-container{
+
+    .light .collection-container {
       flex-direction: row-reverse;
     }
-    .light .collection-content{
+
+    .light .collection-content {
       margin-right: 700px;
       color: #e3e3e3;
-      background-color: #2b2b2b;   
+      background-color: #2b2b2b;
     }
+
     .light .collection-content h2,
-    .light .collection-content p{
+    .light .collection-content p {
       color: #e3e3e3;
     }
-    .light .collection-btn{
+
+    .light .collection-btn {
       padding: 10px 20px;
       background-color: #e3e3e3;
       color: #2b2b2b;
       border-radius: 5px;
     }
-    .light .collection-btn:hover{
+
+    .light .collection-btn:hover {
       background-color: beige;
     }
-/**branding-section**/
-    .branding-section{
+
+    /**branding-section**/
+    .branding-section {
       height: 100px 0;
       background-color: #2b2b2b;
       padding: 40px 0;
     }
-    .branding-container{
+
+    .branding-container {
       display: flex;
       max-width: 1200px;
       width: 90%;
@@ -183,11 +214,13 @@
       margin: 0 auto;
       padding: 20px;
     }
-    .branding-left{
+
+    .branding-left {
       flex: 0 0 35%;
-      margin-right: 20px    
+      margin-right: 20px
     }
-    .branding-title{
+
+    .branding-title {
       font-size: 4em;
       font-weight: 600;
       margin: 0 0 20px 0;
@@ -195,70 +228,85 @@
       position: relative;
       padding-bottom: 20px;
     }
-    .branding-title::after{
+
+    .branding-title::after {
       content: " ";
-      position: absolute;  
+      position: absolute;
       left: 0;
       bottom: 0;
       width: 400px;
       height: 1px;
-      background-color: #2b2b2b;  
+      background-color: #2b2b2b;
     }
-    .branding-USP{
+
+    .branding-USP {
       display: flex;
       align-items: center;
       margin-top: 20px;
     }
-    .branding-logo{
-      width: 200px; /* Kích thước logo */
+
+    .branding-logo {
+      width: 200px;
+      /* Kích thước logo */
       height: auto;
       margin-right: 15px;
-    } 
-    .branding-text{
+    }
+
+    .branding-text {
       font-size: 0.9em;
       line-height: 1.3;
     }
-    .branding-description{
-      flex: 1; /* Cột phải chiếm phần còn lại */
+
+    .branding-description {
+      flex: 1;
+      /* Cột phải chiếm phần còn lại */
       font-size: 0.9em;
-      line-height: 1.8; /* Khoảng cách dòng lớn hơn để dễ đọc */
+      line-height: 1.8;
+      /* Khoảng cách dòng lớn hơn để dễ đọc */
     }
-/**fomula-section**/
-    .fomula-section{
+
+    /**fomula-section**/
+    .fomula-section {
       background-color: #e3e3e3;
       text-align: center;
       padding: 50px 0;
     }
-    .fomula-section h2{
+
+    .fomula-section h2 {
       font-size: 35px;
       letter-spacing: 1px;
       margin-bottom: 40px;
     }
-    .fomula-items{
+
+    .fomula-items {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 60px;
       margin-bottom: 40px;
     }
-    .fomula-item{
+
+    .fomula-item {
       text-align: center;
       font-size: 20px;
       font-weight: 500;
     }
-    .fomula-line{
+
+    .fomula-line {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 10px;
     }
-    .fomula-line .line{
+
+    .fomula-line .line {
       flex: 1;
       height: 1px;
       background-color: #2b2b2b;
       max-width: 900px;
     }
-    .fomula-section .btn-more{
+
+    .fomula-section .btn-more {
       background-color: #2b2b2b;
       color: #e3e3e3;
       padding: 12px 40px;
@@ -267,17 +315,20 @@
       font-size: 16px;
       letter-spacing: 1px;
     }
-    .fomula-section .btn-more:hover{
+
+    .fomula-section .btn-more:hover {
       background-color: gray;
     }
-/**blog-section**/
-    .blog-section{
+
+    /**blog-section**/
+    .blog-section {
       height: 100vh;
       background-color: #2b2b2b;
       padding: 40px 0;
       color: #e3e3e3;
     }
-    .blog-header{
+
+    .blog-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -285,22 +336,26 @@
       margin: 0 auto 40px auto;
       padding: 0 20px;
     }
-    .blog-header h2{
+
+    .blog-header h2 {
       color: #fff;
       font-size: 28px;
       margin: 0;
       align-items: center;
     }
-    .blog-header .btn-more{
+
+    .blog-header .btn-more {
       background-color: #e3e3e3;
       color: #2b2b2b;
       padding: 10px 20px;
       border-radius: 5px;
-    } 
-    .blog-header .btn-more:hover{
+    }
+
+    .blog-header .btn-more:hover {
       background-color: beige;
     }
-    .blog-items{
+
+    .blog-items {
       gap: 50px;
       max-width: 1400px;
       margin: 0 100px;
@@ -310,10 +365,13 @@
       scroll-behavior: smooth;
       scrollbar-width: none;
     }
+
     .blog-items::-webkit-scrollbar {
-      display: none; /* ẩn scrollbar Chrome/Safari */
+      display: none;
+      /* ẩn scrollbar Chrome/Safari */
     }
-    .blog-item{
+
+    .blog-item {
       flex: 0 0 300px;
       height: 500px;
       background-color: #e3e3e3;
@@ -325,21 +383,25 @@
       flex-direction: column;
       flex-shrink: 0;
     }
-    .blog-item img{
+
+    .blog-item img {
       width: 100%;
       height: 400px;
       object-fit: cover;
     }
-    .blog-item .date{
+
+    .blog-item .date {
       text-align: center;
       font-size: 12px;
       color: gray;
       margin: 10px 20px 0 20px;
     }
-    .blog-item h3{
+
+    .blog-item h3 {
       font-size: 18px;
       margin: 10px 20px;
     }
+
     .blog-sidebar {
       width: 20%;
       height: 4px;
@@ -349,46 +411,57 @@
       border-radius: 5px;
       position: relative;
     }
+
     .slider-progress {
       width: 50%;
       height: 100%;
       background: #fff;
       border-radius: 5px;
       transition: width 1.2s ease;
-} 
-/**insta-section**/
-    .insta-section{
+    }
+
+    /**insta-section**/
+    .insta-section {
       height: 80%;
       background-color: #e3e3e3;
       text-align: center;
       padding: 60px 20px;
       overflow: hidden;
     }
-    .insta-section h2{
+
+    .insta-section h2 {
       font-size: 25px;
       margin-bottom: 5px;
     }
+
     .insta-feed {
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     overflow-x: auto;
-     scroll-behavior: smooth;
-     padding: 5px 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 5px 50px;
     }
+
     .insta-feed::-webkit-scrollbar {
       display: none;
     }
-    .snapwidget-widget{
-      width: 2000px !important;  /* tăng chiều ngang */
-      height: 250px !important;  /* tăng chiều cao */
-      transform-origin: center;     /* phóng ra giữa, không lệch */
-      margin: 0 15px;               /* khoảng cách giữa các khung ảnh */
+
+    .snapwidget-widget {
+      width: 2000px !important;
+      /* tăng chiều ngang */
+      height: 250px !important;
+      /* tăng chiều cao */
+      transform-origin: center;
+      /* phóng ra giữa, không lệch */
+      margin: 0 15px;
+      /* khoảng cách giữa các khung ảnh */
       flex-shrink: 0;
       border: none;
     }
+
     .arrow {
-      background: rgba(0,0,0,0.5);
+      background: rgba(0, 0, 0, 0.5);
       color: #fff;
       border: none;
       font-size: 30px;
@@ -405,18 +478,22 @@
       position: sticky;
       z-index: 10;
     }
+
     .arrow.left {
       left: 20px;
       margin-right: auto;
     }
+
     .arrow.right {
       right: 20px;
       margin-left: auto;
     }
+
     .arrow:hover {
-     background: #000;
-   }
-    .insta-section .btn-more{
+      background: #000;
+    }
+
+    .insta-section .btn-more {
       background-color: #2b2b2b;
       color: #e3e3e3;
       padding: 5px 40px;
@@ -425,10 +502,12 @@
       font-size: 16px;
       letter-spacing: 1px;
     }
-    .insta-section .btn-more:hover{
+
+    .insta-section .btn-more:hover {
       background-color: gray;
     }
-/**contact-form-section**/
+
+    /**contact-form-section**/
     .contact-form-section {
       position: relative;
       padding: 80px 0;
@@ -439,6 +518,7 @@
       background-color: #2b2b2b;
       overflow: hidden;
     }
+
     .form-wrapper {
       position: relative;
       z-index: 1;
@@ -446,433 +526,475 @@
       padding: 100px 80px;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
       width: 100%;
-      max-width: 600px; 
+      max-width: 600px;
     }
+
     .form-header {
-     display: flex;
-     justify-content: space-around;
-     margin-bottom: 40px;
-     padding-bottom: 10px;
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 40px;
+      padding-bottom: 10px;
     }
+
     .tab-link {
-    text-decoration: none;
-    padding: 5px 15px;
-    transition: border-bottom 0.3s;
-    cursor: pointer;
+      text-decoration: none;
+      padding: 5px 15px;
+      transition: border-bottom 0.3s;
+      cursor: pointer;
     }
+
     .tab-link.active {
-    border-bottom: 2px solid #000000; /* Viền dưới tab active màu đen */
+      border-bottom: 2px solid #000000;
+      /* Viền dưới tab active màu đen */
     }
+
     .contact-form {
-      display: none; /* Mặc định ẩn */
+      display: none;
+      /* Mặc định ẩn */
       opacity: 0;
       transition: opacity 0.3s ease-in-out;
     }
+
     .contact-form.active-form {
-      display: block; /* Hiện khi có class active-form */
+      display: block;
+      /* Hiện khi có class active-form */
       opacity: 1;
     }
-  .contact-form label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
-    margin-top: 20px;
-    color: #000000; /* Label màu đen */
-  }
-  .contact-form input[type="text"],
-  .contact-form input[type="email"],
-  .contact-form input[type="tel"],
-  .contact-form textarea,
-  .contact-form select { 
-    width: 100%;
-    padding: 8px 0;
-    border: none;
-    border-bottom: 1px solid #2b2b2b; /* Gạch dưới màu xám đậm */
-    background: transparent;
-    font-size: 16px;
-    color: #000000; /* Input text màu đen */
-    outline: none;
-  }
-  .contact-form textarea {
-    resize: vertical;
-    min-height: 50px;
-  }
-  .submit-btn {
-    display: block;
-    width: 100%;
-    padding: 12px;
-    margin-top: 40px;
-    background-color: #2b2b2b;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: 300;
-    transition: background-color 0.3s;
-  }
-  .submit-btn:hover {
-    background-color: #555555;
-  }
-  /**phục vụ cho script*/
-  [data-animate] {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1.2s ease;
-    will-change: transform, opacity;
-    overflow: visible;
-  }
-  [data-animate].show {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  [data-animate="slide-in"] {
-   transform: translateY(50px);
-  }
-  [data-animate="slide-left"] {
-   transform: translateX(-50px);
-  }
-  [data-animate="slide-right"] {
-   transform: translateX(50px);
-  }
 
-</style>
+    .contact-form label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+      margin-top: 20px;
+      color: #000000;
+      /* Label màu đen */
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form input[type="tel"],
+    .contact-form textarea,
+    .contact-form select {
+      width: 100%;
+      padding: 8px 0;
+      border: none;
+      border-bottom: 1px solid #2b2b2b;
+      /* Gạch dưới màu xám đậm */
+      background: transparent;
+      font-size: 16px;
+      color: #000000;
+      /* Input text màu đen */
+      outline: none;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 50px;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-top: 40px;
+      background-color: #2b2b2b;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 300;
+      transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #555555;
+    }
+
+    /**phục vụ cho script*/
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1.2s ease;
+      will-change: transform, opacity;
+      overflow: visible;
+    }
+
+    [data-animate].show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    [data-animate="slide-in"] {
+      transform: translateY(50px);
+    }
+
+    [data-animate="slide-left"] {
+      transform: translateX(-50px);
+    }
+
+    [data-animate="slide-right"] {
+      transform: translateX(50px);
+    }
+  </style>
 </head>
 
 <body>
- <div class="video-section">
-   <video autoplay muted loop>
-    <source src="asset/img/trangchu/Video_trangchu.mp4" type="video/mp4">
-    Fleur - Video đầu trang
-   </video>
-   <div class="overlay-text" data-animate="slide-in">
-    Fleur - Thiên đường váy cưới
-   </div>
- </div>
+    <!-- Nơi header sẽ được chèn -->
+  <div id="header"></div>
+  
+  <div class="video-section">
+    <video autoplay muted loop>
+      <source src="asset/img/trangchu/Video_trangchu.mp4" type="video/mp4">
+      Fleur - Video đầu trang
+    </video>
+    <div class="overlay-text" data-animate="slide-in">
+      Fleur - Thiên đường váy cưới
+    </div>
+  </div>
 
- <section class="intro-section">
-     <h1 class="intro-title" data-animate>Fleur Bridal House</h1>
-      <div class="intro-content" data-animate>
-     <div class="intro-left">
-      <h3>Giới thiệu</h3>
-     </div>
-     <div class="intro-middle">
-      <p>
-        Fleur được thành lập từ năm 2020 tại Hà Nội, với khát vọng tạo nên những chiếc váy cưới như tác phẩm nghệ thuật 
-        dành riêng cho cô dâu Việt Nam mang phong cách quốc tế. Ban đầu chỉ là một xưởng thủ công nhỏ, Fleur nhanh chóng 
-        phát triển nhờ sự kết hợp giữa kỹ thuật may couture và cảm hứng từ những viên ngọc trắng tinh khôi.
-      </p>
-     </div>
-     <div class="intro-right">
-      <button class="btn-more">Xem thêm</button>
-     </div>
-     </div>
-  <h1 data-animate>Bộ sưu tập tại Fleur</h1>
- </section>
+  <section class="intro-section">
+    <h1 class="intro-title" data-animate>Fleur Bridal House</h1>
+    <div class="intro-content" data-animate>
+      <div class="intro-left">
+        <h3>Giới thiệu</h3>
+      </div>
+      <div class="intro-middle">
+        <p>
+          Fleur được thành lập từ năm 2020 tại Hà Nội, với khát vọng tạo nên những chiếc váy cưới như tác phẩm nghệ
+          thuật
+          dành riêng cho cô dâu Việt Nam mang phong cách quốc tế. Ban đầu chỉ là một xưởng thủ công nhỏ, Fleur nhanh
+          chóng
+          phát triển nhờ sự kết hợp giữa kỹ thuật may couture và cảm hứng từ những viên ngọc trắng tinh khôi.
+        </p>
+      </div>
+      <div class="intro-right">
+        <button class="btn-more">Xem thêm</button>
+      </div>
+    </div>
+    <h1 data-animate>Bộ sưu tập tại Fleur</h1>
+  </section>
 
- <section class="collection-section dark">
-  <div class="collection-container" data-animate="slide-right">
-    <div class="collection-image">
-      <img src="asset/img/trangchu/Bst1.png" alt="Bộ sưu tập Fleur">
+  <section class="collection-section dark">
+    <div class="collection-container" data-animate="slide-right">
+      <div class="collection-image">
+        <img src="asset/img/trangchu/Bst1.png" alt="Bộ sưu tập Fleur">
+      </div>
+      <div class="collection-content">
+        <h2>Hương sắc Á Đông - Nét duyên Việt chạm vào từng sợi lụa</h2>
+        <p>
+          BST "Hương sắc Á Đông" là bản hòa ca của vẻ đẹp truyền thống và tinh thần hiện đại.
+          Mỗi tà áo dài như một bức họa sống động, tôn vinh nét duyên dáng của người phụ nữ Việt.
+          Những đường thêu tỉ mỉ, hoa văn mềm mại, chất lụa óng ánh - tất cả cùng kể lại câu chuyện
+          về sự thanh tao và kiêu hãnh. Gam màu trầm tinh tế hòa cùng sắc son nhẹ, tạo nên vẻ đẹp vừa cổ
+          điển vừa thời thượng. "Hương sắc Á Đông" là lời tri ân với cội nguồn, là dấu ấn của trang nhã
+          vượt thời gian.
+        </p>
+        <a href="#" class="collection-btn">Xem thêm</a>
+      </div>
     </div>
-    <div class="collection-content">
-    <h2>Hương sắc Á Đông - Nét duyên Việt chạm vào từng sợi lụa</h2>
-    <p>
-      BST "Hương sắc Á Đông" là bản hòa ca của vẻ đẹp truyền thống và tinh thần hiện đại.
-      Mỗi tà áo dài như một bức họa sống động, tôn vinh nét duyên dáng của người phụ nữ Việt.
-      Những đường thêu tỉ mỉ, hoa văn mềm mại, chất lụa óng ánh - tất cả cùng kể lại câu chuyện
-      về sự thanh tao và kiêu hãnh. Gam màu trầm tinh tế hòa cùng sắc son nhẹ, tạo nên vẻ đẹp vừa cổ
-      điển vừa thời thượng. "Hương sắc Á Đông" là lời tri ân với cội nguồn, là dấu ấn của trang nhã 
-      vượt thời gian.
-    </p>
-    <a href="#" class="collection-btn">Xem thêm</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="collection-section light">
-  <div class="collection-container" data-animate="slide-left">
-    <div class="collection-image">
-      <img src="asset/img/trangchu/Bst2.png" alt="Bộ sưu tập Fleur">
+  <section class="collection-section light">
+    <div class="collection-container" data-animate="slide-left">
+      <div class="collection-image">
+        <img src="asset/img/trangchu/Bst2.png" alt="Bộ sưu tập Fleur">
+      </div>
+      <div class="collection-content">
+        <h2>Thanh âm của tình yêu - Mỗi nếp váy là một giai điệu, ngân nga bản tình ca của hạnh phúc</h2>
+        <p>
+          Như một khúc tình ca dịu dàng, “Thanh Âm Của Tình Yêu” tái hiện khoảnh khắc trái tim hòa chung
+          nhịp đập. Mỗi thiết kế là sự kết hợp hài hòa giữa ren mềm, voan mỏng và ánh sáng phản chiếu của cườm ngọc -
+          tựa như giai điệu của yêu thương ngân vang trong không khí. BST mang đến cảm giác bay bổng, lãng mạn và đầy
+          xúc
+          cảm, dành cho những cô dâu mơ mộng, tin vào phép màu của tình yêu. “Thanh Âm Của Tình Yêu” không chỉ là váy
+          cưới
+          - đó là bản nhạc của hạnh phúc được dệt nên bằng từng sợi chỉ.
+        </p>
+        <a href="#" class="collection-btn">Xem thêm</a>
+      </div>
     </div>
-    <div class="collection-content">
-    <h2>Thanh âm của tình yêu - Mỗi nếp váy là một giai điệu, ngân nga bản tình ca của hạnh phúc</h2>
-    <p>
-      Như một khúc tình ca dịu dàng, “Thanh Âm Của Tình Yêu” tái hiện khoảnh khắc trái tim hòa chung 
-      nhịp đập. Mỗi thiết kế là sự kết hợp hài hòa giữa ren mềm, voan mỏng và ánh sáng phản chiếu của cườm ngọc -
-      tựa như giai điệu của yêu thương ngân vang trong không khí. BST mang đến cảm giác bay bổng, lãng mạn và đầy xúc 
-      cảm, dành cho những cô dâu mơ mộng, tin vào phép màu của tình yêu. “Thanh Âm Của Tình Yêu” không chỉ là váy cưới 
-      - đó là bản nhạc của hạnh phúc được dệt nên bằng từng sợi chỉ.
-    </p>
-    <a href="#" class="collection-btn">Xem thêm</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="collection-section dark">
-  <div class="collection-container" data-animate="slide-right">
-    <div class="collection-image">
-      <img src="asset/img/trangchu/Bst3.png" alt="Bộ sưu tập Fleur">
+  <section class="collection-section dark">
+    <div class="collection-container" data-animate="slide-right">
+      <div class="collection-image">
+        <img src="asset/img/trangchu/Bst3.png" alt="Bộ sưu tập Fleur">
+      </div>
+      <div class="collection-content">
+        <h2>Hẹn ước trăm năm - Bởi có những lời hứa không cần nói, chỉ cần cùng nhau đi đến cuối con
+          đường</h2>
+        <p>
+          “Hẹn Ước Trăm Năm” là bản giao hòa của sự vĩnh cửu và tình yêu chân thành. Lấy cảm hứng từ khoảnh khắc
+          đôi mắt chạm nhau trong lời thề nguyện, BST sử dụng chất liệu satin, ren chantilly và lụa tơ tằm - tượng
+          trưng cho sự bền chặt và thanh khiết. Mỗi chi tiết thêu tay, mỗi lớp vải xếp nếp đều chứa đựng lời hứa
+          về một hành trình dài cùng nhau. “Hẹn Ước Trăm Năm” dành cho cô dâu chọn tình yêu không chỉ cho hôm nay,
+          mà cho cả mai sau.
+        </p>
+        <a href="#" class="collection-btn">Xem thêm</a>
+      </div>
     </div>
-    <div class="collection-content">
-    <h2>Hẹn ước trăm năm - Bởi có những lời hứa không cần nói, chỉ cần cùng nhau đi đến cuối con đường</h2>
-    <p>
-      “Hẹn Ước Trăm Năm” là bản giao hòa của sự vĩnh cửu và tình yêu chân thành. Lấy cảm hứng từ khoảnh khắc 
-      đôi mắt chạm nhau trong lời thề nguyện, BST sử dụng chất liệu satin, ren chantilly và lụa tơ tằm - tượng 
-      trưng cho sự bền chặt và thanh khiết. Mỗi chi tiết thêu tay, mỗi lớp vải xếp nếp đều chứa đựng lời hứa 
-      về một hành trình dài cùng nhau. “Hẹn Ước Trăm Năm” dành cho cô dâu chọn tình yêu không chỉ cho hôm nay, 
-      mà cho cả mai sau.
-    </p>
-    <a href="#" class="collection-btn">Xem thêm</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="collection-section light">
-  <div class="collection-container" data-animate="slide-left">
-    <div class="collection-image">
-      <img src="asset/img/trangchu/Bst4.png" alt="Bộ sưu tập Fleur">
+  <section class="collection-section light">
+    <div class="collection-container" data-animate="slide-left">
+      <div class="collection-image">
+        <img src="asset/img/trangchu/Bst4.png" alt="Bộ sưu tập Fleur">
+      </div>
+      <div class="collection-content">
+        <h2>Lời thì thầm hoa sương - Giọt sương khẽ rơi trên cánh hoa, như tình yêu dịu dàng thì thầm trong
+          nắng sớm </h2>
+        <p>
+          BST “Lời Thì Thầm Hoa Sương” mang hơi thở của buổi sớm tinh mơ, nơi những cánh hoa còn vương giọt sương trong
+          trẻo.
+          Thiết kế nhẹ như làn khói, mềm như hơi thở, với những hạt sequin phản chiếu ánh sáng dịu dàng. Tông màu trắng
+          ngà
+          và hồng phấn hòa quyện tạo nên vẻ đẹp mong manh, tinh khôi và thuần khiết. Mỗi chiếc váy là lời thì thầm dịu
+          ngọt
+          của thiên nhiên gửi đến người phụ nữ - e ấp, lãng mạn mà rạng rỡ như ánh nắng đầu ngày.
+        </p>
+        <a href="#" class="collection-btn">Xem thêm</a>
+      </div>
     </div>
-    <div class="collection-content">
-    <h2>Lời thì thầm hoa sương - Giọt sương khẽ rơi trên cánh hoa, như tình yêu dịu dàng thì thầm trong nắng sớm </h2>
-    <p>
-      BST “Lời Thì Thầm Hoa Sương” mang hơi thở của buổi sớm tinh mơ, nơi những cánh hoa còn vương giọt sương trong trẻo. 
-      Thiết kế nhẹ như làn khói, mềm như hơi thở, với những hạt sequin phản chiếu ánh sáng dịu dàng. Tông màu trắng ngà 
-      và hồng phấn hòa quyện tạo nên vẻ đẹp mong manh, tinh khôi và thuần khiết. Mỗi chiếc váy là lời thì thầm dịu ngọt 
-      của thiên nhiên gửi đến người phụ nữ - e ấp, lãng mạn mà rạng rỡ như ánh nắng đầu ngày.
-    </p>
-    <a href="#" class="collection-btn">Xem thêm</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="collection-section dark">
-  <div class="collection-container" data-animate="slide-right">
-    <div class="collection-image">
-      <img src="asset/img/trangchu/Bst5.png" alt="Bộ sưu tập Fleur">
+  <section class="collection-section dark">
+    <div class="collection-container" data-animate="slide-right">
+      <div class="collection-image">
+        <img src="asset/img/trangchu/Bst5.png" alt="Bộ sưu tập Fleur">
+      </div>
+      <div class="collection-content">
+        <h2>Ánh bình minh - Nắng đầu ngày chạm nhẹ lên vai, khởi đầu cho một hành trình yêu thương rạng rỡ
+        </h2>
+        <p>
+          Tựa như mặt trời khẽ thức giấc sau màn sương, “Ánh Bình Minh” tỏa sáng với năng lượng tươi mới và hy vọng.
+          BST tôn vinh vẻ đẹp rạng rỡ, tràn đầy sức sống của cô dâu hiện đại. Sự kết hợp giữa chất liệu organza trong
+          suốt và lụa satin mịn màng tạo nên cảm giác bồng bềnh, tươi sáng. Ánh phản chiếu từ những hạt pha lê nhỏ như
+          tia nắng vỡ trên bờ vai. “Ánh Bình Minh” là khởi đầu cho một hành trình yêu thương trọn vẹn - nơi mọi giấc mơ
+          đều hóa thành thật.
+        </p>
+        <a href="#" class="collection-btn">Xem thêm</a>
+      </div>
     </div>
-    <div class="collection-content">
-    <h2>Ánh bình minh - Nắng đầu ngày chạm nhẹ lên vai, khởi đầu cho một hành trình yêu thương rạng rỡ</h2>
-    <p>
-      Tựa như mặt trời khẽ thức giấc sau màn sương, “Ánh Bình Minh” tỏa sáng với năng lượng tươi mới và hy vọng. 
-      BST tôn vinh vẻ đẹp rạng rỡ, tràn đầy sức sống của cô dâu hiện đại. Sự kết hợp giữa chất liệu organza trong 
-      suốt và lụa satin mịn màng tạo nên cảm giác bồng bềnh, tươi sáng. Ánh phản chiếu từ những hạt pha lê nhỏ như
-      tia nắng vỡ trên bờ vai. “Ánh Bình Minh” là khởi đầu cho một hành trình yêu thương trọn vẹn - nơi mọi giấc mơ 
-      đều hóa thành thật.
-    </p>
-    <a href="#" class="collection-btn">Xem thêm</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="collection-section light">
-  <div class="collection-container" data-animate="slide-left">
-    <div class="collection-image">
-      <img src="asset/img/trangchu/Bst6.png" alt="Bộ sưu tập Fleur">
+  <section class="collection-section light">
+    <div class="collection-container" data-animate="slide-left">
+      <div class="collection-image">
+        <img src="asset/img/trangchu/Bst6.png" alt="Bộ sưu tập Fleur">
+      </div>
+      <div class="collection-content">
+        <h2>Khúc hẹn yêu - Giữa ngàn ánh nhin, ta gặp nhau, bản tình ca khẽ cất lên từ trái tim</h2>
+        <p>
+          “Khúc Hẹn Yêu” là câu chuyện về tình yêu nảy nở trong giây phút hai trái tim gặp gỡ. BST
+          mang phong vị lãng mạn, pha chút hoài niệm, tựa một bản tình ca được viết bằng ánh mắt và
+          nụ cười. Những lớp voan mỏng tung bay, điểm xuyết hoa ren trắng muốt, tượng trưng cho sự
+          tinh khôi và nồng nàn. Thiết kế tôn lên dáng vẻ mềm mại, nữ tính, khiến mỗi bước đi của
+          cô dâu như một giai điệu nhẹ vang. “Khúc Hẹn Yêu” - nơi tình yêu được cất thành lời, và
+          hạnh phúc bắt đầu ngân lên.
+        </p>
+        <a href="#" class="collection-btn">Xem thêm</a>
+      </div>
     </div>
-    <div class="collection-content">
-    <h2>Khúc hẹn yêu - Giữa ngàn ánh nhin, ta gặp nhau, bản tình ca khẽ cất lên từ trái tim</h2>
-    <p>
-      “Khúc Hẹn Yêu” là câu chuyện về tình yêu nảy nở trong giây phút hai trái tim gặp gỡ. BST 
-      mang phong vị lãng mạn, pha chút hoài niệm, tựa một bản tình ca được viết bằng ánh mắt và 
-      nụ cười. Những lớp voan mỏng tung bay, điểm xuyết hoa ren trắng muốt, tượng trưng cho sự 
-      tinh khôi và nồng nàn. Thiết kế tôn lên dáng vẻ mềm mại, nữ tính, khiến mỗi bước đi của 
-      cô dâu như một giai điệu nhẹ vang. “Khúc Hẹn Yêu” - nơi tình yêu được cất thành lời, và 
-      hạnh phúc bắt đầu ngân lên.
-    </p>
-    <a href="#" class="collection-btn">Xem thêm</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="branding-section">
- <div class="branding-container">
-  <div class="branding-left" data-animate>
-  <h1 class="branding-title">Giới thiệu</h1>
-  <div class="branding-USP">
-  <img src ="asset/img/trangchu/logo.png" alt="Logo" class="branding-logo">
-  <p class="branding-text">
-    FLEUR <br>
-    Thương hiệu váy cưới cao cấp <br>
-    Made in Vietnam
-  </p>
-  </div>
-  </div>
-  <div class="branding-description" data-animate>
-    <p>
-      <i>Fleur Bridal House</i> được thành lập với một khát vọng duy nhất: kiến tạo nên những chiếc 
-      váy cưới như những tác phẩm nghệ thuật, dành riêng cho cô dâu Việt Nam mang phong cách 
-      quốc tế. Ra đời tại Hà Nội vào năm 2020, Fleur nhanh chóng vượt qua khuôn khổ của một 
-      xưởng thủ công nhỏ bé, phát triển dựa trên sự kết hợp hoàn hảo giữa kỹ thuật may đo cao 
-      cấp (couture) tinh xảo và cảm hứng lãng mạn từ vẻ đẹp thuần khiết của viên ngọc trắng tinh 
-      khôi.<br><br>
-
-      Tại Fleur, chúng tôi tin rằng vẻ đẹp truyền thống không bao giờ lỗi mốt, chỉ cần được 
-      khoác lên tinh thần hiện đại. Mỗi thiết kế là một bản hòa ca giữa nét duyên dáng Á Đông và 
-      đường cắt may tinh tế của phương Tây, tôn vinh trọn vẹn sự thanh tao, kiêu hãnh và rạng rỡ 
-      của người phụ nữ trong ngày trọng đại nhất cuộc đời. Fleur không chỉ bán váy cưới, chúng tôi 
-      dệt nên bản tình ca của hạnh phúc, nơi mỗi nếp váy, mỗi sợi chỉ đều chứa đựng lời hẹn ước về 
-      một hành trình yêu thương trọn vẹn.
-    </p>
-  </div>
- </div>
-</section>
-
-<section class="fomula-section">
-  <h2 data-animate>Fleur - Công thức cho cô dâu hoàn hảo</h2>
-  <div class="fomula-items" data-animate>
-    <div class="fomula-item">
-      <p>VÁY TIỆC CHÍNH</p>
-    </div>
-    <div class="fomula-item">
-      <p>VÁY ĐI BÀN</p>
-    </div>
-    <div class="fomula-item">
-      <p>PHỤ KIỆN</p>
-    </div>
-  </div>
-  <div class="fomula-line">
-    <span class="line"></span>
-  <button class="btn-more" data-animate>Khám phá thêm</button>
-    <span class="line"></span>
-  </div>
-</section>
-
-<section class="blog-section">
-  <div class="blog-header" data-animate>
-    <h2>Tin tức mới nhất đến từ Fleur Bridal House</h2>
-    <a href="#" class="btn-more">Xem tất cả</a>
-  </div>
-  <div class="blog-items">
-    <div class="blog-item">
-      <img src="asset/img/trangchu/blog1.jpg" alt="Blog 1">
-      <p class="date">25 tháng 10, 2024</p>
-      <h3>5 xu hướng váy cưới hot nhất năm 2024 không thể bỏ qua</h3>
-      <a href="#" class="btn-more">Đọc thêm</a>
-    </div>
-    <div class="blog-item">
-      <img src="asset/img/trangchu/blog2.jpg" alt="Blog 2">
-      <p class="date">14 tháng 2, 2025</p>
-      <h3>Làm thế nào để chọn váy cưới phù hợp với dáng người?</h3>
-      <a href="#" class="btn-more">Đọc thêm</a>
-    </div>
-    <div class="blog-item">
-      <img src="asset/img/trangchu/blog3.jpg" alt="Blog 3">
-      <p class="date">30 tháng 3, 2025</p>
-      <h3>Bí quyết chăm sóc váy cưới sau ngày trọng đại</h3>
-      <a href="#" class="btn-more">Đọc thêm</a>
-    </div>
-    <div class="blog-item">
-      <img src="asset/img/trangchu/blog4.jpg" alt="Blog 4">
-      <p class="date">10 tháng 10, 2025</p>
-      <h3>Phụ kiện cưới không thể thiếu cho cô dâu hiện đại</h3>
-      <a href="#" class="btn-more">Đọc thêm</a>
-    </div>
-  </div>
-  <div class="blog-sidebar">
-    <div class="slider-progress"></div>
-  </div>
-</section>
-
-<section class="insta-section">
-  <span class="icon" data-animate>
-    <img src="asset/img/trangchu/logoinsta.png" alt="logoinsta" text-align="center" width="60px" height="40px">
-  </span>
-  <h2 data-animate><i class="fa-brands fa-instagram"></i> Instagram</h2>
-    <button class="arrow left">&#10094;</button>
- <div class="insta-feed">
-<iframe src="https://snapwidget.com/embed/1111983" class="snapwidget-widget" allowtransparency="true" 
-frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:1845px; height:278.33166666666665px" 
-title="Posts from Instagram"></iframe>
- </div>
-   <button class="arrow right">&#10095;</button>
- <div class="btn-more" data-animate>
-    <a href="https://www.instagram.com/fleurbridalhouse/" target="_blank">
-      THEO DÕI CHÚNG TÔI
-    </a>
-  </div>
-</section>
-
-<section class="contact-form-section">
-    
-    <div class="form-wrapper">
-        <div class="form-header">
-            <a href="#store-form" class="tab-link active" data-target="store-form">CỬA HÀNG</a>
-            <a href="#bride-form" class="tab-link" data-target="bride-form">KHÁCH HÀNG</a>
-            <a href="#feedback-form" class="tab-link" data-target="feedback-form">ĐÁNH GIÁ</a>
+  <section class="branding-section">
+    <div class="branding-container">
+      <div class="branding-left" data-animate>
+        <h1 class="branding-title">Giới thiệu</h1>
+        <div class="branding-USP">
+          <img src="asset/img/trangchu/logo.png" alt="Logo" class="branding-logo">
+          <p class="branding-text">
+            FLEUR <br>
+            Thương hiệu váy cưới cao cấp <br>
+            Made in Vietnam
+          </p>
         </div>
-        
-        <form class="contact-form active-form" id="store-form">
-            <label for="store_salon">Tên Cửa hàng*</label>
-            <input type="text" id="store_salon" name="salon" required>
+      </div>
+      <div class="branding-description" data-animate>
+        <p>
+          <i>Fleur Bridal House</i> được thành lập với một khát vọng duy nhất: kiến tạo nên những chiếc
+          váy cưới như những tác phẩm nghệ thuật, dành riêng cho cô dâu Việt Nam mang phong cách
+          quốc tế. Ra đời tại Hà Nội vào năm 2020, Fleur nhanh chóng vượt qua khuôn khổ của một
+          xưởng thủ công nhỏ bé, phát triển dựa trên sự kết hợp hoàn hảo giữa kỹ thuật may đo cao
+          cấp (couture) tinh xảo và cảm hứng lãng mạn từ vẻ đẹp thuần khiết của viên ngọc trắng tinh
+          khôi.<br><br>
 
-            <label for="store_country">Quốc gia*</label>
-            <input type="text" id="store_country" name="country" required>
+          Tại Fleur, chúng tôi tin rằng vẻ đẹp truyền thống không bao giờ lỗi mốt, chỉ cần được
+          khoác lên tinh thần hiện đại. Mỗi thiết kế là một bản hòa ca giữa nét duyên dáng Á Đông và
+          đường cắt may tinh tế của phương Tây, tôn vinh trọn vẹn sự thanh tao, kiêu hãnh và rạng rỡ
+          của người phụ nữ trong ngày trọng đại nhất cuộc đời. Fleur không chỉ bán váy cưới, chúng tôi
+          dệt nên bản tình ca của hạnh phúc, nơi mỗi nếp váy, mỗi sợi chỉ đều chứa đựng lời hẹn ước về
+          một hành trình yêu thương trọn vẹn.
+        </p>
+      </div>
+    </div>
+  </section>
 
-            <label for="store_city">Thành phố*</label>
-            <input type="text" id="store_city" name="city" required>
+  <section class="fomula-section">
+    <h2 data-animate>Fleur - Công thức cho cô dâu hoàn hảo</h2>
+    <div class="fomula-items" data-animate>
+      <div class="fomula-item">
+        <p>VÁY TIỆC CHÍNH</p>
+      </div>
+      <div class="fomula-item">
+        <p>VÁY ĐI BÀN</p>
+      </div>
+      <div class="fomula-item">
+        <p>PHỤ KIỆN</p>
+      </div>
+    </div>
+    <div class="fomula-line">
+      <span class="line"></span>
+      <button class="btn-more" data-animate>Khám phá thêm</button>
+      <span class="line"></span>
+    </div>
+  </section>
 
-            <label for="store_social">Website / Instagram / Facebook</label>
-            <input type="text" id="store_social" name="social">
+  <section class="blog-section">
+    <div class="blog-header" data-animate>
+      <h2>Tin tức mới nhất đến từ Fleur Bridal House</h2>
+      <a href="#" class="btn-more">Xem tất cả</a>
+    </div>
+    <div class="blog-items">
+      <div class="blog-item">
+        <img src="asset/img/trangchu/blog1.jpg" alt="Blog 1">
+        <p class="date">25 tháng 10, 2024</p>
+        <h3>5 xu hướng váy cưới hot nhất năm 2024 không thể bỏ qua</h3>
+        <a href="#" class="btn-more">Đọc thêm</a>
+      </div>
+      <div class="blog-item">
+        <img src="asset/img/trangchu/blog2.jpg" alt="Blog 2">
+        <p class="date">14 tháng 2, 2025</p>
+        <h3>Làm thế nào để chọn váy cưới phù hợp với dáng người?</h3>
+        <a href="#" class="btn-more">Đọc thêm</a>
+      </div>
+      <div class="blog-item">
+        <img src="asset/img/trangchu/blog3.jpg" alt="Blog 3">
+        <p class="date">30 tháng 3, 2025</p>
+        <h3>Bí quyết chăm sóc váy cưới sau ngày trọng đại</h3>
+        <a href="#" class="btn-more">Đọc thêm</a>
+      </div>
+      <div class="blog-item">
+        <img src="asset/img/trangchu/blog4.jpg" alt="Blog 4">
+        <p class="date">10 tháng 10, 2025</p>
+        <h3>Phụ kiện cưới không thể thiếu cho cô dâu hiện đại</h3>
+        <a href="#" class="btn-more">Đọc thêm</a>
+      </div>
+    </div>
+    <div class="blog-sidebar">
+      <div class="slider-progress"></div>
+    </div>
+  </section>
 
-            <label for="store_name">Họ và Tên*</label>
-            <input type="text" id="store_name" name="name" required>
+  <section class="insta-section">
+    <span class="icon" data-animate>
+      <img src="asset/img/trangchu/logoinsta.png" alt="logoinsta" text-align="center" width="60px" height="40px">
+    </span>
+    <h2 data-animate><i class="fa-brands fa-instagram"></i> Instagram</h2>
+    <button class="arrow left">&#10094;</button>
+    <div class="insta-feed">
+      <iframe src="https://snapwidget.com/embed/1111983" class="snapwidget-widget" allowtransparency="true"
+        frameborder="0" scrolling="no" style="border:none; overflow:hidden;  width:1845px; height:278.33166666666665px"
+        title="Posts from Instagram"></iframe>
+    </div>
+    <button class="arrow right">&#10095;</button>
+    <div class="btn-more" data-animate>
+      <a href="https://www.instagram.com/fleurbridalhouse/" target="_blank">
+        THEO DÕI CHÚNG TÔI
+      </a>
+    </div>
+  </section>
 
-            <label for="store_email">Email*</label>
-            <input type="email" id="store_email" name="email" required>
+  <section class="contact-form-section">
 
-            <label for="store_phone">Số điện thoại*</label>
-            <input type="tel" id="store_phone" name="phone" required>
+    <div class="form-wrapper">
+      <div class="form-header">
+        <a href="#store-form" class="tab-link active" data-target="store-form">CỬA HÀNG</a>
+        <a href="#bride-form" class="tab-link" data-target="bride-form">KHÁCH HÀNG</a>
+        <a href="#feedback-form" class="tab-link" data-target="feedback-form">ĐÁNH GIÁ</a>
+      </div>
 
-            <label for="store_comment">Lời nhắn / Yêu cầu</label>
-            <textarea id="store_comment" name="comment"></textarea>
-            
-            <button type="submit" class="submit-btn">GỬI</button>
-        </form>
+      <form class="contact-form active-form" id="store-form">
+        <label for="store_salon">Tên Cửa hàng*</label>
+        <input type="text" id="store_salon" name="salon" required>
 
-        <form class="contact-form hidden-form" id="bride-form">
-            <label for="bride_name">Họ và Tên KH*</label>
-            <input type="text" id="bride_name" name="name" required>
+        <label for="store_country">Quốc gia*</label>
+        <input type="text" id="store_country" name="country" required>
 
-            <label for="bride_date">Ngày Cưới Dự Kiến*</label>
-            <input type="date" id="bride_date" name="wedding_date" required>
-            
-            <label for="bride_location">Địa điểm Cưới (Thành phố)*</label>
-            <input type="text" id="bride_location" name="location" required>
+        <label for="store_city">Thành phố*</label>
+        <input type="text" id="store_city" name="city" required>
 
-            <label for="bride_email">Email*</label>
-            <input type="email" id="bride_email" name="email" required>
+        <label for="store_social">Website / Instagram / Facebook</label>
+        <input type="text" id="store_social" name="social">
 
-            <label for="bride_phone">Số điện thoại*</label>
-            <input type="tel" id="bride_phone" name="phone" required>
+        <label for="store_name">Họ và Tên*</label>
+        <input type="text" id="store_name" name="name" required>
 
-            <label for="bride_comment">Váy bạn thích / Yêu cầu tư vấn</label>
-            <textarea id="bride_comment" name="comment"></textarea>
-            
-            <button type="submit" class="submit-btn">ĐẶT LỊCH TƯ VẤN</button>
-        </form>
+        <label for="store_email">Email*</label>
+        <input type="email" id="store_email" name="email" required>
 
-        <form class="contact-form hidden-form" id="feedback-form">
-            <label for="feedback_type">Loại Phản Hồi*</label>
-            <select id="feedback_type" name="type" required>
-                <option value="complaint">Khiếu nại</option>
-                <option value="suggestion">Góp ý</option>
-                <option value="praise">Khen ngợi</option>
-            </select>
-            
-            <label for="feedback_name">Họ và Tên (Tùy chọn)</label>
-            <input type="text" id="feedback_name" name="name">
+        <label for="store_phone">Số điện thoại*</label>
+        <input type="tel" id="store_phone" name="phone" required>
 
-            <label for="feedback_email">Email (Để liên hệ lại)*</label>
-            <input type="email" id="feedback_email" name="email" required>
+        <label for="store_comment">Lời nhắn / Yêu cầu</label>
+        <textarea id="store_comment" name="comment"></textarea>
 
-            <label for="feedback_message">Nội dung Phản Hồi*</label>
-            <textarea id="feedback_message" name="message" required></textarea>
-            
-            <button type="submit" class="submit-btn">GỬI ĐÁNH GIÁ</button>
-        </form>
+        <button type="submit" class="submit-btn">GỬI</button>
+      </form>
+
+      <form class="contact-form hidden-form" id="bride-form">
+        <label for="bride_name">Họ và Tên KH*</label>
+        <input type="text" id="bride_name" name="name" required>
+
+        <label for="bride_date">Ngày Cưới Dự Kiến*</label>
+        <input type="date" id="bride_date" name="wedding_date" required>
+
+        <label for="bride_location">Địa điểm Cưới (Thành phố)*</label>
+        <input type="text" id="bride_location" name="location" required>
+
+        <label for="bride_email">Email*</label>
+        <input type="email" id="bride_email" name="email" required>
+
+        <label for="bride_phone">Số điện thoại*</label>
+        <input type="tel" id="bride_phone" name="phone" required>
+
+        <label for="bride_comment">Váy bạn thích / Yêu cầu tư vấn</label>
+        <textarea id="bride_comment" name="comment"></textarea>
+
+        <button type="submit" class="submit-btn">ĐẶT LỊCH TƯ VẤN</button>
+      </form>
+
+      <form class="contact-form hidden-form" id="feedback-form">
+        <label for="feedback_type">Loại Phản Hồi*</label>
+        <select id="feedback_type" name="type" required>
+          <option value="complaint">Khiếu nại</option>
+          <option value="suggestion">Góp ý</option>
+          <option value="praise">Khen ngợi</option>
+        </select>
+
+        <label for="feedback_name">Họ và Tên (Tùy chọn)</label>
+        <input type="text" id="feedback_name" name="name">
+
+        <label for="feedback_email">Email (Để liên hệ lại)*</label>
+        <input type="email" id="feedback_email" name="email" required>
+
+        <label for="feedback_message">Nội dung Phản Hồi*</label>
+        <textarea id="feedback_message" name="message" required></textarea>
+
+        <button type="submit" class="submit-btn">GỬI ĐÁNH GIÁ</button>
+      </form>
 
     </div>
-</section>
-<script src="asset/js/trangchu.js" defer></script>
+  </section>
+
+
+  <script src="asset/js/trangchu.js"></script>
+
+      <!-- Nơi footer sẽ được chèn -->
+    <div id="footer"></div>
+    <!-- Script để load header + footer và gắn sự kiện -->
+    <script src="/header_footer/header_footer.js"></script>
+
 </body>
+
 </html>

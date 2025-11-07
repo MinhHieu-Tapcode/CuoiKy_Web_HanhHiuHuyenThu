@@ -7,7 +7,8 @@
   <title>Header Design</title>
 
   <!-- Font Montserrat -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap&subset=vietnamese" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap&subset=vietnamese"
+    rel="stylesheet" />
 
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -301,6 +302,70 @@
     </div>
   </header>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const headerEl = document.querySelector("#main-header");
+      const searchIcon = document.querySelector(".icon-search");
+      const searchOverlay = document.querySelector(".search-overlay");
+      const closeSearch = document.querySelector(".close-search");
+      const heartIcon = document.querySelector(".icon-heart");
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+
+      // Giữ khoảng trống tránh header che nội dung
+      if (headerEl) {
+        document.body.style.paddingTop = headerEl.offsetHeight + "px";
+      }
+
+      // 🔍 Hiệu ứng tìm kiếm
+      if (searchIcon && searchOverlay && closeSearch) {
+        searchIcon.addEventListener("click", (e) => {
+          e.stopPropagation();
+          searchOverlay.classList.add("active");
+        });
+        closeSearch.addEventListener("click", () => searchOverlay.classList.remove("active"));
+        searchOverlay.addEventListener("click", (e) => {
+          if (e.target === searchOverlay) searchOverlay.classList.remove("active");
+        });
+      }
+
+      // 💖 Hiệu ứng đổi tim
+      if (heartIcon) {
+        heartIcon.addEventListener("click", () => {
+          heartIcon.classList.toggle("far");
+          heartIcon.classList.toggle("fas");
+          heartIcon.classList.toggle("active");
+        });
+      }
+
+      // 📱 Toggle menu mobile
+      if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", () => {
+          navLinks.classList.toggle("show");
+        });
+      }
+
+      // 🧭 Ẩn header khi cuộn xuống
+      if (headerEl) {
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+        window.addEventListener("scroll", () => {
+          if (ticking) return;
+          ticking = true;
+          window.requestAnimationFrame(() => {
+            const cur = window.scrollY;
+            if (cur > lastScrollY && cur > 150) {
+              headerEl.classList.add("header-hidden");
+            } else {
+              headerEl.classList.remove("header-hidden");
+            }
+            lastScrollY = cur;
+            ticking = false;
+          });
+        });
+      }
+    });
+  </script>
 
 </body>
 

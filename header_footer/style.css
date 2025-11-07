@@ -16,14 +16,16 @@ body {
     flex-direction: column;
 }
 
+
+
 /* Giúp nội dung chiếm toàn bộ chiều cao còn lại giữa header & footer */
 main {
     flex: 1 0 auto;
-    padding-top: 120px;
-    /* để tránh header che */
     padding-bottom: 200px;
-    /* để tránh footer che */
+    margin-top: 150px;
 }
+
+
 
 /* ================== HEADER ================== */
 #main-header {

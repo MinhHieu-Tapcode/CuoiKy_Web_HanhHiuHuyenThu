@@ -251,6 +251,29 @@
 
   </footer>
 
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const subscribeBtn = document.querySelector(".footer-col button");
+      const emailInput = document.querySelector(".footer-col input[type='email']");
+
+      if (subscribeBtn && emailInput) {
+        subscribeBtn.addEventListener("click", () => {
+          const email = emailInput.value.trim();
+          const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+          if (email === "") {
+            alert("⚠️ Vui lòng nhập email của bạn!");
+          } else if (!emailPattern.test(email)) {
+            alert("❌ Email không hợp lệ. Vui lòng nhập đúng định dạng (ví dụ: ten@gmail.com)");
+          } else {
+            alert("🎉 Bạn đã đăng ký thành công!");
+            emailInput.value = "";
+          }
+        });
+      }
+    });
+  </script>
+
 </body>
 
 </html>

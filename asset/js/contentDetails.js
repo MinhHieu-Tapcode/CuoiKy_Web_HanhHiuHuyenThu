@@ -34,7 +34,6 @@ function renderProduct(p) {
 
       <div id="productDetails">
         <h1>${p.name}</h1>
-        <h4>${p.brand}</h4>
 
         <h3>Giá: ${p.price.toLocaleString()}₫</h3>
         <h3 id="totalPrice">Tổng tiền: ${p.price.toLocaleString()}₫</h3>
@@ -43,19 +42,19 @@ function renderProduct(p) {
         <p>${p.description}</p>
 
         <label>Màu sắc:</label>
-        <select id="colorSelect">
-          ${p.colors.map(color => `<option value="${color}">${color}</option>`).join("")}
-        </select>
+        <div id="colorSelect" class="option-buttons">
+          ${p.colors.map(color => `<button type="button" class="option-btn" data-value="${color}">${color}</button>`).join("")}
+        </div>
 
         <label>Kích cỡ:</label>
-        <select id="sizeSelect">
-          ${p.sizes.map(size => `<option value="${size}">${size}</option>`).join("")}
-        </select>
+        <div id="sizeSelect" class="option-buttons">
+          ${p.sizes.map(size => `<button type="button" class="option-btn" data-value="${size}">${size}</button>`).join("")}
+        </div>
 
         <label>Lựa chọn:</label>
-        <select id="optionSelect">
-          ${p.options.map(opt => `<option value="${opt}">${opt}</option>`).join("")}
-        </select>
+        <div id="optionSelect" class="option-buttons">
+          ${p.options.map(opt => `<button type="button" class="option-btn" data-value="${opt}">${opt}</button>`).join("")}
+        </div>
 
         <label>Số lượng:</label>
         <input type="number" id="quantity" value="1" min="1" style="width:60px;margin-left:10px;">
@@ -71,11 +70,37 @@ function renderProduct(p) {
   const qtyInput = document.getElementById("quantity");
   const totalPrice = document.getElementById("totalPrice");
 
-  qtyInput.addEventListener("input", function() {
+  qtyInput.addEventListener("input", function () {
     const qty = parseInt(this.value) || 1;
     const total = p.price * qty;
     totalPrice.textContent = "Tổng tiền: " + total.toLocaleString() + "₫";
   });
+
+  // ================================
+  // Thiết lập button chọn 1 giá trị
+  // ================================
+  function setupOptionButtons(containerId) {
+    const container = document.getElementById(containerId);
+    const buttons = container.querySelectorAll('.option-btn');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (btn.classList.contains('selected')) {
+          // Click lần 2 → hủy chọn
+          btn.classList.remove('selected');
+        } else {
+          // Click lần 1 → chọn nút này, bỏ chọn nút khác
+          buttons.forEach(b => b.classList.remove('selected'));
+          btn.classList.add('selected');
+        }
+      });
+    });
+  }
+
+
+  setupOptionButtons('colorSelect');
+  setupOptionButtons('sizeSelect');
+  setupOptionButtons('optionSelect');
 
   // ================================
   // Nút thêm vào giỏ hàng
@@ -84,14 +109,48 @@ function renderProduct(p) {
 }
 
 // ================================
+// Hàm lấy giá trị button đã chọn
+// ================================
+function getSelectedValue(containerId) {
+  const selected = document.querySelector(`#${containerId} .option-btn.selected`);
+  return selected ? selected.dataset.value : '';
+}
+
+// ================================
 // Hàm thêm vào giỏ hàng
 // ================================
 function addToCart(p) {
-  const color = document.getElementById("colorSelect").value;
-  const size = document.getElementById("sizeSelect").value;
-  const option = document.getElementById("optionSelect").value;
-  const quantity = parseInt(document.getElementById("quantity").value);
+  const color = getSelectedValue('colorSelect');
+  const size = getSelectedValue('sizeSelect');
+  const option = getSelectedValue('optionSelect');
+  let quantity = parseInt(document.getElementById("quantity").value) || 0;
+
+  // Kiểm tra điều kiện
+  if (!color || !size || !option) {
+    alert("Vui lòng chọn đủ Màu sắc, Kích cỡ và Lựa chọn trước khi thêm vào giỏ hàng!");
+    return;
+  }
+
+  if (quantity < 1) {
+    alert("Số lượng phải lớn hơn hoặc bằng 1!");
+    return;
+  }
+
+  // Tính tổng tiền
   const total = p.price * quantity;
+
+  // Lưu vào giỏ hàng trong localStorage
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  cart.push({
+    id: p.id,
+    name: p.name,
+    color,
+    size,
+    option,
+    quantity,
+    total
+  });
+  localStorage.setItem("cart", JSON.stringify(cart));
 
   alert(`${p.name} đã được thêm vào giỏ hàng!
 Màu: ${color}
@@ -99,4 +158,14 @@ Kích cỡ: ${size}
 Lựa chọn: ${option}
 Số lượng: ${quantity}
 👉 Tổng tiền: ${total.toLocaleString()}₫`);
+
+  // Reset giao diện chọn
+  document.getElementById("quantity").value = 1;
+  ['colorSelect', 'sizeSelect', 'optionSelect'].forEach(id => {
+    const buttons = document.querySelectorAll(`#${id} .option-btn`);
+    buttons.forEach(btn => btn.classList.remove('selected'));
+  });
+
+  // Cập nhật lại tổng tiền hiển thị
+  document.getElementById("totalPrice").textContent = "Tổng tiền: " + p.price.toLocaleString() + "₫";
 }

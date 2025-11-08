@@ -1,88 +1,190 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Collections</title>
-  <script src="../header_footer/header_footer.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../asset/css/sanpham.css">
-  
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../header_footer/style.css">
+
+
 </head>
 
 <body>
-  <section class="collections">
-    <h2>Sản phẩm</h2>
-  <div class="breadcrumb">
-    <a href="index.html">Fleur</a> / <span>Sản phẩm</span> <!--về trang chủ-->
-  </div>
-  </section>
+  <!-- Nơi header sẽ được chèn -->
+  <!-- HEADER -->
+  <header id="main-header">
+    <div class="header-top">
+      <a href="../dangky.html">Đăng Nhập</a>
+      <a href="../dangky.html">Đăng Ký</a>
+    </div>
+
+    <!-- HEADER BOTTOM -->
+    <div class="header-bottom">
+      <div class="logo">
+        <img src="../asset/img/header_footer/FLEAURLOGOBLACK.png" alt="Logo" />
+      </div>
+
+      <nav class="nav-links">
+        <a href="../gioithieu.html">Giới thiệu</a>
+        <a href="sanpham.html">Sản phẩm</a>
+        <a href="../bosuutap.html">Bộ sưu tập</a>
+        <a href="../cuahang.html">Cửa hàng</a>
+        <a href="../lienhe.html">Liên hệ</a>
+      </nav>
+
+      <div class="icons">
+        <i class="fas fa-search icon-search"></i>
+        <i class="far fa-heart icon-heart"></i>
+        <a href="../giohang.html">
+          <i class="fas fa-shopping-cart icon-cart"></i>
+        </a>
+        <i class="fas fa-bars menu-toggle"></i>
+      </div>
+    </div>
+
+
+    <!-- SEARCH OVERLAY -->
+    <div class="search-overlay">
+      <input type="text" class="search-box" placeholder="Nhập tên sản phẩm..." />
+      <i class="fa-solid fa-xmark close-search"></i>
+    </div>
+  </header>
+
+  <main>
+    <section class="collections">
+      <h2>Sản phẩm</h2>
+      <div class="breadcrumb">
+        <a href="index.html">Fleur</a> / <span>Sản phẩm</span> <!--về trang chủ-->
+      </div>
+    </section>
     <div class="collection-container">
 
       <div class="collection-item">
         <a href="sp1.html" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/sp1/elowen.png" alt="Hương sắc á đông" class="main-img">
-          <img src="../asset/img/image/sp1/elowen1.png" alt="Hương sắc á đông" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title"> VÁY BỒNG XÒE</h3>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/sp1/elowen.png" alt="Hương sắc á đông" class="main-img">
+            <img src="../asset/img/image/sp1/elowen1.png" alt="Hương sắc á đông" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title"> VÁY BỒNG XÒE</h3>
         </a>
       </div>
 
       <div class="collection-item">
         <a href="sp2.html" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/sp2/affection.png" alt="Thanh âm của tình yêu" class="main-img">
-          <img src="../asset/img/image/sp2/affection1.png" alt="Thanh âm của tình yêu" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title"> VÁY ĐUÔI CÁ</h3>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/sp2/affection.png" alt="Thanh âm của tình yêu" class="main-img">
+            <img src="../asset/img/image/sp2/affection1.png" alt="Thanh âm của tình yêu" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title"> VÁY ĐUÔI CÁ</h3>
         </a>
       </div>
 
       <div class="collection-item">
         <a href="sp3.html" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/sp3/gesture.png" alt="Hẹn ước trăm năm" class="main-img">
-          <img src="../asset/img/image/sp3/gesture1.png" alt="Hẹn ước trăm năm" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title"> VÁY CHỮ A</h3>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/sp3/gesture.png" alt="Hẹn ước trăm năm" class="main-img">
+            <img src="../asset/img/image/sp3/gesture1.png" alt="Hẹn ước trăm năm" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title"> VÁY CHỮ A</h3>
         </a>
       </div>
 
       <div class="collection-item">
         <a href="sp4.html" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/sp4/celeste.png" alt="Lời thì thầm hoa sương" class="main-img">
-          <img src="../asset/img/image/sp4/celeste1.png" alt="Lời thì thầm hoa sương" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title">VÁY NGẮN</h3>
-      </a>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/sp4/celeste.png" alt="Lời thì thầm hoa sương" class="main-img">
+            <img src="../asset/img/image/sp4/celeste1.png" alt="Lời thì thầm hoa sương" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title">VÁY NGẮN</h3>
+        </a>
       </div>
 
       <div class="collection-item">
         <a href="sp5.html" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/sp5/look11.png" alt="Ánh bình minh" class="main-img">
-          <img src="../asset/img/image/sp5/look12.png" alt="Ánh bình minh" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title">ÁO DÀI CƯỚI</h3>
-      </a>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/sp5/look11.png" alt="Ánh bình minh" class="main-img">
+            <img src="../asset/img/image/sp5/look12.png" alt="Ánh bình minh" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title">ÁO DÀI CƯỚI</h3>
+        </a>
       </div>
 
       <div class="collection-item">
         <a href="pk.html" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/pk/cleodora.png" alt="Mũ đội đầu đính đá giả" class="main-img">
-          <img src="../asset/img/image/pk/cleodora2.png" alt="Mũ đội đầu đính đá giả" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title">PHỤ KIỆN</h3>
-      </a>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/pk/cleodora.png" alt="Mũ đội đầu đính đá giả" class="main-img">
+            <img src="../asset/img/image/pk/cleodora2.png" alt="Mũ đội đầu đính đá giả" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title">PHỤ KIỆN</h3>
+        </a>
       </div>
+    </div>
+  </main>
+
+  <!-- Nơi footer sẽ được chèn -->
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-top">
+      <a href="#" class="logo"><img src="../asset/img/header_footer/FLEAURLOGOBLACK.png" alt="Logo"></a>
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-col">
+        <h3>Sản phẩm</h3>
+        <a href="sp1.html">Váy bồng xòe</a>
+        <a href="sp2.html">Váy đuôi cá</a>
+        <a href="sp3.html">Váy chữ A</a>
+        <a href="sp4.html">Váy ngắn</a>
+        <a href="sp5.html">Áo dài cưới</a>
+        <a href="pk.html">Phụ kiện</a>
+      </div>
+      <div class="footer-col">
+        <h3>Công ty</h3>
+        <a href="../gioithieu.html">Giới thiệu</a>
+        <a href="../doitac.html">Đối tác</a>
+        <a href="../tintuc.html">Tin tức</a>
+      </div>
+      <div class="footer-col">
+        <h3>Hỗ trợ</h3>
+        <a href="../hotro.html">Trung tâm hỗ trợ</a>
+      </div>
+      <div class="footer-col">
+        <h3>Đăng ký nhận ưu đãi và tin tức mới nhất!</h3>
+        <div class="subscribe">
+          <input type="email" placeholder="Nhập email">
+          <button>Subscribe</button>
+        </div>
+        <div class="icons">
+          <a href="#"><img src="../asset/img/header_footer/IGLOGO.png" alt="Icon 1"></a>
+          <a href="#"><img src="../asset/img/header_footer/FBLOGO.png" alt="Icon 2"></a>
+          <a href="#"><img src="../asset/img/header_footer/YTBLOGO.png" alt="Icon 3"></a>
+          <a href="#"><img src="../asset/img/header_footer/TIKLOGO.png" alt="Icon 4"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="line"></div>
+      <span>2025 @ All rights reserved</span>
+      <div class="line"></div>
+    </div>
+
+
+  </footer>
+  <!-- Script để load header + footer và gắn sự kiện -->
+  <script src="../header_footer/header_footer.js"></script>
 </body>
+
 </html>

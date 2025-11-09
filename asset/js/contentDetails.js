@@ -2,8 +2,9 @@
 // pages/js/contentDetails.js
 // ================================
 
-// Lấy ID sản phẩm từ URL (VD: contentDetails.html?1)
-const id = location.search.split("?")[1] || "1"; // mặc định "1" nếu không có query
+// Lấy ID sản phẩm từ URL (VD: contentDetails.html?id=1)
+const params = new URLSearchParams(location.search);
+const id = params.get("id") || "1"; // mặc định "1" nếu không có query
 
 // Kiểm tra xem biến products đã được nạp từ data.js chưa
 const product = (typeof products !== "undefined") ? products.find(p => p.id === id) : null;
@@ -26,9 +27,7 @@ function renderProduct(p) {
       <div id="imageSection">
         <img id="imgDetails" src="${p.preview}" alt="${p.name}">
         <div id="productPreview">
-          ${p.photos.map(photo => `
-            <img src="${photo}" onclick="document.getElementById('imgDetails').src='${photo}'">
-          `).join("")}
+          ${p.photos.map(photo => `<img src="${photo}" onclick="document.getElementById('imgDetails').src='${photo}'">`).join("")}
         </div>
       </div>
 
@@ -72,8 +71,7 @@ function renderProduct(p) {
 
   qtyInput.addEventListener("input", function () {
     const qty = parseInt(this.value) || 1;
-    const total = p.price * qty;
-    totalPrice.textContent = "Tổng tiền: " + total.toLocaleString() + "₫";
+    totalPrice.textContent = "Tổng tiền: " + (p.price * qty).toLocaleString() + "₫";
   });
 
   // ================================
@@ -85,18 +83,11 @@ function renderProduct(p) {
 
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
-        if (btn.classList.contains('selected')) {
-          // Click lần 2 → hủy chọn
-          btn.classList.remove('selected');
-        } else {
-          // Click lần 1 → chọn nút này, bỏ chọn nút khác
-          buttons.forEach(b => b.classList.remove('selected'));
-          btn.classList.add('selected');
-        }
+        buttons.forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
       });
     });
   }
-
 
   setupOptionButtons('colorSelect');
   setupOptionButtons('sizeSelect');
@@ -130,34 +121,52 @@ function addToCart(p) {
     alert("Vui lòng chọn đủ Màu sắc, Kích cỡ và Lựa chọn trước khi thêm vào giỏ hàng!");
     return;
   }
-
   if (quantity < 1) {
     alert("Số lượng phải lớn hơn hoặc bằng 1!");
     return;
   }
 
-  // Tính tổng tiền
-  const total = p.price * quantity;
-
-  // Lưu vào giỏ hàng trong localStorage
+  // Lấy giỏ hàng hiện tại từ localStorage
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-  cart.push({
-    id: p.id,
-    name: p.name,
-    color,
-    size,
-    option,
-    quantity,
-    total
-  });
-  localStorage.setItem("cart", JSON.stringify(cart));
 
-  alert(`${p.name} đã được thêm vào giỏ hàng!
+  // Kiểm tra sản phẩm đã tồn tại trong giỏ hàng chưa (cùng id, color, size, option)
+  let existingItem = cart.find(item => 
+    item.id === p.id &&
+    item.color === color &&
+    item.size === size &&
+    item.option === option
+  );
+
+  if (existingItem) {
+    // Cộng dồn số lượng và cập nhật tổng tiền
+    existingItem.quantity += quantity;
+    existingItem.total = existingItem.quantity * p.price;
+    alert(`${p.name} đã được cập nhật trong giỏ hàng!
+Số lượng mới: ${existingItem.quantity}
+👉 Tổng tiền: ${existingItem.total.toLocaleString()}₫`);
+  } else {
+    // Thêm mới sản phẩm vào giỏ hàng
+    cart.push({
+      id: p.id,
+      name: p.name,
+      preview: p.preview,
+      color,
+      size,
+      option,
+      quantity,
+      price: p.price,
+      total: p.price * quantity
+    });
+    alert(`${p.name} đã được thêm vào giỏ hàng!
 Màu: ${color}
 Kích cỡ: ${size}
 Lựa chọn: ${option}
 Số lượng: ${quantity}
-👉 Tổng tiền: ${total.toLocaleString()}₫`);
+👉 Tổng tiền sản phẩm: ${(p.price * quantity).toLocaleString()}₫`);
+  }
+
+  // Lưu lại giỏ hàng
+  localStorage.setItem("cart", JSON.stringify(cart));
 
   // Reset giao diện chọn
   document.getElementById("quantity").value = 1;

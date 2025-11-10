@@ -21,8 +21,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
-      ;
+      height: 100vh;
       z-index: 0;
     }
 
@@ -132,6 +131,9 @@
       display: block;
       object-fit: cover;
     }
+    .collection-content h2{
+      text-align: center;
+    }
 
     .collection-content {
       position: absolute;
@@ -143,6 +145,7 @@
       margin-top: 50px;
       margin-left: 0;
       margin-right: 0;
+      text-align: justify;
     }
 
     /**phần riêng**/
@@ -262,6 +265,7 @@
     }
 
     .branding-description {
+      text-align: justify;
       flex: 1;
       /* Cột phải chiếm phần còn lại */
       font-size: 0.9em;
@@ -404,6 +408,7 @@
     .blog-item h3 {
       font-size: 18px;
       margin: 10px 20px;
+      text-align: justify;
     }
 
     .blog-sidebar {
@@ -614,6 +619,68 @@
       background-color: #555555;
     }
 
+/* --- POPUP CẢM ƠN --- */
+    .thankyou-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5); /* Nền mờ */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 999;
+    }
+
+    .thankyou-overlay.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .thankyou-popup {
+      background-color: #e3e3e3;
+      padding: 40px 60px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      transform: scale(0.8);
+      transition: transform 0.3s ease;
+    }
+
+    .thankyou-overlay.show .thankyou-popup {
+      transform: scale(1);
+    }
+
+    .thankyou-popup h3 {
+     margin-bottom: 10px;
+     font-size: 24px;
+     color: #2b2b2b;
+    }
+
+    .thankyou-popup p {
+     font-size: 16px;
+     margin-bottom: 25px;
+     color: #2b2b2b;
+    }
+
+    #closePopup {
+     background-color: #2b2b2b;
+     color: #e3e3e3;
+     border: none;
+     padding: 10px 25px;
+     border-radius: 5px;
+     cursor: pointer;
+     transition: background 0.3s;
+    }
+
+    #closePopup:hover {
+     background-color: gray;
+    }
+
     /**phục vụ cho script*/
     [data-animate] {
       opacity: 0;
@@ -661,7 +728,7 @@
       <nav class="nav-links">
         <a href="gioithieu.html">Giới thiệu</a>
         <a href="sanpham/sanpham.html">Sản phẩm</a>
-        <a href="bosuutap.html">Bộ sưu tập</a>
+        <a href="bosuutap/bosuutap.html">Bộ sưu tập</a>
         <a href="cuahang.html">Cửa hàng</a>
         <a href="lienhe.html">Liên hệ</a>
       </nav>
@@ -712,18 +779,20 @@
           </p>
         </div>
         <div class="intro-right">
-          <button class="btn-more">Xem thêm</button>
+          <button class="btn-more">
+            <a href="gioithieu.html">Xem thêm</a>
+          </button>
         </div>
       </div>
       <h1 data-animate>Bộ sưu tập tại Fleur</h1>
     </section>
 
     <section class="collection-section dark">
-      <div class="collection-container" data-animate="slide-right">
-        <div class="collection-image">
+      <div class="collection-container">
+        <div class="collection-image" data-animate="slide-left">
           <img src="asset/img/trangchu/Bst1.png" alt="Bộ sưu tập Fleur">
         </div>
-        <div class="collection-content">
+        <div class="collection-content" data-animate="slide-right">
           <h2>Hương sắc Á Đông - Nét duyên Việt chạm vào từng sợi lụa</h2>
           <p>
             BST "Hương sắc Á Đông" là bản hòa ca của vẻ đẹp truyền thống và tinh thần hiện đại.
@@ -735,17 +804,17 @@
             nhã
             vượt thời gian.
           </p>
-          <a href="#" class="collection-btn">Xem thêm</a>
+          <a href="bosuutap/Bst1.html" class="collection-btn">Xem thêm</a>
         </div>
       </div>
     </section>
 
     <section class="collection-section light">
-      <div class="collection-container" data-animate="slide-left">
-        <div class="collection-image">
+      <div class="collection-container">
+        <div class="collection-image" data-animate="slide-right">
           <img src="asset/img/trangchu/Bst2.png" alt="Bộ sưu tập Fleur">
         </div>
-        <div class="collection-content">
+        <div class="collection-content" data-animate="slide-left">
           <h2>Thanh âm của tình yêu - Mỗi nếp váy là một giai điệu, ngân nga bản tình ca của hạnh phúc</h2>
           <p>
             Như một khúc tình ca dịu dàng, “Thanh Âm Của Tình Yêu” tái hiện khoảnh khắc trái tim hòa chung
@@ -756,18 +825,18 @@
             cưới
             - đó là bản nhạc của hạnh phúc được dệt nên bằng từng sợi chỉ.
           </p>
-          <a href="#" class="collection-btn">Xem thêm</a>
+          <a href="bosuutap/Bst2.html" class="collection-btn">Xem thêm</a>
         </div>
       </div>
     </section>
 
     <section class="collection-section dark">
-      <div class="collection-container" data-animate="slide-right">
-        <div class="collection-image">
+      <div class="collection-container">
+        <div class="collection-image" data-animate="slide-left">
           <img src="asset/img/trangchu/Bst3.png" alt="Bộ sưu tập Fleur">
         </div>
-        <div class="collection-content">
-          <h2>Hẹn ước trăm năm - Bởi có những lời hứa không cần nói, chỉ cần cùng nhau đi đến cuối con
+        <div class="collection-content" data-animate="slide-right">
+          <h2>Hẹn ước trăm năm - Bởi lời hứa không cần nói, chỉ cần cùng nhau đi đến cuối con
             đường</h2>
           <p>
             “Hẹn Ước Trăm Năm” là bản giao hòa của sự vĩnh cửu và tình yêu chân thành. Lấy cảm hứng từ khoảnh khắc
@@ -776,17 +845,17 @@
             về một hành trình dài cùng nhau. “Hẹn Ước Trăm Năm” dành cho cô dâu chọn tình yêu không chỉ cho hôm nay,
             mà cho cả mai sau.
           </p>
-          <a href="#" class="collection-btn">Xem thêm</a>
+          <a href="bosuutap/Bst3.html" class="collection-btn">Xem thêm</a>
         </div>
       </div>
     </section>
 
     <section class="collection-section light">
-      <div class="collection-container" data-animate="slide-left">
-        <div class="collection-image">
+      <div class="collection-container">
+        <div class="collection-image" data-animate="slide-right">
           <img src="asset/img/trangchu/Bst4.png" alt="Bộ sưu tập Fleur">
         </div>
-        <div class="collection-content">
+        <div class="collection-content" data-animate="slide-left">
           <h2>Lời thì thầm hoa sương - Giọt sương khẽ rơi trên cánh hoa, như tình yêu dịu dàng thì thầm trong
             nắng sớm </h2>
           <p>
@@ -800,18 +869,18 @@
             ngọt
             của thiên nhiên gửi đến người phụ nữ - e ấp, lãng mạn mà rạng rỡ như ánh nắng đầu ngày.
           </p>
-          <a href="#" class="collection-btn">Xem thêm</a>
+          <a href="bosuutap/Bst4.html" class="collection-btn">Xem thêm</a>
         </div>
       </div>
     </section>
 
     <section class="collection-section dark">
-      <div class="collection-container" data-animate="slide-right">
-        <div class="collection-image">
+      <div class="collection-container">
+        <div class="collection-image" data-animate="slide-left">
           <img src="asset/img/trangchu/Bst5.png" alt="Bộ sưu tập Fleur">
         </div>
-        <div class="collection-content">
-          <h2>Ánh bình minh - Nắng đầu ngày chạm nhẹ lên vai, khởi đầu cho một hành trình yêu thương rạng
+        <div class="collection-content" data-animate="slide-right">
+          <h2>Ánh bình minh - Nắng đầu ngày chạm lên vai, khởi đầu cho một hành trình yêu thương rạng
             rỡ
           </h2>
           <p>
@@ -822,17 +891,17 @@
             mơ
             đều hóa thành thật.
           </p>
-          <a href="#" class="collection-btn">Xem thêm</a>
+          <a href="bosuutap/Bst5.html" class="collection-btn">Xem thêm</a>
         </div>
       </div>
     </section>
 
     <section class="collection-section light">
-      <div class="collection-container" data-animate="slide-left">
-        <div class="collection-image">
+      <div class="collection-container">
+        <div class="collection-image" data-animate="slide-right">
           <img src="asset/img/trangchu/Bst6.png" alt="Bộ sưu tập Fleur">
         </div>
-        <div class="collection-content">
+        <div class="collection-content" data-animate="slide-left">
           <h2>Khúc hẹn yêu - Giữa ngàn ánh nhin, ta gặp nhau, bản tình ca khẽ cất lên từ trái tim</h2>
           <p>
             “Khúc Hẹn Yêu” là câu chuyện về tình yêu nảy nở trong giây phút hai trái tim gặp gỡ. BST
@@ -842,7 +911,7 @@
             cô dâu như một giai điệu nhẹ vang. “Khúc Hẹn Yêu” - nơi tình yêu được cất thành lời, và
             hạnh phúc bắt đầu ngân lên.
           </p>
-          <a href="#" class="collection-btn">Xem thêm</a>
+          <a href="bosuutap/Bst6.html" class="collection-btn">Xem thêm</a>
         </div>
       </div>
     </section>
@@ -895,7 +964,9 @@
       </div>
       <div class="fomula-line">
         <span class="line"></span>
-        <button class="btn-more" data-animate>Khám phá thêm</button>
+        <button class="btn-more" data-animate>
+          <a href="sanpham/sanpham.html">KHÁM PHÁ NGAY</a>
+        </button>
         <span class="line"></span>
       </div>
     </section>
@@ -903,32 +974,32 @@
     <section class="blog-section">
       <div class="blog-header" data-animate>
         <h2>Tin tức mới nhất đến từ Fleur Bridal House</h2>
-        <a href="#" class="btn-more">Xem tất cả</a>
+        <a href="tintuc/tintuc.html" class="btn-more">Xem tất cả</a>
       </div>
       <div class="blog-items">
         <div class="blog-item">
           <img src="asset/img/trangchu/blog1.jpg" alt="Blog 1">
           <p class="date">25 tháng 10, 2024</p>
           <h3>5 xu hướng váy cưới hot nhất năm 2024 không thể bỏ qua</h3>
-          <a href="#" class="btn-more">Đọc thêm</a>
+          <a href="tintuc/blog1.html" class="btn-more">Đọc thêm</a>
         </div>
         <div class="blog-item">
           <img src="asset/img/trangchu/blog2.jpg" alt="Blog 2">
           <p class="date">14 tháng 2, 2025</p>
           <h3>Làm thế nào để chọn váy cưới phù hợp với dáng người?</h3>
-          <a href="#" class="btn-more">Đọc thêm</a>
+          <a href="tintuc/blog2.html" class="btn-more">Đọc thêm</a>
         </div>
         <div class="blog-item">
           <img src="asset/img/trangchu/blog3.jpg" alt="Blog 3">
           <p class="date">30 tháng 3, 2025</p>
           <h3>Bí quyết chăm sóc váy cưới sau ngày trọng đại</h3>
-          <a href="#" class="btn-more">Đọc thêm</a>
+          <a href="tintuc/blog3.html" class="btn-more">Đọc thêm</a>
         </div>
         <div class="blog-item">
           <img src="asset/img/trangchu/blog4.jpg" alt="Blog 4">
           <p class="date">10 tháng 10, 2025</p>
           <h3>Phụ kiện cưới không thể thiếu cho cô dâu hiện đại</h3>
-          <a href="#" class="btn-more">Đọc thêm</a>
+          <a href="tintuc/blog4.html" class="btn-more">Đọc thêm</a>
         </div>
       </div>
       <div class="blog-sidebar">
@@ -967,7 +1038,14 @@
 
         <form class="contact-form active-form" id="store-form">
           <label for="store_salon">Tên Cửa hàng*</label>
-          <input type="text" id="store_salon" name="salon" required>
+          <select id="store_branch" name="type" required>
+            <option value="fleurbridal">CS1: 281 Trường Chinh, P.Phương Liệt, Tp.Hà Nội</option>
+            <option value="fleurbridallottemall">CS2: Tầng 2, Lotte Mall Tây Hồ, Hà Nội</option>
+            <option value="fleurbridalhouse">CS3: 32 Nguyễn Đình Chiểu, Quận 1, TP. Hồ Chí Minh</option>
+            <option value="fleurbridaloffcial">CS4: 20 Điện Biên Phủ,P.Thanh Khê Đông, Q.Thanh Khê, Đà Nẵng</option>
+            <option value="fleurbridalsaigon">CS5: Tòa nhà Saigon Centre, Quận 1, TP.Hồ Chí Minh</option>
+            <option value="fleurbridalvvt">CS6: 40 Võ Văn Tần, Quận 3, TP.Hồ Chí Minh</option>
+          </select>
 
           <label for="store_country">Quốc gia*</label>
           <input type="text" id="store_country" name="country" required>
@@ -1039,7 +1117,14 @@
     </section>
         </div>
   </main>
-
+  <!-- POPUP THÔNG BÁO -->
+<div class="thankyou-overlay" id="thankyouOverlay">
+  <div class="thankyou-popup">
+    <h3>Cảm ơn bạn!</h3>
+    <p>Chúng tôi đã nhận được thông tin của bạn.</p>
+    <button id="closePopup">Đóng</button>
+  </div>
+</div>
 
     <script src="asset/js/trangchu.js"></script>
 

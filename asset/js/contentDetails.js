@@ -24,13 +24,18 @@ function renderProduct(p) {
 
   container.innerHTML = `
     <div id="containerD">
-      <div id="imageSection">
+        <div id="imageSection">
         <img id="imgDetails" src="${p.preview}" alt="${p.name}">
-        <div id="productPreview">
-          ${p.photos.map(photo => `<img src="${photo}" onclick="document.getElementById('imgDetails').src='${photo}'">`).join("")}
-        </div>
-      </div>
 
+        <div id="productPreview">
+              ${p.photos
+                .map(
+                  (photo) =>
+                    `<img src="${photo}" onclick="document.getElementById('imgDetails').src='${photo}'">`
+                )
+                .join("")}
+            </div>
+        </div>
       <div id="productDetails">
         <h1>${p.name}</h1>
 
@@ -39,6 +44,15 @@ function renderProduct(p) {
 
         <h3>Mô tả sản phẩm</h3>
         <p>${p.description}</p>
+
+        <h3>Chi tiết:</h3>
+        <ul id="detailList" style="list-style:none; padding-left:0;">
+          ${p.details
+      ? Object.entries(p.details)
+        .map(([key, value]) => `<li><strong>${key}:</strong> ${value}</li>`)
+        .join("")
+      : "<li>Đang cập nhật...</li>"}
+        </ul>
 
         <label>Màu sắc:</label>
         <div id="colorSelect" class="option-buttons">
@@ -64,6 +78,37 @@ function renderProduct(p) {
   `;
 
   // ================================
+// Hiệu ứng chuyển ảnh (auto và click preview)
+// ================================
+let currentIndex = 0;
+const imgElement = document.getElementById("imgDetails");
+const previews = document.querySelectorAll("#productPreview img");
+
+// Hàm hiển thị ảnh theo index
+function showImage(index) {
+  imgElement.style.opacity = 0;
+  setTimeout(() => {
+    imgElement.src = p.photos[index];
+    imgElement.style.opacity = 1;
+  }, 200);
+
+  previews.forEach(pre => pre.style.border = "2px solid #ddd");
+  previews[index].style.border = "2px solid #000";
+  currentIndex = index;
+}
+
+// Click ảnh nhỏ để đổi
+previews.forEach((preview, index) => {
+  preview.addEventListener("click", () => showImage(index));
+});
+
+// Tự động chuyển ảnh mỗi 8 giây
+setInterval(() => {
+  currentIndex = (currentIndex + 1) % p.photos.length;
+  showImage(currentIndex);
+}, 8000);
+
+  // ================================
   // Cập nhật tổng tiền khi thay đổi số lượng
   // ================================
   const qtyInput = document.getElementById("quantity");
@@ -80,11 +125,14 @@ function renderProduct(p) {
   function setupOptionButtons(containerId) {
     const container = document.getElementById(containerId);
     const buttons = container.querySelectorAll('.option-btn');
-
     buttons.forEach(btn => {
       btn.addEventListener('click', () => {
-        buttons.forEach(b => b.classList.remove('selected'));
-        btn.classList.add('selected');
+        if (btn.classList.contains('selected')) {
+          btn.classList.remove('selected');
+        } else {
+          buttons.forEach(b => b.classList.remove('selected'));
+          btn.classList.add('selected');
+        }
       });
     });
   }
@@ -116,7 +164,6 @@ function addToCart(p) {
   const option = getSelectedValue('optionSelect');
   let quantity = parseInt(document.getElementById("quantity").value) || 0;
 
-  // Kiểm tra điều kiện
   if (!color || !size || !option) {
     alert("Vui lòng chọn đủ Màu sắc, Kích cỡ và Lựa chọn trước khi thêm vào giỏ hàng!");
     return;
@@ -126,26 +173,16 @@ function addToCart(p) {
     return;
   }
 
-  // Lấy giỏ hàng hiện tại từ localStorage
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-  // Kiểm tra sản phẩm đã tồn tại trong giỏ hàng chưa (cùng id, color, size, option)
-  let existingItem = cart.find(item => 
-    item.id === p.id &&
-    item.color === color &&
-    item.size === size &&
-    item.option === option
+  let existingItem = cart.find(item =>
+    item.id === p.id && item.color === color && item.size === size && item.option === option
   );
 
   if (existingItem) {
-    // Cộng dồn số lượng và cập nhật tổng tiền
     existingItem.quantity += quantity;
     existingItem.total = existingItem.quantity * p.price;
-    alert(`${p.name} đã được cập nhật trong giỏ hàng!
-Số lượng mới: ${existingItem.quantity}
-👉 Tổng tiền: ${existingItem.total.toLocaleString()}₫`);
+    alert(`${p.name} đã được cập nhật trong giỏ hàng!\nSố lượng mới: ${existingItem.quantity}\n👉 Tổng tiền: ${existingItem.total.toLocaleString()}₫`);
   } else {
-    // Thêm mới sản phẩm vào giỏ hàng
     cart.push({
       id: p.id,
       name: p.name,
@@ -157,24 +194,15 @@ Số lượng mới: ${existingItem.quantity}
       price: p.price,
       total: p.price * quantity
     });
-    alert(`${p.name} đã được thêm vào giỏ hàng!
-Màu: ${color}
-Kích cỡ: ${size}
-Lựa chọn: ${option}
-Số lượng: ${quantity}
-👉 Tổng tiền sản phẩm: ${(p.price * quantity).toLocaleString()}₫`);
+    alert(`${p.name} đã được thêm vào giỏ hàng!\nMàu: ${color}\nKích cỡ: ${size}\nLựa chọn: ${option}\nSố lượng: ${quantity}\n👉 Tổng tiền: ${(p.price * quantity).toLocaleString()}₫`);
   }
 
-  // Lưu lại giỏ hàng
   localStorage.setItem("cart", JSON.stringify(cart));
 
-  // Reset giao diện chọn
   document.getElementById("quantity").value = 1;
   ['colorSelect', 'sizeSelect', 'optionSelect'].forEach(id => {
-    const buttons = document.querySelectorAll(`#${id} .option-btn`);
-    buttons.forEach(btn => btn.classList.remove('selected'));
+    document.querySelectorAll(`#${id} .option-btn`).forEach(btn => btn.classList.remove('selected'));
   });
 
-  // Cập nhật lại tổng tiền hiển thị
   document.getElementById("totalPrice").textContent = "Tổng tiền: " + p.price.toLocaleString() + "₫";
 }

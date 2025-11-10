@@ -236,7 +236,7 @@ main {
 }
 
 /* ================== FOOTER ================== */
-footer {
+.footer-component {
     width: 100%;
     background: #fff;
     border-top: 1px solid #ddd;
@@ -247,12 +247,12 @@ footer {
     z-index: 10;
 }
 
-.footer-top {
+.footer-component .footer-top {
     text-align: center;
     margin-bottom: 30px;
 }
 
-.footer-top a.logo {
+.footer-component .footer-top a.logo {
     display: inline-block;
     text-decoration: none;
     color: #000;
@@ -260,7 +260,7 @@ footer {
     font-weight: bold;
 }
 
-.footer-main {
+.footer-component .footer-main {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -269,16 +269,16 @@ footer {
     margin: 0 auto;
 }
 
-.footer-col {
+.footer-component .footer-col {
     flex: 1 1 220px;
 }
 
-.footer-col h3 {
+.footer-component .footer-col h3 {
     font-size: 24px;
     margin-bottom: 15px;
 }
 
-.footer-col a {
+.footer-component .footer-col a {
     text-decoration: none;
     color: #000;
     font-size: 18px;
@@ -287,14 +287,14 @@ footer {
 }
 
 /* Subscribe form */
-.footer-col .subscribe {
+.footer-component .footer-col .subscribe {
     display: flex;
     margin-top: 10px;
     width: 100%;
     max-width: 420px;
 }
 
-.footer-col input[type="email"] {
+.footer-component .footer-col input[type="email"] {
     flex: 1;
     height: 45px;
     border: none;
@@ -304,7 +304,7 @@ footer {
     font-size: 16px;
 }
 
-.footer-col button {
+.footer-component .footer-col button {
     height: 45px;
     padding: 0 20px;
     border: none;
@@ -315,19 +315,19 @@ footer {
     font-weight: 600;
 }
 
-.footer-col button:hover {
+.footer-component .footer-col button:hover {
     background: #333;
 }
 
 /* Icons */
-.footer-col .icons {
+.footer-component .footer-col .icons {
     display: flex;
     justify-content: space-between;
     max-width: 420px;
     margin-top: 20px;
 }
 
-.footer-col .icons a {
+.footer-component .footer-col .icons a {
     width: 40px;
     height: 40px;
     display: flex;
@@ -337,18 +337,18 @@ footer {
     transition: transform 0.2s;
 }
 
-.footer-col .icons a:hover {
+.footer-component .footer-col .icons a:hover {
     transform: scale(1.05);
 }
 
-.footer-col .icons a img {
+.footer-component .footer-col .icons a img {
     width: 70%;
     height: 70%;
     object-fit: contain;
 }
 
 /* Bottom line */
-.footer-bottom {
+.footer-component .footer-bottom {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -356,13 +356,13 @@ footer {
     margin-top: 60px;
 }
 
-.footer-bottom .line {
+.footer-component .footer-bottom .line {
     flex: 1;
     height: 2px;
     background: #000;
 }
 
-.footer-bottom span {
+.footer-component .footer-bottom span {
     font-family: "Bree Serif", serif;
     font-size: 16px;
     font-weight: 600;
@@ -370,20 +370,19 @@ footer {
 
 /* Responsive footer */
 @media (max-width: 768px) {
-    .footer-main {
+    .footer-component .footer-main {
         flex-direction: column;
         align-items: center;
         text-align: center;
     }
 
-    .footer-bottom {
+    .footer-component .footer-bottom {
         flex-direction: column;
         gap: 10px;
     }
 
-    .footer-bottom .line {
+    .footer-component .footer-bottom .line {
         display: none;
     }
 }
-
 /* ================== END OF FILE ================== */

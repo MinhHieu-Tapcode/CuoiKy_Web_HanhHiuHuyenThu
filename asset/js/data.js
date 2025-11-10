@@ -6,6 +6,13 @@ const products = [
     "name": "ELOWEN",
     "price": 4590000,
     "description": "Váy voan phối satin bồng xoè, tạo cảm giác nhẹ nhàng và tinh tế, thích hợp cho tiệc tối hoặc lễ cưới.",
+    "details": {
+      "Chất liệu": "Phần thân vải satin bóng, tà váy vải voan chất lượng cao",
+      "Kiểu dáng": "Dáng bồng xòe",
+      "Cổ áo": "Cúp ngực cổ chữ V",
+      "Tay áo": "Không tay",
+      "Chiều dài": "Dài chấm đất"
+    },
     "preview": "../asset/img/image/sp1/elowen.png",
     "photos": [
       "../asset/img/image/sp1/elowen.png",
@@ -1050,6 +1057,202 @@ const products = [
     "colors": ["Bạc"],
     "sizes": ["S", "M", "L", "XL", "XXL"],
     "options": ["Kèm đuôi váy", "Không kèm đuôi váy"]
+  },
+  {
+    "id": "76",
+    "name": "Yên Hoa",
+    "price": null,
+    "description": "Áo dài mang nét thanh lịch và gợi cảm vừa đủ, nổi bật với phần lưng hở tinh tế. Chất liệu ren pha voan tạo cảm giác nhẹ nhàng và bay bổng. Thiết kế giúp cô dâu tỏa sáng trong mọi không gian cưới.",
+    "preview": "../asset/img/image/sp5/yenhoa1.png",
+    "photos": [
+      "../asset/img/image/sp5/yenhoa1.png",
+      "../asset/img/image/sp5/yenhoa2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "options": ["1 lựa chọn"]
+  },
+  {
+    "id": "77",
+    "name": "Look 2 Áo dài Viên Mãn",
+    "price": 20000000,
+    "description": "Áo dài cô dâu mang vẻ đẹp thuần khiết và sang trọng. Chất ren ánh kim nhẹ phản chiếu ánh sáng, tạo cảm giác lấp lánh tự nhiên. Thiết kế cổ cao cùng đường cắt tinh gọn giúp tôn dáng và giữ nét truyền thống duyên dáng.",
+    "preview": "../asset/img/image/sp5/look2vienman.png",
+    "photos": [
+      "../asset/img/image/sp5/look2.1.png",
+      "../asset/img/image/sp5/look2.2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "options": ["Áo dài cô dâu"]
+  },
+  {
+    "id": "78",
+    "name": "Xuân Cầm",
+    "price": 15000000,
+    "description": "Áo dài mang vẻ đẹp thanh lịch, tối giản nhưng sang trọng. Thiết kế ôm nhẹ tôn dáng, kết hợp chất liệu lụa satin mềm mịn tạo hiệu ứng tinh khôi. Phù hợp cho cô dâu yêu thích phong cách trang nhã và cổ điển.",
+    "preview": "../asset/img/image/sp5/xuancam.png",
+    "photos": [
+      "../asset/img/image/sp5/xuancam1.png",
+      "../asset/img/image/sp5/xuancam2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "options": ["Áo dài cô dâu"]
+  },
+  {
+    "id": "79",
+    "name": "Viên Mãn",
+    "price": 20000000,
+    "description": "Áo dài kết hợp giữa nét truyền thống và hiện đại, tạo điểm nhấn với phần đuôi váy bồng nhẹ. Họa tiết ren nổi tinh tế tôn lên vẻ mềm mại, thanh thoát. Thiết kế giúp cô dâu trở nên nổi bật và sang trọng trong ngày cưới.",
+    "preview": "../asset/img/image/sp5/vienman 1.png",
+    "photos": [
+      "../asset/img/image/sp5/vienman1.png",
+      "../asset/img/image/sp5/vienman2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "options": ["Áo dài cô dâu"]
+  },
+  {
+    "id": "80",
+    "name": "Áo dài Thiên Ân",
+    "price": 20000000,
+    "description": "Áo dài mang vẻ đẹp nhẹ nhàng và tinh khôi, điểm xuyết họa tiết ren tỉ mỉ tạo chiều sâu cho thiết kế. Chất liệu bắt sáng nhẹ giúp cô dâu nổi bật mà vẫn thanh lịch. Phù hợp cho không gian cưới ngoài trời hoặc lễ gia tiên trang nhã.",
+    "preview": "../asset/img/image/sp5/thienan1.png",
+    "photos": [
+      "../asset/img/image/sp5/thienan1.png",
+      "../asset/img/image/sp5/thienan2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "options": ["Áo dài cô dâu"]
+  },
+  {
+    "id": "81",
+    "name": "Trăm Năm",
+    "price": 20000000,
+    "description": "Áo dài mang nét thanh lịch và gợi cảm vừa đủ, nổi bật với phần lưng hở tinh tế. Chất liệu ren pha voan tạo cảm giác nhẹ nhàng và bay bổng. Thiết kế giúp cô dâu tỏa sáng trong mọi không gian cưới.",
+    "preview": "../asset/img/image/sp5/tramnam1.png",
+    "photos": [
+      "../asset/img/image/sp5/tramnam1.png",
+      "../asset/img/image/sp5/tramnam2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "options": ["Áo dài cô dâu"]
+  },
+  {
+    "id": "82",
+    "name": "Nét Duyên",
+    "price": 20000000,
+    "description": "Áo dài cô dâu mang vẻ đẹp kiêu sa và thanh thoát. Họa tiết ren tinh xảo kết hợp voan mềm tạo nên sự nhẹ nhàng, trang nhã. Thiết kế cổ cao tôn nét dịu dàng, phù hợp cho các buổi lễ truyền thống sang trọng.",
+    "preview": "../asset/img/image/sp5/netduyen1.png",
+    "photos": [
+      "../asset/img/image/sp5/netduyen1.png",
+      "../asset/img/image/sp5/netduyen2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "options": ["Áo dài cô dâu"]
+  },
+  {
+    "id": "83",
+    "name": "Thiên Ân",
+    "price": null,
+    "description": "Áo dài cô dâu mang vẻ đẹp thanh lịch và tinh khôi. Thiết kế ren tỉ mỉ kết hợp voan nhẹ tạo cảm giác bay bổng. Form ôm nhẹ tôn dáng, phù hợp cho những cô dâu yêu nét truyền thống pha hiện đại.",
+    "preview": "../asset/img/image/sp5/thienan1.png",
+    "photos": [
+      "../asset/img/image/sp5/look3.1.png",
+      "../asset/img/image/sp5/look3.2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "options": ["Áo dài cô dâu"]
+  },
+  {
+    "id": "84",
+    "name": "Trao Tay",
+    "price": 20000000,
+    "description": "Áo dài cô dâu mang phong cách sang trọng và hiện đại. Họa tiết pha lê tỉ mỉ tạo nên hiệu ứng lấp lánh nhẹ nhàng dưới ánh sáng. Thiết kế cổ thuyền tôn phần vai thanh mảnh, phù hợp cho những cô dâu yêu nét tinh tế và quý phái.",
+    "preview": "../asset/img/image/sp5/traotay1.png",
+    "photos": [
+      "../asset/img/image/sp5/traotay1.png",
+      "../asset/img/image/sp5/traotay2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "options": ["Áo dài cô dâu"]
+  },
+  {
+    "id": "85",
+    "name": "Kết Duyên",
+    "price": 20000000,
+    "description": "Áo dài cô dâu mang vẻ đẹp thuần khiết và sang trọng. Chất ren ánh kim nhẹ phản chiếu ánh sáng, tạo cảm giác lấp lánh tự nhiên. Thiết kế cổ cao cùng đường cắt tinh gọn giúp tôn dáng và giữ nét truyền thống duyên dáng.",
+    "preview": "../asset/img/image/sp5/ketduyen1.png",
+    "photos": [
+      "../asset/img/image/sp5/ketduyen1.png",
+      "../asset/img/image/sp5/ketduyen2.png"
+    ],
+    "colors": ["Trắng ngọc trai"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "options": ["Áo dài cô dâu"]
+  },
+  {
+    "id": "86",
+    "name": "Bích Lan",
+    "price": null,
+    "description": "Thiết kế áo dài cô dâu mang hơi thở cổ điển với họa tiết hoa nổi tinh xảo. Chất liệu ren ánh bạc tạo hiệu ứng lấp lánh nhẹ nhàng dưới ánh sáng. Form dáng ôm tôn vẻ thanh thoát, giúp cô dâu nổi bật một cách thanh lịch và sang trọng.",
+    "preview": "../asset/img/image/sp5/bichlan1.png",
+    "photos": [
+      "../asset/img/image/sp5/bichlan1.png",
+      "../asset/img/image/sp5/bichlan2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "options": ["Áo dài cô dâu"]
+  },
+  {
+    "id": "87",
+    "name": "Thiên Cầm",
+    "price": null,
+    "description": "Áo dài cô dâu mang vẻ đẹp tinh khôi và sang trọng. Thiết kế tối giản tôn lên đường cong tự nhiên cùng chất liệu lụa mềm mại, nhẹ nhàng. Họa tiết ren tinh tế ở tà áo tạo điểm nhấn dịu dàng, giúp cô dâu toát lên vẻ thanh lịch và trang nhã.",
+    "preview": "../asset/img/image/sp5/thiencam1.png",
+    "photos": [
+      "../asset/img/image/sp5/thiencam1.png",
+      "../asset/img/image/sp5/thiencam2.png"
+    ],
+    "colors": ["Trắng ánh bạc"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "options": ["Áo dài cô dâu"]
+  },
+  {
+    "id": "88",
+    "name": "Tinh Khôi",
+    "price": null,
+    "description": "Áo dài cô dâu mang nét hiện đại pha lẫn cổ điển. Thiết kế vai trần nhẹ cùng nơ bản lớn phía sau tạo điểm nhấn tinh tế. Chất satin mềm mịn giúp tôn dáng, mang lại vẻ thanh thoát và quyến rũ cho cô dâu trong ngày trọng đại.",
+    "preview": "../asset/img/image/sp5/tinhkhoi1.png",
+    "photos": [
+      "../asset/img/image/sp5/tinhkhoi1.png",
+      "../asset/img/image/sp5/tinhkhoi2.png"
+    ],
+    "colors": ["Trắng ngọc trai"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "options": ["Áo dài cô dâu"]
+  },
+  {
+    "id": "89",
+    "name": "Tình Ca",
+    "price": null,
+    "description": "Áo dài cô dâu ren trắng mang vẻ đẹp tinh khôi và thanh lịch. Thiết kế cổ cao cùng tay ren mảnh mai tôn nét duyên dáng truyền thống. Họa tiết ren nổi tạo chiều sâu tinh tế, giúp cô dâu toát lên vẻ sang trọng trong ngày trọng đại.",
+    "preview": "../asset/img/image/sp5/tinhca1.png",
+    "photos": [
+      "../asset/img/image/sp5/tinhca1.png",
+      "../asset/img/image/sp5/tinhca2.png"
+    ],
+    "colors": ["Trắng kem"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "options": ["Áo dài cô dâu"]
   }
 
 

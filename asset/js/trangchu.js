@@ -81,3 +81,26 @@ container.addEventListener('scroll', () => {
       targetForm.classList.add('active-form');
     });
   });
+
+  /**Hiển thị khi điền xong form */
+  document.addEventListener("DOMContentLoaded", function() {
+  const forms = document.querySelectorAll(".contact-form");
+  const popup = document.getElementById("thankyouOverlay");
+  const closeBtn = document.getElementById("closePopup");
+
+  forms.forEach(form => {
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      popup.classList.add("show");
+      form.reset();
+    });
+  });
+
+  closeBtn.addEventListener("click", function() {
+    popup.classList.remove("show");
+  });
+
+  popup.addEventListener("click", function(e) {
+    if (e.target === popup) popup.classList.remove("show");
+  });
+});

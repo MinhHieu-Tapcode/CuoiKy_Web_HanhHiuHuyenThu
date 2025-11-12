@@ -81,6 +81,32 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    const searchInput = document.querySelector(".search-overlay input[type='text']");
+if (searchInput) {
+  searchInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      const keyword = searchInput.value.trim().toLowerCase();
+      if (keyword === "") {
+        alert("Vui lòng nhập tên sản phẩm!");
+        return;
+      }
+
+      // 🔎 Tìm sản phẩm khớp name hoặc description
+      const match = products.find(p =>
+        p.name.toLowerCase().includes(keyword) ||
+        p.description.toLowerCase().includes(keyword)
+      );
+
+      if (match) {
+        // ✅ Chuyển hướng đến trang chi tiết
+        window.location.href = `../sanpham/contentDetails.html?id=${match.id}`;
+      } else {
+        alert(`Không tìm thấy sản phẩm phù hợp với từ khóa "${keyword}"`);
+      }
+    }
+  });
+}
+
     // ===================== HEART ICON =====================
     if (heartIcon) {
         heartIcon.addEventListener("click", () => {

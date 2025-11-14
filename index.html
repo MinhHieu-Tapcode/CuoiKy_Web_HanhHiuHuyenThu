@@ -18,40 +18,17 @@
 
     <!-- HEADER -->
     <header id="main-header">
-        <div class="header-top">
-            <a href="/dangnhap.html">Đăng nhập</a>
-            <a href="/dangky.html">Đăng ký</a>
-        </div>
-
-        <!-- HEADER BOTTOM -->
-        <div class="header-bottom">
-            <div class="logo">
-                <img src="/asset/img/header_footer/FLEAURLOGOBLACK.png" alt="Logo" />
-            </div>
-
-            <nav class="nav-links">
-                <a href="/gioithieu.html">Giới thiệu</a>
-                <a href="/sanpham.html">Sản phẩm</a>
-                <a href="/bosuutap.html">Bộ sưu tập</a>
-                <a href="/cuahang.html">Cửa hàng</a>
-                <a href="/lienhe.html">Liên hệ</a>
-            </nav>
-
-            <div class="icons">
-                <i class="fas fa-search icon-search"></i>
-                <i class="far fa-heart icon-heart"></i>
-                <a href="/giohang.html">
-                    <i class="fas fa-shopping-cart icon-cart"></i>
-                </a>
-                <i class="fas fa-bars menu-toggle"></i>
-            </div>
-        </div>
-
-
-        <!-- SEARCH OVERLAY -->
-        <div class="search-overlay">
-            <input type="text" class="search-box" placeholder="Nhập tên sản phẩm..." />
-            <i class="fa-solid fa-xmark close-search"></i>
+        <!-- HEADER -->
+        <div id="9999"></div>
+        <script>
+            load("header_footer/header.html");
+            function load(url) {
+                req = new XMLHttpRequest();
+                req.open("GET", url, false);
+                req.send(null);
+                document.getElementById(9999).innerHTML = req.responseText;
+            }
+        </script>
         </div>
     </header>
 
@@ -65,52 +42,16 @@
 
     <!-- FOOTER -->
     <footer>
-        <div class="footer-top">
-            <a href="#" class="logo"><img src="/asset/img/header_footer/FLEAURLOGOBLACK.png" alt="Logo"></a>
-        </div>
-
-        <div class="footer-main">
-            <div class="footer-col">
-                <h3>Sản phẩm</h3>
-                <a href="/sanpham/loaisanpham.html">Váy bồng xòe</a>
-                <a href="/sanpham/loaisanpham.html">Váy đuôi cá</a>
-                <a href="/sanpham/loaisanpham.html">Váy chữ A</a>
-                <a href="/sanpham/loaisanpham.html">Váy ngắn</a>
-                <a href="/sanpham/loaisanpham.html">Áo dài cưới</a>
-                <a href="/sanpham/loaisanpham.html">Phụ kiện</a>
-            </div>
-            <div class="footer-col">
-                <h3>Công ty</h3>
-                <a href="/gioithieu.html">Giới thiệu</a>
-                <a href="/doitac.html">Đối tác</a>
-                <a href="/tintuc.html">Tin tức</a>
-            </div>
-            <div class="footer-col">
-                <h3>Hỗ trợ</h3>
-                <a href="/hotro.html">Trung tâm hỗ trợ</a>
-            </div>
-            <div class="footer-col">
-                <h3>Đăng ký nhận ưu đãi và tin tức mới nhất!</h3>
-                <div class="subscribe">
-                    <input type="email" placeholder="Nhập email">
-                    <button>Subscribe</button>
-                </div>
-                <div class="icons">
-                    <a href="#"><img src="/asset/img/header_footer/IGLOGO.png" alt="Icon 1"></a>
-                    <a href="#"><img src="/asset/img/header_footer/FBLOGO.png" alt="Icon 2"></a>
-                    <a href="#"><img src="/asset/img/header_footer/YTBLOGO.png" alt="Icon 3"></a>
-                    <a href="#"><img src="/asset/img/header_footer/TIKLOGO.png" alt="Icon 4"></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div class="line"></div>
-            <span>2025 @ All rights reserved</span>
-            <div class="line"></div>
-        </div>
-
-
+        <div id="8888"></div>
+        <script>
+            load("header_footer/footer.html");
+            function load(url) {
+                req = new XMLHttpRequest();
+                req.open("GET", url, false);
+                req.send(null);
+                document.getElementById("8888").innerHTML = req.responseText;
+            }
+        </script>
     </footer>
 
     <script src="/header_footer/header_footer.js"></script>

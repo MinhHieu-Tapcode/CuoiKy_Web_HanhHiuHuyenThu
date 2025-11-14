@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng | E-Commerce Frontend</title>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <link rel="stylesheet" href="asset/css/cart.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="cartMainContainer">
+        <h2>Giỏ hàng của bạn</h2>
+        <h3 id="totalItem">Sản phẩm: 0</h3>
+
+        <div id="cartContainer">
+            <!-- Danh sách sản phẩm -->
+            <div id="boxContainer"></div>
+
+            <!-- Tổng tiền -->
+            <div id="totalContainer">
+                <h3>Tóm tắt đơn hàng</h3>
+                <p id="totalAmount">Tổng tiền: 0₫</p>
+                <hr>
+                <button id="checkoutBtn">Thanh toán</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="asset/js/cart.js"></script>
+</body>
+
+</html>

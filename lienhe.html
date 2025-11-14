@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="utf-8">
+  <title>Fleur Official</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap&subset=vietnamese"
+    rel="stylesheet">
+  <link rel="icon" type="image/png" href="asset/img/trangchu/logobe.png">
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="header_footer/style.css">
+  <style>
+    @import url('asset/css/main.css');
+
+    .khung-chinh {
+      text-align: justify;
+    }
+
+    .contact-info-section {
+      padding: 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .contact-info-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      max-width: 1200px;
+      width: 100%;
+      gap: 40px;
+      position: relative;
+    }
+
+    .contact-image {
+      flex: 1.3;
+      overflow: auto;
+      transition: transform 1.2s;
+      scrollbar-width: none;
+    }
+
+    .contact-image::-webkit-scrollbar {
+      display: none;
+    }
+
+    .contact-image img {
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      object-fit: cover;
+    }
+
+    .contact-text-box {
+      flex: 0.7;
+      background-color: #2b2b2b;
+      padding: 50px 30px;
+      line-height: 1.8;
+      font-size: 16px;
+      position: relative;
+      margin-left: -100px;
+      z-index: 2;
+      transition: transform 1.2s;
+    }
+
+    .contact-text-box a {
+      color: #fff;
+      text-decoration: underline;
+      transition: color 0.3s;
+    }
+
+    .contact-text-box a:hover {
+      color: gray;
+    }
+
+    .contact-form-section {
+      position: relative;
+      padding: 80px 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #2b2b2b;
+      overflow: hidden;
+    }
+
+    .form-wrapper {
+      position: relative;
+      z-index: 1;
+      background-color: #e3e3e3;
+      padding: 100px 80px;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+      width: 100%;
+      max-width: 600px;
+    }
+
+    .form-header {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 40px;
+      padding-bottom: 10px;
+    }
+
+    .tab-link {
+      text-decoration: none;
+      padding: 5px 15px;
+      transition: border-bottom 0.3s;
+      cursor: pointer;
+    }
+
+    .tab-link.active {
+      border-bottom: 2px solid #000000;
+      /* Viền dưới tab active màu đen */
+    }
+
+    .contact-form {
+      display: none;
+      /* Mặc định ẩn */
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    .contact-form.active-form {
+      display: block;
+      /* Hiện khi có class active-form */
+      opacity: 1;
+    }
+
+    .contact-form label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+      margin-top: 20px;
+      color: #000000;
+      /* Label màu đen */
+    }
+
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form input[type="tel"],
+    .contact-form textarea,
+    .contact-form select {
+      width: 100%;
+      padding: 8px 0;
+      border: none;
+      border-bottom: 1px solid #2b2b2b;
+      /* Gạch dưới màu xám đậm */
+      background: transparent;
+      font-size: 16px;
+      color: #000000;
+      /* Input text màu đen */
+      outline: none;
+    }
+
+    .contact-form textarea {
+      resize: vertical;
+      min-height: 50px;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      margin-top: 40px;
+      background-color: #2b2b2b;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 300;
+      transition: background-color 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: #555555;
+    }
+
+    /* --- POPUP CẢM ƠN --- */
+    .thankyou-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      /* Nền mờ */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+      z-index: 999;
+    }
+
+    .thankyou-overlay.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .thankyou-popup {
+      background-color: #e3e3e3;
+      padding: 40px 60px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      transform: scale(0.8);
+      transition: transform 0.3s ease;
+    }
+
+    .thankyou-overlay.show .thankyou-popup {
+      transform: scale(1);
+    }
+
+    .thankyou-popup h3 {
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #2b2b2b;
+    }
+
+    .thankyou-popup p {
+      font-size: 16px;
+      margin-bottom: 25px;
+      color: #2b2b2b;
+    }
+
+    #closePopup {
+      background-color: #2b2b2b;
+      color: #e3e3e3;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #closePopup:hover {
+      background-color: gray;
+    }
+
+    /**phục vụ cho script*/
+    [data-animate] {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: all 1.2s ease;
+      will-change: transform, opacity;
+      overflow: visible;
+    }
+
+    [data-animate].show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    [data-animate="slide-left"] {
+      transform: translateX(-50px);
+    }
+
+    [data-animate="slide-right"] {
+      transform: translateX(50px);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Nơi header sẽ được chèn -->
+  <!-- HEADER -->
+  <header id="main-header">
+    <div class="header-top">
+      <a href="/dangky.html">Đăng Nhập</a>
+      <a href="/dangky.html">Đăng Ký</a>
+    </div>
+
+    <!-- HEADER BOTTOM -->
+    <div class="header-bottom">
+      <div class="logo">
+        <img src="asset/img/header_footer/FLEAURLOGOBLACK.png" alt="Logo" />
+      </div>
+
+      <nav class="nav-links">
+        <a href="gioithieu.html">Giới thiệu</a>
+        <a href="sanpham.html">Sản phẩm</a>
+        <a href="bosuutap.html">Bộ sưu tập</a>
+        <a href="cuahang.html">Cửa hàng</a>
+        <a href="lienhe.html">Liên hệ</a>
+      </nav>
+
+      <div class="icons">
+        <i class="fas fa-search icon-search"></i>
+        <i class="far fa-heart icon-heart"></i>
+        <a href="giohang.html">
+          <i class="fas fa-shopping-cart icon-cart"></i>
+        </a>
+        <i class="fas fa-bars menu-toggle"></i>
+      </div>
+    </div>
+
+
+    <!-- SEARCH OVERLAY -->
+    <div class="search-overlay">
+      <input type="text" class="search-box" placeholder="Nhập tên sản phẩm..." />
+      <i class="fa-solid fa-xmark close-search"></i>
+    </div>
+  </header>
+
+  <main class="khung-toan-trang" style="padding: 60px 20px;">
+    <div class="khung-chinh">
+      <h1 class="tieu-de-chinh" style="text-align: center;">LIÊN HỆ</h1>
+      <div class="page-breadcrumbs" style="text-align: center;">
+        <nav aria-label="breadcrumbs" class="rank-math-breadcrumb">
+          <p style="font-size: 0.8em;">
+            <a href="trangchu.html">Fleur</a>
+            <span class="separator"> - </span>
+            <span class=" last">Liên hệ</span>
+          </p>
+        </nav>
+      </div>
+      <section class="contact-info-section">
+        <div class="contact-info-container">
+          <div class="contact-image">
+            <img src="asset/img/lienhe.jpg" alt="Ảnh mẫu" data-animate="slide-right">
+          </div>
+          <div class="contact-text-box" data-animate="slide-left">
+            <p style="color: #fff; font-weight: 500;">Để hợp tác, phản hồi hoặc đóng góp ý kiến: <br>
+              <a href="mailto:salesoffleur@gmail.com">salesoffleur@gmail.com</a>
+            </p>
+            <p style="color: #fff; font-weight: 500;">Để đặt lịch trực tiếp hoặc liên hệ marketing: <br>
+              <a href="mailto:marketingoffleur@gmail.com">marketingoffleur@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-form-section">
+        <div class="form-wrapper">
+          <div class="form-header">
+            <a href="#store-form" class="tab-link active" data-target="store-form">CỬA HÀNG</a>
+            <a href="#bride-form" class="tab-link" data-target="bride-form">KHÁCH HÀNG</a>
+            <a href="#feedback-form" class="tab-link" data-target="feedback-form">ĐÁNH GIÁ</a>
+          </div>
+
+          <form class="contact-form active-form" id="store-form">
+            <label for="store_salon">Tên Cửa hàng*</label>
+            <input type="text" id="store_salon" name="salon" required>
+
+            <label for="store_country">Quốc gia*</label>
+            <input type="text" id="store_country" name="country" required>
+
+            <label for="store_city">Thành phố*</label>
+            <input type="text" id="store_city" name="city" required>
+
+            <label for="store_social">Website / Instagram / Facebook</label>
+            <input type="text" id="store_social" name="social">
+
+            <label for="store_name">Họ và Tên*</label>
+            <input type="text" id="store_name" name="name" required>
+
+            <label for="store_email">Email*</label>
+            <input type="email" id="store_email" name="email" required>
+
+            <label for="store_phone">Số điện thoại*</label>
+            <input type="tel" id="store_phone" name="phone" required>
+
+            <label for="store_comment">Lời nhắn / Yêu cầu</label>
+            <textarea id="store_comment" name="comment"></textarea>
+
+            <button type="submit" class="submit-btn">GỬI</button>
+          </form>
+
+          <form class="contact-form hidden-form" id="bride-form">
+            <label for="bride_name">Họ và Tên KH*</label>
+            <input type="text" id="bride_name" name="name" required>
+
+            <label for="bride_date">Ngày Cưới Dự Kiến*</label>
+            <input type="date" id="bride_date" name="wedding_date" required>
+
+            <label for="bride_location">Địa điểm Cưới (Thành phố)*</label>
+            <input type="text" id="bride_location" name="location" required>
+
+            <label for="bride_email">Email*</label>
+            <input type="email" id="bride_email" name="email" required>
+
+            <label for="bride_phone">Số điện thoại*</label>
+            <input type="tel" id="bride_phone" name="phone" required>
+
+            <label for="bride_comment">Váy bạn thích / Yêu cầu tư vấn</label>
+            <textarea id="bride_comment" name="comment"></textarea>
+
+            <button type="submit" class="submit-btn">ĐẶT LỊCH TƯ VẤN</button>
+          </form>
+
+          <form class="contact-form hidden-form" id="feedback-form">
+            <label for="feedback_type">Loại Phản Hồi*</label>
+            <select id="feedback_type" name="type" required>
+              <option value="complaint">Khiếu nại</option>
+              <option value="suggestion">Góp ý</option>
+              <option value="praise">Khen ngợi</option>
+            </select>
+
+            <label for="feedback_name">Họ và Tên (Tùy chọn)</label>
+            <input type="text" id="feedback_name" name="name">
+
+            <label for="feedback_email">Email (Để liên hệ lại)*</label>
+            <input type="email" id="feedback_email" name="email" required>
+
+            <label for="feedback_message">Nội dung Phản Hồi*</label>
+            <textarea id="feedback_message" name="message" required></textarea>
+
+            <button type="submit" class="submit-btn">GỬI ĐÁNH GIÁ</button>
+          </form>
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const elements = document.querySelectorAll("[data-animate]");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      }, { threshold: 0.2 });
+
+      elements.forEach(el => observer.observe(el));
+    });
+  </script>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab-link');
+    const forms = document.querySelectorAll('.contact-form');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        // Xoá class active trên tất cả tab
+        tabs.forEach(t => t.classList.remove('active'));
+
+        // Thêm class active cho tab được click
+        tab.classList.add('active');
+
+        // Ẩn tất cả form
+        forms.forEach(form => {
+          form.classList.remove('active-form');
+          form.style.display = 'none';
+          form.style.opacity = 0;
+        });
+
+        // Lấy ID của form tương ứng với tab
+        const targetId = tab.getAttribute('data-target');
+        const targetForm = document.getElementById(targetId);
+
+        // Hiển thị form tương ứng
+        targetForm.style.display = 'block';
+        setTimeout(() => targetForm.style.opacity = 1, 10);
+        targetForm.classList.add('active-form');
+      });
+    });
+  </script>
+  <!-- POPUP THÔNG BÁO -->
+  <div class="thankyou-overlay" id="thankyouOverlay">
+    <div class="thankyou-popup">
+      <h3>Cảm ơn bạn!</h3>
+      <p>Chúng tôi đã nhận được thông tin của bạn.</p>
+      <button id="closePopup">Đóng</button>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const forms = document.querySelectorAll(".contact-form");
+      const popup = document.getElementById("thankyouOverlay");
+      const closeBtn = document.getElementById("closePopup");
+
+      forms.forEach(form => {
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          popup.classList.add("show");
+          form.reset();
+        });
+      });
+
+      closeBtn.addEventListener("click", function () {
+        popup.classList.remove("show");
+      });
+
+      popup.addEventListener("click", function (e) {
+        if (e.target === popup) popup.classList.remove("show");
+      });
+    });
+  </script>
+
+
+
+
+  <!-- Nơi footer sẽ được chèn -->
+  <!-- FOOTER -->
+  <footer class="footer-component">
+    <div class="footer-top">
+      <a href="#" class="logo"><img src="../asset/img/header_footer/FLEAURLOGOBLACK.png" alt="Logo"></a>
+    </div>
+    <div class="footer-main">
+      <div class="footer-col">
+        <h3>Sản phẩm</h3>
+        <a href="sp1.html">Váy bồng xòe</a>
+        <a href="sp2.html">Váy đuôi cá</a>
+        <a href="sp3.html">Váy chữ A</a>
+        <a href="sp4.html">Váy ngắn</a>
+        <a href="sp5.html">Áo dài cưới</a>
+        <a href="pk.html">Phụ kiện</a>
+      </div>
+      <div class="footer-col">
+        <h3>Công ty</h3>
+        <a href="../gioithieu.html">Giới thiệu</a>
+        <a href="../doitac.html">Đối tác</a>
+        <a href="../tintuc/tintuc.html">Tin tức</a>
+      </div>
+      <div class="footer-col">
+        <h3>Hỗ trợ</h3>
+        <a href="../hotro.html">Trung tâm hỗ trợ</a>
+      </div>
+      <div class="footer-col">
+        <h3>Đăng ký nhận ưu đãi và tin tức mới nhất!</h3>
+        <div class="subscribe">
+          <input type="email" placeholder="Nhập email">
+          <button>Subscribe</button>
+        </div>
+        <div class="icons">
+          <a href="#"><img src="../asset/img/header_footer/IGLOGO.png" alt="Icon 1"></a>
+          <a href="#"><img src="../asset/img/header_footer/FBLOGO.png" alt="Icon 2"></a>
+          <a href="#"><img src="../asset/img/header_footer/YTBLOGO.png" alt="Icon 3"></a>
+          <a href="#"><img src="../asset/img/header_footer/TIKLOGO.png" alt="Icon 4"></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="line"></div>
+      <span>2025 @ All rights reserved</span>
+      <div class="line"></div>
+    </div>
+  </footer>
+  <!-- Script để load header + footer và gắn sự kiện -->
+  <script src="header_footer/header_footer.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <script src="asset/js/gioithieu.js"></script>
+
+
+
+
+</body>
+
+</html>

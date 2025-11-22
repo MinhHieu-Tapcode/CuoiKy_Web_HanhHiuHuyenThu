@@ -1,0 +1,185 @@
+:root{
+  --max-width: 820px;
+  --accent: #222;
+  --line: rgba(0,0,0,0.2);
+  --gap: 28px;
+  font-size: 16px;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color:var(--accent);
+  background-color:#fff;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* big decorative image on the right like your screenshot */
+body::after{
+  content:"";
+  position:fixed;
+  right:0;
+  top:0;
+  height:100%;
+  width:45%;
+  background-image: url("/mnt/data/48b70ad2-2f08-4d24-9385-f4a50b530d35.png");
+  background-size: cover;
+  background-repeat:no-repeat;
+  background-position:center right;
+  opacity:0.12;
+  pointer-events:none;
+  z-index:0;
+  transform: translateX(6%);
+}
+
+/* page layout */
+.page{
+  max-width:var(--max-width);
+  margin:48px auto;
+  padding: 24px 28px;
+  position:relative;
+  z-index:1; /* above background */
+}
+
+/* title centered */
+.page-title{
+  text-align:center;
+  font-weight:500;
+  font-size:28px;
+  margin:0 0 30px 0;
+  letter-spacing:1px;
+}
+
+/* FAQ list */
+.faq-wrapper{
+  display:block;
+}
+
+.faq-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+/* each item */
+.faq-item{
+  border-bottom:1px solid var(--line);
+  padding: 18px 0;
+  display:block;
+}
+
+/* question button */
+.faq-q{
+  width:100%;
+  text-align:left;
+  background:transparent;
+  border:0;
+  padding:0;
+  font-size:18px;
+  font-weight:400;
+  cursor:pointer;
+  display:block;
+  outline:none;
+  position:relative;
+  padding-right:36px; /* room for arrow */
+}
+
+/* thin separator line appears visually like screenshot: use pseudo element under question? already have border-bottom */
+.faq-q:focus{
+  outline:2px dashed rgba(0,0,0,0.06);
+  outline-offset:6px;
+}
+
+/* chevron arrow on the right */
+.faq-q::after{
+  content: "";
+  position:absolute;
+  right:6px;
+  top:50%;
+  transform: translateY(-50%) rotate(0deg);
+  width:12px;
+  height:12px;
+  border-right:2px solid var(--accent);
+  border-bottom:2px solid var(--accent);
+  transform-origin:center;
+  transition:transform 220ms ease;
+  opacity:0.9;
+}
+
+/* rotate when open */
+.faq-q[aria-expanded="true"]::after{
+  transform: translateY(-50%) rotate(135deg);
+}
+
+/* arrow closed (pointing down) */
+.faq-q[aria-expanded="false"]::after{
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+/* answer panel */
+.faq-a{
+  margin-top:12px;
+  padding-right:20%;
+  color:#333;
+  font-size:15px;
+}
+
+/* small responsive tweaks */
+@media (max-width:900px){
+  body::after{ display:none; } /* hide big right graphic on small screens */
+  .page{ padding:20px; margin:24px; }
+  .page-title{ font-size:24px; }
+  .faq-q{ font-size:16px; padding-right:30px; }
+  .faq-a{ padding-right:0; }
+}
+
+@media (max-width:520px){
+  :root{ font-size:15px; }
+  .page{ margin:12px; }
+  .page-title{ font-size:20px; }
+  .faq-item{ padding:14px 0; }
+}
+.collections {
+  text-align: center;
+  padding: 20px 5%;
+}
+.breadcrumb {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+}
+
+.breadcrumb a {
+  color: #0f0f0f;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.breadcrumb a:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.collections h2 {
+  font-size: 48px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.collection-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
+  justify-content: center;
+}
+
+.collection-item {
+  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
+}

@@ -40,7 +40,7 @@ body::after{
 .page{
   max-width:var(--max-width);
   margin:48px auto;
-  padding: 24px 28px;
+  padding: 10px 10px;
   position:relative;
   z-index:1; /* above background */
 }
@@ -68,7 +68,7 @@ body::after{
 /* each item */
 .faq-item{
   border-bottom:1px solid var(--line);
-  padding: 18px 0;
+  padding: 10px 0;
   display:block;
 }
 

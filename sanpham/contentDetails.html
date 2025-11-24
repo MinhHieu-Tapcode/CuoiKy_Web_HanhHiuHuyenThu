@@ -16,208 +16,208 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="../header_footer/style.css">
 
-      <style>
-        @import url(../asset/css/main.css);
+  <style>
+    @import url(../asset/css/main.css);
 
-        strong {
-            font-weight: bold !important;
-        }
+    strong {
+      font-weight: bold !important;
+    }
 
-        .content-box-fixed {
-            position: relative;
-            width: calc(100% + 40px);
-            max-width: none;
-            margin: 0 -20px 2rem -20px;
-            padding: 30px 20px;
-            box-sizing: border-box;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            border: 1px solid #ddd;
-            border-radius: 1.25rem;
-        }
+    .content-box-fixed {
+      position: relative;
+      width: calc(100% + 40px);
+      max-width: none;
+      margin: 0 -20px 2rem -20px;
+      padding: 30px 20px;
+      box-sizing: border-box;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      border: 1px solid #ddd;
+      border-radius: 1.25rem;
+    }
 
-        .content-box-fixed p {
-            text-align: left;
-            padding: 0 15px;
-            max-width: none;
-            margin: 0;
-            line-height: 1.6;
-            color: inherit;
-        }
+    .content-box-fixed p {
+      text-align: left;
+      padding: 0 15px;
+      max-width: none;
+      margin: 0;
+      line-height: 1.6;
+      color: inherit;
+    }
 
-        .dark-background {
-            background-color: #2b2b2b;
-            border-color: #555;
-            color: #fff;
-        }
+    .dark-background {
+      background-color: #2b2b2b;
+      border-color: #555;
+      color: #fff;
+    }
 
-        .khung-toan-trang {
+    .khung-toan-trang {
 
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 2.5rem 1rem;
-            box-sizing: border-box;
-        }
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2.5rem 1rem;
+      box-sizing: border-box;
+    }
 
-        .khung-chinh {
-            width: 100%;
-            max-width: 76rem;
-            margin: 0 auto;
-            padding: 0;
-        }
-
-
-        .tieu-de-chinh {
-            margin-top: -3rem;
-            margin-bottom: 0rem;
-            text-align: center;
-            color: #1a202c;
-        }
+    .khung-chinh {
+      width: 100%;
+      max-width: 76rem;
+      margin: 0 auto;
+      padding: 0;
+    }
 
 
-        .khung-danh-sach {
-            display: grid;
-            grid-template-columns: repeat(1, minmax(0, 1fr));
-            gap: 1.5rem;
-            padding: 0 1rem;
-            margin-bottom: 2rem;
-        }
+    .tieu-de-chinh {
+      margin-top: -3rem;
+      margin-bottom: 0rem;
+      text-align: center;
+      color: #1a202c;
+    }
 
 
-        @media (min-width: 640px) {
-            .khung-danh-sach {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-        }
+    .khung-danh-sach {
+      display: grid;
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+      gap: 1.5rem;
+      padding: 0 1rem;
+      margin-bottom: 2rem;
+    }
 
 
-        @media (min-width: 1024px) {
-            .khung-danh-sach {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-            }
-        }
+    @media (min-width: 640px) {
+      .khung-danh-sach {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+
+    @media (min-width: 1024px) {
+      .khung-danh-sach {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
 
 
 
-        .khung-chi-nhanh {
-            background-color: #ffffff;
-            padding: 2rem;
-            border: 1px solid #e5e7eb;
-            border-radius: 1.25rem;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
+    .khung-chi-nhanh {
+      background-color: #ffffff;
+      padding: 2rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 1.25rem;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
 
-        .khung-chi-nhanh:hover {
-            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
-            transform: translateY(-5px);
-        }
-
-
-        .tieu-de-cua-hang {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #2b2b2b;
-            margin-bottom: 0.5rem;
-            line-height: 1.2;
-        }
+    .khung-chi-nhanh:hover {
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
+      transform: translateY(-5px);
+    }
 
 
-        .vung-dia-chi {
-            margin-bottom: 1.5rem;
-            border-left: 3px solid #9e9b9c;
-            padding-left: 1rem;
-        }
-
-        .dia-chi-chi-tiet {
-            font-size: 1rem;
-            color: #4b5563;
-            margin-top: 0.25rem;
-            line-height: 1.4;
-        }
+    .tieu-de-cua-hang {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #2b2b2b;
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
 
 
-        .khung-nut {
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
-            margin-top: auto;
-        }
+    .vung-dia-chi {
+      margin-bottom: 1.5rem;
+      border-left: 3px solid #9e9b9c;
+      padding-left: 1rem;
+    }
+
+    .dia-chi-chi-tiet {
+      font-size: 1rem;
+      color: #4b5563;
+      margin-top: 0.25rem;
+      line-height: 1.4;
+    }
 
 
-        @media (min-width: 640px) {
-            .khung-nut {
-                flex-direction: row;
-            }
-        }
+    .khung-nut {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      margin-top: auto;
+    }
 
 
-        .nut-chung {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            column-gap: 0.5rem;
-            font-size: 0.9rem;
-            font-weight: 600;
-            padding: 0.75rem 1rem;
-            border-radius: 0.75rem;
-            transition: all 0.2s ease;
-            width: 100%;
-            text-decoration: none;
-            text-align: center;
-
-        }
-
-        @media (min-width: 640px) {
-            .nut-chung {
-                flex-grow: 1;
-                width: auto;
-            }
-        }
+    @media (min-width: 640px) {
+      .khung-nut {
+        flex-direction: row;
+      }
+    }
 
 
-        .nut-ban-do {
-            background-color: #f3eeee;
-            color: #000;
-            border: 1px solid rgb(196, 193, 194);
-        }
+    .nut-chung {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      column-gap: 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.75rem 1rem;
+      border-radius: 0.75rem;
+      transition: all 0.2s ease;
+      width: 100%;
+      text-decoration: none;
+      text-align: center;
 
-        .nut-ban-do:hover {
-            background-color: #ffffff;
+    }
 
-        }
+    @media (min-width: 640px) {
+      .nut-chung {
+        flex-grow: 1;
+        width: auto;
+      }
+    }
 
-        .nut-chi-duong {
-            background-color: #2b2b2b;
-            color: #ffffff;
-            box-shadow: 0 4px 6px rgba(86, 84, 85, 0.4);
-        }
 
-        .nut-chi-duong:hover {
-            background-color: #0000;
-            box-shadow: 0 6px 10px rgba(177, 175, 176, 0.6);
-        }
+    .nut-ban-do {
+      background-color: #f3eeee;
+      color: #000;
+      border: 1px solid rgb(196, 193, 194);
+    }
 
-        nav {
-            display: block;
-            unicode-bidi: isolate;
-        }
+    .nut-ban-do:hover {
+      background-color: #ffffff;
 
-        .page-breadcrumbs {
-            text-align: center;
-            margin-bottom: 35px;
-            font-size: 80%;
-            line-height: 13px;
-            color: #635859;
-            margin-top: 15px;
-            padding: 0 20px;
-        }
-    </style>
+    }
+
+    .nut-chi-duong {
+      background-color: #2b2b2b;
+      color: #ffffff;
+      box-shadow: 0 4px 6px rgba(86, 84, 85, 0.4);
+    }
+
+    .nut-chi-duong:hover {
+      background-color: #0000;
+      box-shadow: 0 6px 10px rgba(177, 175, 176, 0.6);
+    }
+
+    nav {
+      display: block;
+      unicode-bidi: isolate;
+    }
+
+    .page-breadcrumbs {
+      text-align: center;
+      margin-bottom: 35px;
+      font-size: 80%;
+      line-height: 13px;
+      color: #635859;
+      margin-top: 15px;
+      padding: 0 20px;
+    }
+  </style>
 
 
 
@@ -237,13 +237,13 @@
     <!-- HEADER BOTTOM -->
     <div class="header-bottom">
       <div class="logo">
-        <img src="../asset/img/header_footer/FLEAURLOGOBLACK.png" alt="Logo" />
+        <a href="../Trangchu.html"><img src="../asset/img/header_footer/logohoa.png" alt="Logo" /></a>
       </div>
 
       <nav class="nav-links">
         <a href="../gioithieu.html">Giới thiệu</a>
-        <a href="sanpham.html">Sản phẩm</a>
-        <a href="../bosuutap.html">Bộ sưu tập</a>
+        <a href="../sanpham/sanpham.html">Sản phẩm</a>
+        <a href="../bosuutap/bosuutap.html">Bộ sưu tập</a>
         <a href="../cuahang.html">Cửa hàng</a>
         <a href="../lienhe.html">Liên hệ</a>
       </nav>
@@ -266,7 +266,7 @@
     </div>
   </header>
 
-  <main  id="productPage">
+  <main id="productPage">
     <div id="containerProduct"></div>
 
     <!-- load data.js (chứa products) -->
@@ -280,23 +280,24 @@
   <!-- FOOTER -->
   <footer class="footer-component">
     <div class="footer-top">
-      <a href="#" class="logo"><img src="../asset/img/header_footer/FLEAURLOGOBLACK.png" alt="Logo"></a>
+      <a href="../Trangchu.html" class="logo"><img src="../asset/img/header_footer/logohoa.png" alt="Logo"></a>
     </div>
+
     <div class="footer-main">
       <div class="footer-col">
         <h3>Sản phẩm</h3>
-        <a href="sp1.html">Váy bồng xòe</a>
-        <a href="sp2.html">Váy đuôi cá</a>
-        <a href="sp3.html">Váy chữ A</a>
-        <a href="sp4.html">Váy ngắn</a>
-        <a href="sp5.html">Áo dài cưới</a>
-        <a href="pk.html">Phụ kiện</a>
+        <a href="../sanpham/sp1.html">Váy bồng xòe</a>
+        <a href="../sanpham/sp2.html">Váy đuôi cá</a>
+        <a href="../sanpham/sp3.html">Váy chữ A</a>
+        <a href="../sanpham/sp4.html">Váy ngắn</a>
+        <a href="../sanpham/sp5.html">Áo dài cưới</a>
+        <a href="../sanpham/sp6.html">Phụ kiện</a>
       </div>
       <div class="footer-col">
         <h3>Công ty</h3>
         <a href="../gioithieu.html">Giới thiệu</a>
         <a href="../doitac.html">Đối tác</a>
-        <a href="../tintuc.html">Tin tức</a>
+        <a href="../tintuc/tintuc.html">Tin tức</a>
       </div>
       <div class="footer-col">
         <h3>Hỗ trợ</h3>
@@ -309,20 +310,24 @@
           <button>Subscribe</button>
         </div>
         <div class="icons">
-          <a href="#"><img src="../asset/img/header_footer/IGLOGO.png" alt="Icon 1"></a>
-          <a href="#"><img src="../asset/img/header_footer/FBLOGO.png" alt="Icon 2"></a>
-          <a href="#"><img src="../asset/img/header_footer/YTBLOGO.png" alt="Icon 3"></a>
-          <a href="#"><img src="../asset/img/header_footer/TIKLOGO.png" alt="Icon 4"></a>
+          <a href="https://www.instagram.com/"><img src="../asset/img/header_footer/IGLOGO.png" alt="Icon 1"></a>
+          <a href="https://www.facebook.com/"><img src="../asset/img/header_footer/FBLOGO.png" alt="Icon 2"></a>
+          <a href="https://www.youtube.com/"><img src="../asset/img/header_footer/YTBLOGO.png" alt="Icon 3"></a>
+          <a href="https://www.tiktok.com/"><img src="../asset/img/header_footer/TIKLOGO.png" alt="Icon 4"></a>
         </div>
       </div>
     </div>
+
     <div class="footer-bottom">
       <div class="line"></div>
       <span>2025 @ All rights reserved</span>
       <div class="line"></div>
     </div>
+
+
   </footer>
   <!-- Script để load header + footer và gắn sự kiện -->
+  <script src="../asset/js/data.js"></script>
   <script src="../header_footer/header_footer.js"></script>
 
 

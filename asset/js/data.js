@@ -836,13 +836,13 @@ const products = [
   },
   {
     "id": "60",
-    "name": "Eleste",
+    "name": "Celeste",
     "price": 10990000,
     "description": "Váy ngắn voan kèm đuôi dài chấm đất, cổ tim, không tay, nhiều lớp tuyn bồng bềnh, thoải mái và bay bổng.",
-    "preview": "../asset/img/image/sp4/eleste.png",
+    "preview": "../asset/img/image/sp4/celeste.png",
     "photos": [
-      "../asset/img/image/sp4/eleste.png",
-      "../asset/img/image/sp4/eleste1.png"
+      "../asset/img/image/sp4/celeste.png",
+      "../asset/img/image/sp4/celeste1.png"
     ],
     "colors": ["Trắng"],
     "sizes": ["S", "M", "L", "XL", "XXL"],
@@ -1061,7 +1061,7 @@ const products = [
   {
     "id": "76",
     "name": "Yên Hoa",
-    "price": null,
+    "price": 18000000,
     "description": "Áo dài mang nét thanh lịch và gợi cảm vừa đủ, nổi bật với phần lưng hở tinh tế. Chất liệu ren pha voan tạo cảm giác nhẹ nhàng và bay bổng. Thiết kế giúp cô dâu tỏa sáng trong mọi không gian cưới.",
     "preview": "../asset/img/image/sp5/yenhoa1.png",
     "photos": [
@@ -1077,7 +1077,7 @@ const products = [
     "name": "Look 2 Áo dài Viên Mãn",
     "price": 20000000,
     "description": "Áo dài cô dâu mang vẻ đẹp thuần khiết và sang trọng. Chất ren ánh kim nhẹ phản chiếu ánh sáng, tạo cảm giác lấp lánh tự nhiên. Thiết kế cổ cao cùng đường cắt tinh gọn giúp tôn dáng và giữ nét truyền thống duyên dáng.",
-    "preview": "../asset/img/image/sp5/look2vienman.png",
+    "preview": "../asset/img/image/sp5/look2.1.png",
     "photos": [
       "../asset/img/image/sp5/look2.1.png",
       "../asset/img/image/sp5/look2.2.png"
@@ -1091,7 +1091,7 @@ const products = [
     "name": "Xuân Cầm",
     "price": 15000000,
     "description": "Áo dài mang vẻ đẹp thanh lịch, tối giản nhưng sang trọng. Thiết kế ôm nhẹ tôn dáng, kết hợp chất liệu lụa satin mềm mịn tạo hiệu ứng tinh khôi. Phù hợp cho cô dâu yêu thích phong cách trang nhã và cổ điển.",
-    "preview": "../asset/img/image/sp5/xuancam.png",
+    "preview": "../asset/img/image/sp5/xuancam1.png",
     "photos": [
       "../asset/img/image/sp5/xuancam1.png",
       "../asset/img/image/sp5/xuancam2.png"
@@ -1105,7 +1105,7 @@ const products = [
     "name": "Viên Mãn",
     "price": 20000000,
     "description": "Áo dài kết hợp giữa nét truyền thống và hiện đại, tạo điểm nhấn với phần đuôi váy bồng nhẹ. Họa tiết ren nổi tinh tế tôn lên vẻ mềm mại, thanh thoát. Thiết kế giúp cô dâu trở nên nổi bật và sang trọng trong ngày cưới.",
-    "preview": "../asset/img/image/sp5/vienman 1.png",
+    "preview": "../asset/img/image/sp5/vienman1.png",
     "photos": [
       "../asset/img/image/sp5/vienman1.png",
       "../asset/img/image/sp5/vienman2.png"
@@ -1158,10 +1158,10 @@ const products = [
   },
   {
     "id": "83",
-    "name": "Thiên Ân",
-    "price": null,
+    "name": "Hoa Sương",
+    "price": 24000000,
     "description": "Áo dài cô dâu mang vẻ đẹp thanh lịch và tinh khôi. Thiết kế ren tỉ mỉ kết hợp voan nhẹ tạo cảm giác bay bổng. Form ôm nhẹ tôn dáng, phù hợp cho những cô dâu yêu nét truyền thống pha hiện đại.",
-    "preview": "../asset/img/image/sp5/thienan1.png",
+    "preview": "../asset/img/image/sp5/look3.1.png",
     "photos": [
       "../asset/img/image/sp5/look3.1.png",
       "../asset/img/image/sp5/look3.2.png"
@@ -1201,7 +1201,7 @@ const products = [
   {
     "id": "86",
     "name": "Bích Lan",
-    "price": null,
+    "price": 13000000,
     "description": "Thiết kế áo dài cô dâu mang hơi thở cổ điển với họa tiết hoa nổi tinh xảo. Chất liệu ren ánh bạc tạo hiệu ứng lấp lánh nhẹ nhàng dưới ánh sáng. Form dáng ôm tôn vẻ thanh thoát, giúp cô dâu nổi bật một cách thanh lịch và sang trọng.",
     "preview": "../asset/img/image/sp5/bichlan1.png",
     "photos": [
@@ -1215,7 +1215,7 @@ const products = [
   {
     "id": "87",
     "name": "Thiên Cầm",
-    "price": null,
+    "price": 17000000,
     "description": "Áo dài cô dâu mang vẻ đẹp tinh khôi và sang trọng. Thiết kế tối giản tôn lên đường cong tự nhiên cùng chất liệu lụa mềm mại, nhẹ nhàng. Họa tiết ren tinh tế ở tà áo tạo điểm nhấn dịu dàng, giúp cô dâu toát lên vẻ thanh lịch và trang nhã.",
     "preview": "../asset/img/image/sp5/thiencam1.png",
     "photos": [
@@ -1229,7 +1229,7 @@ const products = [
   {
     "id": "88",
     "name": "Tinh Khôi",
-    "price": null,
+    "price": 18000000,
     "description": "Áo dài cô dâu mang nét hiện đại pha lẫn cổ điển. Thiết kế vai trần nhẹ cùng nơ bản lớn phía sau tạo điểm nhấn tinh tế. Chất satin mềm mịn giúp tôn dáng, mang lại vẻ thanh thoát và quyến rũ cho cô dâu trong ngày trọng đại.",
     "preview": "../asset/img/image/sp5/tinhkhoi1.png",
     "photos": [
@@ -1243,7 +1243,7 @@ const products = [
   {
     "id": "89",
     "name": "Tình Ca",
-    "price": null,
+    "price": 11000000,
     "description": "Áo dài cô dâu ren trắng mang vẻ đẹp tinh khôi và thanh lịch. Thiết kế cổ cao cùng tay ren mảnh mai tôn nét duyên dáng truyền thống. Họa tiết ren nổi tạo chiều sâu tinh tế, giúp cô dâu toát lên vẻ sang trọng trong ngày trọng đại.",
     "preview": "../asset/img/image/sp5/tinhca1.png",
     "photos": [
@@ -1253,9 +1253,346 @@ const products = [
     "colors": ["Trắng kem"],
     "sizes": ["S", "M", "L", "XL", "XXL"],
     "options": ["Áo dài cô dâu"]
+  },
+  {
+    "id": "90",
+    "name": "Cleodora - Mũ đội đầu đính đá giả",
+    "price": 1000000,
+    "description": "Mũ đội đầu đính đá giả sang trọng, tạo điểm nhấn tinh tế cho cô dâu trong ngày trọng đại.",
+    "details": {
+      "Chất liệu": "chiffon, đá cườm"
+    },
+    "preview": "../asset/img/image/sp6/cleodora1.png",
+    "photos": [
+      "../asset/img/image/sp6/cleodora1.png",
+      "../asset/img/image/sp6/cleodora2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["1 lựa chọn"],
+    "options": ["1 lựa chọn"]
+  },
+  {
+    "id": "91",
+    "name": "Eudora - Vương miện đính đá",
+    "price": 320000,
+    "description": "Vương miện đính đá lấp lánh, kết hợp đá cườm và ngọc trai, mang lại vẻ đẹp quý phái và thanh lịch.",
+    "details": {
+      "Chất liệu": "chiffon, đá cườm, ngọc trai"
+    },
+    "preview": "../asset/img/image/sp6/eudora1.png",
+    "photos": [
+      "../asset/img/image/sp6/eudora1.png",
+      "../asset/img/image/sp6/eudora2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["1 lựa chọn"],
+    "options": ["1 lựa chọn"]
+  },
+  {
+    "id": "92",
+    "name": "Alour - Lược đính đá",
+    "price": 500000,
+    "description": "Chiếc lược đính đá tinh xảo giúp tô điểm mái tóc cô dâu thêm phần rực rỡ.",
+    "details": {
+      "Chất liệu": "chiffon, đá cườm, ngọc trai"
+    },
+    "preview": "../asset/img/image/sp6/alour1.png",
+    "photos": [
+      "../asset/img/image/sp6/alour1.png",
+      "../asset/img/image/sp6/alour2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["1 lựa chọn"],
+    "options": ["1 lựa chọn"]
+  },
+  {
+    "id": "93",
+    "name": "Halana - Băng đô satin có lưới và đá đính",
+    "price": 400000,
+    "description": "Băng đô satin kết hợp lưới và đá đính tinh tế, tôn lên vẻ nhẹ nhàng, sang trọng.",
+    "details": {
+      "Chất liệu": "satin, đá cườm, ngọc trai"
+    },
+    "preview": "../asset/img/image/sp6/halana1.png",
+    "photos": [
+      "../asset/img/image/sp6/halana1.png",
+      "../asset/img/image/sp6/halana2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["1 lựa chọn"],
+    "options": ["1 lựa chọn"]
+  },
+  {
+    "id": "94",
+    "name": "Jack-LA14 - Áo khoác vải tuyn đính đá",
+    "price": 500000,
+    "description": "Chiếc áo khoác lửng tuyệt vời được làm từ vải tuyn và ngọc trai, có cổ tròn, tay dài và cài nút sau lưng.",
+    "details": {
+      "Chất liệu": "vải tuyn, đá cườm, ngọc trai"
+    },
+    "preview": "../asset/img/image/sp6/jack-la14.1.png",
+    "photos": [
+      "../asset/img/image/sp6/jack-la14.1.png",
+      "../asset/img/image/sp6/jack-la14.2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["1 lựa chọn"],
+    "options": ["1 lựa chọn"]
+  },
+  {
+    "id": "95",
+    "name": "Glv-LA05 - Găng tay Chantilly",
+    "price": 500000,
+    "description": "Găng tay Chantilly thanh lịch, được làm từ vải ren cao cấp và đính đá, ngọc trai tinh tế.",
+    "details": {
+      "Chất liệu": "vải ren, đá cườm, ngọc trai"
+    },
+    "preview": "../asset/img/image/sp6/glv1.png",
+    "photos": [
+      "../asset/img/image/sp6/glv1.png",
+      "../asset/img/image/sp6/glv2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["1 lựa chọn"],
+    "options": ["1 lựa chọn"]
+  },
+  {
+    "id": "96",
+    "name": "Jack-LA23 - Áo khoác Mikado mềm mại",
+    "price": 700000,
+    "description": "Áo khoác Mikado mềm mại, tạo cảm giác nhẹ nhàng và quý phái cho cô dâu.",
+    "details": {
+      "Chất liệu": "vải ren, ngọc trai"
+    },
+    "preview": "../asset/img/image/sp6/jack-la23.1.png",
+    "photos": [
+      "../asset/img/image/sp6/jack-la23.1.png",
+      "../asset/img/image/sp6/jack-la23.2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["1 lựa chọn"],
+    "options": ["1 lựa chọn"]
+  },
+  {
+    "id": "97",
+    "name": "Slves-LA11 - Tay áo Crepe",
+    "price": 900000,
+    "description": "Tay áo crepe tinh tế với chất liệu satin bóng, mang lại vẻ mềm mại và thanh lịch.",
+    "details": {
+      "Chất liệu": "satin bóng"
+    },
+    "preview": "../asset/img/image/sp6/slves1.png",
+    "photos": [
+      "../asset/img/image/sp6/slves1.png",
+      "../asset/img/image/sp6/slves2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["1 lựa chọn"],
+    "options": ["1 lựa chọn"]
+  },
+  {
+    "id": "98",
+    "name": "Noemie - Tay áo Crepe",
+    "price": 1500000,
+    "description": "Tay áo crepe mô phỏng hai bó hoa hồng tuyệt đẹp trên vai, tạo nét mới lạ cho kiểu tay áo bóng bay cổ điển.",
+    "details": {
+      "Chất liệu": "satin bóng"
+    },
+    "preview": "../asset/img/image/sp6/noemie1.png",
+    "photos": [
+      "../asset/img/image/sp6/noemie1.png",
+      "../asset/img/image/sp6/noemie2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["1 lựa chọn"],
+    "options": ["1 lựa chọn"]
+  },
+  {
+    "id": "99",
+    "name": "Cape-LA46 - Áo choàng Mikado",
+    "price": 3000000,
+    "description": "Áo choàng Mikado sang trọng, làm từ chất liệu satin bóng cao cấp.",
+    "details": {
+      "Chất liệu": "satin bóng"
+    },
+    "preview": "../asset/img/image/sp6/cape-la46.1.png",
+    "photos": [
+      "../asset/img/image/sp6/cape-la46.1.png",
+      "../asset/img/image/sp6/cape-la46.2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["1 lựa chọn"],
+    "options": ["1 lựa chọn"]
+  },
+  {
+    "id": "100",
+    "name": "Cape-LA41 - Choàng Chantilly",
+    "price": 5000000,
+    "description": "Choàng Chantilly tinh tế với chất liệu ren 3D cao cấp, mang đến vẻ quý phái và thanh lịch.",
+    "details": {
+      "Chất liệu": "ren 3D"
+    },
+    "preview": "../asset/img/image/sp6/cape-la41.1.png",
+    "photos": [
+      "../asset/img/image/sp6/cape-la41.1.png",
+      "../asset/img/image/sp6/cape-la41.2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["1 lựa chọn"],
+    "options": ["1 lựa chọn"]
+  },
+  {
+    "id": "101",
+    "name": "Cape-LA40 - Áo choàng vải tuyn",
+    "price": 2000000,
+    "description": "Áo choàng vải tuyn nhẹ nhàng, tinh tế, giúp tôn lên vẻ mềm mại và nữ tính.",
+    "details": {
+      "Chất liệu": "vải tuyn"
+    },
+    "preview": "../asset/img/image/sp6/cape-la40.1.png",
+    "photos": [
+      "../asset/img/image/sp6/cape-la40.1.png",
+      "../asset/img/image/sp6/cape-la40.2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["1 lựa chọn"],
+    "options": ["1 lựa chọn"]
+  },
+  {
+    "id": "102",
+    "name": "M-LA02 - Mạng che mặt Chantilly",
+    "price": 3000000,
+    "description": "Mạng che mặt Chantilly được làm từ vải ren cao cấp, tôn lên nét duyên dáng của cô dâu.",
+    "details": {
+      "Chất liệu": "vải ren"
+    },
+    "preview": "../asset/img/image/sp6/m-la02.1.png",
+    "photos": [
+      "../asset/img/image/sp6/m-la02.1.png",
+      "../asset/img/image/sp6/m-la02.2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["1 lựa chọn"],
+    "options": ["1 lựa chọn"]
+  },
+  {
+    "id": "103",
+    "name": "V-LA77 - Mạng che mặt vải tuyn có hoa",
+    "price": 1500000,
+    "description": "Mạng che mặt vải tuyn trang trí hoa tinh tế, mang phong cách lãng mạn.",
+    "details": {
+      "Chất liệu": "vải tuyn"
+    },
+    "preview": "../asset/img/image/sp6/v-la77.1.png",
+    "photos": [
+      "../asset/img/image/sp6/v-la77.1.png",
+      "../asset/img/image/sp6/v-la77.2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["1 lựa chọn"],
+    "options": ["1 lựa chọn"]
+  },
+  {
+    "id": "104",
+    "name": "V-LA76 - Mạng che mặt vải tuyn kết hợp ren",
+    "price": 2500000,
+    "description": "Mạng che mặt vải tuyn kết hợp ren sang trọng, mang lại nét mềm mại và tinh tế.",
+    "details": {
+      "Chất liệu": "vải tuyn phối ren"
+    },
+    "preview": "../asset/img/image/sp6/v-la76.1.png",
+    "photos": [
+      "../asset/img/image/sp6/v-la76.1.png",
+      "../asset/img/image/sp6/v-la76.2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["1 lựa chọn"],
+    "options": ["1 lựa chọn"]
+  },
+  {
+    "id": "105",
+    "name": "V-LA65 - Mạng che mặt vải tuyn",
+    "price": 1000000,
+    "description": "Mạng che mặt vải tuyn nhẹ nhàng, phù hợp cho phong cách cô dâu cổ điển.",
+    "details": {
+      "Chất liệu": "vải tuyn"
+    },
+    "preview": "../asset/img/image/sp6/v-la65.1.png",
+    "photos": [
+      "../asset/img/image/sp6/v-la65.1.png",
+      "../asset/img/image/sp6/v-la65.1.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["1 lựa chọn"],
+    "options": ["1 lựa chọn"]
+  },
+  {
+    "id": "106",
+    "name": "V-LA60 - Mạng che mặt vải tuyn phối đá",
+    "price": 2000000,
+    "description": "Mạng che mặt vải tuyn phối đá giả và ren, tạo điểm nhấn tinh tế cho phong cách cô dâu hiện đại.",
+    "details": {
+      "Chất liệu": "vải tuyn, ren, đá giả"
+    },
+    "preview": "../asset/img/image/sp6/v-la60.1.png",
+    "photos": [
+      "../asset/img/image/sp6/v-la60.1.png",
+      "../asset/img/image/sp6/v-la60.2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["1 lựa chọn"],
+    "options": ["1 lựa chọn"]
+  },
+  {
+    "id": "107",
+    "name": "Sault - Váy ngoài mỏng",
+    "price": 1000000,
+    "description": "Váy ngoài mỏng được làm từ vải tuyn và ren, điểm xuyết hạt cườm tinh tế.",
+    "details": {
+      "Chất liệu": "vải tuyn, ren, hạt cườm"
+    },
+    "preview": "../asset/img/image/sp6/sault1.png",
+    "photos": [
+      "../asset/img/image/sp6/sault1.png",
+      "../asset/img/image/sp6/sault2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["1 lựa chọn"],
+    "options": ["1 lựa chọn"]
+  },
+  {
+    "id": "108",
+    "name": "Wadibani - Váy ngoài bồng bềnh",
+    "price": 1000000,
+    "description": "Váy ngoài bồng bềnh từ vải tuyn và ren, tạo cảm giác bay bổng và sang trọng.",
+    "details": {
+      "Chất liệu": "vải tuyn, ren, hạt cườm"
+    },
+    "preview": "../asset/img/image/sp6/wadibani1.png",
+    "photos": [
+      "../asset/img/image/sp6/wadibani1.png",
+      "../asset/img/image/sp6/wadibani2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["1 lựa chọn"],
+    "options": ["1 lựa chọn"]
+  },
+  {
+    "id": "109",
+    "name": "Havasu - Váy ngoài chữ A",
+    "price": 1000000,
+    "description": "Váy ngoài dáng chữ A nhẹ nhàng, làm từ vải tuyn mềm mại, tôn lên vẻ thanh thoát.",
+    "details": {
+      "Chất liệu": "vải tuyn"
+    },
+    "preview": "../asset/img/image/sp6/havasu1.png",
+    "photos": [
+      "../asset/img/image/sp6/havasu1.png",
+      "../asset/img/image/sp6/havasu2.png"
+    ],
+    "colors": ["Trắng"],
+    "sizes": ["1 lựa chọn"],
+    "options": ["1 lựa chọn"]
   }
-
-
-
 ];
 

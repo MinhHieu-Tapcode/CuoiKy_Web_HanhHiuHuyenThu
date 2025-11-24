@@ -131,7 +131,8 @@
       display: block;
       object-fit: cover;
     }
-    .collection-content h2{
+
+    .collection-content h2 {
       text-align: center;
     }
 
@@ -619,14 +620,15 @@
       background-color: #555555;
     }
 
-/* --- POPUP CẢM ƠN --- */
+    /* --- POPUP CẢM ƠN --- */
     .thankyou-overlay {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: rgba(0, 0, 0, 0.5); /* Nền mờ */
+      background: rgba(0, 0, 0, 0.5);
+      /* Nền mờ */
       display: flex;
       justify-content: center;
       align-items: center;
@@ -646,7 +648,7 @@
       padding: 40px 60px;
       border-radius: 10px;
       text-align: center;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
       transform: scale(0.8);
       transition: transform 0.3s ease;
     }
@@ -656,29 +658,29 @@
     }
 
     .thankyou-popup h3 {
-     margin-bottom: 10px;
-     font-size: 24px;
-     color: #2b2b2b;
+      margin-bottom: 10px;
+      font-size: 24px;
+      color: #2b2b2b;
     }
 
     .thankyou-popup p {
-     font-size: 16px;
-     margin-bottom: 25px;
-     color: #2b2b2b;
+      font-size: 16px;
+      margin-bottom: 25px;
+      color: #2b2b2b;
     }
 
     #closePopup {
-     background-color: #2b2b2b;
-     color: #e3e3e3;
-     border: none;
-     padding: 10px 25px;
-     border-radius: 5px;
-     cursor: pointer;
-     transition: background 0.3s;
+      background-color: #2b2b2b;
+      color: #e3e3e3;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
     }
 
     #closePopup:hover {
-     background-color: gray;
+      background-color: gray;
     }
 
     /**phục vụ cho script*/
@@ -706,7 +708,6 @@
     [data-animate="slide-right"] {
       transform: translateX(50px);
     }
-  
   </style>
 </head>
 
@@ -722,13 +723,13 @@
     <!-- HEADER BOTTOM -->
     <div class="header-bottom">
       <div class="logo">
-        <img src="asset/img/header_footer/FLEAURLOGOBLACK.png" alt="Logo" />
+        <a href="Trangchu.html"><img src="asset/img/header_footer/logohoa.png" alt="Logo" /></a>
       </div>
 
       <nav class="nav-links">
         <a href="gioithieu.html">Giới thiệu</a>
-        <a href="sanpham/sanpham.html">Sản phẩm</a>
-        <a href="bosuutap/bosuutap.html">Bộ sưu tập</a>
+        <a href="../sanpham/sanpham.html">Sản phẩm</a>
+        <a href="../bosuutap/bosuutap.html">Bộ sưu tập</a>
         <a href="cuahang.html">Cửa hàng</a>
         <a href="lienhe.html">Liên hệ</a>
       </nav>
@@ -736,7 +737,7 @@
       <div class="icons">
         <i class="fas fa-search icon-search"></i>
         <i class="far fa-heart icon-heart"></i>
-        <a href="giohang.html">
+        <a href="cart.html">
           <i class="fas fa-shopping-cart icon-cart"></i>
         </a>
         <i class="fas fa-bars menu-toggle"></i>
@@ -751,406 +752,414 @@
     </div>
   </header>
 
-  <main class="khung-toan-trang" style="padding: 60px 20px;">
-        <div class="khung-chinh">
-  <div class="video-section">
-      <video autoplay muted loop>
-        <source src="asset/img/trangchu/Video_trangchu.mp4" type="video/mp4">
-        Fleur - Video đầu trang
-      </video>
-      <div class="overlay-text" data-animate="slide-in">
-        Fleur - Thiên đường váy cưới
-      </div>
-    </div>
-
-    <section class="intro-section">
-      <h1 class="intro-title" data-animate>Fleur Bridal House</h1>
-      <div class="intro-content" data-animate>
-        <div class="intro-left">
-          <h3>Giới thiệu</h3>
-        </div>
-        <div class="intro-middle">
-          <p>
-            Fleur được thành lập từ năm 2020 tại Hà Nội, với khát vọng tạo nên những chiếc váy cưới như tác phẩm nghệ
-            thuật
-            dành riêng cho cô dâu Việt Nam mang phong cách quốc tế. Ban đầu chỉ là một xưởng thủ công nhỏ, Fleur nhanh
-            chóng
-            phát triển nhờ sự kết hợp giữa kỹ thuật may couture và cảm hứng từ những viên ngọc trắng tinh khôi.
-          </p>
-        </div>
-        <div class="intro-right">
-          <button class="btn-more">
-            <a href="gioithieu.html">Xem thêm</a>
-          </button>
+  <main class="khung-toan-trang" style="padding:  20px;">
+    <div class="khung-chinh">
+      <div class="video-section">
+        <video autoplay muted loop>
+          <source src="asset/img/trangchu/Video_trangchu.mp4" type="video/mp4">
+          Fleur - Video đầu trang
+        </video>
+        <div class="overlay-text" data-animate="slide-in">
+          Fleur - Thiên đường váy cưới
         </div>
       </div>
-      <h1 data-animate>Bộ sưu tập tại Fleur</h1>
-    </section>
 
-    <section class="collection-section dark">
-      <div class="collection-container">
-        <div class="collection-image" data-animate="slide-left">
-          <img src="asset/img/trangchu/Bst1.jpg" alt="Bộ sưu tập Fleur">
+      <section class="intro-section">
+        <h1 class="intro-title" data-animate>Fleur Bridal House</h1>
+        <div class="intro-content" data-animate>
+          <div class="intro-left">
+            <h3>Giới thiệu</h3>
+          </div>
+          <div class="intro-middle">
+            <p>
+              Fleur được thành lập từ năm 2020 tại Hà Nội, với khát vọng tạo nên những chiếc váy cưới như tác phẩm nghệ
+              thuật
+              dành riêng cho cô dâu Việt Nam mang phong cách quốc tế. Ban đầu chỉ là một xưởng thủ công nhỏ, Fleur nhanh
+              chóng
+              phát triển nhờ sự kết hợp giữa kỹ thuật may couture và cảm hứng từ những viên ngọc trắng tinh khôi.
+            </p>
+          </div>
+          <div class="intro-right">
+            <button class="btn-more">
+              <a href="gioithieu.html">Xem thêm</a>
+            </button>
+          </div>
         </div>
-        <div class="collection-content" data-animate="slide-right">
-          <h2>Hương sắc Á Đông - Nét duyên Việt chạm vào từng sợi lụa</h2>
-          <p>
-            BST "Hương sắc Á Đông" là bản hòa ca của vẻ đẹp truyền thống và tinh thần hiện đại.
-            Mỗi tà áo dài như một bức họa sống động, tôn vinh nét duyên dáng của người phụ nữ Việt.
-            Những đường thêu tỉ mỉ, hoa văn mềm mại, chất lụa óng ánh - tất cả cùng kể lại câu chuyện
-            về sự thanh tao và kiêu hãnh. Gam màu trầm tinh tế hòa cùng sắc son nhẹ, tạo nên vẻ đẹp vừa
-            cổ
-            điển vừa thời thượng. "Hương sắc Á Đông" là lời tri ân với cội nguồn, là dấu ấn của trang
-            nhã
-            vượt thời gian.
-          </p>
-          <a href="bosuutap/Bst1.html" class="collection-btn">Xem thêm</a>
-        </div>
-      </div>
-    </section>
+        <h1 data-animate>Bộ sưu tập tại Fleur</h1>
+      </section>
 
-    <section class="collection-section light">
-      <div class="collection-container">
-        <div class="collection-image" data-animate="slide-right">
-          <img src="asset/img/trangchu/Bst2.jpg" alt="Bộ sưu tập Fleur">
+      <section class="collection-section dark">
+        <div class="collection-container">
+          <div class="collection-image" data-animate="slide-left">
+            <img src="asset/img/trangchu/Bst1.jpg" alt="Bộ sưu tập Fleur">
+          </div>
+          <div class="collection-content" data-animate="slide-right">
+            <h2>Hương sắc Á Đông - Nét duyên Việt chạm vào từng sợi lụa</h2>
+            <p>
+              BST "Hương sắc Á Đông" là bản hòa ca của vẻ đẹp truyền thống và tinh thần hiện đại.
+              Mỗi tà áo dài như một bức họa sống động, tôn vinh nét duyên dáng của người phụ nữ Việt.
+              Những đường thêu tỉ mỉ, hoa văn mềm mại, chất lụa óng ánh - tất cả cùng kể lại câu chuyện
+              về sự thanh tao và kiêu hãnh. Gam màu trầm tinh tế hòa cùng sắc son nhẹ, tạo nên vẻ đẹp vừa
+              cổ
+              điển vừa thời thượng. "Hương sắc Á Đông" là lời tri ân với cội nguồn, là dấu ấn của trang
+              nhã
+              vượt thời gian.
+            </p>
+            <a href="bosuutap/Bst1.html" class="collection-btn">Xem thêm</a>
+          </div>
         </div>
-        <div class="collection-content" data-animate="slide-left">
-          <h2>Thanh âm của tình yêu - Mỗi nếp váy là một giai điệu, ngân nga bản tình ca của hạnh phúc</h2>
-          <p>
-            Như một khúc tình ca dịu dàng, “Thanh Âm Của Tình Yêu” tái hiện khoảnh khắc trái tim hòa chung
-            nhịp đập. Mỗi thiết kế là sự kết hợp hài hòa giữa ren mềm, voan mỏng và ánh sáng phản chiếu của cườm ngọc -
-            tựa như giai điệu của yêu thương ngân vang trong không khí. BST mang đến cảm giác bay bổng, lãng mạn và đầy
-            xúc
-            cảm, dành cho những cô dâu mơ mộng, tin vào phép màu của tình yêu. “Thanh Âm Của Tình Yêu” không chỉ là váy
-            cưới
-            - đó là bản nhạc của hạnh phúc được dệt nên bằng từng sợi chỉ.
-          </p>
-          <a href="bosuutap/Bst2.html" class="collection-btn">Xem thêm</a>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="collection-section dark">
-      <div class="collection-container">
-        <div class="collection-image" data-animate="slide-left">
-          <img src="asset/img/trangchu/Bst3.jpg" alt="Bộ sưu tập Fleur">
+      <section class="collection-section light">
+        <div class="collection-container">
+          <div class="collection-image" data-animate="slide-right">
+            <img src="asset/img/trangchu/Bst2.jpg" alt="Bộ sưu tập Fleur">
+          </div>
+          <div class="collection-content" data-animate="slide-left">
+            <h2>Thanh âm của tình yêu - Mỗi nếp váy là một giai điệu, ngân nga bản tình ca của hạnh phúc
+            </h2>
+            <p>
+              Như một khúc tình ca dịu dàng, “Thanh Âm Của Tình Yêu” tái hiện khoảnh khắc trái tim hòa chung
+              nhịp đập. Mỗi thiết kế là sự kết hợp hài hòa giữa ren mềm, voan mỏng và ánh sáng phản chiếu của cườm ngọc
+              -
+              tựa như giai điệu của yêu thương ngân vang trong không khí. BST mang đến cảm giác bay bổng, lãng mạn và
+              đầy
+              xúc
+              cảm, dành cho những cô dâu mơ mộng, tin vào phép màu của tình yêu. “Thanh Âm Của Tình Yêu” không chỉ là
+              váy
+              cưới
+              - đó là bản nhạc của hạnh phúc được dệt nên bằng từng sợi chỉ.
+            </p>
+            <a href="bosuutap/Bst2.html" class="collection-btn">Xem thêm</a>
+          </div>
         </div>
-        <div class="collection-content" data-animate="slide-right">
-          <h2>Hẹn ước trăm năm - Bởi lời hứa không cần nói, chỉ cần cùng nhau đi đến cuối con
-            đường</h2>
-          <p>
-            “Hẹn Ước Trăm Năm” là bản giao hòa của sự vĩnh cửu và tình yêu chân thành. Lấy cảm hứng từ khoảnh khắc
-            đôi mắt chạm nhau trong lời thề nguyện, BST sử dụng chất liệu satin, ren chantilly và lụa tơ tằm - tượng
-            trưng cho sự bền chặt và thanh khiết. Mỗi chi tiết thêu tay, mỗi lớp vải xếp nếp đều chứa đựng lời hứa
-            về một hành trình dài cùng nhau. “Hẹn Ước Trăm Năm” dành cho cô dâu chọn tình yêu không chỉ cho hôm nay,
-            mà cho cả mai sau.
-          </p>
-          <a href="bosuutap/Bst3.html" class="collection-btn">Xem thêm</a>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="collection-section light">
-      <div class="collection-container">
-        <div class="collection-image" data-animate="slide-right">
-          <img src="asset/img/trangchu/Bst4.jpg" alt="Bộ sưu tập Fleur">
+      <section class="collection-section dark">
+        <div class="collection-container">
+          <div class="collection-image" data-animate="slide-left">
+            <img src="asset/img/trangchu/Bst3.jpg" alt="Bộ sưu tập Fleur">
+          </div>
+          <div class="collection-content" data-animate="slide-right">
+            <h2>Hẹn ước trăm năm - Bởi lời hứa không cần nói, chỉ cần cùng nhau đi đến cuối con
+              đường</h2>
+            <p>
+              “Hẹn Ước Trăm Năm” là bản giao hòa của sự vĩnh cửu và tình yêu chân thành. Lấy cảm hứng từ khoảnh khắc
+              đôi mắt chạm nhau trong lời thề nguyện, BST sử dụng chất liệu satin, ren chantilly và lụa tơ tằm - tượng
+              trưng cho sự bền chặt và thanh khiết. Mỗi chi tiết thêu tay, mỗi lớp vải xếp nếp đều chứa đựng lời hứa
+              về một hành trình dài cùng nhau. “Hẹn Ước Trăm Năm” dành cho cô dâu chọn tình yêu không chỉ cho hôm nay,
+              mà cho cả mai sau.
+            </p>
+            <a href="bosuutap/Bst3.html" class="collection-btn">Xem thêm</a>
+          </div>
         </div>
-        <div class="collection-content" data-animate="slide-left">
-          <h2>Lời thì thầm hoa sương - Giọt sương khẽ rơi trên cánh hoa, như tình yêu dịu dàng thì thầm trong
-            nắng sớm </h2>
-          <p>
-            BST “Lời Thì Thầm Hoa Sương” mang hơi thở của buổi sớm tinh mơ, nơi những cánh hoa còn vương giọt sương
-            trong
-            trẻo.
-            Thiết kế nhẹ như làn khói, mềm như hơi thở, với những hạt sequin phản chiếu ánh sáng dịu dàng. Tông màu
-            trắng
-            ngà
-            và hồng phấn hòa quyện tạo nên vẻ đẹp mong manh, tinh khôi và thuần khiết. Mỗi chiếc váy là lời thì thầm dịu
-            ngọt
-            của thiên nhiên gửi đến người phụ nữ - e ấp, lãng mạn mà rạng rỡ như ánh nắng đầu ngày.
-          </p>
-          <a href="bosuutap/Bst4.html" class="collection-btn">Xem thêm</a>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="collection-section dark">
-      <div class="collection-container">
-        <div class="collection-image" data-animate="slide-left">
-          <img src="asset/img/trangchu/Bst5.jpg" alt="Bộ sưu tập Fleur">
+      <section class="collection-section light">
+        <div class="collection-container">
+          <div class="collection-image" data-animate="slide-right">
+            <img src="asset/img/trangchu/Bst4.jpg" alt="Bộ sưu tập Fleur">
+          </div>
+          <div class="collection-content" data-animate="slide-left">
+            <h2>Lời thì thầm hoa sương - Giọt sương khẽ rơi trên cánh hoa, như tình yêu dịu dàng thì thầm
+              trong
+              nắng sớm </h2>
+            <p>
+              BST “Lời Thì Thầm Hoa Sương” mang hơi thở của buổi sớm tinh mơ, nơi những cánh hoa còn vương giọt sương
+              trong
+              trẻo.
+              Thiết kế nhẹ như làn khói, mềm như hơi thở, với những hạt sequin phản chiếu ánh sáng dịu dàng. Tông màu
+              trắng
+              ngà
+              và hồng phấn hòa quyện tạo nên vẻ đẹp mong manh, tinh khôi và thuần khiết. Mỗi chiếc váy là lời thì thầm
+              dịu
+              ngọt
+              của thiên nhiên gửi đến người phụ nữ - e ấp, lãng mạn mà rạng rỡ như ánh nắng đầu ngày.
+            </p>
+            <a href="bosuutap/Bst4.html" class="collection-btn">Xem thêm</a>
+          </div>
         </div>
-        <div class="collection-content" data-animate="slide-right">
-          <h2>Ánh bình minh - Nắng đầu ngày chạm lên vai, khởi đầu cho một hành trình yêu thương rạng
-            rỡ
-          </h2>
-          <p>
-            Tựa như mặt trời khẽ thức giấc sau màn sương, “Ánh Bình Minh” tỏa sáng với năng lượng tươi mới và hy vọng.
-            BST tôn vinh vẻ đẹp rạng rỡ, tràn đầy sức sống của cô dâu hiện đại. Sự kết hợp giữa chất liệu organza trong
-            suốt và lụa satin mịn màng tạo nên cảm giác bồng bềnh, tươi sáng. Ánh phản chiếu từ những hạt pha lê nhỏ như
-            tia nắng vỡ trên bờ vai. “Ánh Bình Minh” là khởi đầu cho một hành trình yêu thương trọn vẹn - nơi mọi giấc
-            mơ
-            đều hóa thành thật.
-          </p>
-          <a href="bosuutap/Bst5.html" class="collection-btn">Xem thêm</a>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="collection-section light">
-      <div class="collection-container">
-        <div class="collection-image" data-animate="slide-right">
-          <img src="asset/img/trangchu/Bst6.jpg" alt="Bộ sưu tập Fleur">
+      <section class="collection-section dark">
+        <div class="collection-container">
+          <div class="collection-image" data-animate="slide-left">
+            <img src="asset/img/trangchu/Bst5.jpg" alt="Bộ sưu tập Fleur">
+          </div>
+          <div class="collection-content" data-animate="slide-right">
+            <h2>Ánh bình minh - Nắng đầu ngày chạm lên vai, khởi đầu cho một hành trình yêu thương rạng
+              rỡ
+            </h2>
+            <p>
+              Tựa như mặt trời khẽ thức giấc sau màn sương, “Ánh Bình Minh” tỏa sáng với năng lượng tươi mới và hy vọng.
+              BST tôn vinh vẻ đẹp rạng rỡ, tràn đầy sức sống của cô dâu hiện đại. Sự kết hợp giữa chất liệu organza
+              trong
+              suốt và lụa satin mịn màng tạo nên cảm giác bồng bềnh, tươi sáng. Ánh phản chiếu từ những hạt pha lê nhỏ
+              như
+              tia nắng vỡ trên bờ vai. “Ánh Bình Minh” là khởi đầu cho một hành trình yêu thương trọn vẹn - nơi mọi giấc
+              mơ
+              đều hóa thành thật.
+            </p>
+            <a href="bosuutap/Bst5.html" class="collection-btn">Xem thêm</a>
+          </div>
         </div>
-        <div class="collection-content" data-animate="slide-left">
-          <h2>Khúc hẹn yêu - Giữa ngàn ánh nhin, ta gặp nhau, bản tình ca khẽ cất lên từ trái tim</h2>
-          <p>
-            “Khúc Hẹn Yêu” là câu chuyện về tình yêu nảy nở trong giây phút hai trái tim gặp gỡ. BST
-            mang phong vị lãng mạn, pha chút hoài niệm, tựa một bản tình ca được viết bằng ánh mắt và
-            nụ cười. Những lớp voan mỏng tung bay, điểm xuyết hoa ren trắng muốt, tượng trưng cho sự
-            tinh khôi và nồng nàn. Thiết kế tôn lên dáng vẻ mềm mại, nữ tính, khiến mỗi bước đi của
-            cô dâu như một giai điệu nhẹ vang. “Khúc Hẹn Yêu” - nơi tình yêu được cất thành lời, và
-            hạnh phúc bắt đầu ngân lên.
-          </p>
-          <a href="bosuutap/Bst6.html" class="collection-btn">Xem thêm</a>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="branding-section">
-      <div class="branding-container">
-        <div class="branding-left" data-animate>
-          <h1 class="branding-title">Giới thiệu</h1>
-          <div class="branding-USP">
-            <img src="asset/img/trangchu/logo.png" alt="Logo" class="branding-logo">
-            <p class="branding-text">
-              FLEUR <br>
-              Thương hiệu váy cưới cao cấp <br>
-              Made in Vietnam
+      <section class="collection-section light">
+        <div class="collection-container">
+          <div class="collection-image" data-animate="slide-right">
+            <img src="asset/img/trangchu/Bst6.jpg" alt="Bộ sưu tập Fleur">
+          </div>
+          <div class="collection-content" data-animate="slide-left">
+            <h2>Khúc hẹn yêu - Giữa ngàn ánh nhin, ta gặp nhau, bản tình ca khẽ cất lên từ trái tim</h2>
+            <p>
+              “Khúc Hẹn Yêu” là câu chuyện về tình yêu nảy nở trong giây phút hai trái tim gặp gỡ. BST
+              mang phong vị lãng mạn, pha chút hoài niệm, tựa một bản tình ca được viết bằng ánh mắt và
+              nụ cười. Những lớp voan mỏng tung bay, điểm xuyết hoa ren trắng muốt, tượng trưng cho sự
+              tinh khôi và nồng nàn. Thiết kế tôn lên dáng vẻ mềm mại, nữ tính, khiến mỗi bước đi của
+              cô dâu như một giai điệu nhẹ vang. “Khúc Hẹn Yêu” - nơi tình yêu được cất thành lời, và
+              hạnh phúc bắt đầu ngân lên.
+            </p>
+            <a href="bosuutap/Bst6.html" class="collection-btn">Xem thêm</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="branding-section">
+        <div class="branding-container">
+          <div class="branding-left" data-animate>
+            <h1 class="branding-title">Giới thiệu</h1>
+            <div class="branding-USP">
+              <img src="asset/img/trangchu/logo.png" alt="Logo" class="branding-logo">
+              <p class="branding-text">
+                FLEUR <br>
+                Thương hiệu váy cưới cao cấp <br>
+                Made in Vietnam
+              </p>
+            </div>
+          </div>
+          <div class="branding-description" data-animate>
+            <p>
+              <i>Fleur Bridal House</i> được thành lập với một khát vọng duy nhất: kiến tạo nên những chiếc
+              váy cưới như những tác phẩm nghệ thuật, dành riêng cho cô dâu Việt Nam mang phong cách
+              quốc tế. Ra đời tại Hà Nội vào năm 2020, Fleur nhanh chóng vượt qua khuôn khổ của một
+              xưởng thủ công nhỏ bé, phát triển dựa trên sự kết hợp hoàn hảo giữa kỹ thuật may đo cao
+              cấp (couture) tinh xảo và cảm hứng lãng mạn từ vẻ đẹp thuần khiết của viên ngọc trắng tinh
+              khôi.<br><br>
+
+              Tại Fleur, chúng tôi tin rằng vẻ đẹp truyền thống không bao giờ lỗi mốt, chỉ cần được
+              khoác lên tinh thần hiện đại. Mỗi thiết kế là một bản hòa ca giữa nét duyên dáng Á Đông và
+              đường cắt may tinh tế của phương Tây, tôn vinh trọn vẹn sự thanh tao, kiêu hãnh và rạng rỡ
+              của người phụ nữ trong ngày trọng đại nhất cuộc đời. Fleur không chỉ bán váy cưới, chúng tôi
+              dệt nên bản tình ca của hạnh phúc, nơi mỗi nếp váy, mỗi sợi chỉ đều chứa đựng lời hẹn ước về
+              một hành trình yêu thương trọn vẹn.
             </p>
           </div>
         </div>
-        <div class="branding-description" data-animate>
-          <p>
-            <i>Fleur Bridal House</i> được thành lập với một khát vọng duy nhất: kiến tạo nên những chiếc
-            váy cưới như những tác phẩm nghệ thuật, dành riêng cho cô dâu Việt Nam mang phong cách
-            quốc tế. Ra đời tại Hà Nội vào năm 2020, Fleur nhanh chóng vượt qua khuôn khổ của một
-            xưởng thủ công nhỏ bé, phát triển dựa trên sự kết hợp hoàn hảo giữa kỹ thuật may đo cao
-            cấp (couture) tinh xảo và cảm hứng lãng mạn từ vẻ đẹp thuần khiết của viên ngọc trắng tinh
-            khôi.<br><br>
+      </section>
 
-            Tại Fleur, chúng tôi tin rằng vẻ đẹp truyền thống không bao giờ lỗi mốt, chỉ cần được
-            khoác lên tinh thần hiện đại. Mỗi thiết kế là một bản hòa ca giữa nét duyên dáng Á Đông và
-            đường cắt may tinh tế của phương Tây, tôn vinh trọn vẹn sự thanh tao, kiêu hãnh và rạng rỡ
-            của người phụ nữ trong ngày trọng đại nhất cuộc đời. Fleur không chỉ bán váy cưới, chúng tôi
-            dệt nên bản tình ca của hạnh phúc, nơi mỗi nếp váy, mỗi sợi chỉ đều chứa đựng lời hẹn ước về
-            một hành trình yêu thương trọn vẹn.
-          </p>
+      <section class="fomula-section">
+        <h2 data-animate>Fleur - Công thức cho cô dâu hoàn hảo</h2>
+        <div class="fomula-items" data-animate>
+          <div class="fomula-item">
+            <p>VÁY TIỆC CHÍNH</p>
+          </div>
+          <div class="fomula-item">
+            <p>VÁY ĐI BÀN</p>
+          </div>
+          <div class="fomula-item">
+            <p>PHỤ KIỆN</p>
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section class="fomula-section">
-      <h2 data-animate>Fleur - Công thức cho cô dâu hoàn hảo</h2>
-      <div class="fomula-items" data-animate>
-        <div class="fomula-item">
-          <p>VÁY TIỆC CHÍNH</p>
+        <div class="fomula-line">
+          <span class="line"></span>
+          <button class="btn-more" data-animate>
+            <a href="sanpham/sanpham.html">KHÁM PHÁ NGAY</a>
+          </button>
+          <span class="line"></span>
         </div>
-        <div class="fomula-item">
-          <p>VÁY ĐI BÀN</p>
+      </section>
+
+      <section class="blog-section">
+        <div class="blog-header" data-animate>
+          <h2>Tin tức mới nhất đến từ Fleur Bridal House</h2>
+          <a href="tintuc/tintuc.html" class="btn-more">Xem tất cả</a>
         </div>
-        <div class="fomula-item">
-          <p>PHỤ KIỆN</p>
+        <div class="blog-items">
+          <div class="blog-item">
+            <img src="asset/img/trangchu/blog1.jpg" alt="Blog 1">
+            <p class="date">25 tháng 10, 2024</p>
+            <h3>5 xu hướng váy cưới hot nhất năm 2024 không thể bỏ qua</h3>
+            <a href="tintuc/blog1.html" class="btn-more">Đọc thêm</a>
+          </div>
+          <div class="blog-item">
+            <img src="asset/img/trangchu/blog2.jpg" alt="Blog 2">
+            <p class="date">14 tháng 2, 2025</p>
+            <h3>Làm thế nào để chọn váy cưới phù hợp với dáng người?</h3>
+            <a href="tintuc/blog2.html" class="btn-more">Đọc thêm</a>
+          </div>
+          <div class="blog-item">
+            <img src="asset/img/trangchu/blog3.jpg" alt="Blog 3">
+            <p class="date">30 tháng 3, 2025</p>
+            <h3>Bí quyết chăm sóc váy cưới sau ngày trọng đại</h3>
+            <a href="tintuc/blog3.html" class="btn-more">Đọc thêm</a>
+          </div>
+          <div class="blog-item">
+            <img src="asset/img/trangchu/blog4.jpg" alt="Blog 4">
+            <p class="date">10 tháng 10, 2025</p>
+            <h3>Phụ kiện cưới không thể thiếu cho cô dâu hiện đại</h3>
+            <a href="tintuc/blog4.html" class="btn-more">Đọc thêm</a>
+          </div>
         </div>
-      </div>
-      <div class="fomula-line">
-        <span class="line"></span>
-        <button class="btn-more" data-animate>
-          <a href="sanpham/sanpham.html">KHÁM PHÁ NGAY</a>
-        </button>
-        <span class="line"></span>
-      </div>
-    </section>
-
-    <section class="blog-section">
-      <div class="blog-header" data-animate>
-        <h2>Tin tức mới nhất đến từ Fleur Bridal House</h2>
-        <a href="tintuc/tintuc.html" class="btn-more">Xem tất cả</a>
-      </div>
-      <div class="blog-items">
-        <div class="blog-item">
-          <img src="asset/img/trangchu/blog1.jpg" alt="Blog 1">
-          <p class="date">25 tháng 10, 2024</p>
-          <h3>5 xu hướng váy cưới hot nhất năm 2024 không thể bỏ qua</h3>
-          <a href="tintuc/blog1.html" class="btn-more">Đọc thêm</a>
+        <div class="blog-sidebar">
+          <div class="slider-progress"></div>
         </div>
-        <div class="blog-item">
-          <img src="asset/img/trangchu/blog2.jpg" alt="Blog 2">
-          <p class="date">14 tháng 2, 2025</p>
-          <h3>Làm thế nào để chọn váy cưới phù hợp với dáng người?</h3>
-          <a href="tintuc/blog2.html" class="btn-more">Đọc thêm</a>
+      </section>
+
+      <section class="insta-section">
+        <span class="icon" data-animate>
+          <img src="asset/img/trangchu/logoinsta.png" alt="logoinsta" text-align="center" width="60px" height="40px">
+        </span>
+        <h2 data-animate><i class="fa-brands fa-instagram"></i> Instagram</h2>
+        <button class="arrow left">&#10094;</button>
+        <div class="insta-feed">
+          <iframe src="https://snapwidget.com/embed/1111983" class="snapwidget-widget" allowtransparency="true"
+            frameborder="0" scrolling="no"
+            style="border:none; overflow:hidden;  width:1845px; height:278.33166666666665px"
+            title="Posts from Instagram"></iframe>
         </div>
-        <div class="blog-item">
-          <img src="asset/img/trangchu/blog3.jpg" alt="Blog 3">
-          <p class="date">30 tháng 3, 2025</p>
-          <h3>Bí quyết chăm sóc váy cưới sau ngày trọng đại</h3>
-          <a href="tintuc/blog3.html" class="btn-more">Đọc thêm</a>
+        <button class="arrow right">&#10095;</button>
+        <div class="btn-more" data-animate>
+          <a href="https://www.instagram.com/fleurbridalhouse/" target="_blank">
+            THEO DÕI CHÚNG TÔI
+          </a>
         </div>
-        <div class="blog-item">
-          <img src="asset/img/trangchu/blog4.jpg" alt="Blog 4">
-          <p class="date">10 tháng 10, 2025</p>
-          <h3>Phụ kiện cưới không thể thiếu cho cô dâu hiện đại</h3>
-          <a href="tintuc/blog4.html" class="btn-more">Đọc thêm</a>
+      </section>
+
+      <section class="contact-form-section">
+
+        <div class="form-wrapper">
+          <div class="form-header">
+            <a href="#store-form" class="tab-link active" data-target="store-form">CỬA HÀNG</a>
+            <a href="#bride-form" class="tab-link" data-target="bride-form">KHÁCH HÀNG</a>
+            <a href="#feedback-form" class="tab-link" data-target="feedback-form">ĐÁNH GIÁ</a>
+          </div>
+
+          <form class="contact-form active-form" id="store-form">
+            <label for="store_salon">Tên Cửa hàng*</label>
+            <select id="store_branch" name="type" required>
+              <option value="fleurbridal">CS1: 281 Trường Chinh, P.Phương Liệt, Tp.Hà Nội</option>
+              <option value="fleurbridallottemall">CS2: Tầng 2, Lotte Mall Tây Hồ, Hà Nội</option>
+              <option value="fleurbridalhouse">CS3: 32 Nguyễn Đình Chiểu, Quận 1, TP. Hồ Chí Minh</option>
+              <option value="fleurbridaloffcial">CS4: 20 Điện Biên Phủ,P.Thanh Khê Đông, Q.Thanh Khê, Đà Nẵng</option>
+              <option value="fleurbridalsaigon">CS5: Tòa nhà Saigon Centre, Quận 1, TP.Hồ Chí Minh</option>
+              <option value="fleurbridalvvt">CS6: 40 Võ Văn Tần, Quận 3, TP.Hồ Chí Minh</option>
+            </select>
+
+            <label for="store_country">Quốc gia*</label>
+            <input type="text" id="store_country" name="country" required>
+
+            <label for="store_city">Thành phố*</label>
+            <input type="text" id="store_city" name="city" required>
+
+            <label for="store_social">Website / Instagram / Facebook</label>
+            <input type="text" id="store_social" name="social">
+
+            <label for="store_name">Họ và Tên*</label>
+            <input type="text" id="store_name" name="name" required>
+
+            <label for="store_email">Email*</label>
+            <input type="email" id="store_email" name="email" required>
+
+            <label for="store_phone">Số điện thoại*</label>
+            <input type="tel" id="store_phone" name="phone" required>
+
+            <label for="store_comment">Lời nhắn / Yêu cầu</label>
+            <textarea id="store_comment" name="comment"></textarea>
+
+            <button type="submit" class="submit-btn">GỬI</button>
+          </form>
+
+          <form class="contact-form hidden-form" id="bride-form">
+            <label for="bride_name">Họ và Tên KH*</label>
+            <input type="text" id="bride_name" name="name" required>
+
+            <label for="bride_date">Ngày Cưới Dự Kiến*</label>
+            <input type="date" id="bride_date" name="wedding_date" required>
+
+            <label for="bride_location">Địa điểm Cưới (Thành phố)*</label>
+            <input type="text" id="bride_location" name="location" required>
+
+            <label for="bride_email">Email*</label>
+            <input type="email" id="bride_email" name="email" required>
+
+            <label for="bride_phone">Số điện thoại*</label>
+            <input type="tel" id="bride_phone" name="phone" required>
+
+            <label for="bride_comment">Váy bạn thích / Yêu cầu tư vấn</label>
+            <textarea id="bride_comment" name="comment"></textarea>
+
+            <button type="submit" class="submit-btn">ĐẶT LỊCH TƯ VẤN</button>
+          </form>
+
+          <form class="contact-form hidden-form" id="feedback-form">
+            <label for="feedback_type">Loại Phản Hồi*</label>
+            <select id="feedback_type" name="type" required>
+              <option value="complaint">Khiếu nại</option>
+              <option value="suggestion">Góp ý</option>
+              <option value="praise">Khen ngợi</option>
+            </select>
+
+            <label for="feedback_name">Họ và Tên (Tùy chọn)</label>
+            <input type="text" id="feedback_name" name="name">
+
+            <label for="feedback_email">Email (Để liên hệ lại)*</label>
+            <input type="email" id="feedback_email" name="email" required>
+
+            <label for="feedback_message">Nội dung Phản Hồi*</label>
+            <textarea id="feedback_message" name="message" required></textarea>
+
+            <button type="submit" class="submit-btn">GỬI ĐÁNH GIÁ</button>
+          </form>
+
         </div>
-      </div>
-      <div class="blog-sidebar">
-        <div class="slider-progress"></div>
-      </div>
-    </section>
-
-    <section class="insta-section">
-      <span class="icon" data-animate>
-        <img src="asset/img/trangchu/logoinsta.png" alt="logoinsta" text-align="center" width="60px" height="40px">
-      </span>
-      <h2 data-animate><i class="fa-brands fa-instagram"></i> Instagram</h2>
-      <button class="arrow left">&#10094;</button>
-      <div class="insta-feed">
-        <iframe src="https://snapwidget.com/embed/1111983" class="snapwidget-widget" allowtransparency="true"
-          frameborder="0" scrolling="no"
-          style="border:none; overflow:hidden;  width:1845px; height:278.33166666666665px"
-          title="Posts from Instagram"></iframe>
-      </div>
-      <button class="arrow right">&#10095;</button>
-      <div class="btn-more" data-animate>
-        <a href="https://www.instagram.com/fleurbridalhouse/" target="_blank">
-          THEO DÕI CHÚNG TÔI
-        </a>
-      </div>
-    </section>
-
-    <section class="contact-form-section">
-
-      <div class="form-wrapper">
-        <div class="form-header">
-          <a href="#store-form" class="tab-link active" data-target="store-form">CỬA HÀNG</a>
-          <a href="#bride-form" class="tab-link" data-target="bride-form">KHÁCH HÀNG</a>
-          <a href="#feedback-form" class="tab-link" data-target="feedback-form">ĐÁNH GIÁ</a>
-        </div>
-
-        <form class="contact-form active-form" id="store-form">
-          <label for="store_salon">Tên Cửa hàng*</label>
-          <select id="store_branch" name="type" required>
-            <option value="fleurbridal">CS1: 281 Trường Chinh, P.Phương Liệt, Tp.Hà Nội</option>
-            <option value="fleurbridallottemall">CS2: Tầng 2, Lotte Mall Tây Hồ, Hà Nội</option>
-            <option value="fleurbridalhouse">CS3: 32 Nguyễn Đình Chiểu, Quận 1, TP. Hồ Chí Minh</option>
-            <option value="fleurbridaloffcial">CS4: 20 Điện Biên Phủ,P.Thanh Khê Đông, Q.Thanh Khê, Đà Nẵng</option>
-            <option value="fleurbridalsaigon">CS5: Tòa nhà Saigon Centre, Quận 1, TP.Hồ Chí Minh</option>
-            <option value="fleurbridalvvt">CS6: 40 Võ Văn Tần, Quận 3, TP.Hồ Chí Minh</option>
-          </select>
-
-          <label for="store_country">Quốc gia*</label>
-          <input type="text" id="store_country" name="country" required>
-
-          <label for="store_city">Thành phố*</label>
-          <input type="text" id="store_city" name="city" required>
-
-          <label for="store_social">Website / Instagram / Facebook</label>
-          <input type="text" id="store_social" name="social">
-
-          <label for="store_name">Họ và Tên*</label>
-          <input type="text" id="store_name" name="name" required>
-
-          <label for="store_email">Email*</label>
-          <input type="email" id="store_email" name="email" required>
-
-          <label for="store_phone">Số điện thoại*</label>
-          <input type="tel" id="store_phone" name="phone" required>
-
-          <label for="store_comment">Lời nhắn / Yêu cầu</label>
-          <textarea id="store_comment" name="comment"></textarea>
-
-          <button type="submit" class="submit-btn">GỬI</button>
-        </form>
-
-        <form class="contact-form hidden-form" id="bride-form">
-          <label for="bride_name">Họ và Tên KH*</label>
-          <input type="text" id="bride_name" name="name" required>
-
-          <label for="bride_date">Ngày Cưới Dự Kiến*</label>
-          <input type="date" id="bride_date" name="wedding_date" required>
-
-          <label for="bride_location">Địa điểm Cưới (Thành phố)*</label>
-          <input type="text" id="bride_location" name="location" required>
-
-          <label for="bride_email">Email*</label>
-          <input type="email" id="bride_email" name="email" required>
-
-          <label for="bride_phone">Số điện thoại*</label>
-          <input type="tel" id="bride_phone" name="phone" required>
-
-          <label for="bride_comment">Váy bạn thích / Yêu cầu tư vấn</label>
-          <textarea id="bride_comment" name="comment"></textarea>
-
-          <button type="submit" class="submit-btn">ĐẶT LỊCH TƯ VẤN</button>
-        </form>
-
-        <form class="contact-form hidden-form" id="feedback-form">
-          <label for="feedback_type">Loại Phản Hồi*</label>
-          <select id="feedback_type" name="type" required>
-            <option value="complaint">Khiếu nại</option>
-            <option value="suggestion">Góp ý</option>
-            <option value="praise">Khen ngợi</option>
-          </select>
-
-          <label for="feedback_name">Họ và Tên (Tùy chọn)</label>
-          <input type="text" id="feedback_name" name="name">
-
-          <label for="feedback_email">Email (Để liên hệ lại)*</label>
-          <input type="email" id="feedback_email" name="email" required>
-
-          <label for="feedback_message">Nội dung Phản Hồi*</label>
-          <textarea id="feedback_message" name="message" required></textarea>
-
-          <button type="submit" class="submit-btn">GỬI ĐÁNH GIÁ</button>
-        </form>
-
-      </div>
-    </section>
-        </div>
+      </section>
+    </div>
   </main>
   <!-- POPUP THÔNG BÁO -->
-<div class="thankyou-overlay" id="thankyouOverlay">
-  <div class="thankyou-popup">
-    <h3>Cảm ơn bạn!</h3>
-    <p>Chúng tôi đã nhận được thông tin của bạn.</p>
-    <button id="closePopup">Đóng</button>
+  <div class="thankyou-overlay" id="thankyouOverlay">
+    <div class="thankyou-popup">
+      <h3>Cảm ơn bạn!</h3>
+      <p>Chúng tôi đã nhận được thông tin của bạn.</p>
+      <button id="closePopup">Đóng</button>
+    </div>
   </div>
-</div>
 
-    <script src="asset/js/trangchu.js"></script>
+  <script src="asset/js/trangchu.js"></script>
 
   <!-- Nơi footer sẽ được chèn -->
   <!-- Nơi footer sẽ được chèn -->
   <!-- FOOTER -->
   <footer class="footer-component">
     <div class="footer-top">
-      <a href="#" class="logo"><img src="asset/img/header_footer/FLEAURLOGOBLACK.png" alt="Logo"></a>
+      <a href="Trangchu.html" class="logo"><img src="asset/img/header_footer/logohoa.png" alt="Logo"></a>
     </div>
 
     <div class="footer-main">
       <div class="footer-col">
         <h3>Sản phẩm</h3>
-        <a href="sanpham/loaisanpham.html">Váy bồng xòe</a>
-        <a href="sanpham/loaisanpham.html">Váy đuôi cá</a>
-        <a href="sanpham/loaisanpham.html">Váy chữ A</a>
-        <a href="sanpham/loaisanpham.html">Váy ngắn</a>
-        <a href="sanpham/loaisanpham.html">Áo dài cưới</a>
-        <a href="sanpham/loaisanpham.html">Phụ kiện</a>
+        <a href="sanpham/sp1.html">Váy bồng xòe</a>
+        <a href="sanpham/sp2.html">Váy đuôi cá</a>
+        <a href="sanpham/sp3.html">Váy chữ A</a>
+        <a href="sanpham/sp4.html">Váy ngắn</a>
+        <a href="sanpham/sp5.html">Áo dài cưới</a>
+        <a href="sanpham/sp6.html">Phụ kiện</a>
       </div>
       <div class="footer-col">
         <h3>Công ty</h3>
         <a href="gioithieu.html">Giới thiệu</a>
         <a href="doitac.html">Đối tác</a>
-        <a href="tintuc.html">Tin tức</a>
+        <a href="tintuc/tintuc.html">Tin tức</a>
       </div>
       <div class="footer-col">
         <h3>Hỗ trợ</h3>
@@ -1163,10 +1172,10 @@
           <button>Subscribe</button>
         </div>
         <div class="icons">
-          <a href="#"><img src="asset/img/header_footer/IGLOGO.png" alt="Icon 1"></a>
-          <a href="#"><img src="asset/img/header_footer/FBLOGO.png" alt="Icon 2"></a>
-          <a href="#"><img src="asset/img/header_footer/YTBLOGO.png" alt="Icon 3"></a>
-          <a href="#"><img src="asset/img/header_footer/TIKLOGO.png" alt="Icon 4"></a>
+          <a href="https://www.instagram.com/"><img src="asset/img/header_footer/IGLOGO.png" alt="Icon 1"></a>
+          <a href="https://www.facebook.com/"><img src="asset/img/header_footer/FBLOGO.png" alt="Icon 2"></a>
+          <a href="https://www.youtube.com/"><img src="asset/img/header_footer/YTBLOGO.png" alt="Icon 3"></a>
+          <a href="https://www.tiktok.com/"><img src="asset/img/header_footer/TIKLOGO.png" alt="Icon 4"></a>
         </div>
       </div>
     </div>
@@ -1180,6 +1189,7 @@
 
   </footer>
   <!-- Script để load header + footer và gắn sự kiện -->
+  <script src="asset/js/data.js"></script>
   <script src="header_footer/header_footer.js"></script>
 
 </body>

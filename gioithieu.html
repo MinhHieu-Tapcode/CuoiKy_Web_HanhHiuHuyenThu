@@ -30,11 +30,19 @@
         .precise-overlay-container {
             position: relative;
             width: 100%;
-            max-width: 1200px;
+            max-width: 85%;
             margin: 20px auto 0 auto;
             overflow: hidden;
             height: auto;
-            
+
+        }
+
+        section {
+            padding-bottom: 20px;
+        }
+       
+        .tieu-de-chinh {
+            padding: 0 0 20px 0;
         }
 
         .layout-left .image-column-fixed {
@@ -45,7 +53,7 @@
 
         .layout-left .content-box-fixed {
             left: auto;
-            right: 0;
+            right: 100px;
         }
 
         .layout-right .image-column-fixed {
@@ -55,7 +63,7 @@
         }
 
         .layout-right .content-box-fixed {
-            left: 0;
+            left: 100px;
             right: auto;
         }
 
@@ -82,7 +90,7 @@
 
         .content-box-fixed {
             position: absolute;
-
+            
             top: 50%;
             right: 0;
             transform: translateY(-50%);
@@ -123,32 +131,37 @@
             color: #333;
         }
 
-.dark-background {
-    background-color: #2b2b2b;
-    border-color: #555;
-    color: #fff;
-}
-.dark-background h2, .dark-background p {
-    color: #fff;
-} 
-.full-page-center-wrapper {
-    height: 70vh;           
-    display: flex;           
-    justify-content: center; 
-    align-items: center; 
-    padding: 100px, 0; 
-    margin-bottom: 0;  
-   }
-.center-content-section {
-    max-width: 800px;        
-    width: 60%;
-    text-align: center;      
-     margin: 0 ;
-    margin-top: 0;
-    padding-top: 0;
-    
-}
-.center-content-section h2 {
+        .dark-background {
+            background-color: #2b2b2b;
+            border-color: #555;
+            color: #fff;
+        }
+
+        .dark-background h2,
+        .dark-background p {
+            color: #fff;
+        }
+
+        .full-page-center-wrapper {
+            height: 70vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px, 0;
+            margin-bottom: 0;
+        }
+
+        .center-content-section {
+            max-width: 800px;
+            width: 60%;
+            text-align: center;
+            margin: 0;
+            margin-top: 0;
+            padding-top: 0;
+
+        }
+
+        .center-content-section h2 {
             font-size: 2em;
             margin-bottom: 0.2em;
         }
@@ -538,68 +551,69 @@
         .submit-btn:hover {
             background-color: #555555;
         }
+
         /* --- POPUP CẢM ƠN --- */
-    .thankyou-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      /* Nền mờ */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.3s ease;
-      z-index: 999;
-    }
+        .thankyou-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /* Nền mờ */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            z-index: 999;
+        }
 
-    .thankyou-overlay.show {
-      opacity: 1;
-      pointer-events: all;
-    }
+        .thankyou-overlay.show {
+            opacity: 1;
+            pointer-events: all;
+        }
 
-    .thankyou-popup {
-      background-color: #e3e3e3;
-      padding: 40px 60px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      transform: scale(0.8);
-      transition: transform 0.3s ease;
-    }
+        .thankyou-popup {
+            background-color: #e3e3e3;
+            padding: 40px 60px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+        }
 
-    .thankyou-overlay.show .thankyou-popup {
-      transform: scale(1);
-    }
+        .thankyou-overlay.show .thankyou-popup {
+            transform: scale(1);
+        }
 
-    .thankyou-popup h3 {
-      margin-bottom: 10px;
-      font-size: 24px;
-      color: #2b2b2b;
-    }
+        .thankyou-popup h3 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            color: #2b2b2b;
+        }
 
-    .thankyou-popup p {
-      font-size: 16px;
-      margin-bottom: 25px;
-      color: #2b2b2b;
-    }
+        .thankyou-popup p {
+            font-size: 16px;
+            margin-bottom: 25px;
+            color: #2b2b2b;
+        }
 
-    #closePopup {
-      background-color: #2b2b2b;
-      color: #e3e3e3;
-      border: none;
-      padding: 10px 25px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
+        #closePopup {
+            background-color: #2b2b2b;
+            color: #e3e3e3;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
 
-    #closePopup:hover {
-      background-color: gray;
-    }
+        #closePopup:hover {
+            background-color: gray;
+        }
     </style>
 </head>
 
@@ -617,13 +631,13 @@
         <!-- HEADER BOTTOM -->
         <div class="header-bottom">
             <div class="logo">
-                <img src="asset/img/header_footer/FLEAURLOGOBLACK.png" alt="Logo" />
+                <a href="Trangchu.html"><img src="asset/img/header_footer/logohoa.png" alt="Logo" /></a>
             </div>
 
             <nav class="nav-links">
                 <a href="gioithieu.html">Giới thiệu</a>
-                <a href="sanpham.html">Sản phẩm</a>
-                <a href="bosuutap.html">Bộ sưu tập</a>
+                <a href="../sanpham/sanpham.html">Sản phẩm</a>
+                <a href="../bosuutap/bosuutap.html">Bộ sưu tập</a>
                 <a href="cuahang.html">Cửa hàng</a>
                 <a href="lienhe.html">Liên hệ</a>
             </nav>
@@ -631,7 +645,7 @@
             <div class="icons">
                 <i class="fas fa-search icon-search"></i>
                 <i class="far fa-heart icon-heart"></i>
-                <a href="giohang.html">
+                <a href="cart.html">
                     <i class="fas fa-shopping-cart icon-cart"></i>
                 </a>
                 <i class="fas fa-bars menu-toggle"></i>
@@ -645,341 +659,360 @@
             <i class="fa-solid fa-xmark close-search"></i>
         </div>
     </header>
-       
-        <main class="khung-toan-trang" style="padding: 60px 20px;">
+
+    <main class="khung-toan-trang" style="padding: 60px 20px;">
         <div class="khung-chinh">
-        <h1 class="tieu-de-chinh" style="text-align: center;">Giới thiệu</h1>
-        <div class="page-breadcrumbs">
-            <nav aria-label="breadcrumbs" class="rank-math-breadcrumb">
-                <p>
-                    <a href="trangchu.html">Fleur</a>
-                    <span class="separator"> - </span>
-                    <span class=" last">Giới thiệu</span>
-                </p>
-            </nav>
-        </div>
-        <section>
-            <div class="precise-overlay-container layout-left">
-
-                <div class="image-column-fixed">
-                    <img src="asset/img/gioithieu/gioithieu2.jpg" alt="Gt1">
-                </div>
-
-                <div class="content-box-fixed light-background">
-                    <h2>THƯƠNG HIỆU THỜI TRANG FLEUR</h2>
-                    <p><strong>Fleur</strong> - Nàng thơ của những giấc mơ cưới. Tên gọi bắt nguồn từ tiếng Pháp, có
-                        nghĩa
-                        là <strong>“bông hoa”</strong> – biểu tượng của sự tinh khiết, nữ tính và tỏa sáng.
-                        Cái tên không chỉ thể hiện triết lý thẩm mỹ tinh tế của thương hiệu mà còn gửi gắm thông điệp:
-                        mỗi
-                        cô dâu đều là một đóa hoa riêng biệt, xứng đáng được nở rộ trong ngày trọng đại của mình.</p>
-                </div>
-
+            <h1 class="tieu-de-chinh" style="text-align: center;">Giới thiệu</h1>
+            <div class="page-breadcrumbs">
+                <nav aria-label="breadcrumbs" class="rank-math-breadcrumb">
+                    <p>
+                        <a href="trangchu.html">Fleur</a>
+                        <span class="separator"> - </span>
+                        <span class=" last">Giới thiệu</span>
+                    </p>
+                </nav>
             </div>
-            <div class="precise-overlay-container layout-right">
+            <section>
+                <div class="precise-overlay-container layout-left">
 
-                <div class="image-column-fixed">
-                    <img src="asset/img/gioithieu/gioithieu1.png" alt="gioithieu2">
+                    <div class="image-column-fixed">
+                        <img src="asset/img/gioithieu/gioithieu2.jpg" alt="Gt1">
+                    </div>
+
+                    <div class="content-box-fixed light-background">
+                        <h2>THƯƠNG HIỆU THỜI TRANG FLEUR</h2>
+                        <p><strong>Fleur</strong> - Nàng thơ của những giấc mơ cưới. Tên gọi bắt nguồn từ tiếng Pháp, có
+                            nghĩa
+                            là <strong>“bông hoa”</strong> – biểu tượng của sự tinh khiết, nữ tính và tỏa sáng.
+                            Cái tên không chỉ thể hiện triết lý thẩm mỹ tinh tế của thương hiệu mà còn gửi gắm thông
+                            điệp:
+                            mỗi
+                            cô dâu đều là một đóa hoa riêng biệt, xứng đáng được nở rộ trong ngày trọng đại của mình.
+                        </p>
+                    </div>
+
                 </div>
+                <div class="precise-overlay-container layout-right">
 
-                <div class="content-box-fixed dark-background">
-                    <h2>Hành trình của Fleur</h2>
-                    <p>Thương hiệu Fleur được thành lập vào năm 2016, người mang niềm đam mê bất tận với nghệ thuật thời
-                        trang Haute Couture.
-                        Bắt đầu từ một Atelier nhỏ trên con phố Nguyễn Đình Chiểu (TP. Hồ Chí Minh), Fleur nhanh chóng
-                        khẳng
-                        định vị thế trong giới thời trang cưới Việt Nam nhờ phong cách thiết kế thanh lịch, tinh xảo và
-                        mang
-                        dấu ấn châu Âu hiện đại.</p>
+                    <div class="image-column-fixed">
+                        <img src="asset/img/gioithieu/gioithieu1.png" alt="gioithieu2">
+                    </div>
+
+                    <div class="content-box-fixed dark-background">
+                        <h2>Hành trình của Fleur</h2>
+                        <p>Thương hiệu Fleur được thành lập vào năm 2016, người mang niềm đam mê bất tận với nghệ thuật
+                            thời
+                            trang Haute Couture.
+                            Bắt đầu từ một Atelier nhỏ trên con phố Nguyễn Đình Chiểu (TP. Hồ Chí Minh), Fleur nhanh
+                            chóng
+                            khẳng
+                            định vị thế trong giới thời trang cưới Việt Nam nhờ phong cách thiết kế thanh lịch, tinh xảo
+                            và
+                            mang
+                            dấu ấn châu Âu hiện đại.</p>
+                    </div>
+
                 </div>
-
-            </div>
-        </section>
-        <section class="bg-gray-50 font-sans p-4 sm:p-8">
-            <section class="max-w-7xl mx-auto mt-0">
-        <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-10" style="text-align: center; margin-bottom: 10px;"> Cô Dâu Của Fleur </h1>
-        <!-- 
+            </section>
+            <section class="bg-gray-50 font-sans p-4 sm:p-8">
+                <section class="max-w-7xl mx-auto mt-0">
+                    <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 text-center mb-10"
+                        style="text-align: center; margin-bottom: 10px;"> Cô Dâu Của Fleur </h1>
+                    <!-- 
             - flex: Kích hoạt flex.
             - overflow-x-auto: Tạo thanh cuộn ngang khi nội dung tràn ra.
             - flex-nowrap: Quan trọng để giữ tất cả item trên 1 hàng.
         -->
-                <div id="bride-carousel"
-                    class="image-gallery flex flex-nowrap justify-start gap-6 overflow-x-auto pb-4">
-                    <div class="image-gallery-item bg-white shadow-lg hover:shadow-xl transition duration-300">
-                        <img src="asset/img/gioithieu/gioithieu8.1.jpg" alt="Cô Dâu Fleur 1" loading="lazy">
-                    </div>
-                    <div class="image-gallery-item bg-white shadow-lg hover:shadow-xl transition duration-300">
-                        <img src="asset/img/gioithieu/gioithieu8.3.jpg" alt="Cô Dâu Fleur 2" loading="lazy">
-                    </div>
-                    <div class=".image-gallery-item">
+                    <div id="bride-carousel"
+                        class="image-gallery flex flex-nowrap justify-start gap-6 overflow-x-auto pb-4">
                         <div class="image-gallery-item bg-white shadow-lg hover:shadow-xl transition duration-300">
-                            <video controls autoplay muted loop>
-                                <source src="asset/img/gioithieu/gioithieu8.2.mp4" type="video/mp4">
-                                Trình duyệt của bạn không hỗ trợ video.
-                            </video>
+                            <img src="asset/img/gioithieu/gioithieu8.1.jpg" alt="Cô Dâu Fleur 1" loading="lazy">
+                        </div>
+                        <div class="image-gallery-item bg-white shadow-lg hover:shadow-xl transition duration-300">
+                            <img src="asset/img/gioithieu/gioithieu8.3.jpg" alt="Cô Dâu Fleur 2" loading="lazy">
+                        </div>
+                        <div class=".image-gallery-item">
+                            <div class="image-gallery-item bg-white shadow-lg hover:shadow-xl transition duration-300">
+                                <video controls autoplay muted loop>
+                                    <source src="asset/img/gioithieu/gioithieu8.2.mp4" type="video/mp4">
+                                    Trình duyệt của bạn không hỗ trợ video.
+                                </video>
+                            </div>
+                        </div>
+                        <div class="image-gallery-item bg-white shadow-lg hover:shadow-xl transition duration-300">
+                            <img src="asset/img/gioithieu/gioithieu8.4.jpg" alt="Cô Dâu Fleur 3" loading="lazy">
+                        </div>
+                        <div class="image-gallery-item bg-white shadow-lg hover:shadow-xl transition duration-300">
+                            <img src="asset/img/gioithieu/gioithieu8.5.jpg" alt="Cô Dâu Fleur 4" loading="lazy">
+                        </div>
+                        <div class="image-gallery-item bg-white shadow-lg hover:shadow-xl transition duration-300">
+                            <img src="asset/img/gioithieu/gioithieu8.6.jpg" alt="Cô Dâu Fleur 6" loading="lazy">
+                        </div>
+                        <div class="image-gallery-item bg-white shadow-lg hover:shadow-xl transition duration-300">
+                            <img src="asset/img/gioithieu/gioithieu8.7.jpg" alt="Cô Dâu Fleur 7" loading="lazy">
+                        </div>
+                        <div class="image-gallery-item bg-white shadow-lg hover:shadow-xl transition duration-300">
+                            <img src="asset/img/gioithieu/gioithieu8.8.jpg" alt="Cô Dâu Fleur 7" loading="lazy">
                         </div>
                     </div>
-                    <div class="image-gallery-item bg-white shadow-lg hover:shadow-xl transition duration-300">
-                        <img src="asset/img/gioithieu/gioithieu8.4.jpg" alt="Cô Dâu Fleur 3" loading="lazy">
+                </section>
+            </section>
+
+            <section>
+                <h1 class="tieu-de-chinh">Đội ngũ của chúng tôi</h1>
+                <div class="precise-overlay-container layout-left">
+
+                    <div class="image-column-fixed">
+                        <img src="asset/img/gioithieu/gioithieu3.jpg" alt="Gt3">
                     </div>
-                    <div class="image-gallery-item bg-white shadow-lg hover:shadow-xl transition duration-300">
-                        <img src="asset/img/gioithieu/gioithieu8.5.jpg" alt="Cô Dâu Fleur 4" loading="lazy">
+
+                    <div class="content-box-fixed light-background">
+                        <h2>Giám đốc sáng tạo</h2>
+                        <p>Đứng sau thành công của Fleur là Giám đốc sáng tạo <strong>Hoàng Minh Hiếu</strong>, người
+                            từng
+                            theo
+                            học thiết kế thời trang tại Paris và có hơn 10 năm kinh nghiệm trong lĩnh vực haute couture.
+                            Anh là người mang đến cho Fleur hơi thở hiện đại, tinh giản nhưng vẫn đậm chất thơ, biến mỗi
+                            bộ
+                            sưu
+                            tập thành hành trình kể chuyện về tình yêu và vẻ đẹp người phụ nữ.
+                        <blockquote>“Tôi tin váy cưới không chỉ là trang phục, mà là cảm xúc được hiện hình.” – Hoàng
+                            Minh
+                            Hiếu
+                        </blockquote>
+                        </p>
                     </div>
-                    <div class="image-gallery-item bg-white shadow-lg hover:shadow-xl transition duration-300">
-                        <img src="asset/img/gioithieu/gioithieu8.6.jpg" alt="Cô Dâu Fleur 6" loading="lazy">
+                </div>
+                <div class="precise-overlay-container layout-right">
+                    <div class="image-column-fixed">
+                        <img src="asset/img/gioithieu/gioithieu4.jpg" alt="gioithieu4">
                     </div>
-                    <div class="image-gallery-item bg-white shadow-lg hover:shadow-xl transition duration-300">
-                        <img src="asset/img/gioithieu/gioithieu8.7.jpg" alt="Cô Dâu Fleur 7" loading="lazy">
+
+                    <div class="content-box-fixed dark-background">
+                        <h2>Bán hàng và tiếp thị</h2>
+                        <p>Bên cạnh đội ngũ thiết kế tài năng, Fleur tự hào sở hữu một tập thể bán hàng và tiếp thị
+                            chuyên
+                            nghiệp, được đào tạo bài bản về tư vấn hình ảnh và chăm sóc khách hàng.
+                            Họ không chỉ là những người am hiểu sản phẩm, mà còn là <strong>“người bạn đồng hành”
+                            </strong>
+                            giúp
+                            mỗi cô dâu tìm thấy chiếc váy phản chiếu đúng phong cách và câu chuyện của riêng mình.</p>
                     </div>
-                    <div class="image-gallery-item bg-white shadow-lg hover:shadow-xl transition duration-300">
-                        <img src="asset/img/gioithieu/gioithieu8.8.jpg" alt="Cô Dâu Fleur 7" loading="lazy">
+                </div>
+                <div class="precise-overlay-container layout-left">
+                    <div class="video-column-wrapper">
+                        <video class="responsive-video" controls autoplay muted loop>
+                            <source src="asset/img/gioithieu/gioithieu5.mp4" type="video/mp4">
+                            Trình duyệt của bạn không hỗ trợ video.
+                        </video>
+                    </div>
+
+                    <div class="content-box-fixed light-background">
+                        <h2>Sản xuất</h2>
+                        <p>Với phương châm <strong>“Tôn vinh vẻ đẹp vĩnh cửu của nàng dâu hiện đại”</strong>,
+                            Fleur không chỉ tạo ra chiếc váy cưới hoàn hảo, mà còn mang đến một hành trình chạm đến cảm
+                            xúc,
+                            sự
+                            tự tin và phong thái thanh lịch của mỗi cô gái.</p>
                     </div>
                 </div>
             </section>
-        </section>
+            <div class="grid-collage-container">
+                <div class="grid-content-wrapper">
+                    <!-- 1. Ảnh máy may lớn  -->
+                    <div class="grid-item item-1">
+                        <img src="asset/img/gioithieu/gioithieu7.1.jpg" alt="Ảnh 1: Máy may">
+                    </div>
+                    <!-- 2. Ảnh đính cườm  -->
+                    <div class="grid-item item-2">
+                        <img src="asset/img/gioithieu/gioithieu7.6.jpg" alt="Ảnh 2: Đính cườm">
+                    </div>
+                    <!-- 3. Ảnh may chi tiết  -->
+                    <div class="grid-item item-3">
+                        <img src="asset/img/gioithieu/gioithieu7.7.jpg" alt="Ảnh 3: May chi tiết">
+                    </div>
+                    <!-- 5. Logo  -->
+                    <div class="grid-item item-5">
 
-        <section>
-            <h1 class="tieu-de-chinh">Đội ngũ của chúng tôi</h1>
+                        <img src="asset/img/gioithieu/gioithieu7.2.jpg" alt="chi tiết ren">
+                    </div>
+                    <!-- 6. Ảnh váy cưới treo lớn  -->
+                    <div class="grid-item item-6">
+                        <img src="asset/img/gioithieu/gioithieu7.3.jpg" alt="Ảnh 6: Váy cưới treo">
+                    </div>
+                </div>
+            </div>
+            <div class="full-page-center-wrapper">
+                <section class="center-content-section">
+                    <h2>FLEUR Việt Nam</h2>
+                    <p>Fleur cung cấp dịch vụ khách hàng tuyệt vời và luôn nỗ lực vượt trên sự mong đợi của mọi khách
+                        hàng.
+                        Hiện nay, váy cưới của chúng tôi được bán tại nhiều thành phố lớn và có các cửa hàng trải dài ở
+                        Việt
+                        Nam.</p>
+                    <a href="cuahang.html" alt="TimCH">
+                        <h3 style="font-weight: normal;">KHÁM PHÁ BẢN ĐỒ CỬA HÀNG TẠI ĐÂY</h3>
+                    </a>
+                </section>
+
+            </div>
+
             <div class="precise-overlay-container layout-left">
-
                 <div class="image-column-fixed">
-                    <img src="asset/img/gioithieu/gioithieu3.jpg" alt="Gt3">
+                    <h2 style="text-align: center;">Cửa hàng FLEUR</h2>
+                    <img src="asset/img/gioithieu/gioithieu6.jpg" alt="GT6">
+                </div>
+                <div class="non-overlay-content-box">
+                    <p>Bộ sưu tập váy cưới của Fleur mang đến những thiết kế tinh xảo, tôn vinh vẻ đẹp thanh lịch của cô
+                        dâu hiện đại.
+                        Đội ngũ tư vấn và stylist chuyên nghiệp của Fleur sẽ giúp bạn hoàn thiện phong cách với phụ
+                        kiện, giày và trang sức hài hòa cho ngày trọng đại.</p>
+                    <a href="bosuutap/bosuutap.html" class="bst" alt="bosuutap">
+                        <h3 style="font-weight: normal;">XEM THÊM</h3>
+                    </a>
                 </div>
 
-                <div class="content-box-fixed light-background">
-                    <h2>Giám đốc sáng tạo</h2>
-                    <p>Đứng sau thành công của Fleur là Giám đốc sáng tạo <strong>Hoàng Minh Hiếu</strong>, người từng
-                        theo
-                        học thiết kế thời trang tại Paris và có hơn 10 năm kinh nghiệm trong lĩnh vực haute couture.
-                        Anh là người mang đến cho Fleur hơi thở hiện đại, tinh giản nhưng vẫn đậm chất thơ, biến mỗi bộ
-                        sưu
-                        tập thành hành trình kể chuyện về tình yêu và vẻ đẹp người phụ nữ.
-                    <blockquote>“Tôi tin váy cưới không chỉ là trang phục, mà là cảm xúc được hiện hình.” – Hoàng Minh
-                        Hiếu
-                    </blockquote>
-                    </p>
-                </div>
             </div>
-            <div class="precise-overlay-container layout-right">
-                <div class="image-column-fixed">
-                    <img src="asset/img/gioithieu/gioithieu4.jpg" alt="gioithieu4">
-                </div>
+            <section class="contact-form-section">
 
-                <div class="content-box-fixed dark-background">
-                    <h2>Bán hàng và tiếp thị</h2>
-                    <p>Bên cạnh đội ngũ thiết kế tài năng, Fleur tự hào sở hữu một tập thể bán hàng và tiếp thị chuyên
-                        nghiệp, được đào tạo bài bản về tư vấn hình ảnh và chăm sóc khách hàng.
-                        Họ không chỉ là những người am hiểu sản phẩm, mà còn là <strong>“người bạn đồng hành” </strong>
-                        giúp
-                        mỗi cô dâu tìm thấy chiếc váy phản chiếu đúng phong cách và câu chuyện của riêng mình.</p>
-                </div>
-            </div>
-            <div class="precise-overlay-container layout-left">
-                <div class="video-column-wrapper">
-                    <video class="responsive-video" controls autoplay muted loop>
-                        <source src="asset/img/gioithieu/gioithieu5.mp4" type="video/mp4">
-                        Trình duyệt của bạn không hỗ trợ video.
-                    </video>
-                </div>
+                <div class="form-wrapper">
+                    <div class="form-header">
+                        <a href="#store-form" class="tab-link active" data-target="store-form">CỬA HÀNG</a>
+                        <a href="#bride-form" class="tab-link" data-target="bride-form">KHÁCH HÀNG</a>
+                        <a href="#feedback-form" class="tab-link" data-target="feedback-form">ĐÁNH GIÁ</a>
+                    </div>
 
-                <div class="content-box-fixed light-background">
-                    <h2>Sản xuất</h2>
-                    <p>Với phương châm <strong>“Tôn vinh vẻ đẹp vĩnh cửu của nàng dâu hiện đại”</strong>,
-                        Fleur không chỉ tạo ra chiếc váy cưới hoàn hảo, mà còn mang đến một hành trình chạm đến cảm xúc,
-                        sự
-                        tự tin và phong thái thanh lịch của mỗi cô gái.</p>
-                </div>
-            </div>
-        </section>
-        <div class="grid-collage-container">
-            <div class="grid-content-wrapper">
-                <!-- 1. Ảnh máy may lớn  -->
-                <div class="grid-item item-1">
-                    <img src="asset/img/gioithieu/gioithieu7.1.jpg" alt="Ảnh 1: Máy may">
-                </div>
-                <!-- 2. Ảnh đính cườm  -->
-                <div class="grid-item item-2">
-                    <img src="asset/img/gioithieu/gioithieu7.6.jpg" alt="Ảnh 2: Đính cườm">
-                </div>
-                <!-- 3. Ảnh may chi tiết  -->
-                <div class="grid-item item-3">
-                    <img src="asset/img/gioithieu/gioithieu7.7.jpg" alt="Ảnh 3: May chi tiết">
-                </div>
-                <!-- 5. Logo  -->
-                <div class="grid-item item-5">
+                    <form class="contact-form active-form" id="store-form">
+                        <label for="store_salon">Tên Cửa hàng*</label>
+                        <input type="text" id="store_salon" name="salon" required>
 
-                    <img src="asset/img/gioithieu/gioithieu7.2.jpg" alt="chi tiết ren">
+                        <label for="store_country">Quốc gia*</label>
+                        <input type="text" id="store_country" name="country" required>
+
+                        <label for="store_city">Thành phố*</label>
+                        <input type="text" id="store_city" name="city" required>
+
+                        <label for="store_social">Website / Instagram / Facebook</label>
+                        <input type="text" id="store_social" name="social">
+
+                        <label for="store_name">Họ và Tên*</label>
+                        <input type="text" id="store_name" name="name" required>
+
+                        <label for="store_email">Email*</label>
+                        <input type="email" id="store_email" name="email" required>
+
+                        <label for="store_phone">Số điện thoại*</label>
+                        <input type="tel" id="store_phone" name="phone" required>
+
+                        <label for="store_comment">Lời nhắn / Yêu cầu</label>
+                        <textarea id="store_comment" name="comment"></textarea>
+
+                        <button type="submit" class="submit-btn">GỬI</button>
+                    </form>
+
+                    <form class="contact-form hidden-form" id="bride-form">
+                        <label for="bride_name">Họ và Tên KH*</label>
+                        <input type="text" id="bride_name" name="name" required>
+
+                        <label for="bride_date">Ngày Cưới Dự Kiến*</label>
+                        <input type="date" id="bride_date" name="wedding_date" required>
+
+                        <label for="bride_location">Địa điểm Cưới (Thành phố)*</label>
+                        <input type="text" id="bride_location" name="location" required>
+
+                        <label for="bride_email">Email*</label>
+                        <input type="email" id="bride_email" name="email" required>
+
+                        <label for="bride_phone">Số điện thoại*</label>
+                        <input type="tel" id="bride_phone" name="phone" required>
+
+                        <label for="bride_comment">Váy bạn thích / Yêu cầu tư vấn</label>
+                        <textarea id="bride_comment" name="comment"></textarea>
+
+                        <button type="submit" class="submit-btn">ĐẶT LỊCH TƯ VẤN</button>
+                    </form>
+
+                    <form class="contact-form hidden-form" id="feedback-form">
+                        <label for="feedback_type">Loại Phản Hồi*</label>
+                        <select id="feedback_type" name="type" required>
+                            <option value="complaint">Khiếu nại</option>
+                            <option value="suggestion">Góp ý</option>
+                            <option value="praise">Khen ngợi</option>
+                        </select>
+
+                        <label for="feedback_name">Họ và Tên (Tùy chọn)</label>
+                        <input type="text" id="feedback_name" name="name">
+
+                        <label for="feedback_email">Email (Để liên hệ lại)*</label>
+                        <input type="email" id="feedback_email" name="email" required>
+
+                        <label for="feedback_message">Nội dung Phản Hồi*</label>
+                        <textarea id="feedback_message" name="message" required></textarea>
+
+                        <button type="submit" class="submit-btn">GỬI ĐÁNH GIÁ</button>
+                    </form>
+
+
                 </div>
-                <!-- 6. Ảnh váy cưới treo lớn  -->
-                <div class="grid-item item-6">
-                    <img src="asset/img/gioithieu/gioithieu7.3.jpg" alt="Ảnh 6: Váy cưới treo">
-                </div>
-            </div>
         </div>
-        <div class="full-page-center-wrapper">
-            <section class="center-content-section">
-                <h2>FLEUR Việt Nam</h2>
-                <p>Fleur cung cấp dịch vụ khách hàng tuyệt vời và luôn nỗ lực vượt trên sự mong đợi của mọi khách hàng.
-                    Hiện nay, váy cưới của chúng tôi được bán tại nhiều thành phố lớn và có các cửa hàng trải dài ở Việt
-                    Nam.</p>
-                <a href="cuahang.html" alt="TimCH">
-                    <h3 style="font-weight: normal;">KHÁM PHÁ BẢN ĐỒ CỬA HÀNG TẠI ĐÂY</h3>
-                </a>
-            </section>
-
-</div>
-   
-    <div class="precise-overlay-container layout-left" >
-    <div class="image-column-fixed">
-    <h2 style="text-align: center;">Cửa hàng FLEUR</h2>
-    <img src="asset/img/gioithieu/gioithieu6.jpg" alt="GT6">
-    </div>
-     <div class= "non-overlay-content-box">
-            <p>Bộ sưu tập váy cưới của Fleur mang đến những thiết kế tinh xảo, tôn vinh vẻ đẹp thanh lịch của cô dâu hiện đại.
-Đội ngũ tư vấn và stylist chuyên nghiệp của Fleur sẽ giúp bạn hoàn thiện phong cách với phụ kiện, giày và trang sức hài hòa cho ngày trọng đại.</p>
-                <a href="bosuutap/bosuutap.html" class="bst" alt="bosuutap"><h3 style="font-weight: normal;">XEM THÊM</h3></a>
-          </div>
-    
-</div>
-<section class="contact-form-section">
-    
-    <div class="form-wrapper">
-        <div class="form-header">
-            <a href="#store-form" class="tab-link active" data-target="store-form">CỬA HÀNG</a>
-            <a href="#bride-form" class="tab-link" data-target="bride-form">KHÁCH HÀNG</a>
-            <a href="#feedback-form" class="tab-link" data-target="feedback-form">ĐÁNH GIÁ</a>
+    </main>
+    </section>
+    <!-- POPUP THÔNG BÁO -->
+    <div class="thankyou-overlay" id="thankyouOverlay">
+        <div class="thankyou-popup">
+            <h3>Cảm ơn bạn!</h3>
+            <p>Chúng tôi đã nhận được thông tin của bạn.</p>
+            <button id="closePopup">Đóng</button>
         </div>
-        
-        <form class="contact-form active-form" id="store-form">
-            <label for="store_salon">Tên Cửa hàng*</label>
-            <input type="text" id="store_salon" name="salon" required>
-
-                    <label for="store_country">Quốc gia*</label>
-                    <input type="text" id="store_country" name="country" required>
-
-                    <label for="store_city">Thành phố*</label>
-                    <input type="text" id="store_city" name="city" required>
-
-                    <label for="store_social">Website / Instagram / Facebook</label>
-                    <input type="text" id="store_social" name="social">
-
-                    <label for="store_name">Họ và Tên*</label>
-                    <input type="text" id="store_name" name="name" required>
-
-                    <label for="store_email">Email*</label>
-                    <input type="email" id="store_email" name="email" required>
-
-                    <label for="store_phone">Số điện thoại*</label>
-                    <input type="tel" id="store_phone" name="phone" required>
-
-                    <label for="store_comment">Lời nhắn / Yêu cầu</label>
-                    <textarea id="store_comment" name="comment"></textarea>
-
-                    <button type="submit" class="submit-btn">GỬI</button>
-                </form>
-
-                <form class="contact-form hidden-form" id="bride-form">
-                    <label for="bride_name">Họ và Tên KH*</label>
-                    <input type="text" id="bride_name" name="name" required>
-
-                    <label for="bride_date">Ngày Cưới Dự Kiến*</label>
-                    <input type="date" id="bride_date" name="wedding_date" required>
-
-                    <label for="bride_location">Địa điểm Cưới (Thành phố)*</label>
-                    <input type="text" id="bride_location" name="location" required>
-
-                    <label for="bride_email">Email*</label>
-                    <input type="email" id="bride_email" name="email" required>
-
-                    <label for="bride_phone">Số điện thoại*</label>
-                    <input type="tel" id="bride_phone" name="phone" required>
-
-                    <label for="bride_comment">Váy bạn thích / Yêu cầu tư vấn</label>
-                    <textarea id="bride_comment" name="comment"></textarea>
-
-                    <button type="submit" class="submit-btn">ĐẶT LỊCH TƯ VẤN</button>
-                </form>
-
-                <form class="contact-form hidden-form" id="feedback-form">
-                    <label for="feedback_type">Loại Phản Hồi*</label>
-                    <select id="feedback_type" name="type" required>
-                        <option value="complaint">Khiếu nại</option>
-                        <option value="suggestion">Góp ý</option>
-                        <option value="praise">Khen ngợi</option>
-                    </select>
-
-                    <label for="feedback_name">Họ và Tên (Tùy chọn)</label>
-                    <input type="text" id="feedback_name" name="name">
-
-                    <label for="feedback_email">Email (Để liên hệ lại)*</label>
-                    <input type="email" id="feedback_email" name="email" required>
-
-                    <label for="feedback_message">Nội dung Phản Hồi*</label>
-                    <textarea id="feedback_message" name="message" required></textarea>
-
-                    <button type="submit" class="submit-btn">GỬI ĐÁNH GIÁ</button>
-                </form>
-
-
-                </div>
-            </div>
-        </main>
-        </section>
-        <!-- POPUP THÔNG BÁO -->
-  <div class="thankyou-overlay" id="thankyouOverlay">
-    <div class="thankyou-popup">
-      <h3>Cảm ơn bạn!</h3>
-      <p>Chúng tôi đã nhận được thông tin của bạn.</p>
-      <button id="closePopup">Đóng</button>
     </div>
-  </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const forms = document.querySelectorAll(".contact-form");
-      const popup = document.getElementById("thankyouOverlay");
-      const closeBtn = document.getElementById("closePopup");
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const forms = document.querySelectorAll(".contact-form");
+            const popup = document.getElementById("thankyouOverlay");
+            const closeBtn = document.getElementById("closePopup");
 
-      forms.forEach(form => {
-        form.addEventListener("submit", function (e) {
-          e.preventDefault();
-          popup.classList.add("show");
-          form.reset();
+            forms.forEach(form => {
+                form.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    popup.classList.add("show");
+                    form.reset();
+                });
+            });
+
+            closeBtn.addEventListener("click", function () {
+                popup.classList.remove("show");
+            });
+
+            popup.addEventListener("click", function (e) {
+                if (e.target === popup) popup.classList.remove("show");
+            });
         });
-      });
+    </script>
 
-      closeBtn.addEventListener("click", function () {
-        popup.classList.remove("show");
-      });
-
-      popup.addEventListener("click", function (e) {
-        if (e.target === popup) popup.classList.remove("show");
-      });
-    });
-  </script>
-
+    <!-- Nơi footer sẽ được chèn -->
     <!-- Nơi footer sẽ được chèn -->
     <!-- FOOTER -->
     <footer class="footer-component">
         <div class="footer-top">
-            <a href="#" class="logo"><img src="asset/img/header_footer/FLEAURLOGOBLACK.png" alt="Logo"></a>
+            <a href="Trangchu.html" class="logo"><img src="asset/img/header_footer/logohoa.png" alt="Logo"></a>
         </div>
 
         <div class="footer-main">
             <div class="footer-col">
                 <h3>Sản phẩm</h3>
-                <a href="sanpham/loaisanpham.html">Váy bồng xòe</a>
-                <a href="sanpham/loaisanpham.html">Váy đuôi cá</a>
-                <a href="sanpham/loaisanpham.html">Váy chữ A</a>
-                <a href="sanpham/loaisanpham.html">Váy ngắn</a>
-                <a href="sanpham/loaisanpham.html">Áo dài cưới</a>
-                <a href="sanpham/loaisanpham.html">Phụ kiện</a>
+                <a href="sanpham/sp1.html">Váy bồng xòe</a>
+                <a href="sanpham/sp2.html">Váy đuôi cá</a>
+                <a href="sanpham/sp3.html">Váy chữ A</a>
+                <a href="sanpham/sp4.html">Váy ngắn</a>
+                <a href="sanpham/sp5.html">Áo dài cưới</a>
+                <a href="sanpham/sp6.html">Phụ kiện</a>
             </div>
             <div class="footer-col">
                 <h3>Công ty</h3>
                 <a href="gioithieu.html">Giới thiệu</a>
                 <a href="doitac.html">Đối tác</a>
-                <a href="../tintuc/tintuc.html">Tin tức</a>
+                <a href="tintuc/tintuc.html">Tin tức</a>
             </div>
             <div class="footer-col">
                 <h3>Hỗ trợ</h3>
@@ -992,26 +1025,29 @@
                     <button>Subscribe</button>
                 </div>
                 <div class="icons">
-                    <a href="#"><img src="asset/img/header_footer/IGLOGO.png" alt="Icon 1"></a>
-                    <a href="#"><img src="asset/img/header_footer/FBLOGO.png" alt="Icon 2"></a>
-                    <a href="#"><img src="asset/img/header_footer/YTBLOGO.png" alt="Icon 3"></a>
-                    <a href="#"><img src="asset/img/header_footer/TIKLOGO.png" alt="Icon 4"></a>
+                    <a href="https://www.instagram.com/"><img src="asset/img/header_footer/IGLOGO.png" alt="Icon 1"></a>
+                    <a href="https://www.facebook.com/"><img src="asset/img/header_footer/FBLOGO.png" alt="Icon 2"></a>
+                    <a href="https://www.youtube.com/"><img src="asset/img/header_footer/YTBLOGO.png" alt="Icon 3"></a>
+                    <a href="https://www.tiktok.com/"><img src="asset/img/header_footer/TIKLOGO.png" alt="Icon 4"></a>
                 </div>
             </div>
         </div>
-    
 
         <div class="footer-bottom">
             <div class="line"></div>
             <span>2025 @ All rights reserved</span>
             <div class="line"></div>
         </div>
-        <!-- Script để load header + footer và gắn sự kiện -->
-        <script src="header_footer/header_footer.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-        <script src="asset/js/gioithieu.js"></script>
+
+    </footer>
+    <!-- Script để load header + footer và gắn sự kiện -->
+    <script src="asset/js/data.js"></script>
+    <script src="header_footer/header_footer.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <script src="asset/js/gioithieu.js"></script>
 
 
 

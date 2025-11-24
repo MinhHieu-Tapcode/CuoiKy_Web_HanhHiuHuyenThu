@@ -14,15 +14,18 @@
   <link rel="stylesheet" href="../header_footer/style.css">
   <style>
     @import url('../asset/css/main.css');
+
     .khung-chinh {
       text-align: justify;
     }
-/**grid của tin tức*/
+
+    /**grid của tin tức*/
     .article-grid {
       padding-top: 10px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 2px; /* viền mảnh giữa các cột */
+      gap: 2px;
+      /* viền mảnh giữa các cột */
       height: 200vh;
     }
 
@@ -38,19 +41,24 @@
       object-fit: cover;
       transition: transform 0.5s ease;
     }
+
     .article-item-4 {
-        grid-column: 1 / 2;
+      grid-column: 1 / 2;
     }
+
     .article-item:nth-child(5) {
-       grid-column: 2 / -1; /* chiếm từ cột 2 tới hết grid */
-       height: 90vh;
-       width: 100%;
-       object-fit: cover; /* giúp hình phủ kín */
+      grid-column: 2 / -1;
+      /* chiếm từ cột 2 tới hết grid */
+      height: 90vh;
+      width: 100%;
+      object-fit: cover;
+      /* giúp hình phủ kín */
     }
 
     .article-item:hover img {
       transform: scale(1.05);
     }
+
     .overlay {
       position: absolute;
       bottom: 0;
@@ -63,7 +71,7 @@
     .overlay h2 {
       font-size: 1rem;
       margin-bottom: 0.5rem;
-      color: #fff; 
+      color: #fff;
     }
 
     .overlay p {
@@ -78,7 +86,8 @@
       font-size: 0.8rem;
       letter-spacing: 1px;
     }
-/**đánh giá*/
+
+    /**đánh giá*/
     .reviews-section {
       text-align: center;
       padding: 80px 20px;
@@ -87,7 +96,7 @@
     }
 
     .reviews-title {
-      font-size: 1,5rem;
+      font-size: 1, 5rem;
       font-weight: 700;
       margin-bottom: 50px;
       position: relative;
@@ -95,314 +104,323 @@
     }
 
     .review-card {
-       object-fit: contain;
-       background: #2b2b2b;
-       border-radius: 20px;
-       padding: 30px;
-       box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-       transition: all 0.4s ease;
-       text-align: center;
-       opacity: 0.6;
-       transform: scale(0.85);
+      object-fit: contain;
+      background: #2b2b2b;
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.4s ease;
+      text-align: center;
+      opacity: 0.6;
+      transform: scale(0.85);
     }
 
     .swiper-slide-active {
       opacity: 1 !important;
       transform: scale(1.05) !important;
-      box-shadow: 0 15px 25px rgba(0,0,0,0.15);
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
     }
 
     .review-img {
-       width: 100px;
-       height: 100px;
-       border-radius: 50%;
-       margin-bottom: 20px;
-       object-fit: cover;
-       border: 4px solid #e3e3e3;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      object-fit: cover;
+      border: 4px solid #e3e3e3;
     }
+
     h3 {
-       margin-bottom: 10px;
-       color: #fff;
+      margin-bottom: 10px;
+      color: #000;
     }
+
     .review-card p {
-      color: #fff;
+      color: #000;
       font-size: 0.95rem;
       line-height: 1.5;
     }
+
     .swiper-button-next,
     .swiper-button-prev {
       color: #fff !important;
       transition: 0.3s;
     }
-
   </style>
 </head>
 
 <body>
-    <!-- Nơi header sẽ được chèn -->
-    <!-- HEADER -->
-    <header id="main-header">
-        <div class="header-top">
-            <a href="/dangky.html">Đăng Nhập</a>
-            <a href="/dangky.html">Đăng Ký</a>
+  <!-- Nơi header sẽ được chèn -->
+  <!-- HEADER -->
+  <header id="main-header">
+    <div class="header-top">
+      <a href="../dangky.html">Đăng Nhập</a>
+      <a href="../dangky.html">Đăng Ký</a>
+    </div>
+
+    <!-- HEADER BOTTOM -->
+    <div class="header-bottom">
+      <div class="logo">
+        <a href="../Trangchu.html"><img src="../asset/img/header_footer/logohoa.png" alt="Logo" /></a>
+      </div>
+
+      <nav class="nav-links">
+        <a href="../gioithieu.html">Giới thiệu</a>
+        <a href="../sanpham/sanpham.html">Sản phẩm</a>
+        <a href="../bosuutap/bosuutap.html">Bộ sưu tập</a>
+        <a href="../cuahang.html">Cửa hàng</a>
+        <a href="../lienhe.html">Liên hệ</a>
+      </nav>
+
+      <div class="icons">
+        <i class="fas fa-search icon-search"></i>
+        <i class="far fa-heart icon-heart"></i>
+        <a href="../cart.html">
+          <i class="fas fa-shopping-cart icon-cart"></i>
+        </a>
+        <i class="fas fa-bars menu-toggle"></i>
+      </div>
+    </div>
+
+
+    <!-- SEARCH OVERLAY -->
+    <div class="search-overlay">
+      <input type="text" class="search-box" placeholder="Nhập tên sản phẩm..." />
+      <i class="fa-solid fa-xmark close-search"></i>
+    </div>
+  </header>
+
+  <main class="khung-toan-trang" style="padding: 40px 20px;">
+    <div class="khung-chinh">
+      <h1 class="tieu-de-chinh" style="text-align: center;">TIN TỨC</h1>
+      <div class="page-breadcrumbs" style="text-align: center;">
+        <nav aria-label="breadcrumbs" class="rank-math-breadcrumb">
+          <p style="font-size: 0.8em;">
+            <a href="../trangchu.html">Fleur</a>
+            <span class="separator"> - </span>
+            <span class=" last">Tin tức</span>
+          </p>
+        </nav>
+      </div>
+      <section class="article-grid">
+        <!-- 1. blog1  -->
+        <div class="article-item 1">
+          <img src="../asset/img/tintuc/blog1.jpg" alt="Ảnh 1: Blog 1">
+          <div class="overlay">
+            <h2>5 Xu hướng váy cưới hot nhất năm 2025</h2>
+            <p>Khám phá những xu hướng váy cưới nổi bật nhất năm 2025, từ thiết kế cổ điển đến hiện đại,
+              giúp bạn tỏa sáng trong ngày trọng đại.</p>
+            <a href="blog1.html" class="read-more">Khám phá ngay</a>
+          </div>
         </div>
-
-        <!-- HEADER BOTTOM -->
-        <div class="header-bottom">
-            <div class="logo">
-                <img src="../asset/img/header_footer/FLEAURLOGOBLACK.png" alt="Logo" />
-            </div>
-
-            <nav class="nav-links">
-                <a href="../gioithieu.html">Giới thiệu</a>
-                <a href="../sanpham/">Sản phẩm</a>
-                <a href="../bosuutap/">Bộ sưu tập</a>
-                <a href="../cuahang.html">Cửa hàng</a>
-                <a href="../lienhe.html">Liên hệ</a>
-            </nav>
-
-            <div class="icons">
-                <i class="fas fa-search icon-search"></i>
-                <i class="far fa-heart icon-heart"></i>
-                <a href="giohang.html">
-                    <i class="fas fa-shopping-cart icon-cart"></i>
-                </a>
-                <i class="fas fa-bars menu-toggle"></i>
-            </div>
+        <!-- 2. blog2  -->
+        <div class="article-item 2">
+          <img src="../asset/img/tintuc/blog2.jpg" alt="Ảnh 2: Blog 2">
+          <div class="overlay">
+            <h2>Làm thế nào để chọn váy cưới phù hợp với dáng người?</h2>
+            <p>
+              Hướng dẫn chọn váy cưới phù hợp với từng dáng người, giúp bạn tôn vinh vẻ đẹp tự nhiên và
+              cảm thấy tự tin trong ngày cưới.
+            </p>
+            <a href="blog2.html" class="read-more">Khám phá ngay</a>
+          </div>
         </div>
-
-
-        <!-- SEARCH OVERLAY -->
-        <div class="search-overlay">
-            <input type="text" class="search-box" placeholder="Nhập tên sản phẩm..." />
-            <i class="fa-solid fa-xmark close-search"></i>
+        <!-- 3. blog3  -->
+        <div class="article-item 3">
+          <img src="../asset/img/tintuc/blog3.jpg" alt="Ảnh 3: Blog 3 ">
+          <div class="overlay">
+            <h2>Bí quyết chăm sóc váy cưới sau ngày trọng đại</h2>
+            <p>
+              Mẹo và hướng dẫn chăm sóc váy cưới sau ngày cưới để giữ cho chiếc váy luôn mới và đẹp
+              như ngày đầu tiên.
+            </p>
+            <a href="blog3.html" class="read-more">Khám phá ngay</a>
+          </div>
         </div>
-    </header>
-       
-    <main class="khung-toan-trang" style="padding: 40px 20px;">
-      <div class="khung-chinh">
-        <h1 class="tieu-de-chinh" style="text-align: center;">TIN TỨC</h1>
-        <div class="page-breadcrumbs" style="text-align: center;">
-            <nav aria-label="breadcrumbs" class="rank-math-breadcrumb">
-                <p style="font-size: 0.8em;">
-                    <a href="../trangchu.html">Fleur</a>
-                    <span class="separator"> - </span>
-                    <span class=" last">Tin tức</span>
-                </p>
-            </nav>
+        <!-- 4. blog4  -->
+        <div class="article-item 4">
+          <img src="../asset/img/tintuc/blog4.jpg" alt="Ảnh 4: Blog 4">
+          <div class="overlay">
+            <h2>Phụ kiện cưới không thể thiếu cho cô dâu hiện đại</h2>
+            <p>
+              Khám phá những phụ kiện cưới không thể thiếu giúp cô dâu hiện đại tỏa sáng và hoàn thiện
+              vẻ đẹp trong ngày trọng đại.
+            </p>
+            <a href="blog4.html" class="read-more">Khám phá ngay</a>
+          </div>
         </div>
-            <section class="article-grid">
-                <!-- 1. blog1  -->
-                <div class="article-item 1">
-                    <img src="../asset/img/tintuc/blog1.jpg" alt="Ảnh 1: Blog 1">
-                  <div class="overlay">
-                    <h2>5 Xu hướng váy cưới hot nhất năm 2025</h2>
-                    <p>Khám phá những xu hướng váy cưới nổi bật nhất năm 2025, từ thiết kế cổ điển đến hiện đại, 
-                        giúp bạn tỏa sáng trong ngày trọng đại.</p>
-                    <a href="blog1.html" class="read-more">Khám phá ngay</a>
-                  </div>
-                </div>
-                <!-- 2. blog2  -->
-                <div class="article-item 2">
-                    <img src="../asset/img/tintuc/blog2.jpg" alt="Ảnh 2: Blog 2">
-                    <div class="overlay">
-                    <h2>Làm thế nào để chọn váy cưới phù hợp với dáng người?</h2>
-                    <p>
-                        Hướng dẫn chọn váy cưới phù hợp với từng dáng người, giúp bạn tôn vinh vẻ đẹp tự nhiên và 
-                        cảm thấy tự tin trong ngày cưới.
-                    </p>
-                    <a href="blog2.html" class="read-more">Khám phá ngay</a>
-                  </div>
-                </div>
-                <!-- 3. blog3  -->
-                <div class="article-item 3">
-                    <img src="../asset/img/tintuc/blog3.jpg" alt="Ảnh 3: Blog 3 ">
-                    <div class="overlay">
-                    <h2>Bí quyết chăm sóc váy cưới sau ngày trọng đại</h2>
-                    <p>
-                        Mẹo và hướng dẫn chăm sóc váy cưới sau ngày cưới để giữ cho chiếc váy luôn mới và đẹp 
-                        như ngày đầu tiên.
-                    </p>
-                    <a href="blog3.html" class="read-more">Khám phá ngay</a>
-                  </div>
-                </div>
-                <!-- 4. blog4  -->
-                <div class="article-item 4">
-                    <img src="../asset/img/tintuc/blog4.jpg" alt="Ảnh 4: Blog 4">
-                    <div class="overlay">
-                    <h2>Phụ kiện cưới không thể thiếu cho cô dâu hiện đại</h2>
-                    <p>
-                        Khám phá những phụ kiện cưới không thể thiếu giúp cô dâu hiện đại tỏa sáng và hoàn thiện 
-                        vẻ đẹp trong ngày trọng đại.
-                    </p>
-                    <a href="blog4.html" class="read-more">Khám phá ngay</a>
-                  </div>
-                </div>
-                <!-- 5. logo  -->
-                <div class="article-item 5">
-                    <img src="../asset/img/tintuc/grid5.jpg" alt="Ảnh 5: Logo">
-                </div>
-            </section>
-      </div> 
-      <section class="reviews-section">
-        <h2 class="reviews-title">Đánh Giá Từ Khách Hàng</h2>
-        <div class="swiper mySwiper">
+        <!-- 5. logo  -->
+        <div class="article-item 5">
+          <img src="../asset/img/tintuc/grid5.jpg" alt="Ảnh 5: Logo">
+        </div>
+      </section>
+    </div>
+    <section class="reviews-section">
+      <h2 class="reviews-title">Đánh Giá Từ Khách Hàng</h2>
+      <div class="swiper mySwiper">
         <div class="swiper-wrapper" style="padding: 50px 10px;">
           <!-- Review 1 -->
           <div class="swiper-slide review-card">
-             <img src="../asset/img/tintuc/cus1.jpg" alt="review1" class="review-img">
-             <h3>Ngọc Anh</h3>
-               <p class="review-text">“Mình thật sự rất hài lòng với dịch vụ và sản phẩm ở đây! Váy 
-                cưới được thiết kế tinh tế, lên dáng cực kỳ sang trọng.”</p>
+            <img src="../asset/img/tintuc/cus1.jpg" alt="review1" class="review-img">
+            <h3>Ngọc Anh</h3>
+            <p class="review-text">“Mình thật sự rất hài lòng với dịch vụ và sản phẩm ở đây! Váy
+              cưới được thiết kế tinh tế, lên dáng cực kỳ sang trọng.”</p>
           </div>
           <!-- Review 2 -->
           <div class="swiper-slide review-card">
-             <img src="../asset/img/tintuc/cus2.jpg" alt="review2" class="review-img">
-             <h3>Thu Hà</h3>
-             <p class="review-text">“Nhân viên tư vấn cực kỳ nhiệt tình và thân thiện. Mình chọn 
-                được chiếc váy ưng ý chỉ trong một buổi!”</p>
+            <img src="../asset/img/tintuc/cus2.jpg" alt="review2" class="review-img">
+            <h3>Thu Hà</h3>
+            <p class="review-text">“Nhân viên tư vấn cực kỳ nhiệt tình và thân thiện. Mình chọn
+              được chiếc váy ưng ý chỉ trong một buổi!”</p>
           </div>
-      <!-- Review 3 -->
+          <!-- Review 3 -->
           <div class="swiper-slide review-card">
-             <img src="../asset/img/tintuc/cus3.jpg" alt="review3" class="review-img">
-             <h3>Minh Thư</h3>
-             <p class="review-text">“Không gian thử đồ rất đẹp, cảm giác như công 
-                chúa luôn! Mình sẽ giới thiệu bạn bè đến đây.”</p>
+            <img src="../asset/img/tintuc/cus3.jpg" alt="review3" class="review-img">
+            <h3>Minh Thư</h3>
+            <p class="review-text">“Không gian thử đồ rất đẹp, cảm giác như công
+              chúa luôn! Mình sẽ giới thiệu bạn bè đến đây.”</p>
           </div>
-       <!-- Review 4 -->
+          <!-- Review 4 -->
           <div class="swiper-slide review-card">
-             <img src="../asset/img/tintuc/cus4.jpg" alt="review4" class="review-img">
-             <h3>Hoàng Tuấn</h3>
-             <p class="review-text">“Váy cưới rất đẹp, vợ mình và họ hàng mình khen lắm!
-                Đây thực sự là một thương hiệu tốt và chất lượng!”</p>
+            <img src="../asset/img/tintuc/cus4.jpg" alt="review4" class="review-img">
+            <h3>Hoàng Tuấn</h3>
+            <p class="review-text">“Váy cưới rất đẹp, vợ mình và họ hàng mình khen lắm!
+              Đây thực sự là một thương hiệu tốt và chất lượng!”</p>
           </div>
-         <!-- Review 5 -->
+          <!-- Review 5 -->
           <div class="swiper-slide review-card">
-             <img src="../asset/img/tintuc/cus5.jpg" alt="review4" class="review-img">
-             <h3>Jung Hae-in</h3>
-             <p class="review-text">“Vợ tôi và tôi đã có 1 lễ cưới như trong mơ
-                nhờ chiếc váy cưới công chúa của Fleur! Cảm ơn bạn rất nhiều!”</p>
+            <img src="../asset/img/tintuc/cus5.jpg" alt="review4" class="review-img">
+            <h3>Jung Hae-in</h3>
+            <p class="review-text">“Vợ tôi và tôi đã có 1 lễ cưới như trong mơ
+              nhờ chiếc váy cưới công chúa của Fleur! Cảm ơn bạn rất nhiều!”</p>
           </div>
           <!-- Review 6 -->
           <div class="swiper-slide review-card">
-             <img src="../asset/img/tintuc/cus6.jpg" alt="review6" class="review-img">
-             <h3>Ngọc Mai</h3>
-             <p class="review-text">“Tôi đã có 1 lễ cưới như trong mơ
-                nhờ chiếc váy cưới công chúa của Fleur! Cảm ơn bạn rất nhiều!”</p>
+            <img src="../asset/img/tintuc/cus6.jpg" alt="review6" class="review-img">
+            <h3>Ngọc Mai</h3>
+            <p class="review-text">“Tôi đã có 1 lễ cưới như trong mơ
+              nhờ chiếc váy cưới công chúa của Fleur! Cảm ơn bạn rất nhiều!”</p>
           </div>
           <!-- Review 7 -->
           <div class="swiper-slide review-card">
-             <img src="../asset/img/tintuc/cus7.jpg" alt="review7" class="review-img">
-             <h3>Ngọc Huyền</h3>
-             <p class="review-text">“Váy fit người và mang lại cảm giác mới lạ chưa từng có!
-                Tôi sẽ giới thiệu cho bạn bè.”</p>
+            <img src="../asset/img/tintuc/cus7.jpg" alt="review7" class="review-img">
+            <h3>Ngọc Huyền</h3>
+            <p class="review-text">“Váy fit người và mang lại cảm giác mới lạ chưa từng có!
+              Tôi sẽ giới thiệu cho bạn bè.”</p>
           </div>
           <!-- Review 8 -->
           <div class="swiper-slide review-card">
-             <img src="../asset/img/tintuc/cus8.jpg" alt="review8" class="review-img">
-             <h3>Diễn viên Thanh Vân</h3>
-             <p class="review-text">“Fleur thực sự cho để lại cho mình một ấn tượng rất lớn về phong cách váy.”</p>
+            <img src="../asset/img/tintuc/cus8.jpg" alt="review8" class="review-img">
+            <h3>Diễn viên Thanh Vân</h3>
+            <p class="review-text">“Fleur thực sự cho để lại cho mình một ấn tượng rất lớn về phong cách
+              váy.”</p>
           </div>
           <!-- Review 9 -->
           <div class="swiper-slide review-card">
-             <img src="../asset/img/tintuc/cus9.jpg" alt="review9" class="review-img">
-             <h3>Diễn viên Việt Anh</h3>
-             <p class="review-text">“Vợ tôi và tôi đã có 1 lễ cưới như trong mơ
-                nhờ chiếc váy cưới công chúa của Fleur! Cảm ơn bạn rất nhiều!”</p>
+            <img src="../asset/img/tintuc/cus9.jpg" alt="review9" class="review-img">
+            <h3>Diễn viên Việt Anh</h3>
+            <p class="review-text">“Vợ tôi và tôi đã có 1 lễ cưới như trong mơ
+              nhờ chiếc váy cưới công chúa của Fleur! Cảm ơn bạn rất nhiều!”</p>
           </div>
+        </div>
+
+        <!-- Nút điều hướng -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+  </main>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <script>
+    const swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      centeredSlides: true,
+      loop: true, // 🔁 Lặp vô hạn
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      speed: 1000,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  </script>
+
+  <!-- Nơi footer sẽ được chèn -->
+  <!-- Nơi footer sẽ được chèn -->
+  <!-- FOOTER -->
+  <footer class="footer-component">
+    <div class="footer-top">
+      <a href="../Trangchu.html" class="logo"><img src="../asset/img/header_footer/logohoa.png" alt="Logo"></a>
     </div>
 
-    <!-- Nút điều hướng -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+    <div class="footer-main">
+      <div class="footer-col">
+        <h3>Sản phẩm</h3>
+        <a href="../sanpham/sp1.html">Váy bồng xòe</a>
+        <a href="../sanpham/sp2.html">Váy đuôi cá</a>
+        <a href="../sanpham/sp3.html">Váy chữ A</a>
+        <a href="../sanpham/sp4.html">Váy ngắn</a>
+        <a href="../sanpham/sp5.html">Áo dài cưới</a>
+        <a href="../sanpham/sp6.html">Phụ kiện</a>
+      </div>
+      <div class="footer-col">
+        <h3>Công ty</h3>
+        <a href="../gioithieu.html">Giới thiệu</a>
+        <a href="../doitac.html">Đối tác</a>
+        <a href="../tintuc/tintuc.html">Tin tức</a>
+      </div>
+      <div class="footer-col">
+        <h3>Hỗ trợ</h3>
+        <a href="../hotro.html">Trung tâm hỗ trợ</a>
+      </div>
+      <div class="footer-col">
+        <h3>Đăng ký nhận ưu đãi và tin tức mới nhất!</h3>
+        <div class="subscribe">
+          <input type="email" placeholder="Nhập email">
+          <button>Subscribe</button>
+        </div>
+        <div class="icons">
+          <a href="https://www.instagram.com/"><img src="../asset/img/header_footer/IGLOGO.png" alt="Icon 1"></a>
+          <a href="https://www.facebook.com/"><img src="../asset/img/header_footer/FBLOGO.png" alt="Icon 2"></a>
+          <a href="https://www.youtube.com/"><img src="../asset/img/header_footer/YTBLOGO.png" alt="Icon 3"></a>
+          <a href="https://www.tiktok.com/"><img src="../asset/img/header_footer/TIKLOGO.png" alt="Icon 4"></a>
+        </div>
+      </div>
     </div>
-  </section>
-</main>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-<script>
-  const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 3,
-    spaceBetween: 30,
-    centeredSlides: true,
-    loop: true, // 🔁 Lặp vô hạn
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
-    },
-    speed: 1000,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1,
-      },
-      768: {
-        slidesPerView: 2,
-      },
-      1024: {
-        slidesPerView: 3,
-      },
-    },
-  });
-</script>
+    <div class="footer-bottom">
+      <div class="line"></div>
+      <span>2025 @ All rights reserved</span>
+      <div class="line"></div>
+    </div>
 
-<!-- Nơi footer sẽ được chèn -->
-    <!-- FOOTER -->
-    <footer class="footer-component"> 
-        <div class="footer-top">
-            <a href="#" class="logo"><img src="../asset/img/header_footer/FLEAURLOGOBLACK.png" alt="Logo"></a>
-        </div>
 
-        <div class="footer-main">
-            <div class="footer-col">
-                <h3>Sản phẩm</h3>
-                <a href="../sanpham/loaisanpham.html">Váy bồng xòe</a>
-                <a href="../sanpham/loaisanpham.html">Váy đuôi cá</a>
-                <a href="../sanpham/loaisanpham.html">Váy chữ A</a>
-                <a href="../sanpham/loaisanpham.html">Váy ngắn</a>
-                <a href="../sanpham/loaisanpham.html">Áo dài cưới</a>
-                <a href="../sanpham/loaisanpham.html">Phụ kiện</a>
-            </div>
-            <div class="footer-col">
-                <h3>Công ty</h3>
-                <a href="gioithieu.html">Giới thiệu</a>
-                <a href="doitac.html">Đối tác</a>
-                <a href="../tintuc/tintuc.html">Tin tức</a>
-            </div>
-            <div class="footer-col">
-                <h3>Hỗ trợ</h3>
-                <a href="../hotro.html">Trung tâm hỗ trợ</a>
-            </div>
-            <div class="footer-col">
-                <h3>Đăng ký nhận ưu đãi và tin tức mới nhất!</h3>
-                <div class="subscribe">
-                    <input type="email" placeholder="Nhập email">
-                    <button>Subscribe</button>
-                </div>
-                <div class="icons">
-                    <a href="#"><img src="../asset/img/header_footer/IGLOGO.png" alt="Icon 1"></a>
-                    <a href="#"><img src="../asset/img/header_footer/FBLOGO.png" alt="Icon 2"></a>
-                    <a href="#"><img src="../asset/img/header_footer/YTBLOGO.png" alt="Icon 3"></a>
-                    <a href="#"><img src="../asset/img/header_footer/TIKLOGO.png" alt="Icon 4"></a>
-                </div>
-            </div>
-        </div>
-    
-        <div class="footer-bottom">
-            <div class="line"></div>
-            <span>2025 @ All rights reserved</span>
-            <div class="line"></div>
-        </div>
-        <!-- Script để load header + footer và gắn sự kiện -->
-        <script src="header_footer/header_footer.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  </footer>
+  <!-- Script để load header + footer và gắn sự kiện -->
+  <script src="../asset/js/data.js"></script>
+  <script src="../header_footer/header_footer.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-        <script src="asset/js/gioithieu.js"></script>
-    </footer> 
+  <script src="../asset/js/gioithieu.js"></script>
+  </footer>
 </body>
+
 </html>

@@ -614,6 +614,19 @@
         #closePopup:hover {
             background-color: gray;
         }
+        
+        @media (min-height: 640px) {
+            .precise-overlay-container, .khung-toan-trang {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+
+        @media (min-height: 1024px) {
+            .precise-overlay-container, .khung-toan-trang {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
     </style>
 </head>
 

@@ -716,48 +716,47 @@
   <!-- HEADER -->
   <header id="main-header">
     <div class="header-top">
-      <a href="/dangky.html">Đăng Nhập</a>
-      <a href="/dangky.html">Đăng Ký</a>
+      <a href="../dangky.html">Đăng Nhập</a>
+      <a href="../dangky.html">Đăng Ký</a>
     </div>
 
     <!-- HEADER BOTTOM -->
     <div class="header-bottom">
       <div class="logo">
-        <a href="Trangchu.html"><img src="asset/img/header_footer/logohoa.png" alt="Logo" /></a>
+        <a href="../Trangchu.html">
+          <img src="../asset/img/header_footer/logohoa.png" alt="Logo" />
+        </a>
       </div>
 
       <nav class="nav-links">
-        <a href="gioithieu.html">Giới thiệu</a>
+        <a href="../gioithieu.html">Giới thiệu</a>
         <a href="../sanpham/sanpham.html">Sản phẩm</a>
         <a href="../bosuutap/bosuutap.html">Bộ sưu tập</a>
-        <a href="cuahang.html">Cửa hàng</a>
-        <a href="lienhe.html">Liên hệ</a>
+        <a href="../cuahang.html">Cửa hàng</a>
+        <a href="../lienhe.html">Liên hệ</a>
       </nav>
 
       <div class="icons">
-        <i class="fas fa-search icon-search"></i>
-        <i class="far fa-heart icon-heart"></i>
-        <a href="cart.html">
+        <!-- SEARCH -->
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Tìm sản phẩm..." autocomplete="off" />
+          <div class="search-suggest" id="searchSuggest"></div>
+        </div>
+
+        <a href="../cart.html">
           <i class="fas fa-shopping-cart icon-cart"></i>
         </a>
         <i class="fas fa-bars menu-toggle"></i>
       </div>
     </div>
-
-
-    <!-- SEARCH OVERLAY -->
-    <div class="search-overlay">
-      <input type="text" class="search-box" placeholder="Nhập tên sản phẩm..." />
-      <i class="fa-solid fa-xmark close-search"></i>
-    </div>
   </header>
 
-  <main class="khung-toan-trang" style="padding:  20px;">
+  <main class="khung-toan-trang" style="padding: 0 20px 20px 20px;">
     <div class="khung-chinh">
       <div class="video-section">
         <video autoplay muted loop>
           <source src="asset/img/trangchu/Video_trangchu.mp4" type="video/mp4">
-          Fleur - Video đầu trang
+          Fleur - Video đầu trang
         </video>
         <div class="overlay-text" data-animate="slide-in">
           Fleur - Thiên đường váy cưới

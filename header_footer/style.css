@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
 html,
@@ -39,13 +40,12 @@ main {
     transition: transform 0.4s ease, opacity 0.3s ease;
 }
 
-/* Ẩn header khi cuộn xuống */
 .header-hidden {
     transform: translateY(-100%);
     opacity: 0;
 }
 
-/* HEADER TOP */
+/* ================== HEADER TOP ================== */
 .header-top {
     width: 100%;
     height: 50px;
@@ -69,7 +69,7 @@ main {
     color: black;
 }
 
-/* HEADER BOTTOM */
+/* ================== HEADER BOTTOM ================== */
 .header-bottom {
     height: 100px;
     display: flex;
@@ -79,11 +79,13 @@ main {
 }
 
 .logo img {
-    height: 70px;
-    object-fit: contain;
+    height: 110px;
+    /* tăng chiều cao logo */
+    max-height: 120px;
+    /* object-fit: contain; */
 }
 
-/* NAV LINKS */
+/* ================== NAV LINKS ================== */
 .nav-links {
     display: flex;
     align-items: center;
@@ -97,7 +99,6 @@ main {
     font-weight: 400;
     position: relative;
     padding-bottom: 5px;
-    transition: color 0.3s ease;
 }
 
 .nav-links a::after {
@@ -115,11 +116,11 @@ main {
     width: 100%;
 }
 
-/* ICONS */
+/* ================== ICONS ================== */
 .icons {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 14px;
     font-size: 24px;
 }
 
@@ -136,104 +137,143 @@ main {
     color: white;
 }
 
-.icon-heart.active {
-    color: red;
+/* ================== SEARCH BAR ================== */
+.search-bar {
+    position: relative;
+    width: 280px;
+    margin-right: 6px;
 }
 
-/* SEARCH OVERLAY */
-.search-overlay {
-    position: fixed;
-    top: 0;
+.search-bar input {
+    width: 100%;
+    height: 42px;
+    padding: 0 16px;
+    border-radius: 22px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    transition: border 0.2s ease;
+}
+
+.search-bar input:focus {
+    border-color: #000;
+}
+
+/* SEARCH SUGGEST */
+.search-suggest {
+    position: absolute;
+    top: 110%;
     left: 0;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.85);
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
     display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
     z-index: 999;
+    max-height: 260px;
+    overflow-y: auto;
 }
 
-.search-overlay.active {
-    display: flex;
-}
-
-.search-box {
-    width: 60%;
-    max-width: 600px;
-    border: none;
-    border-bottom: 2px solid white;
-    background: transparent;
-    color: white;
-    font-size: 22px;
-    outline: none;
-    text-align: center;
-    padding: 10px;
-}
-
-.close-search {
-    color: white;
-    font-size: 28px;
-    margin-top: 25px;
+.search-suggest div {
+    padding: 12px 16px;
+    font-size: 14px;
     cursor: pointer;
-    transition: all 0.3s ease;
 }
 
-.close-search:hover {
-    color: #ccc;
+.search-suggest div:hover {
+    background: #f4f4f4;
 }
 
-/* MENU RESPONSIVE */
-.menu-toggle {
-    display: none;
-    font-size: 26px;
+.search-suggest .no-result {
+    text-align: center;
+    color: #999;
 }
 
+/* NAV LINKS – trạng thái desktop (luôn hiện) */
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* ================== DROPDOWN MODE MOBILE ================== */
 @media (max-width: 900px) {
+
+    /* Nav-links nhỏ, popup gần nút menu */
     .nav-links {
-        display: none;
-        flex-direction: column;
         position: absolute;
-        top: 129px;
-        right: 0;
-        background-color: white;
-        width: 100%;
-        text-align: center;
-        border-top: 1px solid #eee;
-        padding: 20px 0;
-        animation: dropdown 0.3s ease forwards;
+        top: 100%;
+        /* ngay dưới nút menu */
+        right: 10px;
+        /* sát góc phải */
+        width: 200px;
+        /* menu nhỏ */
+        background: rgba(255, 255, 255, 0.95);
+        flex-direction: column;
+
+        /* Ẩn dropdown mặc định */
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        transition: max-height 0.35s ease, opacity 0.3s ease;
+        z-index: 100;
     }
 
-    @keyframes dropdown {
-        from {
-            opacity: 0;
-            transform: translateY(-10px);
-        }
-
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
+    /* Hiển thị khi click toggle */
     .nav-links.show {
-        display: flex;
+        max-height: 500px;
+        /* đủ chứa menu */
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* Các link trong menu */
+    .nav-links a {
+        font-size: 16px;
+        padding: 10px 15px;
+        line-height: 1.4;
+        border-bottom: 1px solid #eee;
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+
+    /* Nút menu toggle */
+    .menu-toggle {
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    /* Gỡ lớp ::before không cần thiết */
+    .nav-links::before {
+        display: none;
+    }
+}
+
+/* TRÊN DESKTOP: menu luôn hiện */
+@media (min-width: 901px) {
+    .nav-links {
+        display: flex !important;
+        /* đảm bảo luôn hiện */
+        position: static;
+        flex-direction: row;
+        max-height: none;
+        opacity: 1;
+        pointer-events: auto;
+        background: none;
     }
 
     .menu-toggle {
-        display: block;
-    }
-
-    .header-bottom {
-        padding: 0 20px;
-    }
-
-    .nav-links a {
-        font-size: 18px;
-        padding: 10px 0;
+        display: none;
     }
 }
+
+
 
 /* ================== FOOTER ================== */
 .footer-component {
@@ -290,8 +330,17 @@ main {
 .footer-component .footer-col .subscribe {
     display: flex;
     margin-top: 10px;
-    width: 100%;
     max-width: 420px;
+    /* giữ kích thước tối đa */
+    width: auto;
+    /* thay vì 100%, để flex căn giữa */
+    justify-content: center;
+    /* căn giữa input + button */
+    margin-left: auto;
+    /* căn giữa block */
+    margin-right: auto;
+    /* căn giữa block */
+
 }
 
 .footer-component .footer-col input[type="email"] {
@@ -325,6 +374,13 @@ main {
     justify-content: space-between;
     max-width: 420px;
     margin-top: 20px;
+    gap: 60px;
+    justify-content: center;
+    /* căn giữa input + button */
+    margin-left: auto;
+    /* căn giữa block */
+    margin-right: auto;
+    /* căn giữa block */
 }
 
 .footer-component .footer-col .icons a {
@@ -385,4 +441,5 @@ main {
         display: none;
     }
 }
+
 /* ================== END OF FILE ================== */

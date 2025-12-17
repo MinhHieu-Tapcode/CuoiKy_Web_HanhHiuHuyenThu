@@ -260,18 +260,17 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            /* Đảm bảo ảnh phủ kín ô mà không bị méo */
             display: block;
             transition: transform 0.3s ease;
-            /* Hiệu ứng zoom khi hover */
+            
         }
 
         .grid-item:hover img {
             transform: scale(1.05);
-            /* Hiệu ứng phóng to nhẹ khi di chuột */
+           
         }
 
-        /* Ô 1: Ảnh máy may lớn (gioithieu7.1.jpg) - Chiếm 2x2 */
+        
         .item-1 {
             grid-column: 1 / span 2;
             /* Cột 1 đến Cột 3 */
@@ -279,7 +278,6 @@
             /* Hàng 1 đến Hàng 3 */
         }
 
-        /* Ô 2: Ảnh đính cườm (gioithieu7.6.jpg) - Trên cùng bên phải, 2x1 */
         .item-2 {
             grid-column: 3 / span 2;
             /* Cột 3 đến Cột 5 */
@@ -287,7 +285,7 @@
             /* Nằm ở Hàng 1 */
         }
 
-        /* Ô 3: Ảnh may chi tiết (gioithieu7.7.jpg) - Dưới cùng bên trái, 1x1 */
+        
         .item-3 {
             grid-column: 1;
             /* Nằm ở Cột 1 */
@@ -295,7 +293,7 @@
             /* Nằm ở Hàng 3 */
         }
 
-        /* Ô 5: Logo (gioithieu7.5.png) - Vị trí logo, 1x1 */
+       
         .item-5 {
             grid-column: 2;
             /* Nằm ở Cột 2 */
@@ -312,7 +310,7 @@
             transition: transform 0.3s ease;
         }
 
-        /* Ô 6: Ảnh váy cưới treo lớn (gioithieu7.3.jpg) - Bên phải, 2x2 */
+        
         .item-6 {
             grid-column: 3 / span 2;
             /* Chiếm cột 3, kéo dài 2 cột */
@@ -414,7 +412,7 @@
 
         }
 
-        /* Đảm bảo ảnh chiếm hết không gian của thẻ chứa và giữ tỷ lệ */
+        
         .image-gallery-item img .image-gallery-item video {
             width: 100%;
             height: 100%;
@@ -423,7 +421,7 @@
             display: block;
         }
 
-        /* Chiều rộng cố định cho mỗi item và ngăn không cho nó co lại */
+        
         .image-gallery-item {
             min-width: 300px;
             width: 400px;
@@ -434,7 +432,7 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* Tùy chỉnh thanh cuộn ngang (chỉ hoạt động trên một số trình duyệt) */
+        
         .image-gallery::-webkit-scrollbar {
             height: 0;
         }

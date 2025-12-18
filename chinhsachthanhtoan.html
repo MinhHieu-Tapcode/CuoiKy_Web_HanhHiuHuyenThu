@@ -27,6 +27,17 @@
             }
         }
     </script>
+    <style>
+        .policy-icon {
+            transform: rotate(-10deg);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .policy-icon:active {
+            transform: rotate(0deg) scale(1.5);
+            box-shadow: 0 10px 25px rgba(200, 155, 106, 0.4);
+        }
+    </style>
     <body class="bg-[#fafafa] text-[#333] m-0">
 
     <header id="main-header">
@@ -89,52 +100,70 @@
                     <div class="space-y-10">
                         <section id="pham-vi">
                             <h2 class="text-xl font-bold mb-3 text-gray-800 flex items-center">
-                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-sm">1</span>
-                                Phạm vi áp dụng
+                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-xs gap-1">
+                                    <i class="fa-solid fa-file-invoice-dollar text-[11px] policy-icon"></i>
+                                    <span>1</span>
+                                </span>
+                            Phạm vi áp dụng
                             </h2>
-                            <p class="text-gray-600 leading-relaxed text-justify">
-                                NOI DUNG GI DO
-                            </p>
+                        <p class="text-gray-600 leading-relaxed text-justify">
+                            Chính sách thanh toán này được áp dụng cho toàn bộ khách hàng mua sắm sản phẩm và sử dụng dịch vụ tại Fleur Bridal House, bao gồm mua trực tiếp tại cửa hàng và mua hàng thông qua các kênh trực tuyến chính thức của Fleur.
+                        </p>
                         </section>
 
                         <section id="hinh-thuc">
                             <h2 class="text-xl font-bold mb-3 text-gray-800 flex items-center">
-                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-sm">2</span>
-                                Hình thức giao hàng
+                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-xs gap-1">
+                                    <i class="fa-solid fa-credit-card text-[11px] policy-icon"></i>
+                                    <span>2</span>
+                                </span>
+                             Hình thức thanh toán
                             </h2>
                             <p class="text-gray-600 leading-relaxed text-justify">
-                                NOI DUNG GI DO
+                                Fleur chấp nhận các hình thức thanh toán sau:
+                                    <br>• Thanh toán tiền mặt tại cửa hàng.
+                                    <br>• Chuyển khoản ngân hàng theo thông tin do Fleur cung cấp.
+                                    <br>• Thanh toán qua ví điện tử hoặc cổng thanh toán trực tuyến (nếu có).
                             </p>
                         </section>
 
                         <section id="thoi-gian">
                             <h2 class="text-xl font-bold mb-3 text-gray-800 flex items-center">
-                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-sm">3</span>
-                                Thời gian giao hàng
+                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-xs gap-1">
+                                    <i class="fa-regular fa-clock text-[11px] policy-icon"></i>
+                                    <span>3</span>
+                                </span>
+                                Thời điểm thanh toán
                             </h2>
-                            <p class="text-gray-600 leading-relaxed text-justify">
-                                NOI DUNG GI DO
-                            </p>
+                        <p class="text-gray-600 leading-relaxed text-justify">
+                            Khách hàng vui lòng hoàn tất thanh toán theo thỏa thuận trước khi Fleur tiến hành giao hàng hoặc cung cấp dịch vụ. Đối với các sản phẩm thiết kế riêng, may đo hoặc đặt trước, Fleur có thể yêu cầu đặt cọc một phần giá trị đơn hàng.
+                        </p>
                         </section>
 
                         <section id="phi">
                             <h2 class="text-xl font-bold mb-3 text-gray-800 flex items-center">
-                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-sm">4</span>
-                                Phí vận chuyển
+                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-xs gap-1">
+                                    <i class="fa-solid fa-money-bill-transfer text-[11px] policy-icon"></i>
+                                    <span>4</span>
+                                </span>
+                                Chính sách hoàn tiền & điều chỉnh
                             </h2>
-                            <p class="text-gray-600 leading-relaxed text-justify">
-                                NOI DUNG GI DO
-                            </p>
+                        <p class="text-gray-600 leading-relaxed text-justify">
+                            Việc hoàn tiền (nếu có) sẽ được thực hiện theo Chính sách đổi trả của Fleur. Các khoản phí phát sinh trong quá trình thanh toán, chuyển khoản hoặc dịch vụ trung gian sẽ không được hoàn lại, trừ khi có thỏa thuận khác bằng văn bản.
+                        </p>
                         </section>
 
                         <section id="quy-trinh">
                             <h2 class="text-xl font-bold mb-3 text-gray-800 flex items-center">
-                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-sm">5</span>
-                                Quy trình giao nhận
+                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-xs gap-1">
+                                    <i class="fa-solid fa-shield-halved text-[11px] policy-icon"></i>
+                                    <span>5</span>
+                                </span>
+                                Bảo mật thông tin thanh toán
                             </h2>
-                            <p class="text-gray-600 leading-relaxed text-justify">
-                                NOI DUNG GI DO
-                            </p>
+                        <p class="text-gray-600 leading-relaxed text-justify">
+                            Fleur cam kết bảo mật tuyệt đối thông tin thanh toán của khách hàng. Mọi dữ liệu liên quan đến giao dịch được lưu trữ và xử lý theo quy định bảo mật hiện hành, đảm bảo an toàn và quyền riêng tư cho khách hàng.
+                        </p>
                         </section>
                         </section>
                     </div>

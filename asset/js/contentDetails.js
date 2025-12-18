@@ -45,15 +45,6 @@ function renderProduct(p) {
         <h3>Mô tả sản phẩm</h3>
         <p>${p.description}</p>
 
-        <h3>Chi tiết:</h3>
-        <ul id="detailList" style="list-style:none; padding-left:0;">
-          ${p.details
-      ? Object.entries(p.details)
-        .map(([key, value]) => `<li><strong>${key}:</strong> ${value}</li>`)
-        .join("")
-      : "<li>Đang cập nhật...</li>"}
-        </ul>
-
         <label>Màu sắc:</label>
         <div id="colorSelect" class="option-buttons">
           ${p.colors.map(color => `<button type="button" class="option-btn" data-value="${color}">${color}</button>`).join("")}

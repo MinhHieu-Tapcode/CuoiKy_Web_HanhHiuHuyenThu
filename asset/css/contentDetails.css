@@ -14,7 +14,7 @@
 
 /* ================== CONTAINER CHÍNH ================== */
 #productPage #containerProduct {
-    padding: 60px 20px;
+    padding: 20px 0px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -23,7 +23,7 @@
 #productPage #containerD {
     display: grid;
     grid-template-columns: 1.2fr 1.3fr;
-    gap: 50px;
+    gap: 10px;
     max-width: 1100px;
     width: 100%;
 }
@@ -34,18 +34,18 @@
     position: relative;
     display: inline-block;
     width: 100%;
-    max-width: 550px;
+    max-width: 380px;
 }
 
 #productPage #imageSection img {
     width: 100%;
-    max-width: 480px;
+    max-width: 380px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 #productPage #imageSection img#imgDetails {
-    width: 100%;
+    max-width: 380px;
     height: auto;
     border-radius: 16px;
     object-fit: cover;
@@ -109,12 +109,13 @@
 #productPage #productDetails {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 5px;
 }
 
 #productPage #productDetails label {
     display: block;
-    margin-top: 10px;
+    margin-top: 5px;
+    margin-bottom: 3px;
     font-weight: 500;
     text-transform: none;
     letter-spacing: normal;
@@ -171,7 +172,7 @@
 }
 
 /* ================== BUTTON OPTION ================== */
-#productPage .option-buttons { display: flex; margin-top: 5px; }
+#productPage .option-buttons { display: flex; margin-top: 0px; margin-bottom: 0px; }
 
 #productPage .option-btn {
     background-color: #111;

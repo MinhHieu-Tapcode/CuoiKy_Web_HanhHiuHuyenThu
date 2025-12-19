@@ -7,7 +7,7 @@
 }
 
 *{box-sizing:border-box}
-html,body{height:100%}
+html,body{min-height:unset; height:auto;}
 body{
   margin:0;
   font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
@@ -20,6 +20,13 @@ body{
 *{
   font-family: "Montserrat", sans-serif !important;
 }
+.faq-a a{
+  color: inherit;
+  text-decoration: underline; /* hoặc none */
+  font-weight: 500;
+
+}
+
 
 /* big decorative image on the right like your screenshot */
 body::after{
@@ -42,7 +49,8 @@ body::after{
 /* page layout */
 .page{
   max-width:var(--max-width);
-  margin:10px auto;
+  margin:0 auto 0;
+  margin-bottom: 0;
   padding-top: 0;
   position:relative;
   z-index:1; /* above background */
@@ -57,7 +65,9 @@ body::after{
   letter-spacing:1px;
 }
 
-
+.body{
+  overflow-x: hidden;
+}
 
 .faq-list{
   list-style:none;
@@ -145,7 +155,7 @@ body::after{
 }
 .collections {
   text-align: center;
-  padding-bottom: 5px;
+  padding-bottom: 0;
 }
 .breadcrumb {
   margin-top: 5px;
@@ -187,12 +197,13 @@ body::after{
 .faq-item{
   opacity:0;
   transform: translateY(20px);
-  transition: all .6s ease;
+  visibility: hidden;
 }
 
 .faq-item.show{
   opacity:1;
   transform:none;
+  visibility: visible;
 }
 .faq-item{
   transition: transform .25s ease, box-shadow .25s ease;

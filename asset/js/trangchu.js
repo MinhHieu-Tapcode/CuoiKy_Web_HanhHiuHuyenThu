@@ -104,3 +104,26 @@ container.addEventListener('scroll', () => {
     if (e.target === popup) popup.classList.remove("show");
   });
 });
+/**Hiệu ứng hover cho best seller**/
+document.querySelectorAll('.tilt-card').forEach(card => {
+    const img = card.querySelector('img');
+
+    card.addEventListener('mousemove', e => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      const rotateX = ((y / rect.height) - 0.5) * -12;
+      const rotateY = ((x / rect.width) - 0.5) * 12;
+
+      img.style.transform = `
+        rotateX(${rotateX}deg)
+        rotateY(${rotateY}deg)
+        scale(1.05)
+      `;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      img.style.transform = 'rotateX(0) rotateY(0) scale(1)';
+    });
+  });

@@ -37,7 +37,11 @@ body {
   font-weight: 500;
 
 }
-
+.faq-a p{
+  text-align: justify;
+  margin: 0;
+  padding: 0;        /* chữ sát khung */
+}
 
 /* big decorative image on the right like your screenshot */
 body::after {
@@ -146,38 +150,11 @@ body::after {
 }
 
 /* answer panel */
-/* Answer panel ẩn ban đầu */
-.faq-a {
-  max-height: 0;
-  /* Quan trọng để ẩn nội dung khi đóng */
-  padding: 0 1.5rem;
-
-  /* Thay đổi màu nền thành màu ghi nhạt */
-  background-color: #f4f4f4;
-
-  /* Thêm bo góc cho nhẹ nhàng (tùy chọn) */
-  border-radius: 4px;
-
-  /* Giữ border left nếu bạn muốn, hoặc bỏ đi cho sạch */
-  border-left: 3px solid #888;
-
-  color: #333;
-  line-height: 1.6;
-  transition: max-height 0.3s ease, padding 0.3s ease, margin 0.3s ease;
-
-  /* Khoảng cách mặc định khi đóng */
-  margin-top: 0;
-}
-
-/* Khi mở */
-.faq-a.show {
-  max-height: 1000px;
-  /* Tăng lên để chứa được nội dung dài */
-
-  /* Tăng padding và margin để không bị dính vào câu hỏi */
-  padding: 1.2rem 1.5rem;
-  margin-top: 10px;
-  margin-bottom: 10px;
+.faq-a{
+  margin-top:12px;
+  padding-right:20%;
+  color:#333;
+  font-size:15px;
 }
 
 /* small responsive tweaks */
@@ -247,7 +224,7 @@ body::after {
 }
 
 .collections h2 {
-  font-size: 48px;
+  font-size: 24px;
   font-weight: 500;
   margin-bottom: 10px;
   text-transform: uppercase;

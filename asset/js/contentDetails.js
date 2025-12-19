@@ -145,6 +145,18 @@ function getSelectedValue(containerId) {
   const selected = document.querySelector(`#${containerId} .option-btn.selected`);
   return selected ? selected.dataset.value : '';
 }
+const productDetails = document.querySelector("#productPage #productDetails");
+
+if (productDetails) {
+    const buyBtn = document.createElement("button");
+    buyBtn.textContent = "Mua hàng";
+
+    buyBtn.addEventListener("click", () => {
+        window.location.href = "../thanhtoan.html";
+    });
+
+    productDetails.appendChild(buyBtn);
+}
 
 // ================================
 // Hàm thêm vào giỏ hàng

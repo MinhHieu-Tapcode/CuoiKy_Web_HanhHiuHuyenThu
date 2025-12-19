@@ -26,7 +26,11 @@ body{
   font-weight: 500;
 
 }
-
+.faq-a p{
+  text-align: justify;
+  margin: 0;
+  padding: 0;        /* chữ sát khung */
+}
 
 /* big decorative image on the right like your screenshot */
 body::after{
@@ -133,7 +137,7 @@ body::after{
 /* answer panel */
 .faq-a{
   margin-top:12px;
-  padding-right:20%;
+  padding: 0;
   color:#333;
   font-size:15px;
 }
@@ -175,7 +179,7 @@ body::after{
 }
 
 .collections h2 {
-  font-size: 48px;
+  font-size: 24px;
   font-weight: 500;
   margin-bottom: 10px;
   text-transform: uppercase;

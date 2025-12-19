@@ -213,6 +213,7 @@
       margin-top: 15px;
       padding: 0 20px;
     }
+    
   </style>
 
 
@@ -253,9 +254,16 @@
 
 
     <!-- SEARCH OVERLAY -->
-    <div class="search-overlay">
-      <input type="text" class="search-box" placeholder="Nhập tên sản phẩm..." />
-      <i class="fa-solid fa-xmark close-search"></i>
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Tìm sản phẩm..." autocomplete="off" />
+          <div class="search-suggest" id="searchSuggest"></div>
+        </div>
+
+        <a href="cart.html">
+          <span class="icon-cart">🛒</span>
+        </a>
+        <span class="menu-toggle">☰</span>
+      </div>
     </div>
   </header>
 

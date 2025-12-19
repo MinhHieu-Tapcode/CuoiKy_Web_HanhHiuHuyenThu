@@ -135,7 +135,7 @@
                             <span class="totalPrice fw-bold text-primary">0</span>
                         </div>
 
-                        <button type="submit" class="btn btn-primary w-100 buttonCheckout">
+                        <button type="submit" class="btn btn-primary w-100 buttonCheckout" style="background-color: #2e2e2e;">
                             Đặt hàng
                         </button>
                     </form>
@@ -184,37 +184,36 @@
         }
     });
 
-    // Lấy và hiển thị sản phẩm từ giỏ hàng
-    const products = JSON.parse(localStorage.getItem('cartContainer')) || [];
-    
+    const products = JSON.parse(localStorage.getItem('cart')) || [];
+
     if (products.length > 0) {
         const listContainer = document.querySelector('.list');
         let totalQuantity = 0;
         let totalPrice = 0;
 
         products.forEach(function(product) {
-            const price = parseInt(product.price.replace(/[^\d]/g, ''));
-            const itemTotal = price * product.quantity;
+            const price = Number(product.price) || 0;
+            const itemTotal = price * (Number(product.quantity) || 0);
 
             const item = document.createElement('div');
             item.classList.add('card', 'mb-3', 'border-0');
             item.innerHTML = `
                 <div class="row g-0 align-items-center">
                     <div class="col-4 col-md-2">
-                        <img src="${product.img}" class="img-fluid rounded" alt="${product.title}">
+                        <img src="${product.preview}" class="img-fluid rounded" alt="${product.name}">
                     </div>
                     <div class="col-8 col-md-10">
                         <div class="card-body">
                             <div class="row align-items-center">
                                 <div class="col-12 col-md-5">
-                                    <h5 class="card-title">${product.title}</h5>
-                                    <p class="card-text text-muted">${price.toLocaleString('vi-VN')} VNĐ / 1 sản phẩm</p>
+                                    <h5 class="card-title">${product.name}</h5>
+                                    <p class="card-text text-muted">${price.toLocaleString('vi-VN')} ₫ / 1 sản phẩm</p>
                                 </div>
                                 <div class="col-6 col-md-3">
                                     <span class="badge bg-secondary">Số lượng: ${product.quantity}</span>
                                 </div>
                                 <div class="col-6 col-md-4 text-end">
-                                    <span class="fw-bold">${itemTotal.toLocaleString('vi-VN')} VNĐ</span>
+                                    <span class="fw-bold">${itemTotal.toLocaleString('vi-VN')} ₫</span>
                                 </div>
                             </div>
                         </div>
@@ -223,15 +222,14 @@
             `;
             listContainer.appendChild(item);
 
-            totalQuantity += parseInt(product.quantity);
+            totalQuantity += Number(product.quantity) || 0;
             totalPrice += itemTotal;
         });
 
         document.querySelector('.totalQuantity').innerText = totalQuantity;
-        document.querySelector('.totalPrice').innerText = `${totalPrice.toLocaleString('vi-VN')} VNĐ`;
+        document.querySelector('.totalPrice').innerText = `${totalPrice.toLocaleString('vi-VN')} ₫`;
     }
 
-    // Form validation và xử lý đặt hàng
     document.querySelector('form').addEventListener('submit', function(e) {
         e.preventDefault();
         
@@ -242,8 +240,9 @@
         const city = document.getElementById('city').value;
 
         if (name && phone && address && country && (country !== 'Vietnam' || city)) {
-            localStorage.removeItem('cartProducts');
-            window.location.href = 'pay.html';
+            localStorage.removeItem('cart');
+            alert('Đặt hàng thành công! Cảm ơn bạn.');
+            window.location.href = 'Trangchu.html';
         } else {
             alert("Vui lòng điền đầy đủ thông tin!");
         }

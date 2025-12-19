@@ -229,8 +229,28 @@
       </div>
       <nav class="nav-links">
         <a href="gioithieu.html">Giới thiệu</a>
-        <a href="sanpham/sanpham.html">Sản phẩm</a>
-        <a href="bosuutap/bosuutap.html">Bộ sưu tập</a>
+        <div class="nav-item dropdown">
+          <a href="sanpham/sanpham.html">Sản phẩm</a>
+          <div class="dropdown-menu">
+            <a href="sanpham/sp1.html">Váy bồng xòe</a>
+            <a href="sanpham/sp2.html">Váy đuôi cá</a>
+            <a href="sanpham/sp3.html">Váy chữ A</a>
+            <a href="sanpham/sp4.html">Váy ngắn</a>
+            <a href="sanpham/sp5.html">Áo dài cưới</a>
+            <a href="sanpham/sp6.html">Phụ kiện</a>
+          </div>
+        </div>
+        <div class="nav-item dropdown">
+          <a href="bosuutap/bosuutap.html">Bộ sưu tập</a>
+          <div class="dropdown-menu">
+            <a href="bosuutap/Bst1.html">Hương sắc Á Đông</a>
+            <a href="bosuutap/Bst2.html">Thanh của tình yêu</a>
+            <a href="bosuutap/Bst3.html">Hẹn ước trăm năm</a>
+            <a href="bosuutap/Bst4.html">Lời thì thầm hoa sương</a>
+            <a href="bosuutap/Bst5.html">Ánh bình minh</a>
+            <a href="bosuutap/Bst6.html">Khúc hẹn yêu</a>
+          </div>
+        </div>
         <a href="cuahang.html">Cửa hàng</a>
         <a href="chinhsachvanchuyen.html">Chính sách</a>
       </nav>
@@ -485,19 +505,5 @@
   <script src="/asset/js/hotro.js"></script>
   <script src="asset/js/data.js"></script>
   <script src="header_footer/header_footer.js"></script>
-  <script>
-const items = document.querySelectorAll('.faq-item');
-
-const observer = new IntersectionObserver(entries=>{
-  entries.forEach(entry=>{
-    if(entry.isIntersecting){
-      entry.target.classList.add('show');
-    }
-  });
-},{ threshold:0.15 });
-
-items.forEach(item=>observer.observe(item));
-</script>
-
 </body>
 </html>

@@ -27,6 +27,17 @@
             }
         }
     </script>
+    <style>
+        .policy-icon {
+            transform: rotate(-10deg);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .policy-icon:active {
+            transform: rotate(0deg) scale(1.5);
+            box-shadow: 0 10px 25px rgba(200, 155, 106, 0.4);
+        }
+    </style>
     <body class="bg-[#fafafa] text-[#333] m-0">
 
     <header id="main-header">
@@ -84,56 +95,71 @@
 
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                     
-                    
-
                     <div class="space-y-10">
                         <section id="pham-vi">
                             <h2 class="text-xl font-bold mb-3 text-gray-800 flex items-center">
-                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-sm">1</span>
+                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-xs gap-1 transition">
+                                   <i class="fa-solid fa-map-location-dot text-[11px] policy-icon"></i>
+                                    <span>1</span>
+                                </span>
                                 Phạm vi áp dụng
                             </h2>
                             <p class="text-gray-600 leading-relaxed text-justify">
-                                NOI DUNG GI DO
+                                Chính sách vận chuyển được áp dụng cho tất cả các đơn hàng phát sinh trên hệ thống website chính thức của Fleur Bridal House.
+                                Chúng tôi hỗ trợ giao hàng trên toàn lãnh thổ Việt Nam, bao gồm cả khu vực nội thành và ngoại thành.
+                                Đối với các đơn hàng quốc tế, Fleur sẽ tư vấn hình thức vận chuyển phù hợp tùy theo từng quốc gia và nhu cầu của khách hàng.
                             </p>
                         </section>
 
                         <section id="hinh-thuc">
                             <h2 class="text-xl font-bold mb-3 text-gray-800 flex items-center">
-                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-sm">2</span>
+                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-xs gap-1 transition">
+                                   <i class="fa-solid fa-truck-fast text-[11px] policy-icon"></i>
+                                   <span>2</span>
+                                </span>
                                 Hình thức giao hàng
                             </h2>
                             <p class="text-gray-600 leading-relaxed text-justify">
-                                NOI DUNG GI DO
+                                Fleur Bridal House hợp tác với các đơn vị vận chuyển uy tín nhằm đảm bảo sản phẩm được giao đến tay khách hàng một cách an toàn và đúng hẹn. Khách hàng có thể lựa chọn giao hàng tiêu chuẩn hoặc giao hàng nhanh tùy theo nhu cầu. Đối với các sản phẩm thiết kế riêng hoặc váy cưới cao cấp, Fleur sẽ đóng gói kỹ lưỡng và có phương án vận chuyển đặc biệt để bảo vệ sản phẩm.
                             </p>
                         </section>
 
                         <section id="thoi-gian">
                             <h2 class="text-xl font-bold mb-3 text-gray-800 flex items-center">
-                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-sm">3</span>
+                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-xs gap-1 transition">
+                                   <i class="fa-regular fa-clock text-[11px] policy-icon"></i>
+                                   <span>3</span>
+                                </span>
                                 Thời gian giao hàng
                             </h2>
                             <p class="text-gray-600 leading-relaxed text-justify">
-                                NOI DUNG GI DO
+                                Thời gian giao hàng thông thường từ 2–5 ngày làm việc đối với khu vực nội thành và từ 4–7 ngày làm việc đối với khu vực ngoại thành. Thời gian có thể thay đổi tùy theo địa điểm nhận hàng, điều kiện thời tiết hoặc các yếu tố khách quan khác. Fleur sẽ chủ động thông báo nếu có bất kỳ sự chậm trễ nào phát sinh trong quá trình vận chuyển.
                             </p>
                         </section>
 
                         <section id="phi">
                             <h2 class="text-xl font-bold mb-3 text-gray-800 flex items-center">
-                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-sm">4</span>
+                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-xs gap-1 transition">
+                                   <i class="fa-solid fa-wallet text-[11px] policy-icon"></i>
+                                   <span>4</span>
+                                </span>
                                 Phí vận chuyển
                             </h2>
                             <p class="text-gray-600 leading-relaxed text-justify">
-                                NOI DUNG GI DO
+                                Phí vận chuyển được tính dựa trên khu vực giao hàng và giá trị đơn hàng. Fleur Bridal House áp dụng chính sách miễn phí vận chuyển cho các đơn hàng đạt giá trị tối thiểu theo từng thời điểm. Mọi chi phí vận chuyển sẽ được hiển thị rõ ràng trong quá trình đặt hàng để khách hàng dễ dàng theo dõi.
                             </p>
                         </section>
 
                         <section id="quy-trinh">
                             <h2 class="text-xl font-bold mb-3 text-gray-800 flex items-center">
-                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-sm">5</span>
+                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-xs gap-1 transition">
+                                  <i class="fa-solid fa-box-open text-[11px] policy-icon"></i>
+                                  <span>5</span>
+                                </span>
                                 Quy trình giao nhận
                             </h2>
                             <p class="text-gray-600 leading-relaxed text-justify">
-                                NOI DUNG GI DO
+                                Sau khi đơn hàng được xác nhận, Fleur Bridal House sẽ tiến hành chuẩn bị và bàn giao sản phẩm cho đơn vị vận chuyển. Khách hàng vui lòng kiểm tra kỹ tình trạng sản phẩm khi nhận hàng và phản hồi ngay nếu phát hiện bất kỳ vấn đề nào. Việc ký nhận đơn hàng đồng nghĩa với việc khách hàng đã đồng ý về tình trạng và số lượng sản phẩm được giao.
                             </p>
                         </section>
                         </section>
@@ -145,23 +171,23 @@
                         Chính sách khác
                     </h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <a href="#" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
+                        <a href="chinhsachdoitra.html" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
                             <i class="fa-solid fa-caret-right text-gray-400 mr-3 group-hover:text-white"></i>
                             <span class="font-medium">Chính sách đổi trả</span>
                         </a>
-                        <a href="#" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
+                        <a href="chinhsachbaomat.html" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
                             <i class="fa-solid fa-caret-right text-gray-400 mr-3 group-hover:text-white"></i>
                             <span class="font-medium">Chính sách bảo mật</span>
                         </a>
-                        <a href="#" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
+                        <a href="dieukhoansudung.html" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
                             <i class="fa-solid fa-caret-right text-gray-400 mr-3 group-hover:text-white"></i>
                             <span class="font-medium">Điều khoản sử dụng</span>
                         </a>
-                        <a href="#" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
+                        <a href="chinhsachthanhtoan.html" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
                             <i class="fa-solid fa-caret-right text-gray-400 mr-3 group-hover:text-white"></i>
                             <span class="font-medium">Chính sách thanh toán</span>
                         </a>
-                        <a href="#" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
+                        <a href="chinhsachkhachhang.html" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
                             <i class="fa-solid fa-caret-right text-gray-400 mr-3 group-hover:text-white"></i>
                             <span class="font-medium">Chính sách khách hàng</span>
                         </a>

@@ -25,9 +25,9 @@ document.addEventListener("DOMContentLoaded", () => {
             logoutLink.style.padding = "0 20px";
 
             logoutLink.addEventListener("click", (e) => {
-                e.preventDefault();
+                e.preventDefault(); // vẫn giữ để tránh reload thừa
                 localStorage.removeItem("user");
-                renderHeaderTop();
+                window.location.href = "../trangchu.html"; // chuyển trang về home
             });
 
             headerTop.appendChild(nameSpan);

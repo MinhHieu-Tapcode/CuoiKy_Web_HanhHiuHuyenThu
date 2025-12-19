@@ -15,7 +15,7 @@
   <!-- Font Awesome 6 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link rel="stylesheet" href="header_footer/style.css">
-  
+
   <script>
     tailwind.config = {
       theme: {
@@ -31,7 +31,7 @@
       }
     }
   </script>
-  
+
   <style>
     @import url('asset/css/main.css');
 
@@ -164,110 +164,136 @@
     .tilt-card {
       perspective: 1000px;
     }
+
     .tilt-card img {
       transition: transform 0.15s ease-out;
       will-change: transform;
     }
-    
+
     .button-modify {
-  /* Cấu trúc & Vị trí */
-  position: relative;
-  display: inline-block;
-  padding: 0.7em 2em;
-  overflow: hidden; /* Giấu phần background thừa khi chưa hover */
-  z-index: 1; /* Tạo không gian xếp chồng */
+      /* Cấu trúc & Vị trí */
+      position: relative;
+      display: inline-block;
+      padding: 0.7em 2em;
+      overflow: hidden;
+      /* Giấu phần background thừa khi chưa hover */
+      z-index: 1;
+      /* Tạo không gian xếp chồng */
 
-  /* Giao diện cơ bản */
-  border: 1.5px solid #2b2b2b;
-  border-radius: 2px;
-  background-color: transparent; /* Nền trong suốt để thấy hiệu ứng */
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.16), 0 1px 6px rgba(0, 0, 0, 0.1);
-  
-  /* Typography */
-  font-size: 1.125rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  text-align: center;
-  text-decoration: none;
-  
-  /* Màu chữ ban đầu & Hiệu ứng chuyển màu */
-  color: #2b2b2b; 
-  transition: color 0.3s ease;
-}
+      /* Giao diện cơ bản */
+      border: 1.5px solid #2b2b2b;
+      border-radius: 2px;
+      background-color: transparent;
+      /* Nền trong suốt để thấy hiệu ứng */
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.16), 0 1px 6px rgba(0, 0, 0, 0.1);
 
-/* chỉnh hiệu ứng hover cho button siêu vjp */
-  .button-modify span {
-    position: relative;
-    z-index: 5; 
-  }
+      /* Typography */
+      font-size: 1.125rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-align: center;
+      text-decoration: none;
 
-  .button-modify::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    right: 50%; 
-    background-color: #2b2b2b;
-    opacity: 0;
-    z-index: -1;
-    transition: all 0.5s ease;
-  }
+      /* Màu chữ ban đầu & Hiệu ứng chuyển màu */
+      color: #2b2b2b;
+      transition: color 0.3s ease;
+    }
 
-  .button-modify:hover, 
-  .button-modify:focus {
-    color: #ffffff;
-  }
+    /* chỉnh hiệu ứng hover cho button siêu vjp */
+    .button-modify span {
+      position: relative;
+      z-index: 5;
+    }
 
-  .button-modify:hover::before, 
-  .button-modify:focus::before {
-    left: 0;
-    right: 0;
-    opacity: 1;
-  }
+    .button-modify::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      right: 50%;
+      background-color: #2b2b2b;
+      opacity: 0;
+      z-index: -1;
+      transition: all 0.5s ease;
+    }
 
-  .button-modify:active {
-    transform: scale(0.95);
-  }
+    .button-modify:hover,
+    .button-modify:focus {
+      color: #ffffff;
+    }
 
-  /**Hiệu ứng cuốn cho đối tác**/
-  @keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-  }
-  .animate-marquee {
-    animation: marquee 25s linear infinite;
-  }
+    .button-modify:hover::before,
+    .button-modify:focus::before {
+      left: 0;
+      right: 0;
+      opacity: 1;
+    }
 
+    .button-modify:active {
+      transform: scale(0.95);
+    }
+
+    /**Hiệu ứng cuốn cho đối tác**/
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    .animate-marquee {
+      animation: marquee 25s linear infinite;
+    }
   </style>
 </head>
 
 <body class="font-montserrat bg-white">
+  <!-- Nơi header sẽ được chèn -->
   <!-- HEADER -->
   <header id="main-header">
     <div class="header-top">
-      <a href="../dangky.html">Đăng Nhập</a>
-      <a href="../dangky.html">Đăng Ký</a>
+      <a href="dangky.html">Đăng Nhập</a>
+      <a href="dangky.html">Đăng Ký</a>
     </div>
 
     <!-- HEADER BOTTOM -->
     <div class="header-bottom">
       <div class="logo">
-        <a href="../Trangchu.html">
-          <img src="../asset/img/header_footer/logohoa.png" alt="Logo" />
+        <a href="Trangchu.html">
+          <img src="asset/img/header_footer/logohoa.png" alt="Logo" />
         </a>
       </div>
 
       <nav class="nav-links">
-        <a href="../gioithieu.html">Giới thiệu</a>
-        <a href="../sanpham/sanpham.html">Sản phẩm</a>
-        <a href="../bosuutap/bosuutap.html">Bộ sưu tập</a>
-        <a href="../cuahang.html">Cửa hàng</a>
-        <a href="../lienhe.html">Liên hệ</a>
+        <a href="gioithieu.html">Giới thiệu</a>
+        <div class="nav-item dropdown">
+          <a href="sanpham/sanpham.html">Sản phẩm</a>
+          <div class="dropdown-menu">
+            <a href="sanpham/sp1.html">Váy bồng xòe</a>
+            <a href="sanpham/sp2.html">Váy đuôi cá</a>
+            <a href="sanpham/sp3.html">Váy chữ A</a>
+            <a href="sanpham/sp4.html">Váy ngắn</a>
+            <a href="sanpham/sp5.html">Áo dài cưới</a>
+            <a href="sanpham/sp6.html">Phụ kiện</a>
+          </div>
+        </div>
+        <div class="nav-item dropdown">
+          <a href="bosuutap/bosuutap.html">Bộ sưu tập</a>
+          <div class="dropdown-menu">
+            <a href="bosuutap/Bst1.html">Hương sắc Á Đông</a>
+            <a href="bosuutap/Bst2.html">Thanh của tình yêu</a>
+            <a href="bosuutap/Bst3.html">Hẹn ước trăm năm</a>
+            <a href="bosuutap/Bst4.html">Lời thì thầm hoa sương</a>
+            <a href="bosuutap/Bst5.html">Ánh bình minh</a>
+            <a href="bosuutap/Bst6.html">Khúc hẹn yêu</a>
+          </div>
+        </div>
+        <a href="cuahang.html">Cửa hàng</a>
+        <a href="dieukhoansudung.html">Điều khoản</a>
       </nav>
 
       <div class="icons">
@@ -277,15 +303,15 @@
           <div class="search-suggest" id="searchSuggest"></div>
         </div>
 
-        <a href="../cart.html">
-          <i class="fas fa-shopping-cart icon-cart"></i>
+        <a href="cart.html">
+          <span class="icon-cart">🛒</span>
         </a>
-        <i class="fas fa-bars menu-toggle"></i>
+        <span class="menu-toggle">☰</span>
       </div>
     </div>
   </header>
 
-  <main class="khung-toan-trang" style="padding: 10px;">
+  <main class="khung-toan-trang" style="padding:0 10px 10px 10px;">
     <div class="khung-chinh">
       <div class="video-section">
         <video autoplay muted loop>
@@ -297,633 +323,692 @@
         </div>
       </div>
 
-    <!-- Intro Section -->
-    <section class="text-center min-h-[200px] md:min-h-[300px]">
-      <h1 class="bg-white text-2xl md:text-4xl font-semibold py-4 md:py-6 px-4 pb-24" data-animate>
-        Fleur Bridal House
-      </h1>
-      <div class="bg-dark-bg text-white px-4 py-6 md:px-10 md:py-8" data-animate>
-        <div class="container mx-auto flex flex-col lg:flex-row items-center gap-6 lg:gap-8 max-w-8xl">
-          <div class="lg:w-auto flex-shrink-0">
-            <h3 class="text-base font-medium text-white">Giới thiệu</h3>
-          </div>
-          <div class="flex-1 text-sm lg:text-base leading-relaxed text-left lg:text-justify">
-            <p class="text-white">
-              Fleur được thành lập từ năm 2020 tại Hà Nội, với khát vọng tạo nên những chiếc váy cưới như tác phẩm nghệ thuật dành riêng cho cô dâu Việt Nam mang phong cách quốc tế. Ban đầu chỉ là một xưởng thủ công nhỏ, Fleur nhanh chóng phát triển nhờ sự kết hợp giữa kỹ thuật may couture và cảm hứng từ những viên ngọc trắng tinh khôi.
-            </p>
-          </div>
-          <div class="lg:w-auto flex-shrink-0">
-            <button class="px-6 py-3 border border-white-200 rounded-lg text-black bg-white font-medium hover:bg-dark-bg hover:text-white transition">
-              <a href="gioithieu.html">
-              Xem thêm
-            </button>
+      <!-- Intro Section -->
+      <section class="text-center min-h-[200px] md:min-h-[300px]">
+        <h1 class="bg-white text-2xl md:text-4xl font-semibold py-4 md:py-6 px-4 pb-24" data-animate>
+          Fleur Bridal House
+        </h1>
+        <div class="bg-dark-bg text-white px-4 py-6 md:px-10 md:py-8" data-animate>
+          <div class="container mx-auto flex flex-col lg:flex-row items-center gap-6 lg:gap-8 max-w-8xl">
+            <div class="lg:w-auto flex-shrink-0">
+              <h3 class="text-base font-medium text-white">Giới thiệu</h3>
+            </div>
+            <div class="flex-1 text-sm lg:text-base leading-relaxed text-left lg:text-justify">
+              <p class="text-white">
+                Fleur được thành lập từ năm 2020 tại Hà Nội, với khát vọng tạo nên những chiếc váy cưới như tác phẩm
+                nghệ thuật dành riêng cho cô dâu Việt Nam mang phong cách quốc tế. Ban đầu chỉ là một xưởng thủ công
+                nhỏ, Fleur nhanh chóng phát triển nhờ sự kết hợp giữa kỹ thuật may couture và cảm hứng từ những viên
+                ngọc trắng tinh khôi.
+              </p>
+            </div>
+            <div class="lg:w-auto flex-shrink-0">
+              <button
+                class="px-6 py-3 border border-white-200 rounded-lg text-black bg-white font-medium hover:bg-dark-bg hover:text-white transition">
+                <a href="gioithieu.html">
+                  Xem thêm
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <h1 class="bg-white text-2xl md:text-4xl font-semibold py-8 md:py-10 px-4 pt-24" data-animate>
-        Bộ sưu tập tại Fleur
-      </h1>
-    </section>
+        <h1 class="bg-white text-2xl md:text-4xl font-semibold py-8 md:py-10 px-4 pt-24" data-animate>
+          Bộ sưu tập tại Fleur
+        </h1>
+      </section>
 
-    <!-- Collection Sections -->
-    <!-- Collection 1 -->
-    <section class="bg-dark-bg min-h-[85vh] flex items-center py-12 lg:py-0">
-      <div class="container mx-auto px-4 lg:px-8">
-        <div class="flex flex-col lg:flex-row items-center gap-8">
-          <div class="w-full max-h-[70vh] overflow-hidden rounded-lg lg:w-3/5 order-2 lg:order-1" data-animate="slide-left">
-            <img src="asset/img/trangchu/Bst1.jpg" alt="Bộ sưu tập Fleur" class="w-full h-64 md:h-96 lg:h-[600px] object-cover rounded-lg">
+      <!-- Collection Sections -->
+      <!-- Collection 1 -->
+      <section class="bg-dark-bg min-h-[85vh] flex items-center py-12 lg:py-0">
+        <div class="container mx-auto px-4 lg:px-8">
+          <div class="flex flex-col lg:flex-row items-center gap-8">
+            <div class="w-full max-h-[70vh] overflow-hidden rounded-lg lg:w-3/5 order-2 lg:order-1"
+              data-animate="slide-left">
+              <img src="asset/img/trangchu/Bst1.jpg" alt="Bộ sưu tập Fleur"
+                class="w-full h-64 md:h-96 lg:h-[600px] object-cover rounded-lg">
+            </div>
+            <div class="w-full lg:w-2/5 bg-white text-dark-bg p-6 md:p-8 lg:p-12 rounded-lg order-1 lg:order-2"
+              data-animate="slide-right">
+              <h2 class="text-xl md:text-2xl font-semibold mb-4 text-center">
+                Hương sắc Á Đông - Nét duyên Việt chạm vào từng sợi lụa
+              </h2>
+              <p class="text-sm md:text-base leading-relaxed text-justify mb-6">
+                BST "Hương sắc Á Đông" là bản hòa ca của vẻ đẹp truyền thống và tinh thần hiện đại. Mỗi tà áo dài như
+                một bức họa sống động, tôn vinh nét duyên dáng của người phụ nữ Việt. Những đường thêu tỉ mỉ, hoa văn
+                mềm mại, chất lụa óng ánh - tất cả cùng kể lại câu chuyện về sự thanh tao và kiêu hãnh.
+              </p>
+              <a href="bosuutap/Bst1.html"
+                class="px-6 py-3 border rounded-lg bg-dark-bg text-white font-medium hover:bg-white hover:text-black hover:border hover:border-black transition">
+                Xem thêm
+              </a>
+            </div>
           </div>
-          <div class="w-full lg:w-2/5 bg-white text-dark-bg p-6 md:p-8 lg:p-12 rounded-lg order-1 lg:order-2" data-animate="slide-right">
-            <h2 class="text-xl md:text-2xl font-semibold mb-4 text-center">
-              Hương sắc Á Đông - Nét duyên Việt chạm vào từng sợi lụa
+        </div>
+      </section>
+
+      <!-- Collection 2 -->
+      <section class="bg-white min-h-[85vh] flex items-center py-12 lg:py-0">
+        <div class="container mx-auto px-4 lg:px-8">
+          <div class="flex flex-col lg:flex-row items-center gap-8">
+            <div class="w-full lg:w-2/5 bg-dark-bg text-light-bg p-6 md:p-8 lg:p-12 rounded-lg order-1"
+              data-animate="slide-left">
+              <h2 class="text-xl md:text-2xl font-semibold mb-4 text-center text-white">
+                Thanh âm của tình yêu - Mỗi nếp váy là một giai điệu, ngân nga bản tình ca của hạnh phúc
+              </h2>
+              <p class="text-sm md:text-base leading-relaxed text-justify mb-6 text-white">
+                Như một khúc tình ca dịu dàng, "Thanh Âm Của Tình Yêu" tái hiện khoảnh khắc trái tim hòa chung nhịp đập.
+                Mỗi thiết kế là sự kết hợp hài hòa giữa ren mềm, voan mỏng và ánh sáng phản chiếu của cườm ngọc - tựa
+                như giai điệu của yêu thương ngân vang trong không khí.
+              </p>
+              <a href="bosuutap/Bst2.html"
+                class="px-6 py-3 border border-black rounded-lg text-black bg-white font-medium hover:bg-dark-bg hover:text-white hover:border hover:border-white transition">
+                Xem thêm
+              </a>
+            </div>
+            <div class="w-full max-h-[70vh] overflow-hidden rounded-lg lg:w-3/5 order-2" data-animate="slide-right">
+              <img src="asset/img/trangchu/Bst2.jpg" alt="Bộ sưu tập Fleur"
+                class="w-full h-64 md:h-96 lg:h-[600px] object-cover rounded-lg">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Collection 3 -->
+      <section class="bg-dark-bg min-h-[85vh] flex items-center py-12 lg:py-0">
+        <div class="container mx-auto px-4 lg:px-8">
+          <div class="flex flex-col lg:flex-row items-center gap-8">
+            <div class="w-full max-h-[70vh] overflow-hidden rounded-lg lg:w-3/5 order-2 lg:order-1"
+              data-animate="slide-left">
+              <img src="asset/img/trangchu/Bst3.jpg" alt="Bộ sưu tập Fleur"
+                class="w-full h-64 md:h-96 lg:h-[600px] object-cover rounded-lg">
+            </div>
+            <div class="w-full lg:w-2/5 bg-white text-dark-bg p-6 md:p-8 lg:p-12 rounded-lg order-1 lg:order-2"
+              data-animate="slide-right">
+              <h2 class="text-xl md:text-2xl font-semibold mb-4 text-center">
+                Hẹn ước trăm năm - Bởi lời hứa không cần nói, chỉ cần cùng nhau đi đến cuối con đường
+              </h2>
+              <p class="text-sm md:text-base leading-relaxed text-justify mb-6">
+                "Hẹn Ước Trăm Năm" là bản giao hòa của sự vĩnh cửu và tình yêu chân thành. Lấy cảm hứng từ khoảnh khắc
+                đôi mắt chạm nhau trong lời thề nguyện, BST sử dụng chất liệu satin, ren chantilly và lụa tơ tằm - tượng
+                trưng cho sự bền chặt và thanh khiết.
+              </p>
+              <a href="bosuutap/Bst3.html"
+                class="px-6 py-3 bg-dark-bg border border-white rounded-lg text-white font-medium hover:bg-white hover:text-black hover:border hover:border-black transition">
+                Xem thêm
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Collection 4 -->
+      <section class="bg-white min-h-[85vh] flex items-center py-12 lg:py-0">
+        <div class="container mx-auto px-4 lg:px-8">
+          <div class="flex flex-col lg:flex-row items-center gap-8">
+            <div class="w-full lg:w-2/5 bg-dark-bg text-light-bg p-6 md:p-8 lg:p-12 rounded-lg order-1"
+              data-animate="slide-left">
+              <h2 class="text-xl md:text-2xl font-semibold mb-4 text-center text-white">
+                Lời thì thầm hoa sương - Giọt sương khẽ rơi trên cánh hoa, như tình yêu dịu dàng thì thầm trong nắng sớm
+              </h2>
+              <p class="text-sm md:text-base leading-relaxed text-justify mb-6 text-white">
+                BST "Lời Thì Thầm Hoa Sương" mang hơi thở của buổi sớm tinh mơ, nơi những cánh hoa còn vương giọt sương
+                trong trẻo. Thiết kế nhẹ như làn khói, mềm như hơi thở, với những hạt sequin phản chiếu ánh sáng dịu
+                dàng.
+              </p>
+              <a href="bosuutap/Bst4.html"
+                class="px-6 py-3 border border-black rounded-lg text-black bg-white font-medium hover:bg-black hover:text-white hover:border hover:border-white transition">
+                Xem thêm
+              </a>
+            </div>
+            <div class="w-full max-h-[70vh] overflow-hidden rounded-lg lg:w-3/5 order-2" data-animate="slide-right">
+              <img src="asset/img/trangchu/Bst4.jpg" alt="Bộ sưu tập Fleur"
+                class="w-full h-64 md:h-96 lg:h-[600px] object-cover rounded-lg">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Collection 5 -->
+      <section class="bg-dark-bg min-h-[85vh] flex items-center py-12 lg:py-0">
+        <div class="container mx-auto px-4 lg:px-8">
+          <div class="flex flex-col lg:flex-row items-center gap-8">
+            <div class="w-full max-h-[70vh] overflow-hidden rounded-lg lg:w-3/5 order-2 lg:order-1"
+              data-animate="slide-left">
+              <img src="asset/img/trangchu/Bst5.jpg" alt="Bộ sưu tập Fleur"
+                class="w-full h-64 md:h-96 lg:h-[600px] object-cover rounded-lg">
+            </div>
+            <div class="w-full lg:w-2/5 bg-white text-dark-bg p-6 md:p-8 lg:p-12 rounded-lg order-1 lg:order-2"
+              data-animate="slide-right">
+              <h2 class="text-xl md:text-2xl font-semibold mb-4 text-center">
+                Ánh bình minh - Nắng đầu ngày chạm lên vai, khởi đầu cho một hành trình yêu thương rạng rỡ
+              </h2>
+              <p class="text-sm md:text-base leading-relaxed text-justify mb-6">
+                Tựa như mặt trời khẽ thức giấc sau màn sương, "Ánh Bình Minh" tỏa sáng với năng lượng tươi mới và hy
+                vọng. BST tôn vinh vẻ đẹp rạng rỡ, tràn đầy sức sống của cô dâu hiện đại.
+              </p>
+              <a href="bosuutap/Bst5.html"
+                class="px-6 py-3 bg-dark-bg border border-white rounded-lg text-white font-medium hover:bg-white hover:text-black hover:border hover:border-black transition">
+                Xem thêm
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Collection 6 -->
+      <section class="bg-white min-h-[85vh] flex items-center py-12 lg:py-0">
+        <div class="container mx-auto px-4 lg:px-8">
+          <div class="flex flex-col lg:flex-row items-center gap-8">
+            <div class="w-full lg:w-2/5 bg-dark-bg text-light-bg p-6 md:p-8 lg:p-12 rounded-lg order-1"
+              data-animate="slide-left">
+              <h2 class="text-xl md:text-2xl font-semibold mb-4 text-center text-white">
+                Khúc hẹn yêu - Giữa ngàn ánh nhìn, ta gặp nhau, bản tình ca khẽ cất lên từ trái tim
+              </h2>
+              <p class="text-sm md:text-base leading-relaxed text-justify mb-6 text-white">
+                "Khúc Hẹn Yêu" là câu chuyện về tình yêu nảy nở trong giây phút hai trái tim gặp gỡ. BST mang phong vị
+                lãng mạn, pha chút hoài niệm, tựa một bản tình ca được viết bằng ánh mắt và nụ cười.
+              </p>
+              <a href="bosuutap/Bst6.html"
+                class="px-6 py-3 border border-black rounded-lg text-black bg-white font-medium hover:bg-dark-bg hover:border hover:border-white hover:text-white transition">
+                Xem thêm
+              </a>
+            </div>
+            <div class="w-full max-h-[70vh] overflow-hidden rounded-lg lg:w-3/5 order-2" data-animate="slide-right">
+              <img src="asset/img/trangchu/Bst6.jpg" alt="Bộ sưu tập Fleur"
+                class="w-full h-64 md:h-96 lg:h-[600px] object-cover rounded-lg">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- New Arrivals Section -->
+      <section class="py-10 bg-dark-bg text-white">
+        <div class="max-w-7xl mx-auto px-0">
+
+          <!-- Header -->
+          <div class="items-center mb-10">
+            <h2 class="text-2xl md:text-4xl font-medium text-center mb-12 tracking-wide text-white" data-animate>
+              HÀNG MỚI VỀ
             </h2>
-            <p class="text-sm md:text-base leading-relaxed text-justify mb-6">
-              BST "Hương sắc Á Đông" là bản hòa ca của vẻ đẹp truyền thống và tinh thần hiện đại. Mỗi tà áo dài như một bức họa sống động, tôn vinh nét duyên dáng của người phụ nữ Việt. Những đường thêu tỉ mỉ, hoa văn mềm mại, chất lụa óng ánh - tất cả cùng kể lại câu chuyện về sự thanh tao và kiêu hãnh.
-            </p>
-            <a href="bosuutap/Bst1.html" class="px-6 py-3 border rounded-lg bg-dark-bg text-white font-medium hover:bg-white hover:text-black hover:border hover:border-black transition">
-              Xem thêm
-            </a>
+          </div>
+
+          <!-- Content -->
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-10 items-stretch">
+
+            <!-- LEFT: Banner -->
+            <div class="md:col-span-2" data-animate>
+              <div class="overflow-hidden rounded-2xl relative h-full border-1">
+                <video autoplay muted loop>
+                  <source src="asset/img/trangchu/new.mp4" type="video/mp4">
+                  Hàng mới về
+                </video>
+              </div>
+            </div>
+
+            <!-- PRODUCTS (chiếm 2 cột) -->
+            <div class="md:col-span-2 grid grid-cols-2 gap-8" data-animate>
+
+              <!-- Item -->
+              <div class="text-center">
+                <div class="overflow-hidden rounded-2xl mb-4">
+                  <img src="asset/img/trangchu/elowen.png"
+                    class="w-full h-[320px] object-cover hover:scale-105 transition">
+                </div>
+                <h3 class="font-medium text-white">Elowen</h3>
+                <p class="!text-light-bg line-through font-semibold mt-1">5.590.000đ</p>
+                <p class='text-orange-500 font-semibold mt-1'>4.590.000đ</p>
+              </div>
+
+              <div class="text-center">
+                <div class="overflow-hidden rounded-2xl mb-4">
+                  <img src="asset/img/trangchu/moera.png"
+                    class="w-full h-[320px] object-cover hover:scale-105 transition">
+                </div>
+                <h3 class="font-medium text-white">Moera</h3>
+                <p class="!text-light-bg line-through font-semibold mt-1">15.990.000đ</p>
+                <p class='text-orange-500 font-semibold mt-1'>14.990.000đ</p>
+              </div>
+
+              <div class="text-center">
+                <div class="overflow-hidden rounded-2xl mb-4">
+                  <img src="asset/img/trangchu/affection.png"
+                    class="w-full h-[320px] object-cover hover:scale-105 transition">
+                </div>
+                <h3 class="font-medium text-white">Affection</h3>
+                <p class="!text-light-bg line-through font-semibold mt-1">13.990.000đ</p>
+                <p class="text-orange-500 font-semibold mt-1">12.990.000đ</p>
+              </div>
+
+              <div class="text-center">
+                <div class="overflow-hidden rounded-2xl mb-4">
+                  <img src="asset/img/trangchu/gaze.png"
+                    class="w-full h-[320px] object-cover hover:scale-105 transition">
+                </div>
+                <h3 class="font-medium text-white">Gaze</h3>
+                <p class="!text-light-bg line-through font-semibold mt-1">6.490.000đ</p>
+                <p class="text-orange-500 font-semibold mt-1">5.490.000đ</p>
+              </div>
+
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Collection 2 -->
-    <section class="bg-white min-h-[85vh] flex items-center py-12 lg:py-0">
-      <div class="container mx-auto px-4 lg:px-8">
-        <div class="flex flex-col lg:flex-row items-center gap-8">
-          <div class="w-full lg:w-2/5 bg-dark-bg text-light-bg p-6 md:p-8 lg:p-12 rounded-lg order-1" data-animate="slide-left">
-            <h2 class="text-xl md:text-2xl font-semibold mb-4 text-center text-white">
-              Thanh âm của tình yêu - Mỗi nếp váy là một giai điệu, ngân nga bản tình ca của hạnh phúc
-            </h2>
-            <p class="text-sm md:text-base leading-relaxed text-justify mb-6 text-white">
-              Như một khúc tình ca dịu dàng, "Thanh Âm Của Tình Yêu" tái hiện khoảnh khắc trái tim hòa chung nhịp đập. Mỗi thiết kế là sự kết hợp hài hòa giữa ren mềm, voan mỏng và ánh sáng phản chiếu của cườm ngọc - tựa như giai điệu của yêu thương ngân vang trong không khí.
-            </p>
-            <a href="bosuutap/Bst2.html" class="px-6 py-3 border border-black rounded-lg text-black bg-white font-medium hover:bg-dark-bg hover:text-white hover:border hover:border-white transition">
-              Xem thêm
-            </a>
-          </div>
-          <div class="w-full max-h-[70vh] overflow-hidden rounded-lg lg:w-3/5 order-2" data-animate="slide-right">
-            <img src="asset/img/trangchu/Bst2.jpg" alt="Bộ sưu tập Fleur" class="w-full h-64 md:h-96 lg:h-[600px] object-cover rounded-lg">
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- Collection 3 -->
-    <section class="bg-dark-bg min-h-[85vh] flex items-center py-12 lg:py-0">
-      <div class="container mx-auto px-4 lg:px-8">
-        <div class="flex flex-col lg:flex-row items-center gap-8">
-          <div class="w-full max-h-[70vh] overflow-hidden rounded-lg lg:w-3/5 order-2 lg:order-1" data-animate="slide-left">
-            <img src="asset/img/trangchu/Bst3.jpg" alt="Bộ sưu tập Fleur" class="w-full h-64 md:h-96 lg:h-[600px] object-cover rounded-lg">
-          </div>
-          <div class="w-full lg:w-2/5 bg-white text-dark-bg p-6 md:p-8 lg:p-12 rounded-lg order-1 lg:order-2" data-animate="slide-right">
-            <h2 class="text-xl md:text-2xl font-semibold mb-4 text-center">
-              Hẹn ước trăm năm - Bởi lời hứa không cần nói, chỉ cần cùng nhau đi đến cuối con đường
-            </h2>
-            <p class="text-sm md:text-base leading-relaxed text-justify mb-6">
-              "Hẹn Ước Trăm Năm" là bản giao hòa của sự vĩnh cửu và tình yêu chân thành. Lấy cảm hứng từ khoảnh khắc đôi mắt chạm nhau trong lời thề nguyện, BST sử dụng chất liệu satin, ren chantilly và lụa tơ tằm - tượng trưng cho sự bền chặt và thanh khiết.
-            </p>
-            <a href="bosuutap/Bst3.html" class="px-6 py-3 bg-dark-bg border border-white rounded-lg text-white font-medium hover:bg-white hover:text-black hover:border hover:border-black transition">
-              Xem thêm
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
+      <!-- Best Seller Section -->
+      <section class="bg-white py-6 text-dark-bg">
+        <div class="container mx-auto px-4 max-w-6xl">
+          <h2 class="text-2xl md:text-4xl font-medium text-center mb-12 tracking-wide text-black" data-animate>
+            HÀNG HOT NHẤT
+          </h2>
 
-    <!-- Collection 4 -->
-    <section class="bg-white min-h-[85vh] flex items-center py-12 lg:py-0">
-      <div class="container mx-auto px-4 lg:px-8">
-        <div class="flex flex-col lg:flex-row items-center gap-8">
-          <div class="w-full lg:w-2/5 bg-dark-bg text-light-bg p-6 md:p-8 lg:p-12 rounded-lg order-1" data-animate="slide-left">
-            <h2 class="text-xl md:text-2xl font-semibold mb-4 text-center text-white">
-              Lời thì thầm hoa sương - Giọt sương khẽ rơi trên cánh hoa, như tình yêu dịu dàng thì thầm trong nắng sớm
-            </h2>
-            <p class="text-sm md:text-base leading-relaxed text-justify mb-6 text-white">
-              BST "Lời Thì Thầm Hoa Sương" mang hơi thở của buổi sớm tinh mơ, nơi những cánh hoa còn vương giọt sương trong trẻo. Thiết kế nhẹ như làn khói, mềm như hơi thở, với những hạt sequin phản chiếu ánh sáng dịu dàng.
-            </p>
-            <a href="bosuutap/Bst4.html" class="px-6 py-3 border border-black rounded-lg text-black bg-white font-medium hover:bg-black hover:text-white hover:border hover:border-white transition">
-              Xem thêm
-            </a>
-          </div>
-          <div class="w-full max-h-[70vh] overflow-hidden rounded-lg lg:w-3/5 order-2" data-animate="slide-right">
-            <img src="asset/img/trangchu/Bst4.jpg" alt="Bộ sưu tập Fleur" class="w-full h-64 md:h-96 lg:h-[600px] object-cover rounded-lg">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10" data-animate>
+            <!-- Item -->
+            <div class="group">
+              <div class="tilt-card overflow-hidden rounded-lg">
+                <img src="asset/img/trangchu/glance.png"
+                  class="w-full h-[420px] object-cover transition-transform duration-500 group-hover:scale-105">
+              </div>
+              <div class="mt-5 text-center">
+                <h3 class="text-sm font-medium uppercase text-black">Glance</h3>
+                <p class="text-xs text-black-400 mt-1">Best Seller</p>
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="tilt-card overflow-hidden rounded-lg">
+                <img src="asset/img/trangchu/joisyn.png"
+                  class="w-full h-[420px] object-cover transition-transform duration-500 group-hover:scale-105">
+              </div>
+              <div class="mt-5 text-center">
+                <h3 class="text-sm font-medium uppercase text-black">Joisyn</h3>
+                <p class="text-xs text-black-400 mt-1">Most Loved</p>
+              </div>
+            </div>
+
+            <div class="group">
+              <div class="tilt-card overflow-hidden rounded-lg">
+                <img src="asset/img/trangchu/blush.png"
+                  class="w-full h-[420px] object-cover transition-transform duration-500 group-hover:scale-105">
+              </div>
+              <div class="mt-5 text-center">
+                <h3 class="text-sm font-medium uppercase text-black">Blush</h3>
+                <p class="text-xs text-black-400 mt-1">Trending</p>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Collection 5 -->
-    <section class="bg-dark-bg min-h-[85vh] flex items-center py-12 lg:py-0">
-      <div class="container mx-auto px-4 lg:px-8">
-        <div class="flex flex-col lg:flex-row items-center gap-8">
-          <div class="w-full max-h-[70vh] overflow-hidden rounded-lg lg:w-3/5 order-2 lg:order-1" data-animate="slide-left">
-            <img src="asset/img/trangchu/Bst5.jpg" alt="Bộ sưu tập Fleur" class="w-full h-64 md:h-96 lg:h-[600px] object-cover rounded-lg">
-          </div>
-          <div class="w-full lg:w-2/5 bg-white text-dark-bg p-6 md:p-8 lg:p-12 rounded-lg order-1 lg:order-2" data-animate="slide-right">
-            <h2 class="text-xl md:text-2xl font-semibold mb-4 text-center">
-              Ánh bình minh - Nắng đầu ngày chạm lên vai, khởi đầu cho một hành trình yêu thương rạng rỡ
-            </h2>
-            <p class="text-sm md:text-base leading-relaxed text-justify mb-6">
-              Tựa như mặt trời khẽ thức giấc sau màn sương, "Ánh Bình Minh" tỏa sáng với năng lượng tươi mới và hy vọng. BST tôn vinh vẻ đẹp rạng rỡ, tràn đầy sức sống của cô dâu hiện đại.
-            </p>
-            <a href="bosuutap/Bst5.html" class="px-6 py-3 bg-dark-bg border border-white rounded-lg text-white font-medium hover:bg-white hover:text-black hover:border hover:border-black transition">
-              Xem thêm
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Collection 6 -->
-    <section class="bg-white min-h-[85vh] flex items-center py-12 lg:py-0">
-      <div class="container mx-auto px-4 lg:px-8">
-        <div class="flex flex-col lg:flex-row items-center gap-8">
-          <div class="w-full lg:w-2/5 bg-dark-bg text-light-bg p-6 md:p-8 lg:p-12 rounded-lg order-1" data-animate="slide-left">
-            <h2 class="text-xl md:text-2xl font-semibold mb-4 text-center text-white">
-              Khúc hẹn yêu - Giữa ngàn ánh nhìn, ta gặp nhau, bản tình ca khẽ cất lên từ trái tim
-            </h2>
-            <p class="text-sm md:text-base leading-relaxed text-justify mb-6 text-white">
-              "Khúc Hẹn Yêu" là câu chuyện về tình yêu nảy nở trong giây phút hai trái tim gặp gỡ. BST mang phong vị lãng mạn, pha chút hoài niệm, tựa một bản tình ca được viết bằng ánh mắt và nụ cười.
-            </p>
-            <a href="bosuutap/Bst6.html" class="px-6 py-3 border border-black rounded-lg text-black bg-white font-medium hover:bg-dark-bg hover:border hover:border-white hover:text-white transition">
-              Xem thêm
-            </a>
-          </div>
-          <div class="w-full max-h-[70vh] overflow-hidden rounded-lg lg:w-3/5 order-2" data-animate="slide-right">
-            <img src="asset/img/trangchu/Bst6.jpg" alt="Bộ sưu tập Fleur" class="w-full h-64 md:h-96 lg:h-[600px] object-cover rounded-lg">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- New Arrivals Section -->
-<section class="py-10 bg-dark-bg text-white">
-  <div class="max-w-7xl mx-auto px-0">
-
-    <!-- Header -->
-    <div class="items-center mb-10">
-     <h2 class="text-2xl md:text-4xl font-medium text-center mb-12 tracking-wide text-white" data-animate>
-        HÀNG MỚI VỀ
-      </h2>
-    </div>
-
-    <!-- Content -->
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-10 items-stretch">
-
-      <!-- LEFT: Banner -->
-      <div class="md:col-span-2" data-animate>
-        <div class="overflow-hidden rounded-2xl relative h-full border-1">
-          <video autoplay muted loop>
-            <source src="asset/img/trangchu/new.mp4" type="video/mp4">
-            Hàng mới về
-          </video>
-      </div>
-      </div>
-
-      <!-- PRODUCTS (chiếm 2 cột) -->
-      <div class="md:col-span-2 grid grid-cols-2 gap-8" data-animate>
-
-        <!-- Item -->
-        <div class="text-center">
-          <div class="overflow-hidden rounded-2xl mb-4">
-            <img
-              src="asset/img/trangchu/elowen.png"
-              class="w-full h-[320px] object-cover hover:scale-105 transition"
-            >
-          </div>
-          <h3 class="font-medium text-white">Elowen</h3>
-          <p class="!text-light-bg line-through font-semibold mt-1">5.590.000đ</p>
-          <p class='text-orange-500 font-semibold mt-1'>4.590.000đ</p>
-        </div>
-
-        <div class="text-center">
-          <div class="overflow-hidden rounded-2xl mb-4">
-            <img
-              src="asset/img/trangchu/moera.png"
-              class="w-full h-[320px] object-cover hover:scale-105 transition"
-            >
-          </div>
-          <h3 class="font-medium text-white">Moera</h3>
-          <p class="!text-light-bg line-through font-semibold mt-1">15.990.000đ</p>
-          <p class='text-orange-500 font-semibold mt-1'>14.990.000đ</p>
-        </div>
-
-        <div class="text-center">
-          <div class="overflow-hidden rounded-2xl mb-4">
-            <img
-              src="asset/img/trangchu/affection.png"
-              class="w-full h-[320px] object-cover hover:scale-105 transition"
-            >
-          </div>
-          <h3 class="font-medium text-white">Affection</h3>
-          <p class="!text-light-bg line-through font-semibold mt-1">13.990.000đ</p>
-          <p class="text-orange-500 font-semibold mt-1">12.990.000đ</p>
-        </div>
-
-        <div class="text-center">
-          <div class="overflow-hidden rounded-2xl mb-4">
-            <img
-              src="asset/img/trangchu/gaze.png"
-              class="w-full h-[320px] object-cover hover:scale-105 transition"
-            >
-          </div>
-          <h3 class="font-medium text-white">Gaze</h3>
-          <p class="!text-light-bg line-through font-semibold mt-1">6.490.000đ</p>
-          <p class="text-orange-500 font-semibold mt-1">5.490.000đ</p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- Best Seller Section -->
-<section class="bg-white py-6 text-dark-bg">
-  <div class="container mx-auto px-4 max-w-6xl">
-    <h2 class="text-2xl md:text-4xl font-medium text-center mb-12 tracking-wide text-black" data-animate>
-      HÀNG HOT NHẤT
-    </h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-10" data-animate>
-      <!-- Item -->
-      <div class="group">
-        <div class="tilt-card overflow-hidden rounded-lg">
-          <img src="asset/img/trangchu/glance.png"
-            class="w-full h-[420px] object-cover transition-transform duration-500 group-hover:scale-105">
-        </div>
-        <div class="mt-5 text-center">
-          <h3 class="text-sm font-medium uppercase text-black">Glance</h3>
-          <p class="text-xs text-black-400 mt-1">Best Seller</p>
-        </div>
-      </div>
-
-      <div class="group">
-        <div class="tilt-card overflow-hidden rounded-lg">
-          <img src="asset/img/trangchu/joisyn.png"
-            class="w-full h-[420px] object-cover transition-transform duration-500 group-hover:scale-105">
-        </div>
-        <div class="mt-5 text-center">
-          <h3 class="text-sm font-medium uppercase text-black">Joisyn</h3>
-          <p class="text-xs text-black-400 mt-1">Most Loved</p>
-        </div>
-      </div>
-
-      <div class="group">
-        <div class="tilt-card overflow-hidden rounded-lg">
-          <img src="asset/img/trangchu/blush.png"
-            class="w-full h-[420px] object-cover transition-transform duration-500 group-hover:scale-105">
-        </div>
-        <div class="mt-5 text-center">
-          <h3 class="text-sm font-medium uppercase text-black">Blush</h3>
-          <p class="text-xs text-black-400 mt-1">Trending</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- Branding Section -->
-    <section class="bg-dark-bg py-12 md:py-16">
-      <div class="container mx-auto px-4">
-        <div class="bg-white rounded-lg p-6 md:p-12 max-w-6xl mx-auto">
-          <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
-            <div class="lg:w-2/5" data-animate>
-              <h1 class="text-4xl md:text-6xl font-semibold mb-6 leading-tight relative">
-                Giới thiệu
-                <div class="absolute bottom-0 left-0 w-full lg:w-96 h-px bg-dark-bg mt-4"></div>
-              </h1>
-              <div class="flex items-center gap-4 mt-8">
-                <img src="asset/img/trangchu/logo.png" alt="Logo" class="w-24 md:w-32 h-auto">
-                <div class="text-sm leading-relaxed">
-                  <p class="font-medium">FLEUR</p>
-                  <p>Thương hiệu váy cưới cao cấp</p>
-                  <p>Made in Vietnam</p>
+      <!-- Branding Section -->
+      <section class="bg-dark-bg py-12 md:py-16">
+        <div class="container mx-auto px-4">
+          <div class="bg-white rounded-lg p-6 md:p-12 max-w-6xl mx-auto">
+            <div class="flex flex-col lg:flex-row gap-8 lg:gap-12">
+              <div class="lg:w-2/5" data-animate>
+                <h1 class="text-4xl md:text-6xl font-semibold mb-6 leading-tight relative">
+                  Giới thiệu
+                  <div class="absolute bottom-0 left-0 w-full lg:w-96 h-px bg-dark-bg mt-4"></div>
+                </h1>
+                <div class="flex items-center gap-4 mt-8">
+                  <img src="asset/img/trangchu/logo.png" alt="Logo" class="w-24 md:w-32 h-auto">
+                  <div class="text-sm leading-relaxed">
+                    <p class="font-medium">FLEUR</p>
+                    <p>Thương hiệu váy cưới cao cấp</p>
+                    <p>Made in Vietnam</p>
+                  </div>
                 </div>
               </div>
+              <div class="lg:w-3/5 text-sm md:text-base leading-relaxed text-justify" data-animate>
+                <p class="mb-4">
+                  <em>Fleur Bridal House</em> được thành lập với một khát vọng duy nhất: kiến tạo nên những chiếc váy
+                  cưới như những tác phẩm nghệ thuật, dành riêng cho cô dâu Việt Nam mang phong cách quốc tế. Ra đời tại
+                  Hà Nội vào năm 2020, Fleur nhanh chóng vượt qua khuôn khổ của một xưởng thủ công nhỏ bé, phát triển
+                  dựa trên sự kết hợp hoàn hảo giữa kỹ thuật may đo cao cấp (couture) tinh xảo và cảm hứng lãng mạn từ
+                  vẻ đẹp thuần khiết của viên ngọc trắng tinh khôi.
+                </p>
+                <p>
+                  Tại Fleur, chúng tôi tin rằng vẻ đẹp truyền thống không bao giờ lỗi mốt, chỉ cần được khoác lên tinh
+                  thần hiện đại. Mỗi thiết kế là một bản hòa ca giữa nét duyên dáng Á Đông và đường cắt may tinh tế của
+                  phương Tây, tôn vinh trọn vẹn sự thanh tao, kiêu hãnh và rạng rỡ của người phụ nữ trong ngày trọng đại
+                  nhất cuộc đời.
+                </p>
+              </div>
             </div>
-            <div class="lg:w-3/5 text-sm md:text-base leading-relaxed text-justify" data-animate>
-              <p class="mb-4">
-                <em>Fleur Bridal House</em> được thành lập với một khát vọng duy nhất: kiến tạo nên những chiếc váy cưới như những tác phẩm nghệ thuật, dành riêng cho cô dâu Việt Nam mang phong cách quốc tế. Ra đời tại Hà Nội vào năm 2020, Fleur nhanh chóng vượt qua khuôn khổ của một xưởng thủ công nhỏ bé, phát triển dựa trên sự kết hợp hoàn hảo giữa kỹ thuật may đo cao cấp (couture) tinh xảo và cảm hứng lãng mạn từ vẻ đẹp thuần khiết của viên ngọc trắng tinh khôi.
-              </p>
-              <p>
-                Tại Fleur, chúng tôi tin rằng vẻ đẹp truyền thống không bao giờ lỗi mốt, chỉ cần được khoác lên tinh thần hiện đại. Mỗi thiết kế là một bản hòa ca giữa nét duyên dáng Á Đông và đường cắt may tinh tế của phương Tây, tôn vinh trọn vẹn sự thanh tao, kiêu hãnh và rạng rỡ của người phụ nữ trong ngày trọng đại nhất cuộc đời.
-              </p>
-            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Formula Section -->
-    <section class="bg-white py-12 md:py-16 text-center">
-      <div class="container mx-auto px-4">
-        <h2 class="text-2xl md:text-4xl font-medium mb-8 md:mb-12 tracking-wide" data-animate>
-          Fleur - Công thức cho cô dâu hoàn hảo
-        </h2>
-        <div class="flex flex-wrap justify-center gap-8 md:gap-16 mb-8 md:mb-12" data-animate>
-          <div class="text-lg md:text-xl font-medium">
-            <p>VÁY TIỆC CHÍNH</p>
-          </div>
-          <div class="text-lg md:text-xl font-medium">
-            <p>VÁY ĐI BÀN</p>
-          </div>
-          <div class="text-lg md:text-xl font-medium">
-            <p>PHỤ KIỆN</p>
-          </div>
-        </div>
-        <div class="flex items-center justify-center gap-4">
-          <div class="flex-1 h-px bg-dark-bg max-w-md"></div>
-          <button href="sanpham/sanpham.html" class="button-modify" data-animate>
-            <span>KHÁM PHÁ NGAY</span>
-          </button>
-          <div class="flex-1 h-px bg-dark-bg max-w-md"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Blog Section -->
-    <section class="bg-dark-bg py-12 md:py-16 text-light-bg">
-      <div class="container mx-auto px-4">
-        <div class="flex flex-col md:flex-row justify-between items-center mb-8 md:mb-12" data-animate>
-          <h2 class="text-xl md:text-3xl font-medium mb-4 md:mb-0 text-white">
-            Tin tức mới nhất đến từ Fleur Bridal House
+      <!-- Formula Section -->
+      <section class="bg-white py-12 md:py-16 text-center">
+        <div class="container mx-auto px-4">
+          <h2 class="text-2xl md:text-4xl font-medium mb-8 md:mb-12 tracking-wide" data-animate>
+            Fleur - Công thức cho cô dâu hoàn hảo
           </h2>
-          <button class="px-6 py-3 border border-black rounded-lg text-black bg-white font-medium hover:bg-dark-bg hover: border-white hover:text-white transition">
+          <div class="flex flex-wrap justify-center gap-8 md:gap-16 mb-8 md:mb-12" data-animate>
+            <div class="text-lg md:text-xl font-medium">
+              <p>VÁY TIỆC CHÍNH</p>
+            </div>
+            <div class="text-lg md:text-xl font-medium">
+              <p>VÁY ĐI BÀN</p>
+            </div>
+            <div class="text-lg md:text-xl font-medium">
+              <p>PHỤ KIỆN</p>
+            </div>
+          </div>
+          <div class="flex items-center justify-center gap-4">
+            <div class="flex-1 h-px bg-dark-bg max-w-md"></div>
+            <button href="sanpham/sanpham.html" class="button-modify" data-animate>
+              <span>KHÁM PHÁ NGAY</span>
+            </button>
+            <div class="flex-1 h-px bg-dark-bg max-w-md"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog Section -->
+      <section class="bg-dark-bg py-12 md:py-16 text-light-bg">
+        <div class="container mx-auto px-4">
+          <div class="flex flex-col md:flex-row justify-between items-center mb-8 md:mb-12" data-animate>
+            <h2 class="text-xl md:text-3xl font-medium mb-4 md:mb-0 text-white">
+              Tin tức mới nhất đến từ Fleur Bridal House
+            </h2>
+            <button
+              class="px-6 py-3 border border-black rounded-lg text-black bg-white font-medium hover:bg-dark-bg hover: border-white hover:text-white transition">
               <a href="tintuc/tintuc.html">
-              Xem thêm
+                Xem thêm
             </button>
+          </div>
+
+          <div class="flex gap-6 overflow-x-auto pb-4 blog-items">
+            <div class="flex-shrink-0 w-80 bg-white text-dark-bg rounded-lg overflow-hidden shadow-lg">
+              <img src="asset/img/trangchu/blog1.jpg" alt="Blog 1" class="w-full h-64 object-cover">
+              <div class="p-6">
+                <p class="text-xs text-gray-500 mb-2 text-center">25 tháng 10, 2024</p>
+                <h3 class="text-lg font-medium mb-4">5 xu hướng váy cưới hot nhất năm 2024 không thể bỏ qua</h3>
+                <button
+                  class="px-4 py-2 bg-dark-bg border-dark-bg rounded-lg text-white font-medium hover:bg-white hover:text-black hover:border hover:border-black transition">
+                  <a href="tintuc/blog1.html">
+                    Đọc thêm
+                </button>
+              </div>
+            </div>
+
+            <div class="flex-shrink-0 w-80 bg-white text-dark-bg rounded-lg overflow-hidden shadow-lg">
+              <img src="asset/img/trangchu/blog2.jpg" alt="Blog 2" class="w-full h-64 object-cover">
+              <div class="p-6">
+                <p class="text-xs text-gray-500 mb-2 text-center">14 tháng 2, 2025</p>
+                <h3 class="text-lg font-medium mb-4">Làm thế nào để chọn váy cưới phù hợp với dáng người?</h3>
+                <button
+                  class="px-4 py-2 bg-dark-bg border-dark-bg rounded-lg text-white font-medium hover:bg-white hover:text-black hover:border hover:border-black transition">
+                  <a href="tintuc/blog2.html">
+                    Đọc thêm
+                </button>
+              </div>
+            </div>
+
+            <div class="flex-shrink-0 w-80 bg-white text-dark-bg rounded-lg overflow-hidden shadow-lg">
+              <img src="asset/img/trangchu/blog3.jpg" alt="Blog 3" class="w-full h-64 object-cover">
+              <div class="p-6">
+                <p class="text-xs text-gray-500 mb-2 text-center">30 tháng 3, 2025</p>
+                <h3 class="text-lg font-medium mb-4">Bí quyết chăm sóc váy cưới sau ngày trọng đại</h3>
+                <button
+                  class="px-4 py-2 bg-dark-bg border-dark-bg rounded-lg  text-white font-medium hover:bg-white hover:text-black hover:border hover:border-black transition">
+                  <a href="tintuc/blog3.html">
+                    Đọc thêm
+                </button>
+              </div>
+            </div>
+
+            <div class="flex-shrink-0 w-80 bg-white text-dark-bg rounded-lg overflow-hidden shadow-lg">
+              <img src="asset/img/trangchu/blog4.jpg" alt="Blog 4" class="w-full h-64 object-cover">
+              <div class="p-6">
+                <p class="text-xs text-gray-500 mb-2 text-center">10 tháng 10, 2025</p>
+                <h3 class="text-lg font-medium mb-4">Phụ kiện cưới không thể thiếu cho cô dâu hiện đại</h3>
+                <button
+                  class="px-4 py-2 bg-dark-bg border-dark-bg rounded-lg text-white font-medium hover:bg-white hover:text-black hover:border hover:border-black transition">
+                  <a href="tintuc/blog4.html">
+                    Đọc thêm
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
-        
-        <div class="flex gap-6 overflow-x-auto pb-4 blog-items">
-          <div class="flex-shrink-0 w-80 bg-white text-dark-bg rounded-lg overflow-hidden shadow-lg">
-            <img src="asset/img/trangchu/blog1.jpg" alt="Blog 1" class="w-full h-64 object-cover">
-            <div class="p-6">
-              <p class="text-xs text-gray-500 mb-2 text-center">25 tháng 10, 2024</p>
-              <h3 class="text-lg font-medium mb-4">5 xu hướng váy cưới hot nhất năm 2024 không thể bỏ qua</h3>
-              <button class="px-4 py-2 bg-dark-bg border-dark-bg rounded-lg text-white font-medium hover:bg-white hover:text-black hover:border hover:border-black transition">
-              <a href="tintuc/blog1.html">
-              Đọc thêm
-            </button>
+      </section>
+
+      <!-- Instagram Section -->
+      <section class="bg-white py-12 md:py-16 text-center">
+        <div class="container mx-auto px-4">
+
+          <div class="mb-12" data-animate>
+            <h2 class="text-2xl md:text-3xl font-medium">
+              <i class="fa-brands fa-instagram mr-2"></i>Instagram
+            </h2>
+          </div>
+
+          <div class="relative pointer-events-none">
+            <!-- Instagram -->
+            <div class="relative w-full pt-[32%] md:pt-[28%] lg:pt-[24%]">
+              <iframe src="https://snapwidget.com/embed/1111983" class="absolute inset-0 w-full h-full" frameborder="0"
+                scrolling="no" title="Instagram Feed">
+              </iframe>
             </div>
           </div>
-          
-          <div class="flex-shrink-0 w-80 bg-white text-dark-bg rounded-lg overflow-hidden shadow-lg">
-            <img src="asset/img/trangchu/blog2.jpg" alt="Blog 2" class="w-full h-64 object-cover">
-            <div class="p-6">
-              <p class="text-xs text-gray-500 mb-2 text-center">14 tháng 2, 2025</p>
-              <h3 class="text-lg font-medium mb-4">Làm thế nào để chọn váy cưới phù hợp với dáng người?</h3>
-              <button class="px-4 py-2 bg-dark-bg border-dark-bg rounded-lg text-white font-medium hover:bg-white hover:text-black hover:border hover:border-black transition">
-              <a href="tintuc/blog2.html">
-              Đọc thêm
-            </button>
-            </div>
+          <div class="mt-4" data-animate>
+            <a href="https://www.instagram.com/fleurbridalhouse/" target="_blank" class="button-modify">
+              THEO DÕI CHÚNG TÔI
+            </a>
           </div>
-          
-          <div class="flex-shrink-0 w-80 bg-white text-dark-bg rounded-lg overflow-hidden shadow-lg">
-            <img src="asset/img/trangchu/blog3.jpg" alt="Blog 3" class="w-full h-64 object-cover">
-            <div class="p-6">
-              <p class="text-xs text-gray-500 mb-2 text-center">30 tháng 3, 2025</p>
-              <h3 class="text-lg font-medium mb-4">Bí quyết chăm sóc váy cưới sau ngày trọng đại</h3>
-              <button class="px-4 py-2 bg-dark-bg border-dark-bg rounded-lg  text-white font-medium hover:bg-white hover:text-black hover:border hover:border-black transition">
-              <a href="tintuc/blog3.html">
-              Đọc thêm
-            </button>
-            </div>
-          </div>
-          
-          <div class="flex-shrink-0 w-80 bg-white text-dark-bg rounded-lg overflow-hidden shadow-lg">
-            <img src="asset/img/trangchu/blog4.jpg" alt="Blog 4" class="w-full h-64 object-cover">
-            <div class="p-6">
-              <p class="text-xs text-gray-500 mb-2 text-center">10 tháng 10, 2025</p>
-              <h3 class="text-lg font-medium mb-4">Phụ kiện cưới không thể thiếu cho cô dâu hiện đại</h3>
-              <button class="px-4 py-2 bg-dark-bg border-dark-bg rounded-lg text-white font-medium hover:bg-white hover:text-black hover:border hover:border-black transition">
-              <a href="tintuc/blog4.html">
-              Đọc thêm
-            </button>
-            </div>
+
+        </div>
+      </section>
+
+
+      <!-- Partner Logos -->
+      <section class="bg-dark-bg py-8 overflow-hidden">
+        <div class="container mx-auto px-4 mb-12">
+          <h2 class="text-xl md:text-3xl font-medium text-center tracking-wide text-white" data-animate>
+            ĐỐI TÁC CỦA FLEUR
+          </h2>
+        </div>
+
+        <div class="relative w-full overflow-hidden">
+          <div class="flex gap-16 animate-marquee items-center">
+            <img src="asset/img/trangchu/p1.jpg" class="h-12">
+            <img src="asset/img/trangchu/p2.jpg" class="h-12">
+            <img src="asset/img/trangchu/p3.jpg" class="h-12">
+            <img src="asset/img/trangchu/p4.jpg" class="h-12">
+            <img src="asset/img/trangchu/p5.jpg" class="h-12">
+            <img src="asset/img/trangchu/p5.jpg" class="h-12">
+            <img src="asset/img/trangchu/p6.jpg" class="h-12">
+            <img src="asset/img/trangchu/p7.jpg" class="h-12">
+            <img src="asset/img/trangchu/p8.jpg" class="h-12">
+            <img src="asset/img/trangchu/p9.jpg" class="h-12">
+            <img src="asset/img/trangchu/p10.jpg" class="h-12">
+            <!-- duplicate để chạy mượt -->
+            <img src="asset/img/trangchu/p1.jpg" class="h-12">
+            <img src="asset/img/trangchu/p2.jpg" class="h-12">
+            <img src="asset/img/trangchu/p3.jpg" class="h-12">
+            <img src="asset/img/trangchu/p4.jpg" class="h-12">
+            <img src="asset/img/trangchu/p5.jpg" class="h-12">
+            <img src="asset/img/trangchu/p6.jpg" class="h-12">
+            <img src="asset/img/trangchu/p7.jpg" class="h-12">
+            <img src="asset/img/trangchu/p8.jpg" class="h-12">
+            <img src="asset/img/trangchu/p9.jpg" class="h-12">
+            <img src="asset/img/trangchu/p10.jpg" class="h-12">
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Instagram Section -->
-    <section class="bg-white py-12 md:py-16 text-center">
-  <div class="container mx-auto px-4">
-    
-    <div class="mb-12" data-animate>
-      <h2 class="text-2xl md:text-3xl font-medium">
-        <i class="fa-brands fa-instagram mr-2"></i>Instagram
-      </h2>
-    </div>
-
-    <div class="relative pointer-events-none">
-      <!-- Instagram -->
-      <div class="relative w-full pt-[32%] md:pt-[28%] lg:pt-[24%]">
-        <iframe
-          src="https://snapwidget.com/embed/1111983"
-          class="absolute inset-0 w-full h-full"
-          frameborder="0"
-          scrolling="no"
-          title="Instagram Feed">
-        </iframe>
-      </div>
-    </div>
-    <div class="mt-4" data-animate>
-      <a href="https://www.instagram.com/fleurbridalhouse/" target="_blank" class="button-modify">
-        THEO DÕI CHÚNG TÔI
-      </a>
-    </div>
-
-  </div>
-</section>
-
-
-    <!-- Partner Logos -->
-<section class="bg-dark-bg py-8 overflow-hidden">
-  <div class="container mx-auto px-4 mb-12">
-    <h2 class="text-xl md:text-3xl font-medium text-center tracking-wide text-white" data-animate>
-      ĐỐI TÁC CỦA FLEUR
-    </h2>
-  </div>
-
-  <div class="relative w-full overflow-hidden">
-    <div class="flex gap-16 animate-marquee items-center">
-      <img src="asset/img/trangchu/p1.jpg" class="h-12">
-      <img src="asset/img/trangchu/p2.jpg" class="h-12">
-      <img src="asset/img/trangchu/p3.jpg" class="h-12">
-      <img src="asset/img/trangchu/p4.jpg" class="h-12">
-      <img src="asset/img/trangchu/p5.jpg" class="h-12">
-      <img src="asset/img/trangchu/p5.jpg" class="h-12">
-      <img src="asset/img/trangchu/p6.jpg" class="h-12">
-      <img src="asset/img/trangchu/p7.jpg" class="h-12">
-      <img src="asset/img/trangchu/p8.jpg" class="h-12">
-      <img src="asset/img/trangchu/p9.jpg" class="h-12">
-      <img src="asset/img/trangchu/p10.jpg" class="h-12">
-      <!-- duplicate để chạy mượt -->
-      <img src="asset/img/trangchu/p1.jpg" class="h-12">
-      <img src="asset/img/trangchu/p2.jpg" class="h-12">
-      <img src="asset/img/trangchu/p3.jpg" class="h-12">
-      <img src="asset/img/trangchu/p4.jpg" class="h-12">
-      <img src="asset/img/trangchu/p5.jpg" class="h-12">
-      <img src="asset/img/trangchu/p6.jpg" class="h-12">
-      <img src="asset/img/trangchu/p7.jpg" class="h-12">
-      <img src="asset/img/trangchu/p8.jpg" class="h-12">
-      <img src="asset/img/trangchu/p9.jpg" class="h-12">
-      <img src="asset/img/trangchu/p10.jpg" class="h-12">
-    </div>
-  </div>
-</section>
-
-    <!-- Contact Form Section -->
-    <section class="bg-white border-dark-bg py-16 md:py-20 min-h-screen flex items-center">
-      <div class="container mx-auto px-4 flex justify-center">
-        <div class="bg-white p-8 md:p-16 rounded-lg shadow-2xl w-full max-w-2xl">
-          <!-- Form Header -->
-          <div class="flex justify-around mb-8 border-b">
-            <button class="tab-link active px-4 py-2 border-b-2 border-black font-medium" data-target="store-form">
-              CỬA HÀNG
-            </button>
-            <button class="tab-link px-4 py-2 border-b-2 border-transparent font-medium" data-target="bride-form">
-              KHÁCH HÀNG
-            </button>
-            <button class="tab-link px-4 py-2 border-b-2 border-transparent font-medium" data-target="feedback-form">
-              ĐÁNH GIÁ
-            </button>
-          </div>
-
-          <!-- Store Form -->
-          <form class="contact-form active-form" id="store-form">
-            <div class="space-y-6">
-              <div>
-                <label for="store_branch" class="block text-sm font-medium mb-2">Tên Cửa hàng*</label>
-                <select id="store_branch" name="type" required class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
-                  <option value="fleurbridal">CS1: 281 Trường Chinh, P.Phương Liệt, Tp.Hà Nội</option>
-                  <option value="fleurbridallottemall">CS2: Tầng 2, Lotte Mall Tây Hồ, Hà Nội</option>
-                  <option value="fleurbridalhouse">CS3: 32 Nguyễn Đình Chiểu, Quận 1, TP. Hồ Chí Minh</option>
-                  <option value="fleurbridaloffcial">CS4: 20 Điện Biên Phủ,P.Thanh Khê Đông, Q.Thanh Khê, Đà Nẵng</option>
-                  <option value="fleurbridalsaigon">CS5: Tòa nhà Saigon Centre, Quận 1, TP.Hồ Chí Minh</option>
-                  <option value="fleurbridalvvt">CS6: 40 Võ Văn Tần, Quận 3, TP.Hồ Chí Minh</option>
-                </select>
-              </div>
-
-              <div>
-                <label for="store_country" class="block text-sm font-medium mb-2">Quốc gia*</label>
-                <input type="text" id="store_country" name="country" required class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
-              </div>
-
-              <div>
-                <label for="store_city" class="block text-sm font-medium mb-2">Thành phố*</label>
-                <input type="text" id="store_city" name="city" required class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
-              </div>
-
-              <div>
-                <label for="store_social" class="block text-sm font-medium mb-2">Website / Instagram / Facebook</label>
-                <input type="text" id="store_social" name="social" class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
-              </div>
-
-              <div>
-                <label for="store_name" class="block text-sm font-medium mb-2">Họ và Tên*</label>
-                <input type="text" id="store_name" name="name" required class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
-              </div>
-
-              <div>
-                <label for="store_email" class="block text-sm font-medium mb-2">Email*</label>
-                <input type="email" id="store_email" name="email" required class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
-              </div>
-
-              <div>
-                <label for="store_phone" class="block text-sm font-medium mb-2">Số điện thoại*</label>
-                <input type="tel" id="store_phone" name="phone" required class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
-              </div>
-
-              <div>
-                <label for="store_comment" class="block text-sm font-medium mb-2">Lời nhắn / Yêu cầu</label>
-                <textarea id="store_comment" name="comment" rows="3" class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600 resize-vertical"></textarea>
-              </div>
-
-              <button type="submit" class="w-full bg-dark-bg text-white py-3 rounded-md hover:bg-gray-600 transition-colors font-medium">
-                GỬI
+      <!-- Contact Form Section -->
+      <section class="bg-white border-dark-bg py-16 md:py-20 min-h-screen flex items-center">
+        <div class="container mx-auto px-4 flex justify-center">
+          <div class="bg-white p-8 md:p-16 rounded-lg shadow-2xl w-full max-w-2xl">
+            <!-- Form Header -->
+            <div class="flex justify-around mb-8 border-b">
+              <button class="tab-link active px-4 py-2 border-b-2 border-black font-medium" data-target="store-form">
+                CỬA HÀNG
+              </button>
+              <button class="tab-link px-4 py-2 border-b-2 border-transparent font-medium" data-target="bride-form">
+                KHÁCH HÀNG
+              </button>
+              <button class="tab-link px-4 py-2 border-b-2 border-transparent font-medium" data-target="feedback-form">
+                ĐÁNH GIÁ
               </button>
             </div>
-          </form>
 
-          <!-- Bride Form -->
-          <form class="contact-form hidden" id="bride-form">
-            <div class="space-y-6">
-              <div>
-                <label for="bride_name" class="block text-sm font-medium mb-2">Họ và Tên KH*</label>
-                <input type="text" id="bride_name" name="name" required class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
+            <!-- Store Form -->
+            <form class="contact-form active-form" id="store-form">
+              <div class="space-y-6">
+                <div>
+                  <label for="store_branch" class="block text-sm font-medium mb-2">Tên Cửa hàng*</label>
+                  <select id="store_branch" name="type" required
+                    class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
+                    <option value="fleurbridal">CS1: 281 Trường Chinh, P.Phương Liệt, Tp.Hà Nội</option>
+                    <option value="fleurbridallottemall">CS2: Tầng 2, Lotte Mall Tây Hồ, Hà Nội</option>
+                    <option value="fleurbridalhouse">CS3: 32 Nguyễn Đình Chiểu, Quận 1, TP. Hồ Chí Minh</option>
+                    <option value="fleurbridaloffcial">CS4: 20 Điện Biên Phủ,P.Thanh Khê Đông, Q.Thanh Khê, Đà Nẵng
+                    </option>
+                    <option value="fleurbridalsaigon">CS5: Tòa nhà Saigon Centre, Quận 1, TP.Hồ Chí Minh</option>
+                    <option value="fleurbridalvvt">CS6: 40 Võ Văn Tần, Quận 3, TP.Hồ Chí Minh</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="store_country" class="block text-sm font-medium mb-2">Quốc gia*</label>
+                  <input type="text" id="store_country" name="country" required
+                    class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
+                </div>
+
+                <div>
+                  <label for="store_city" class="block text-sm font-medium mb-2">Thành phố*</label>
+                  <input type="text" id="store_city" name="city" required
+                    class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
+                </div>
+
+                <div>
+                  <label for="store_social" class="block text-sm font-medium mb-2">Website / Instagram /
+                    Facebook</label>
+                  <input type="text" id="store_social" name="social"
+                    class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
+                </div>
+
+                <div>
+                  <label for="store_name" class="block text-sm font-medium mb-2">Họ và Tên*</label>
+                  <input type="text" id="store_name" name="name" required
+                    class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
+                </div>
+
+                <div>
+                  <label for="store_email" class="block text-sm font-medium mb-2">Email*</label>
+                  <input type="email" id="store_email" name="email" required
+                    class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
+                </div>
+
+                <div>
+                  <label for="store_phone" class="block text-sm font-medium mb-2">Số điện thoại*</label>
+                  <input type="tel" id="store_phone" name="phone" required
+                    class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
+                </div>
+
+                <div>
+                  <label for="store_comment" class="block text-sm font-medium mb-2">Lời nhắn / Yêu cầu</label>
+                  <textarea id="store_comment" name="comment" rows="3"
+                    class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600 resize-vertical"></textarea>
+                </div>
+
+                <button type="submit"
+                  class="w-full bg-dark-bg text-white py-3 rounded-md hover:bg-gray-600 transition-colors font-medium">
+                  GỬI
+                </button>
               </div>
+            </form>
 
-              <div>
-                <label for="bride_date" class="block text-sm font-medium mb-2">Ngày Cưới Dự Kiến*</label>
-                <input type="date" id="bride_date" name="wedding_date" required class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
+            <!-- Bride Form -->
+            <form class="contact-form hidden" id="bride-form">
+              <div class="space-y-6">
+                <div>
+                  <label for="bride_name" class="block text-sm font-medium mb-2">Họ và Tên KH*</label>
+                  <input type="text" id="bride_name" name="name" required
+                    class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
+                </div>
+
+                <div>
+                  <label for="bride_date" class="block text-sm font-medium mb-2">Ngày Cưới Dự Kiến*</label>
+                  <input type="date" id="bride_date" name="wedding_date" required
+                    class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
+                </div>
+
+                <div>
+                  <label for="bride_location" class="block text-sm font-medium mb-2">Địa điểm Cưới (Thành phố)*</label>
+                  <input type="text" id="bride_location" name="location" required
+                    class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
+                </div>
+
+                <div>
+                  <label for="bride_email" class="block text-sm font-medium mb-2">Email*</label>
+                  <input type="email" id="bride_email" name="email" required
+                    class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
+                </div>
+
+                <div>
+                  <label for="bride_phone" class="block text-sm font-medium mb-2">Số điện thoại*</label>
+                  <input type="tel" id="bride_phone" name="phone" required
+                    class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
+                </div>
+
+                <div>
+                  <label for="bride_comment" class="block text-sm font-medium mb-2">Váy bạn thích / Yêu cầu tư
+                    vấn</label>
+                  <textarea id="bride_comment" name="comment" rows="3"
+                    class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600 resize-vertical"></textarea>
+                </div>
+
+                <button type="submit"
+                  class="w-full bg-dark-bg text-white py-3 rounded-md hover:bg-gray-600 transition-colors font-medium">
+                  ĐẶT LỊCH TƯ VẤN
+                </button>
               </div>
+            </form>
 
-              <div>
-                <label for="bride_location" class="block text-sm font-medium mb-2">Địa điểm Cưới (Thành phố)*</label>
-                <input type="text" id="bride_location" name="location" required class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
+            <!-- Feedback Form -->
+            <form class="contact-form hidden" id="feedback-form">
+              <div class="space-y-6">
+                <div>
+                  <label for="feedback_type" class="block text-sm font-medium mb-2">Loại Phản Hồi*</label>
+                  <select id="feedback_type" name="type" required
+                    class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
+                    <option value="complaint">Khiếu nại</option>
+                    <option value="suggestion">Góp ý</option>
+                    <option value="praise">Khen ngợi</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="feedback_name" class="block text-sm font-medium mb-2">Họ và Tên (Tùy chọn)</label>
+                  <input type="text" id="feedback_name" name="name"
+                    class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
+                </div>
+
+                <div>
+                  <label for="feedback_email" class="block text-sm font-medium mb-2">Email (Để liên hệ lại)*</label>
+                  <input type="email" id="feedback_email" name="email" required
+                    class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
+                </div>
+
+                <div>
+                  <label for="feedback_message" class="block text-sm font-medium mb-2">Nội dung Phản Hồi*</label>
+                  <textarea id="feedback_message" name="message" required rows="4"
+                    class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600 resize-vertical"></textarea>
+                </div>
+
+                <button type="submit"
+                  class="w-full bg-dark-bg text-white py-3 rounded-md hover:bg-gray-600 transition-colors font-medium">
+                  GỬI ĐÁNH GIÁ
+                </button>
               </div>
-
-              <div>
-                <label for="bride_email" class="block text-sm font-medium mb-2">Email*</label>
-                <input type="email" id="bride_email" name="email" required class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
-              </div>
-
-              <div>
-                <label for="bride_phone" class="block text-sm font-medium mb-2">Số điện thoại*</label>
-                <input type="tel" id="bride_phone" name="phone" required class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
-              </div>
-
-              <div>
-                <label for="bride_comment" class="block text-sm font-medium mb-2">Váy bạn thích / Yêu cầu tư vấn</label>
-                <textarea id="bride_comment" name="comment" rows="3" class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600 resize-vertical"></textarea>
-              </div>
-
-              <button type="submit" class="w-full bg-dark-bg text-white py-3 rounded-md hover:bg-gray-600 transition-colors font-medium">
-                ĐẶT LỊCH TƯ VẤN
-              </button>
-            </div>
-          </form>
-
-          <!-- Feedback Form -->
-          <form class="contact-form hidden" id="feedback-form">
-            <div class="space-y-6">
-              <div>
-                <label for="feedback_type" class="block text-sm font-medium mb-2">Loại Phản Hồi*</label>
-                <select id="feedback_type" name="type" required class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
-                  <option value="complaint">Khiếu nại</option>
-                  <option value="suggestion">Góp ý</option>
-                  <option value="praise">Khen ngợi</option>
-                </select>
-              </div>
-
-              <div>
-                <label for="feedback_name" class="block text-sm font-medium mb-2">Họ và Tên (Tùy chọn)</label>
-                <input type="text" id="feedback_name" name="name" class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
-              </div>
-
-              <div>
-                <label for="feedback_email" class="block text-sm font-medium mb-2">Email (Để liên hệ lại)*</label>
-                <input type="email" id="feedback_email" name="email" required class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600">
-              </div>
-
-              <div>
-                <label for="feedback_message" class="block text-sm font-medium mb-2">Nội dung Phản Hồi*</label>
-                <textarea id="feedback_message" name="message" required rows="4" class="w-full py-2 px-0 border-0 border-b-2 border-dark-bg bg-transparent focus:outline-none focus:border-gray-600 resize-vertical"></textarea>
-              </div>
-
-              <button type="submit" class="w-full bg-dark-bg text-white py-3 rounded-md hover:bg-gray-600 transition-colors font-medium">
-                GỬI ĐÁNH GIÁ
-              </button>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
     </div>
   </main>
 
@@ -963,6 +1048,12 @@
       <div class="footer-col">
         <h3>Hỗ trợ</h3>
         <a href="hotro.html">Trung tâm hỗ trợ</a>
+        <a href="lienhe.html">Liên hệ</a>
+        <a href="chinhsachdoitra.html">Chính sách đổi trả</a>
+        <a href="chinhsachvanchuyen.html">Chính sách vận chuyển</a>
+        <a href="chinhsachbaomat.html">Chính sách bảo mật</a>
+        <a href="chinhsachthanhtoan.html">Chính sách thanh toán</a>
+        <a href="chinhsachkhachhang.html">Chính sách khách hàng</a>
       </div>
       <div class="footer-col">
         <h3>Đăng ký nhận ưu đãi và tin tức mới nhất!</h3>
@@ -1011,24 +1102,24 @@
     document.querySelectorAll('.tab-link').forEach(tab => {
       tab.addEventListener('click', (e) => {
         e.preventDefault();
-        
+
         // Remove active classes
         document.querySelectorAll('.tab-link').forEach(t => {
           t.classList.remove('active');
           t.classList.remove('border-black');
           t.classList.add('border-transparent');
         });
-        
+
         document.querySelectorAll('.contact-form').forEach(form => {
           form.classList.add('hidden');
           form.classList.remove('active-form');
         });
-        
+
         // Add active classes
         tab.classList.add('active');
         tab.classList.add('border-black');
         tab.classList.remove('border-transparent');
-        
+
         const targetForm = document.getElementById(tab.dataset.target);
         targetForm.classList.remove('hidden');
         targetForm.classList.add('active-form');
@@ -1072,6 +1163,9 @@
   </script>
 
   <script src="asset/js/trangchu.js"></script>
+  <script src="asset/js/data.js"></script>
+  <script src="header_footer/header_footer.js"></script>
+
 </body>
 
 </html>

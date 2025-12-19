@@ -126,45 +126,77 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ===================== MENU MOBILE =====================
+    // Bật/tắt menu mobile
     if (menuToggle && navLinks) {
-        menuToggle.addEventListener("click", () =>
-            navLinks.classList.toggle("show")
-        );
-    }
-
-    // ===================== HIDE HEADER WHEN SCROLL =====================
-    if (headerEl) {
-        let lastScrollY = window.scrollY;
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > lastScrollY && window.scrollY > 150) {
-                headerEl.classList.add("header-hidden");
-            } else {
-                headerEl.classList.remove("header-hidden");
-            }
-            lastScrollY = window.scrollY;
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
         });
-    }
 
+        // Chỉ mobile: click vào dropdown parent để bật/tắt menu con
+        const dropdownItems = document.querySelectorAll(".nav-item.dropdown > a");
+        dropdownItems.forEach(item => {
+            item.addEventListener("click", (e) => {
+                if (window.innerWidth < 1024) {
+                    e.preventDefault(); // ngăn link chuyển trang
+                    const parent = item.parentElement;
 
+                    // Ẩn dropdown khác khi mở dropdown này
+                    document.querySelectorAll(".nav-item.dropdown").forEach(drop => {
+                        if (drop !== parent) {
+                            drop.classList.remove("active");
+                        }
+                    });
 
-    // ===================== FOOTER SUBSCRIBE =====================
-    const subscribeBtn = document.querySelector(".footer-col button");
-    const emailInput = document.querySelector(".footer-col input[type='email']");
-    if (subscribeBtn && emailInput) {
-        subscribeBtn.addEventListener("click", function () {
-            const email = emailInput.value.trim();
-            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    parent.classList.toggle("active"); // bật/tắt dropdown hiện tại
+                }
+            });
+        });
 
-            if (email === "") {
-                alert("Vui lòng nhập email của bạn!");
-            } else if (!emailPattern.test(email)) {
-                alert(
-                    "Email không hợp lệ. Vui lòng nhập đúng định dạng (ví dụ: ten@gmail.com)"
-                );
-            } else {
-                alert("🎉 Bạn đã đăng ký thành công!");
-                emailInput.value = "";
+        // Click ngoài menu để đóng tất cả dropdown
+        document.addEventListener("click", (e) => {
+            if (!e.target.closest(".nav-links") && !e.target.closest(".menu-toggle")) {
+                navLinks.classList.remove("show");
+                document.querySelectorAll(".nav-item.dropdown").forEach(drop => {
+                    drop.classList.remove("active");
+                });
             }
         });
     }
+
+
+// ===================== HIDE HEADER WHEN SCROLL =====================
+if (headerEl) {
+    let lastScrollY = window.scrollY;
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > lastScrollY && window.scrollY > 150) {
+            headerEl.classList.add("header-hidden");
+        } else {
+            headerEl.classList.remove("header-hidden");
+        }
+        lastScrollY = window.scrollY;
+    });
+}
+
+
+
+// ===================== FOOTER SUBSCRIBE =====================
+const subscribeBtn = document.querySelector(".footer-col button");
+const emailInput = document.querySelector(".footer-col input[type='email']");
+if (subscribeBtn && emailInput) {
+    subscribeBtn.addEventListener("click", function () {
+        const email = emailInput.value.trim();
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (email === "") {
+            alert("Vui lòng nhập email của bạn!");
+        } else if (!emailPattern.test(email)) {
+            alert(
+                "Email không hợp lệ. Vui lòng nhập đúng định dạng (ví dụ: ten@gmail.com)"
+            );
+        } else {
+            alert("🎉 Bạn đã đăng ký thành công!");
+            emailInput.value = "";
+        }
+    });
+}
 });

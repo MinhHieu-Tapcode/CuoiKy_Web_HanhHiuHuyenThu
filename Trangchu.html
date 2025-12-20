@@ -248,6 +248,11 @@
     .animate-marquee {
       animation: marquee 25s linear infinite;
     }
+
+    #menu-toggle {
+      z-index: 200;
+    }
+
   </style>
 </head>
 
@@ -311,8 +316,8 @@
       </div>
     </div>
   </header>
-
-  <main class="khung-toan-trang" style="padding:0 10px 10px 10px;">
+  
+  <main class="khung-toan-trang" style="padding:30px 10px 10px 10px;">
     <div class="khung-chinh">
       <div class="video-section">
         <video autoplay muted loop>
@@ -1147,20 +1152,29 @@
     });
 
     // Search toggle
-    document.querySelector('.icon-search').addEventListener('click', () => {
-      document.querySelector('.search-overlay').classList.add('show');
-    });
+    const iconSearch = document.querySelector('.icon-search');
+    if (iconSearch) {
+      iconSearch.addEventListener('click', () => {
+        document.querySelector('.search-overlay').classList.add('show');
+      });
+    }
 
-    document.querySelector('.close-search').addEventListener('click', () => {
-      document.querySelector('.search-overlay').classList.remove('show');
-    });
+    const closeSearch = document.querySelector('.close-search');
+    if (closeSearch) {
+      closeSearch.addEventListener('click', () => {
+        document.querySelector('.search-overlay').classList.remove('show');
+      });
+    }
 
     // Close search on overlay click
-    document.querySelector('.search-overlay').addEventListener('click', (e) => {
-      if (e.target === e.currentTarget) {
-        document.querySelector('.search-overlay').classList.remove('show');
-      }
-    });
+    const searchOverlay = document.querySelector('.search-overlay');
+    if (searchOverlay) {
+      searchOverlay.addEventListener('click', (e) => {
+        if (e.target === e.currentTarget) {
+          document.querySelector('.search-overlay').classList.remove('show');
+        }
+      });
+    }
   </script>
 
   <script src="asset/js/trangchu.js"></script>

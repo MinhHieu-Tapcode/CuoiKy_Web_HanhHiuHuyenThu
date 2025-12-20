@@ -1,3 +1,4 @@
+// ===================== DOM =====================
 const container = document.getElementById('container');
 const registerBtn = document.getElementById('register');
 const loginBtn = document.getElementById('login');
@@ -6,91 +7,136 @@ const signUpForm = document.getElementById('signup-form');
 const signInForm = document.getElementById('signin-form');
 const forgotLink = document.getElementById('forgot-password');
 
+const signupName = document.getElementById('signup-name');
+const signupEmail = document.getElementById('signup-email');
 const signupPassword = document.getElementById('signup-password');
-const strengthText = document.getElementById('password-strength-text');
+const signupConfirmPassword = document.getElementById('signup-confirm-password');
 
-// Tạo phần tử hiển thị tiêu chí mật khẩu
+const signinEmail = document.getElementById('signin-email');
+const signinPassword = document.getElementById('signin-password');
+
+const strengthText = document.getElementById('password-strength-text');
+const signupTitle = document.getElementById('signup-title');
+
+// ===================== PASSWORD CRITERIA =====================
 const criteriaContainer = document.createElement('div');
 criteriaContainer.style.marginTop = '5px';
+
 const criteriaLength = document.createElement('p');
+criteriaLength.textContent = '• Ít nhất 6 ký tự';
 criteriaLength.style.color = 'red';
 criteriaLength.style.margin = '2px 0';
-criteriaLength.textContent = '• Ít nhất 6 ký tự';
+
 const criteriaSpecial = document.createElement('p');
+criteriaSpecial.textContent = '• Có ít nhất 1 ký tự đặc biệt';
 criteriaSpecial.style.color = 'red';
 criteriaSpecial.style.margin = '2px 0';
-criteriaSpecial.textContent = '• Có ít nhất 1 ký tự đặc biệt';
+
 criteriaContainer.appendChild(criteriaLength);
 criteriaContainer.appendChild(criteriaSpecial);
 signupPassword.insertAdjacentElement('afterend', criteriaContainer);
 
-// --- Toggle form ---
-registerBtn.addEventListener('click', () => container.classList.add("active"));
-loginBtn.addEventListener('click', () => container.classList.remove("active"));
+// ===================== TOGGLE FORM =====================
+registerBtn.addEventListener('click', () => {
+    container.classList.add('active');
+});
 
-// --- Kiểm tra mật khẩu theo tiêu chí ---
+loginBtn.addEventListener('click', () => {
+    container.classList.remove('active');
+});
+
+// ===================== PASSWORD VALIDATION =====================
+function checkPasswordStrength(password) {
+    const hasLength = password.length >= 6;
+    const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+    criteriaLength.style.color = hasLength ? 'green' : 'red';
+    criteriaSpecial.style.color = hasSpecial ? 'green' : 'red';
+
+    return hasLength && hasSpecial;
+}
+
 signupPassword.addEventListener('input', () => {
     const password = signupPassword.value;
 
-    const hasLength = password.length >= 6;
-    const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+    if (!password) {
+        strengthText.textContent = '';
+        return;
+    }
 
-    criteriaLength.style.color = hasLength ? "green" : "red";
-    criteriaSpecial.style.color = hasSpecial ? "green" : "red";
-
-    if (!hasLength || !hasSpecial) {
-        strengthText.textContent = "Mật khẩu chưa đáp ứng đủ yêu cầu";
-        strengthText.style.color = "red";
+    if (checkPasswordStrength(password)) {
+        strengthText.textContent = 'Mật khẩu hợp lệ';
+        strengthText.style.color = 'green';
     } else {
-        strengthText.textContent = "Mật khẩu hợp lệ";
-        strengthText.style.color = "green";
+        strengthText.textContent = 'Mật khẩu chưa đáp ứng đủ yêu cầu';
+        strengthText.style.color = 'red';
     }
 });
 
-// --- Tạo / Chỉnh sửa tài khoản ---
+// ===================== CONFIRM PASSWORD =====================
+signupConfirmPassword.addEventListener('input', () => {
+    if (!signupConfirmPassword.value) return;
+
+    if (signupConfirmPassword.value !== signupPassword.value) {
+        strengthText.textContent = 'Mật khẩu nhập lại không khớp';
+        strengthText.style.color = 'red';
+    } else {
+        strengthText.textContent = 'Mật khẩu trùng khớp';
+        strengthText.style.color = 'green';
+    }
+});
+
+// ===================== SIGN UP / UPDATE ACCOUNT =====================
 signUpForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const name = document.getElementById('signup-name').value.trim();
-    const email = document.getElementById('signup-email').value.trim();
+    const name = signupName.value.trim();
+    const email = signupEmail.value.trim();
     const password = signupPassword.value.trim();
+    const confirmPassword = signupConfirmPassword.value.trim();
 
-    const hasLength = password.length >= 6;
-    const hasSpecial = /[!@#$%^&*(),.?":{}|<>]/.test(password);
-
-    if (!name || !email || !password) {
-        alert("Vui lòng điền đầy đủ thông tin!");
+    if (!name || !email || !password || !confirmPassword) {
+        alert('Vui lòng điền đầy đủ thông tin!');
         return;
     }
 
-    if (!hasLength || !hasSpecial) {
-        alert("Mật khẩu chưa đáp ứng đủ yêu cầu!");
+    if (!checkPasswordStrength(password)) {
+        alert('Mật khẩu chưa đáp ứng đủ yêu cầu!');
         return;
     }
 
-    localStorage.setItem('user', JSON.stringify({ name, email, password }));
+    if (password !== confirmPassword) {
+        alert('Mật khẩu nhập lại không khớp!');
+        return;
+    }
+
+    const user = { name, email, password };
+    localStorage.setItem('user', JSON.stringify(user));
+
     alert('Tài khoản đã được tạo / cập nhật thành công!');
-    signUpForm.reset();
-    container.classList.remove("active");
 
-    // Reset tiêu chí mật khẩu
+    signUpForm.reset();
+    signupConfirmPassword.value = '';
+    strengthText.textContent = '';
+    signupTitle.textContent = 'Tạo Tài Khoản';
+
     criteriaLength.style.color = 'red';
     criteriaSpecial.style.color = 'red';
-    strengthText.textContent = '';
+
+    container.classList.remove('active');
 });
 
-// --- Đăng nhập ---
+// ===================== SIGN IN =====================
 signInForm.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const email = document.getElementById('signin-email').value.trim();
-    const password = document.getElementById('signin-password').value.trim();
-
+    const email = signinEmail.value.trim();
+    const password = signinPassword.value.trim();
     const user = JSON.parse(localStorage.getItem('user'));
 
     if (!user) {
-        alert('Chưa có tài khoản, hãy tạo tài khoản!');
-        container.classList.add("active");
+        alert('Chưa có tài khoản, vui lòng đăng ký!');
+        container.classList.add('active');
         return;
     }
 
@@ -101,28 +147,29 @@ signInForm.addEventListener('submit', (e) => {
     }
 });
 
-// --- Quên mật khẩu ---
+// ===================== FORGOT PASSWORD =====================
 forgotLink.addEventListener('click', (e) => {
     e.preventDefault();
 
     const user = JSON.parse(localStorage.getItem('user'));
-    container.classList.add("active");
+    container.classList.add('active');
 
-    if (!user) {
-        alert("Chưa có tài khoản, hãy tạo tài khoản trước!");
-        document.getElementById('signup-name').value = "";
-        document.getElementById('signup-email').value = "";
-        signupPassword.value = "";
-    } else {
-        document.getElementById('signup-name').value = user.name;
-        document.getElementById('signup-email').value = user.email;
-        signupPassword.value = "";
-        document.getElementById('signup-title').textContent = "Chỉnh sửa tài khoản";
-        alert("Nhập mật khẩu mới để cập nhật tài khoản!");
-    }
+    signupPassword.value = '';
+    signupConfirmPassword.value = '';
+    strengthText.textContent = '';
 
-    // Reset tiêu chí mật khẩu khi mở form
     criteriaLength.style.color = 'red';
     criteriaSpecial.style.color = 'red';
-    strengthText.textContent = '';
+
+    if (!user) {
+        alert('Chưa có tài khoản, hãy tạo tài khoản mới!');
+        signupName.value = '';
+        signupEmail.value = '';
+        signupTitle.textContent = 'Tạo Tài Khoản';
+    } else {
+        signupName.value = user.name;
+        signupEmail.value = user.email;
+        signupTitle.textContent = 'Chỉnh sửa tài khoản';
+        alert('Vui lòng nhập mật khẩu mới!');
+    }
 });

@@ -249,9 +249,7 @@
       animation: marquee 25s linear infinite;
     }
 
-    #menu-toggle {
-      z-index: 200;
-    }
+
 
   </style>
 </head>
@@ -1144,19 +1142,19 @@
       document.getElementById('thankyouOverlay').classList.remove('show');
     });
 
-    // Mobile menu toggle
+    /*/ Mobile menu toggle
     document.querySelector('.menu-toggle').addEventListener('click', () => {
       const navLinks = document.querySelector('.nav-links');
       navLinks.classList.toggle('show');
-    });
+    });*/
 
-    // Search toggle
+    /*/ Search toggle
     const iconSearch = document.querySelector('.icon-search');
     if (iconSearch) {
       iconSearch.addEventListener('click', () => {
         document.querySelector('.search-overlay').classList.add('show');
       });
-    }
+    }*/
 
     const closeSearch = document.querySelector('.close-search');
     if (closeSearch) {

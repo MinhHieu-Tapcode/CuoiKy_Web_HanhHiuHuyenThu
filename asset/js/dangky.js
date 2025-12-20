@@ -141,7 +141,7 @@ signInForm.addEventListener('submit', (e) => {
     }
 
     if (email === user.email && password === user.password) {
-        window.location.href = 'Trangchu.html';
+        window.location.href = '../Trangchu.html';
     } else {
         alert('Email hoặc mật khẩu không đúng!');
     }

@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
             nameSpan.style.marginRight = "15px";
 
             const logoutLink = document.createElement("a");
-            logoutLink.href = "../trangchu.html";
+            logoutLink.href = "../Trangchu.html";
             logoutLink.textContent = "Đăng Xuất";
             //logoutLink.style.color = "#fff";//
             logoutLink.style.padding = "0 20px";
@@ -34,11 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
             headerTop.appendChild(logoutLink);
         } else {
             const login = document.createElement("a");
-            login.href = "../dangky.html";
+            login.href = "../pages/dangky.html";
             login.textContent = "Đăng Nhập";
 
             const register = document.createElement("a");
-            register.href = "../dangky.html";
+            register.href = "../pages/dangky.html";
             register.textContent = "Đăng Ký";
 
             headerTop.appendChild(login);

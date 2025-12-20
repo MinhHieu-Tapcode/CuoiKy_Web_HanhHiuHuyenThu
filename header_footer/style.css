@@ -26,7 +26,7 @@ body {
 
 body {
     display: block;
-    padding-top: 150px;
+    padding-top: 115px;
 
 }
 
@@ -84,8 +84,8 @@ main {
 /* ===== HEADER BOTTOM ===== */
 .header-bottom {
     /*height: calc(15vh - 50px);*/
-    height: auto;
-    padding: 10px 20px;
+    height: 80px;
+    padding: 6px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;

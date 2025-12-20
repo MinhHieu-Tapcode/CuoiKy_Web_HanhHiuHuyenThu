@@ -479,3 +479,95 @@ main {
         padding: 0 10px;
     }
 }
+
+/* ================== MOBILE (PHONE) ================== */
+@media (max-width: 480px) {
+    body {
+        padding-top: 100px;
+        /* header cao hơn trên điện thoại */
+    }
+
+    #main-header {
+        padding: 0 10px;
+    }
+
+    .logo img {
+        height: 70px;
+        /* thu nhỏ logo */
+        max-height: unset;
+    }
+
+    .header-top {
+        height: 40px;
+        padding: 0 5px;
+    }
+
+    .header-top a {
+        font-size: 12px;
+        padding: 0 5px;
+        line-height: 40px;
+    }
+
+    .header-bottom {
+        height: 60px;
+        padding: 6px 10px;
+    }
+
+    .nav-links.show {
+        width: 100%;
+        right: 0;
+        border-radius: 0;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .icons {
+        gap: 8px;
+        font-size: 20px;
+    }
+
+    .search-bar {
+        width: 180px;
+        /* thu nhỏ thanh search */
+    }
+
+    .search-bar input {
+        height: 36px;
+        font-size: 12px;
+    }
+
+    /* Footer */
+    .footer-main {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .footer-col h3 {
+        font-size: 18px;
+    }
+
+    .footer-col a {
+        font-size: 14px;
+    }
+
+    .subscribe input[type="email"] {
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .subscribe button {
+        height: 36px;
+        font-size: 14px;
+    }
+
+    .footer-col .icons {
+        gap: 20px;
+    }
+
+    .footer-bottom span {
+        font-size: 14px;
+    }
+}

@@ -14,217 +14,229 @@
   <link rel="stylesheet" href="../header_footer/style.css">
   <style>
     @import url('../asset/css/main.css');
-
   </style>
 </head>
 
 <body>
-    <!-- Nơi header sẽ được chèn -->
   <!-- HEADER -->
   <header id="main-header">
     <div class="header-top">
-      <a href="/dangky.html">Đăng Nhập</a>
-      <a href="/dangky.html">Đăng Ký</a>
+      <a href="../dangky.html">Đăng Nhập</a>
+      <a href="../dangky.html">Đăng Ký</a>
     </div>
 
     <!-- HEADER BOTTOM -->
     <div class="header-bottom">
       <div class="logo">
-        <img src="../asset/img/header_footer/logohoa.png" alt="Logo" />
+        <a href="../Trangchu.html">
+          <img src="../asset/img/header_footer/logohoa.png" alt="Logo" />
+        </a>
       </div>
 
       <nav class="nav-links">
         <a href="../gioithieu.html">Giới thiệu</a>
-        <a href="../sanpham/sanpham.html">Sản phẩm</a>
-        <a href="../bosuutap/bosuutap.html">Bộ sưu tập</a>
+        <div class="nav-item dropdown">
+          <a href="../sanpham/sanpham.html">Sản phẩm</a>
+          <div class="dropdown-menu">
+            <a href="../sanpham/sp1.html">Váy bồng xòe</a>
+            <a href="../sanpham/sp2.html">Váy đuôi cá</a>
+            <a href="../sanpham/sp3.html">Váy chữ A</a>
+            <a href="../sanpham/sp4.html">Váy ngắn</a>
+            <a href="../sanpham/sp5.html">Áo dài cưới</a>
+            <a href="../sanpham/sp6.html">Phụ kiện</a>
+          </div>
+        </div>
+        <div class="nav-item dropdown">
+          <a href="../bosuutap/bosuutap.html">Bộ sưu tập</a>
+          <div class="dropdown-menu">
+            <a href="../bosuutap/Bst1.html">Hương sắc Á Đông</a>
+            <a href="../bosuutap/Bst2.html">Thanh của tình yêu</a>
+            <a href="../bosuutap/Bst3.html">Hẹn ước trăm năm</a>
+            <a href="../bosuutap/Bst4.html">Lời thì thầm hoa sương</a>
+            <a href="../bosuutap/Bst5.html">Ánh bình minh</a>
+            <a href="../bosuutap/Bst6.html">Khúc hẹn yêu</a>
+          </div>
+        </div>
         <a href="../cuahang.html">Cửa hàng</a>
-        <a href="../lienhe.html">Liên hệ</a>
+        <a href="../dieukhoansudung.html">Điều khoản</a>
       </nav>
 
       <div class="icons">
-        <i class="fas fa-search icon-search"></i>
-        <i class="far fa-heart icon-heart"></i>
-        <a href="../giohang.html">
-          <i class="fas fa-shopping-cart icon-cart"></i>
+        <!-- SEARCH -->
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Tìm sản phẩm..." autocomplete="off" />
+          <div class="search-suggest" id="searchSuggest"></div>
+        </div>
+
+        <a href="../cart.html">
+          <span class="icon-cart">🛒</span>
         </a>
-        <i class="fas fa-bars menu-toggle"></i>
+        <span class="menu-toggle">☰</span>
       </div>
     </div>
-
-    <!-- SEARCH OVERLAY -->
-    <div class="search-overlay">
-      <input type="text" class="search-box" placeholder="Nhập tên sản phẩm..." />
-      <i class="fa-solid fa-xmark close-search"></i>
-    </div>
   </header>
+
   <main>
-    <h1 class="tieu-de-chinh" style="text-align: center; padding: 5px 250px;">Bí quyết chăm sóc váy cưới sau ngày trọng đại</h1>
-        <div class="page-breadcrumbs">
-            <nav aria-label="breadcrumbs" class="rank-math-breadcrumb" style="text-align: center; font-size: small;">
-            <div class="breadcrumb">
-              <a href="../Trangchu.html">Fleur</a> / 
-              <a href="tintuc.html">Tin tức</a> /
-              <span>Blog 3</span>
-            </div>
-            </nav>
+    <h1 class="tieu-de-chinh" style="text-align: center; padding: 5px 250px;">Bí quyết chăm sóc váy cưới sau ngày
+      trọng đại</h1>
+    <div class="page-breadcrumbs">
+      <nav aria-label="breadcrumbs" class="rank-math-breadcrumb" style="text-align: center; font-size: small;">
+        <div class="breadcrumb">
+          <a href="../Trangchu.html">Fleur</a> /
+          <a href="tintuc.html">Tin tức</a> /
+          <span>Blog 3</span>
         </div>
+      </nav>
+    </div>
     <article style="max-width: 900px; margin: auto; padding: 10px; line-height: 1.7;">
-    <p><small>Đăng ngày: <strong>02/09/2023</strong> &nbsp;&nbsp;|&nbsp;&nbsp; Tác giả: <b>Mỹ Hạnh</b></small></p>
+      <p><small>Đăng ngày: <strong>02/09/2023</strong> &nbsp;&nbsp;|&nbsp;&nbsp; Tác giả: <b>Mỹ Hạnh</b></small></p>
 
-    <img src="../asset/img/tintuc/blog3.jpg"
-         alt="Chăm sóc váy cưới"
-         style="width:100%; margin: 25px 0;">
+      <img src="../asset/img/tintuc/blog3.jpg" alt="Chăm sóc váy cưới" style="width:100%; margin: 25px 0;">
 
-    <p>
+      <p>
         Sau ngày trọng đại, chiếc váy cưới không chỉ đơn thuần là một bộ trang phục. Nó chứa đựng những ký ức
         đầy cảm xúc, là minh chứng cho khoảnh khắc thiêng liêng và hạnh phúc của đời người. Vì vậy, việc
-        <strong>giữ gìn và bảo quản váy cưới</strong> luôn được nhiều cô dâu quan tâm, đặc biệt là những người muốn lưu giữ
+        <strong>giữ gìn và bảo quản váy cưới</strong> luôn được nhiều cô dâu quan tâm, đặc biệt là những người muốn lưu
+        giữ
         chiếc váy như một kỷ vật hoặc truyền lại cho thế hệ sau.
-    </p>
+      </p>
 
-    <blockquote>
+      <blockquote>
         “Một chiếc váy cưới được chăm sóc đúng cách có thể giữ được vẻ đẹp trọn vẹn suốt nhiều năm.”
-    </blockquote>
+      </blockquote>
 
-    <p>
+      <p>
         Tuy nhiên, không phải ai cũng biết quy trình bảo quản đúng chuẩn. Từ việc giặt, xử lý vết bẩn đến cách
         cất giữ lâu dài, mỗi bước đều cần tỉ mỉ và chính xác để tránh làm hỏng chất liệu. Bài viết dưới đây sẽ giúp
         bạn hiểu rõ cách chăm sóc chiếc váy cưới yêu quý của mình.
-    </p>
+      </p>
 
-    <h2>1. Xử Lý Ngay Sau Khi Tiệc Kết Thúc</h2>
+      <h2>1. Xử Lý Ngay Sau Khi Tiệc Kết Thúc</h2>
 
-    <p>
+      <p>
         Thời điểm sau khi buổi tiệc kết thúc là lúc chiếc váy cưới “mệt mỏi” nhất: phấn trang điểm, đồ ăn, bụi bẩn
         và thậm chí là vết xước có thể bám lên vải. Do đó, cô dâu nên xử lý sớm nhất có thể.
-    </p>
+      </p>
 
-    <img src="../asset/img/tintuc/blog3.1.jpg" 
-         alt="Xử lý váy sau tiệc cưới" 
-         style="width:100%; margin: 15px 0;">
+      <img src="../asset/img/tintuc/blog3.1.jpg" alt="Xử lý váy sau tiệc cưới" style="width:100%; margin: 15px 0;">
 
-    <ul>
+      <ul>
         <li><b>Treo váy ngay</b> để giữ form và tránh nhàu nát.</li>
         <li><b>Kiểm tra vết bẩn</b>: phấn, rượu vang, đồ ăn… để ghi chú vị trí.</li>
         <li><b>Không gấp mạnh</b> vì có thể gây gãy nếp hoặc hỏng chi tiết ren.</li>
         <li><b>Tránh tự giặt</b> nếu váy có chất liệu cao cấp như satin, tulle, ren 3D.</li>
-    </ul>
-    <p>
+      </ul>
+      <p>
         Nếu váy bị ướt (do mưa, mồ hôi…), hãy phơi ở nơi thoáng gió, tránh tuyệt đối ánh nắng trực tiếp.
-    </p>
+      </p>
 
-    <h2>2. Vệ Sinh Váy Cưới Đúng Cách</h2>
-    <p>
+      <h2>2. Vệ Sinh Váy Cưới Đúng Cách</h2>
+      <p>
         Việc giặt váy cưới không giống với giặt quần áo thông thường. Mỗi chất liệu yêu cầu phương pháp riêng,
         đặc biệt là váy có nhiều lớp hoặc có đính kết thủ công.
-    </p>
+      </p>
 
-    <img src="../asset/img/tintuc/blog3.2.jpg" 
-         alt="Giặt váy cưới" 
-         style="width:100%; margin: 15px 0;">
+      <img src="../asset/img/tintuc/blog3.2.jpg" alt="Giặt váy cưới" style="width:100%; margin: 15px 0;">
 
-    <h3>2.1. Mang Váy Đến Tiệm Chuyên Nghiệp</h3>
-    <p>
+      <h3>2.1. Mang Váy Đến Tiệm Chuyên Nghiệp</h3>
+      <p>
         Đây là lựa chọn tốt nhất vì các tiệm giặt chuyên dụng có:
-    </p>
-    <ul>
+      </p>
+      <ul>
         <li>Máy móc phù hợp với chất liệu nhạy cảm</li>
         <li>Dung dịch làm sạch an toàn, không gây phai màu</li>
         <li>Kỹ thuật xử lý vết bẩn đúng chuẩn</li>
         <li>Kinh nghiệm phục hồi các vết rách nhẹ</li>
-    </ul>
+      </ul>
 
-    <h3>2.2. Tự Giặt Tại Nhà (Nếu Váy Không Quá Cầu Kỳ)</h3>
-    <p>Chỉ áp dụng với các kiểu váy đơn giản, ít lớp, không đính đá.</p>
+      <h3>2.2. Tự Giặt Tại Nhà (Nếu Váy Không Quá Cầu Kỳ)</h3>
+      <p>Chỉ áp dụng với các kiểu váy đơn giản, ít lớp, không đính đá.</p>
 
-    <ul>
+      <ul>
         <li>Dùng nước lạnh để tránh co vải.</li>
         <li>Dùng sữa tắm trẻ em hoặc xà phòng nhẹ.</li>
         <li>Không vò mạnh – chỉ dùng tay ép nhẹ.</li>
         <li>Phơi trong bóng râm, để ráo tự nhiên.</li>
-    </ul>
+      </ul>
 
-    <p><i>Lưu ý:</i> Tuyệt đối không dùng máy giặt vì có thể làm hỏng cấu trúc váy.</p>
+      <p><i>Lưu ý:</i> Tuyệt đối không dùng máy giặt vì có thể làm hỏng cấu trúc váy.</p>
 
-    <h2>3. Phục Hồi Chi Tiết Trang Trí</h2>
+      <h2>3. Phục Hồi Chi Tiết Trang Trí</h2>
 
-    <p>
+      <p>
         Sau một ngày dài, các chi tiết như ren, hạt cườm, sequin hoặc hoa 3D rất dễ bị bung, xước hoặc lệch.
         Việc phục hồi kịp thời giúp váy không xuống cấp theo thời gian.
-    </p>
+      </p>
 
-    <img src="../asset/img/tintuc/blog3.3.jpg" 
-         alt="Sửa váy cưới" 
-         style="width:100%; margin: 15px 0;">
+      <img src="../asset/img/tintuc/blog3.3.jpg" alt="Sửa váy cưới" style="width:100%; margin: 15px 0;">
 
-    <ul>
+      <ul>
         <li><strong>Khâu lại hạt đính lỏng</strong> trước khi cất giữ lâu dài.</li>
         <li><strong>Kiểm tra lớp lót</strong> – lớp này quyết định form váy.</li>
         <li><strong>Phục hồi ren 3D</strong> bằng kim chuyên dụng để không tạo vết thừa.</li>
         <li><strong>Ủi hơi nhẹ</strong> để tạo lại phom váy ban đầu.</li>
-    </ul>
+      </ul>
 
-    <p>
+      <p>
         Nếu váy quá hư tổn, bạn nên mang đến cửa hàng nơi bạn thuê / mua để được phục hồi bởi thợ chuyên nghiệp.
-    </p>
+      </p>
 
-    <h2>4. Bảo Quản Lâu Dài</h2>
+      <h2>4. Bảo Quản Lâu Dài</h2>
 
-    <p>
+      <p>
         Đây là bước quan trọng nhất để giữ váy cưới như mới trong nhiều năm. Một số cô dâu chọn bảo quản để làm kỷ vật,
         số khác muốn truyền lại cho con gái sau này – và điều đó hoàn toàn có thể nếu bạn chăm sóc đúng cách.
-    </p>
+      </p>
 
-    <img src="../asset/img/tintuc/blog3.4.jpg" 
-         alt="Bảo quản váy cưới" 
-         style="width:100%; margin: 15px 0;">
+      <img src="../asset/img/tintuc/blog3.4.jpg" alt="Bảo quản váy cưới" style="width:100%; margin: 15px 0;">
 
-    <h3>4.1. Dùng Túi Vải Chuyên Dụng</h3>
-    <p>
+      <h3>4.1. Dùng Túi Vải Chuyên Dụng</h3>
+      <p>
         Không dùng túi nilon vì dễ gây ẩm mốc, ố vàng. Túi vải giúp váy “thở” và giữ được độ mềm.
-    </p>
+      </p>
 
-    <h3>4.2. Dùng Hộp Bảo Quản Acid-free</h3>
-    <ul>
+      <h3>4.2. Dùng Hộp Bảo Quản Acid-free</h3>
+      <ul>
         <li>Không gây ố vàng theo thời gian.</li>
         <li>Giúp váy giữ màu trắng tự nhiên.</li>
         <li>Tránh côn trùng và bụi bẩn.</li>
-    </ul>
+      </ul>
 
-    <h3>4.3. Chọn Nơi Cất Giữ Lý Tưởng</h3>
-    <ul>
+      <h3>4.3. Chọn Nơi Cất Giữ Lý Tưởng</h3>
+      <ul>
         <li>Nơi khô ráo, tránh ánh nắng và nhiệt độ cao.</li>
         <li>Không để sát sàn nhà hoặc gần ống nước.</li>
         <li>Không treo lâu nếu váy nặng – dễ làm giãn vải.</li>
-    </ul>
+      </ul>
 
-    <p>
+      <p>
         Với váy nhiều lớp hoặc váy công chúa, tốt nhất nên cất trong hộp nằm để tránh tình trạng váy biến dạng.
-    </p>
+      </p>
 
-    <h2>5. Lưu Ý Quan Trọng Để Váy Luôn Như Mới</h2>
+      <h2>5. Lưu Ý Quan Trọng Để Váy Luôn Như Mới</h2>
 
-    <ul>
+      <ul>
         <li>Kiểm tra váy định kỳ 6–12 tháng một lần.</li>
         <li>Thay giấy lót trong hộp để tránh ố vàng.</li>
         <li>Không xịt nước hoa hoặc chất thơm lên váy khi cất giữ.</li>
         <li>Đặt túi hút ẩm tự nhiên trong khu vực cất váy.</li>
         <li>Nếu phát hiện mốc, phải xử lý ngay để tránh lan rộng.</li>
-    </ul>
+      </ul>
 
-    <h2>6. Kết Luận</h2>
+      <h2>6. Kết Luận</h2>
 
-    <p>
+      <p>
         Chiếc váy cưới là kỷ vật chứa đầy cảm xúc – và bạn hoàn toàn có thể giữ nó như mới trong nhiều năm
         nếu tuân theo các bước chăm sóc đúng cách. Từ việc xử lý ngay sau buổi tiệc, vệ sinh cẩn thận,
         sửa chữa chi tiết đến bảo quản lâu dài, mỗi bước đều góp phần duy trì vẻ đẹp của chiếc váy.
-    </p>
+      </p>
 
-    <p>
-        Hãy nhớ rằng: <strong>chăm sóc váy cưới cũng là cách bạn trân trọng những khoảnh khắc ngọt ngào đã trải qua.</strong>
-    </p>
+      <p>
+        Hãy nhớ rằng: <strong>chăm sóc váy cưới cũng là cách bạn trân trọng những khoảnh khắc ngọt ngào đã trải
+          qua.</strong>
+      </p>
 
-</article>
+    </article>
 
   </main>
   <!-- Nơi footer sẽ được chèn -->
@@ -252,6 +264,12 @@
       <div class="footer-col">
         <h3>Hỗ trợ</h3>
         <a href="../hotro.html">Trung tâm hỗ trợ</a>
+        <a href="../lienhe.html">Liên hệ</a>
+        <a href="../chinhsachdoitra.html">Chính sách đổi trả</a>
+        <a href="../chinhsachvanchuyen.html">Chính sách vận chuyển</a>
+        <a href="../chinhsachbaomat.html">Chính sách bảo mật</a>
+        <a href="../chinhsachthanhtoan.html">Chính sách thanh toán</a>
+        <a href="../chinhsachkhachhang.html">Chính sách khách hàng</a>
       </div>
       <div class="footer-col">
         <h3>Đăng ký nhận ưu đãi và tin tức mới nhất!</h3>
@@ -280,4 +298,5 @@
 
   <script src="asset/js/gioithieu.js"></script>
 </body>
+
 </html>

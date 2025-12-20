@@ -146,108 +146,135 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
 
 <script>
-    const countrySelect = document.getElementById("country");
-    const citySelect = document.getElementById("city");
-    const cityGroup = document.getElementById("city-group");
+  // ================= KHỞI TẠO EMAILJS =================
+  emailjs.init("jyEtAUcgjqpxB9Mar"); // 🔑 Thay bằng PUBLIC_KEY của bạn
+  // ======================================================
 
-    // Danh sách tỉnh thành Việt Nam
-    const vietnamCities = [
-        "An Giang", "Bà Rịa - Vũng Tàu", "Bắc Giang", "Bắc Kạn", "Bạc Liêu", "Bắc Ninh",
-        "Bến Tre", "Bình Định", "Bình Dương", "Bình Phước", "Bình Thuận", "Cà Mau",
-        "Cần Thơ", "Cao Bằng", "Đà Nẵng", "Đắk Lắk", "Đắk Nông", "Điện Biên", "Đồng Nai",
-        "Đồng Tháp", "Gia Lai", "Hà Giang", "Hà Nam", "Hà Nội", "Hà Tĩnh", "Hải Dương",
-        "Hải Phòng", "Hậu Giang", "Hòa Bình", "Hưng Yên", "Khánh Hòa", "Kiên Giang",
-        "Kon Tum", "Lai Châu", "Lâm Đồng", "Lạng Sơn", "Lào Cai", "Long An", "Nam Định",
-        "Nghệ An", "Ninh Bình", "Ninh Thuận", "Phú Thọ", "Phú Yên", "Quảng Bình",
-        "Quảng Nam", "Quảng Ngãi", "Quảng Ninh", "Quảng Trị", "Sóc Trăng", "Sơn La",
-        "Tây Ninh", "Thái Bình", "Thái Nguyên", "Thanh Hóa", "Thừa Thiên Huế", "Tiền Giang",
-        "TP. Hồ Chí Minh", "Trà Vinh", "Tuyên Quang", "Vĩnh Long", "Vĩnh Phúc", "Yên Bái"
-    ];
+  // DOM
+  const countrySelect = document.getElementById("country");
+  const citySelect = document.getElementById("city");
+  const cityGroup = document.getElementById("city-group");
 
-    // Xử lý hiển thị tỉnh thành khi chọn quốc gia
-    countrySelect.addEventListener("change", function() {
-        const selectedCountry = this.value;
-        citySelect.innerHTML = '<option value="">Chọn...</option>';
+  // Danh sách tỉnh thành Việt Nam
+  const vietnamCities = [
+    "An Giang", "Bà Rịa - Vũng Tàu", "Bắc Giang", "Bắc Kạn", "Bạc Liêu", "Bắc Ninh",
+    "Bến Tre", "Bình Định", "Bình Dương", "Bình Phước", "Bình Thuận", "Cà Mau",
+    "Cần Thơ", "Cao Bằng", "Đà Nẵng", "Đắk Lắk", "Đắk Nông", "Điện Biên", "Đồng Nai",
+    "Đồng Tháp", "Gia Lai", "Hà Giang", "Hà Nam", "Hà Nội", "Hà Tĩnh", "Hải Dương",
+    "Hải Phòng", "Hậu Giang", "Hòa Bình", "Hưng Yên", "Khánh Hòa", "Kiên Giang",
+    "Kon Tum", "Lai Châu", "Lâm Đồng", "Lạng Sơn", "Lào Cai", "Long An", "Nam Định",
+    "Nghệ An", "Ninh Bình", "Ninh Thuận", "Phú Thọ", "Phú Yên", "Quảng Bình",
+    "Quảng Nam", "Quảng Ngãi", "Quảng Ninh", "Quảng Trị", "Sóc Trăng", "Sơn La",
+    "Tây Ninh", "Thái Bình", "Thái Nguyên", "Thanh Hóa", "Thừa Thiên Huế", "Tiền Giang",
+    "TP. Hồ Chí Minh", "Trà Vinh", "Tuyên Quang", "Vĩnh Long", "Vĩnh Phúc", "Yên Bái"
+  ];
 
-        if (selectedCountry === "Vietnam") {
-            cityGroup.style.display = "block";
-            vietnamCities.forEach(city => {
-                const option = document.createElement("option");
-                option.value = city;
-                option.textContent = city;
-                citySelect.appendChild(option);
-            });
-        } else {
-            cityGroup.style.display = "none";
-        }
-    });
+  // Hiển thị tỉnh/thành khi chọn quốc gia
+  countrySelect.addEventListener("change", function() {
+    const selectedCountry = this.value;
+    citySelect.innerHTML = '<option value="">Chọn...</option>';
 
-    const products = JSON.parse(localStorage.getItem('cart')) || [];
+    if (selectedCountry === "Vietnam") {
+      cityGroup.style.display = "block";
+      vietnamCities.forEach(city => {
+        const option = document.createElement("option");
+        option.value = city;
+        option.textContent = city;
+        citySelect.appendChild(option);
+      });
+    } else {
+      cityGroup.style.display = "none";
+    }
+  });
 
-    if (products.length > 0) {
-        const listContainer = document.querySelector('.list');
-        let totalQuantity = 0;
-        let totalPrice = 0;
+  // Lấy sản phẩm từ localStorage
+  const products = JSON.parse(localStorage.getItem('cart')) || [];
+  const listContainer = document.querySelector('.list');
+  let totalQuantity = 0;
+  let totalPrice = 0;
 
-        products.forEach(function(product) {
-            const price = Number(product.price) || 0;
-            const itemTotal = price * (Number(product.quantity) || 0);
+  if (products.length > 0) {
+    products.forEach(product => {
+      const price = Number(product.price) || 0;
+      const itemTotal = price * (Number(product.quantity) || 0);
 
-            const item = document.createElement('div');
-            item.classList.add('card', 'mb-3', 'border-0');
-            item.innerHTML = `
-                <div class="row g-0 align-items-center">
-                    <div class="col-4 col-md-2">
-                        <img src="${product.preview}" class="img-fluid rounded" alt="${product.name}">
-                    </div>
-                    <div class="col-8 col-md-10">
-                        <div class="card-body">
-                            <div class="row align-items-center">
-                                <div class="col-12 col-md-5">
-                                    <h5 class="card-title">${product.name}</h5>
-                                    <p class="card-text text-muted">${price.toLocaleString('vi-VN')} ₫ / 1 sản phẩm</p>
-                                </div>
-                                <div class="col-6 col-md-3">
-                                    <span class="badge bg-secondary">Số lượng: ${product.quantity}</span>
-                                </div>
-                                <div class="col-6 col-md-4 text-end">
-                                    <span class="fw-bold">${itemTotal.toLocaleString('vi-VN')} ₫</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      const item = document.createElement('div');
+      item.classList.add('card', 'mb-3', 'border-0');
+      item.innerHTML = `
+        <div class="row g-0 align-items-center">
+          <div class="col-4 col-md-2">
+            <img src="${product.preview}" class="img-fluid rounded" alt="${product.name}">
+          </div>
+          <div class="col-8 col-md-10">
+            <div class="card-body">
+              <div class="row align-items-center">
+                <div class="col-12 col-md-5">
+                  <h5 class="card-title">${product.name}</h5>
+                  <p class="card-text text-muted">${price.toLocaleString('vi-VN')} ₫ / 1 sản phẩm</p>
                 </div>
-            `;
-            listContainer.appendChild(item);
+                <div class="col-6 col-md-3">
+                  <span class="badge bg-secondary">Số lượng: ${product.quantity}</span>
+                </div>
+                <div class="col-6 col-md-4 text-end">
+                  <span class="fw-bold">${itemTotal.toLocaleString('vi-VN')} ₫</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      `;
+      listContainer.appendChild(item);
 
-            totalQuantity += Number(product.quantity) || 0;
-            totalPrice += itemTotal;
-        });
+      totalQuantity += Number(product.quantity) || 0;
+      totalPrice += itemTotal;
+    });
+  }
 
-        document.querySelector('.totalQuantity').innerText = totalQuantity;
-        document.querySelector('.totalPrice').innerText = `${totalPrice.toLocaleString('vi-VN')} ₫`;
+  document.querySelector('.totalQuantity').innerText = totalQuantity;
+  document.querySelector('.totalPrice').innerText = `${totalPrice.toLocaleString('vi-VN')} ₫`;
+
+  // ================= XỬ LÝ FORM SUBMIT =================
+  document.querySelector('form').addEventListener('submit', async function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const address = document.getElementById('address').value;
+    const country = document.getElementById('country').value;
+    const city = document.getElementById('city').value;
+
+    if (!name || !phone || !address || !country || (country === 'Vietnam' && !city)) {
+      return alert("Vui lòng điền đầy đủ thông tin!");
     }
 
-    document.querySelector('form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const name = document.getElementById('name').value;
-        const phone = document.getElementById('phone').value;
-        const address = document.getElementById('address').value;
-        const country = document.getElementById('country').value;
-        const city = document.getElementById('city').value;
+    if (products.length === 0) return alert("Giỏ hàng trống!");
 
-        if (name && phone && address && country && (country !== 'Vietnam' || city)) {
-            localStorage.removeItem('cart');
-            alert('Đặt hàng thành công! Cảm ơn bạn.');
-            window.location.href = 'Trangchu.html';
-        } else {
-            alert("Vui lòng điền đầy đủ thông tin!");
-        }
-    });
-    
+    // Chuẩn bị nội dung email
+    const itemsList = products.map(
+      item => `- ${item.name} (${item.color || '-'}, ${item.size || '-'}) x${item.quantity}: ${item.price.toLocaleString()}₫`
+    ).join("\n");
+
+    const emailData = {
+      from_name: name,
+      to_email: "example@.com", // email nhận hóa đơn
+      message: `Cảm ơn bạn đã đặt hàng!\n\nThông tin khách hàng:\nHọ tên: ${name}\nSĐT: ${phone}\nĐịa chỉ: ${address}, ${city || country}\n\nDanh sách sản phẩm:\n${itemsList}\n\nTổng cộng: ${totalPrice.toLocaleString()}₫`
+    };
+
+    try {
+      await emailjs.send("service_agcqc5a", "template_hrgoacw", emailData);
+      alert('✅ Đặt hàng thành công và email đã được gửi!');
+      localStorage.removeItem('cart');
+      window.location.href = 'Trangchu.html';
+    } catch (err) {
+      console.error(err);
+      alert('❌ Lỗi khi gửi email: ' + (err.text || err));
+    }
+  });
 </script>
+
+
 </body>
 </html>

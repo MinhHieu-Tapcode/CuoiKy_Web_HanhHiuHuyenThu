@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../asset/css/bst.css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="../header_footer/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="../header_footer/style.css">
 
   <style>
     @import url(../asset/css/main.css);
@@ -213,8 +214,8 @@
     }
   </style>
 </head>
+
 <body>
-  <!-- Nơi header sẽ được chèn -->
   <!-- HEADER -->
   <header id="main-header">
     <div class="header-top">
@@ -225,248 +226,269 @@
     <!-- HEADER BOTTOM -->
     <div class="header-bottom">
       <div class="logo">
-        <a href="../Trangchu.html"><img src="../asset/img/header_footer/logohoa.png" alt="Logo" /></a>
+        <a href="../Trangchu.html">
+          <img src="../asset/img/header_footer/logohoa.png" alt="Logo" />
+        </a>
       </div>
 
       <nav class="nav-links">
         <a href="../gioithieu.html">Giới thiệu</a>
-        <a href="../sanpham/sanpham.html">Sản phẩm</a>
-        <a href="../bosuutap/bosuutap.html">Bộ sưu tập</a>
+        <div class="nav-item dropdown">
+          <a href="../sanpham/sanpham.html">Sản phẩm</a>
+          <div class="dropdown-menu">
+            <a href="../sanpham/sp1.html">Váy bồng xòe</a>
+            <a href="../sanpham/sp2.html">Váy đuôi cá</a>
+            <a href="../sanpham/sp3.html">Váy chữ A</a>
+            <a href="../sanpham/sp4.html">Váy ngắn</a>
+            <a href="../sanpham/sp5.html">Áo dài cưới</a>
+            <a href="../sanpham/sp6.html">Phụ kiện</a>
+          </div>
+        </div>
+        <div class="nav-item dropdown">
+          <a href="../bosuutap/bosuutap.html">Bộ sưu tập</a>
+          <div class="dropdown-menu">
+            <a href="../bosuutap/Bst1.html">Hương sắc Á Đông</a>
+            <a href="../bosuutap/Bst2.html">Thanh của tình yêu</a>
+            <a href="../bosuutap/Bst3.html">Hẹn ước trăm năm</a>
+            <a href="../bosuutap/Bst4.html">Lời thì thầm hoa sương</a>
+            <a href="../bosuutap/Bst5.html">Ánh bình minh</a>
+            <a href="../bosuutap/Bst6.html">Khúc hẹn yêu</a>
+          </div>
+        </div>
         <a href="../cuahang.html">Cửa hàng</a>
-        <a href="../lienhe.html">Liên hệ</a>
+        <a href="../dieukhoansudung.html">Điều khoản</a>
       </nav>
 
       <div class="icons">
-        <i class="fas fa-search icon-search"></i>
-        <i class="far fa-heart icon-heart"></i>
+        <!-- SEARCH -->
+        <div class="search-bar">
+          <input type="text" id="searchInput" placeholder="Tìm sản phẩm..." autocomplete="off" />
+          <div class="search-suggest" id="searchSuggest"></div>
+        </div>
+
         <a href="../cart.html">
-          <i class="fas fa-shopping-cart icon-cart"></i>
+          <span class="icon-cart">🛒</span>
         </a>
-        <i class="fas fa-bars menu-toggle"></i>
+        <span class="menu-toggle">☰</span>
       </div>
-    </div>
-
-
-    <!-- SEARCH OVERLAY -->
-    <div class="search-overlay">
-      <input type="text" class="search-box" placeholder="Nhập tên sản phẩm..." />
-      <i class="fa-solid fa-xmark close-search"></i>
     </div>
   </header>
 
-<main>
-  <section class="collections">
-    <h2>LỜI THÌ THẦM HOA SƯƠNG</h2>
-  <div class="breadcrumb">
-    <a href="/Trangchu.html">Fleur</a> / 
-    <a href="/bosuutap/bosuutap.html">Bộ sưu tập</a> /
-    <span>Lời thì thầm hoa sương</span> <!--về trang chủ-->
-  </div>
-  </section>
+  <main>
+    <section class="collections">
+      <h2>LỜI THÌ THẦM HOA SƯƠNG</h2>
+      <div class="breadcrumb">
+        <a href="/Trangchu.html">Fleur</a> /
+        <a href="/bosuutap/bosuutap.html">Bộ sưu tập</a> /
+        <span>Lời thì thầm hoa sương</span> <!--về trang chủ-->
+      </div>
+    </section>
 
-      <section class="collection-intro">
-    <div class="intro-container">
+    <section class="collection-intro">
+      <div class="intro-container">
         <div class="intro-image">
-            <img src="../asset/img/image/bst/ltths.png" alt="Hương Sắc Á Đông">
+          <img src="../asset/img/image/bst/ltths.png" alt="Hương Sắc Á Đông">
         </div>
 
         <div class="intro-content">
-            <h2 class="intro-subtitle">BST ÁO DÀI CƯỚI 2025</h2>
+          <h2 class="intro-subtitle">BST ÁO DÀI CƯỚI 2025</h2>
 
-            <p>
-               BST “Lời Thì Thầm Hoa Sương” mang hơi thở của buổi sớm tinh mơ, nơi những cánh hoa còn vương giọt sương trong trẻo.
-            </p>
+          <p>
+            BST “Lời Thì Thầm Hoa Sương” mang hơi thở của buổi sớm tinh mơ, nơi những cánh hoa còn vương giọt sương
+            trong trẻo.
+          </p>
 
-            <p>
-                 Thiết kế nhẹ như làn khói, mềm như hơi thở, với những hạt sequin phản chiếu ánh sáng dịu dàng. 
-                 Tông màu trắng ngà và hồng phấn hòa quyện tạo nên vẻ đẹp mong manh, tinh khôi và thuần khiết. 
-            </p>
+          <p>
+            Thiết kế nhẹ như làn khói, mềm như hơi thở, với những hạt sequin phản chiếu ánh sáng dịu dàng.
+            Tông màu trắng ngà và hồng phấn hòa quyện tạo nên vẻ đẹp mong manh, tinh khôi và thuần khiết.
+          </p>
 
-            <p>
-              Mỗi chiếc váy là lời thì thầm dịu ngọt của thiên nhiên gửi đến người phụ nữ – e ấp, lãng mạn mà rạng rỡ như ánh nắng đầu ngày.
-            </p>
+          <p>
+            Mỗi chiếc váy là lời thì thầm dịu ngọt của thiên nhiên gửi đến người phụ nữ – e ấp, lãng mạn mà rạng rỡ như
+            ánh nắng đầu ngày.
+          </p>
         </div>
-    </div>
-</section>
-    
+      </div>
+    </section>
+
     <div class="collection-container">
 
       <div class="collection-item">
         <a href="../sanpham/contentDetails.html?id=4" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/sp1/solmelia.png" alt="Váy voan phối satin bồng xòe" class="main-img">
-          <img src="../asset/img/image/sp1/solmelia1.png" alt="Váy voan phối satin bồng xòe" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title"> solmelia</h3>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/sp1/solmelia.png" alt="Váy voan phối satin bồng xòe" class="main-img">
+            <img src="../asset/img/image/sp1/solmelia1.png" alt="Váy voan phối satin bồng xòe" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title"> solmelia</h3>
         </a>
       </div>
 
       <div class="collection-item">
         <a href="../sanpham/contentDetails.html?id=10" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/sp1/sokya.png" alt="Váy satin hở lưng kèm nơ" class="main-img">
-          <img src="../asset/img/image/sp1/sokya1.png" alt="Váy satin hở lưng kèm nơ" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title"> sokya</h3>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/sp1/sokya.png" alt="Váy satin hở lưng kèm nơ" class="main-img">
+            <img src="../asset/img/image/sp1/sokya1.png" alt="Váy satin hở lưng kèm nơ" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title"> sokya</h3>
         </a>
       </div>
 
       <div class="collection-item">
         <a href="../sanpham/contentDetails.html?id=15" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/sp1/topha.png" alt="Váy satin bóng bồng bềnh" class="main-img">
-          <img src="../asset/img/image/sp1/topha1.png" alt="Váy satin bóng bồng bềnh" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title"> topha</h3>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/sp1/topha.png" alt="Váy satin bóng bồng bềnh" class="main-img">
+            <img src="../asset/img/image/sp1/topha1.png" alt="Váy satin bóng bồng bềnh" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title"> topha</h3>
         </a>
       </div>
 
       <div class="collection-item">
         <a href="../sanpham/contentDetails.html?id=11" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/sp1/tresa.png" alt="Váy cưới cổ yếm thanh lịch" class="main-img">
-          <img src="../asset/img/image/sp1/tresa1.png" alt="Váy cưới cổ yếm thanh lịch" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title"> tresa</h3>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/sp1/tresa.png" alt="Váy cưới cổ yếm thanh lịch" class="main-img">
+            <img src="../asset/img/image/sp1/tresa1.png" alt="Váy cưới cổ yếm thanh lịch" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title"> tresa</h3>
         </a>
       </div>
 
       <div class="collection-item">
         <a href="../sanpham/contentDetails.html?id=17" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/sp1/jalai.png" alt="Váy satin hở lưng kèm nơ" class="main-img">
-          <img src="../asset/img/image/sp1/jalai1.png" alt="Váy satin hở lưng kèm nơ" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title"> jalai</h3>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/sp1/jalai.png" alt="Váy satin hở lưng kèm nơ" class="main-img">
+            <img src="../asset/img/image/sp1/jalai1.png" alt="Váy satin hở lưng kèm nơ" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title"> jalai</h3>
         </a>
       </div>
 
       <div class="collection-item">
         <a href="../sanpham/contentDetails.html?id=30" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/sp2/scent.png" alt="Váy cưới dáng A-line bằng ren ánh kim" class="main-img">
-          <img src="../asset/img/image/sp2/scent1.png" alt="Váy cưới dáng A-line bằng ren ánh kim" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title"> scent</h3>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/sp2/scent.png" alt="Váy cưới dáng A-line bằng ren ánh kim" class="main-img">
+            <img src="../asset/img/image/sp2/scent1.png" alt="Váy cưới dáng A-line bằng ren ánh kim" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title"> scent</h3>
         </a>
       </div>
 
       <div class="collection-item">
         <a href="../sanpham/contentDetails.html?id=38" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/sp2/selena.png" alt="Váy công chúa satin bóng" class="main-img">
-          <img src="../asset/img/image/sp2/selena1.png" alt="Váy công chúa satin bóng" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title"> selena</h3>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/sp2/selena.png" alt="Váy công chúa satin bóng" class="main-img">
+            <img src="../asset/img/image/sp2/selena1.png" alt="Váy công chúa satin bóng" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title"> selena</h3>
         </a>
       </div>
 
       <div class="collection-item">
         <a href="../sanpham/contentDetails.html?id=29" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/sp2/shadow.png" alt="Váy công chúa cổ tim" class="main-img">
-          <img src="../asset/img/image/sp2/shadow1.png" alt="Váy công chúa cổ tim" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title"> shadow</h3>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/sp2/shadow.png" alt="Váy công chúa cổ tim" class="main-img">
+            <img src="../asset/img/image/sp2/shadow1.png" alt="Váy công chúa cổ tim" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title"> shadow</h3>
         </a>
       </div>
 
       <div class="collection-item">
         <a href="../sanpham/contentDetails.html?id=28" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/sp2/silhouette.png" alt="Váy công chúa hở lưng" class="main-img">
-          <img src="../asset/img/image/sp2/silhouette1.png" alt="Váy công chúa hở lưng" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title"> silhouette</h3>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/sp2/silhouette.png" alt="Váy công chúa hở lưng" class="main-img">
+            <img src="../asset/img/image/sp2/silhouette1.png" alt="Váy công chúa hở lưng" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title"> silhouette</h3>
         </a>
       </div>
 
       <div class="collection-item">
         <a href="../sanpham/contentDetails.html?id=52" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/sp3/larosa.png" alt="Váy công chúa cổ tim hở lưng" class="main-img">
-          <img src="../asset/img/image/sp3/larosa1.png" alt="Váy công chúa cổ tim hở lưng" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title"> larosa</h3>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/sp3/larosa.png" alt="Váy công chúa cổ tim hở lưng" class="main-img">
+            <img src="../asset/img/image/sp3/larosa1.png" alt="Váy công chúa cổ tim hở lưng" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title"> larosa</h3>
         </a>
       </div>
 
       <div class="collection-item">
         <a href="../sanpham/contentDetails.html?id=53" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/sp3/lena.png" alt="Váy công chúa cổ tim có áo khoác" class="main-img">
-          <img src="../asset/img/image/sp3/lena1.png" alt="Váy công chúa cổ tim có áo khoác" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title">lena</h3>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/sp3/lena.png" alt="Váy công chúa cổ tim có áo khoác" class="main-img">
+            <img src="../asset/img/image/sp3/lena1.png" alt="Váy công chúa cổ tim có áo khoác" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title">lena</h3>
         </a>
       </div>
 
       <div class="collection-item">
         <a href="../sanpham/contentDetails.html?id=51" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/sp3/lona.png" alt="Váy công chúa cổ tim có áo khoác" class="main-img">
-          <img src="../asset/img/image/sp3/lona1.png" alt="Váy công chúa cổ tim có áo khoác" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title">lona</h3>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/sp3/lona.png" alt="Váy công chúa cổ tim có áo khoác" class="main-img">
+            <img src="../asset/img/image/sp3/lona1.png" alt="Váy công chúa cổ tim có áo khoác" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title">lona</h3>
         </a>
       </div>
 
       <div class="collection-item">
         <a href="../sanpham/contentDetails.html?id=54" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/sp3/lori.png" alt="Váy công chúa cổ chữ V kèm nơ" class="main-img">
-          <img src="../asset/img/image/sp3/lori1.png" alt="Váy công chúa cổ chữ V kèm nơ" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title">lori</h3>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/sp3/lori.png" alt="Váy công chúa cổ chữ V kèm nơ" class="main-img">
+            <img src="../asset/img/image/sp3/lori1.png" alt="Váy công chúa cổ chữ V kèm nơ" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title">lori</h3>
         </a>
       </div>
 
       <div class="collection-item">
         <a href="../sanpham/contentDetails.html?id=42" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/sp3/moera.png" alt="Váy công chúa cổ tim hở lưng" class="main-img">
-          <img src="../asset/img/image/sp3/moera1.png" alt="Váy công chúa cổ tim hở lưng" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title">moera</h3>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/sp3/moera.png" alt="Váy công chúa cổ tim hở lưng" class="main-img">
+            <img src="../asset/img/image/sp3/moera1.png" alt="Váy công chúa cổ tim hở lưng" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title">moera</h3>
         </a>
       </div>
 
       <div class="collection-item">
         <a href="../sanpham/contentDetails.html?id=64" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/sp4/perla.png" alt="Váy công chúa cổ chữ V" class="main-img">
-          <img src="../asset/img/image/sp4/perla.png" alt="Váy công chúa cổ chữ V" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title">perla</h3>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/sp4/perla.png" alt="Váy công chúa cổ chữ V" class="main-img">
+            <img src="../asset/img/image/sp4/perla.png" alt="Váy công chúa cổ chữ V" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title">perla</h3>
         </a>
       </div>
 
       <div class="collection-item">
         <a href="../sanpham/contentDetails.html?id=70" class="collection-link">
-            <div class="img-wrapper">
-          <img src="../asset/img/image/sp4/sincere.png" alt="Váy công chúa cổ yếm" class="main-img">
-          <img src="../asset/img/image/sp4/sincere1.png" alt="Váy công chúa cổ yếm" class="hover-img">
-          <img src="logoheart.webp" alt="logoheart" class="heart-icon">
-        </div>
-        <h3 class="collection-title">sincere</h3>
+          <div class="img-wrapper">
+            <img src="../asset/img/image/sp4/sincere.png" alt="Váy công chúa cổ yếm" class="main-img">
+            <img src="../asset/img/image/sp4/sincere1.png" alt="Váy công chúa cổ yếm" class="hover-img">
+            <img src="logoheart.webp" alt="logoheart" class="heart-icon">
+          </div>
+          <h3 class="collection-title">sincere</h3>
         </a>
       </div>
-    </main>
+  </main>
   <!-- Nơi footer sẽ được chèn -->
   <!-- FOOTER -->
   <footer class="footer-component">
@@ -493,6 +515,12 @@
       <div class="footer-col">
         <h3>Hỗ trợ</h3>
         <a href="../hotro.html">Trung tâm hỗ trợ</a>
+        <a href="../lienhe.html">Liên hệ</a>
+        <a href="../chinhsachdoitra.html">Chính sách đổi trả</a>
+        <a href="../chinhsachvanchuyen.html">Chính sách vận chuyển</a>
+        <a href="../chinhsachbaomat.html">Chính sách bảo mật</a>
+        <a href="../chinhsachthanhtoan.html">Chính sách thanh toán</a>
+        <a href="../chinhsachkhachhang.html">Chính sách khách hàng</a>
       </div>
       <div class="footer-col">
         <h3>Đăng ký nhận ưu đãi và tin tức mới nhất!</h3>
@@ -520,4 +548,5 @@
   <script src="../asset/js/data.js"></script>
   <script src="../header_footer/header_footer.js"></script>
 </body>
+
 </html>

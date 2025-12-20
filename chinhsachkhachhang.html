@@ -13,7 +13,7 @@
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="header_footer/style.css">
-            <script>
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -29,54 +29,79 @@
     </script>
     <style>
         .policy-icon {
-        transform: rotate(-12deg);
-        transition: transform 0.35s ease, color 0.35s ease;
+            transform: rotate(-12deg);
+            transition: transform 0.35s ease, color 0.35s ease;
         }
 
         section:hover .policy-icon {
-        transform: rotate(0deg) scale(1.1);
+            transform: rotate(0deg) scale(1.1);
         }
     </style>
-    <body class="bg-[#fafafa] text-[#333] m-0">
 
+<body class="bg-[#fafafa] text-[#333] m-0">
+
+    <!-- Nơi header sẽ được chèn -->
+    <!-- HEADER -->
     <header id="main-header">
         <div class="header-top">
-            <a href="/dangky.html">Đăng Nhập</a>
-            <a href="/dangky.html">Đăng Ký</a>
+            <a href="dangky.html">Đăng Nhập</a>
+            <a href="dangky.html">Đăng Ký</a>
         </div>
 
+        <!-- HEADER BOTTOM -->
         <div class="header-bottom">
             <div class="logo">
-                <a href="Trangchu.html"><img src="asset/img/header_footer/logohoa.png" alt="Logo" /></a>
+                <a href="Trangchu.html">
+                    <img src="asset/img/header_footer/logohoa.png" alt="Logo" />
+                </a>
             </div>
 
             <nav class="nav-links">
                 <a href="gioithieu.html">Giới thiệu</a>
-                <a href="../sanpham/sanpham.html">Sản phẩm</a>
-                <a href="../bosuutap/bosuutap.html">Bộ sưu tập</a>
+                <div class="nav-item dropdown">
+                    <a href="sanpham/sanpham.html">Sản phẩm</a>
+                    <div class="dropdown-menu">
+                        <a href="sanpham/sp1.html">Váy bồng xòe</a>
+                        <a href="sanpham/sp2.html">Váy đuôi cá</a>
+                        <a href="sanpham/sp3.html">Váy chữ A</a>
+                        <a href="sanpham/sp4.html">Váy ngắn</a>
+                        <a href="sanpham/sp5.html">Áo dài cưới</a>
+                        <a href="sanpham/sp6.html">Phụ kiện</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="bosuutap/bosuutap.html">Bộ sưu tập</a>
+                    <div class="dropdown-menu">
+                        <a href="bosuutap/Bst1.html">Hương sắc Á Đông</a>
+                        <a href="bosuutap/Bst2.html">Thanh của tình yêu</a>
+                        <a href="bosuutap/Bst3.html">Hẹn ước trăm năm</a>
+                        <a href="bosuutap/Bst4.html">Lời thì thầm hoa sương</a>
+                        <a href="bosuutap/Bst5.html">Ánh bình minh</a>
+                        <a href="bosuutap/Bst6.html">Khúc hẹn yêu</a>
+                    </div>
+                </div>
                 <a href="cuahang.html">Cửa hàng</a>
-                <a href="lienhe.html">Liên hệ</a>
+                <a href="dieukhoansudung.html">Điều khoản</a>
             </nav>
 
             <div class="icons">
-                <i class="fas fa-search icon-search"></i>
-                <i class="far fa-heart icon-heart"></i>
-                <a href="cart.html">
-                    <i class="fas fa-shopping-cart icon-cart"></i>
-                </a>
-                <i class="fas fa-bars menu-toggle"></i>
-            </div>
-        </div>
+                <!-- SEARCH -->
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Tìm sản phẩm..." autocomplete="off" />
+                    <div class="search-suggest" id="searchSuggest"></div>
+                </div>
 
-        <div class="search-overlay">
-            <input type="text" class="search-box" placeholder="Nhập tên sản phẩm..." />
-            <i class="fa-solid fa-xmark close-search"></i>
+                <a href="cart.html">
+                    <span class="icon-cart">🛒</span>
+                </a>
+                <span class="menu-toggle">☰</span>
+            </div>
         </div>
     </header>
 
     <main class="w-full">
         <div class="max-w-[1200px] mx-auto px-4 py-10">
-            
+
             <div class="text-center mb-8 text-sm text-gray-500">
                 <nav aria-label="breadcrumbs" class="rank-math-breadcrumb">
                     <h1 class="text-3xl font-bold text-center mb-8 text-gray-800 uppercase tracking-wide">
@@ -93,67 +118,89 @@
             <div class="space-y-8">
 
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                    
-                    
+
+
 
                     <div class="space-y-10">
                         <section id="pham-vi">
                             <h2 class="text-xl font-bold mb-3 text-gray-800 flex items-center">
-                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-sm">1</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-sm">1</span>
                                 <i class="fa-solid fa-crown text-primary mr-2 policy-icon"></i>
                                 Khách hàng thân thiết
                             </h2>
 
                             <p class="text-gray-600 leading-relaxed text-justify">
-                                Fleur trân trọng và xây dựng chương trình khách hàng thân thiết dành cho những khách hàng đã và đang đồng hành cùng thương hiệu. Khách hàng thân thiết sẽ được hưởng các quyền lợi ưu đãi đặc biệt như ưu đãi giá, quà tặng theo từng dịp, quyền tham gia sớm các bộ sưu tập mới và các chương trình tri ân độc quyền do Fleur tổ chức.
+                                Fleur trân trọng và xây dựng chương trình khách hàng thân thiết dành cho những khách
+                                hàng đã và đang đồng hành cùng thương hiệu. Khách hàng thân thiết sẽ được hưởng các
+                                quyền lợi ưu đãi đặc biệt như ưu đãi giá, quà tặng theo từng dịp, quyền tham gia sớm các
+                                bộ sưu tập mới và các chương trình tri ân độc quyền do Fleur tổ chức.
                             </p>
                         </section>
 
                         <section id="hinh-thuc">
                             <h2 class="text-xl font-bold mb-3 text-gray-800 flex items-center">
-                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-sm">2</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-sm">2</span>
                                 <i class="fa-solid fa-gift text-primary mr-2 policy-icon"></i>
                                 Quyền lợi & ưu đãi dành cho khách hàng
                             </h2>
 
                             <p class="text-gray-600 leading-relaxed text-justify">
-                                Fleur trân trọng và xây dựng chương trình khách hàng thân thiết dành cho những khách hàng đã và đang đồng hành cùng thương hiệu. Khách hàng thân thiết sẽ được hưởng các quyền lợi ưu đãi đặc biệt như ưu đãi giá, quà tặng theo từng dịp, quyền tham gia sớm các bộ sưu tập mới và các chương trình tri ân độc quyền do Fleur tổ chức. 
+                                Fleur trân trọng và xây dựng chương trình khách hàng thân thiết dành cho những khách
+                                hàng đã và đang đồng hành cùng thương hiệu. Khách hàng thân thiết sẽ được hưởng các
+                                quyền lợi ưu đãi đặc biệt như ưu đãi giá, quà tặng theo từng dịp, quyền tham gia sớm các
+                                bộ sưu tập mới và các chương trình tri ân độc quyền do Fleur tổ chức.
                             </p>
                         </section>
 
                         <section id="thoi-gian">
                             <h2 class="text-xl font-bold mb-3 text-gray-800 flex items-center">
-                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-sm">3</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-sm">3</span>
                                 <i class="fa-solid fa-star text-primary mr-2 policy-icon"></i>
                                 Đánh giá sản phẩm & phản hồi dịch vụ
                             </h2>
 
                             <p class="text-gray-600 leading-relaxed text-justify">
-                                Fleur khuyến khích khách hàng chia sẻ đánh giá, nhận xét và trải nghiệm thực tế sau khi sử dụng sản phẩm. Mọi ý kiến đóng góp đều là nguồn động lực giúp Fleur cải thiện chất lượng sản phẩm và dịch vụ. Các đánh giá mang tính xây dựng, trung thực sẽ được hiển thị công khai nhằm hỗ trợ khách hàng khác trong quá trình lựa chọn.
+                                Fleur khuyến khích khách hàng chia sẻ đánh giá, nhận xét và trải nghiệm thực tế sau khi
+                                sử dụng sản phẩm. Mọi ý kiến đóng góp đều là nguồn động lực giúp Fleur cải thiện chất
+                                lượng sản phẩm và dịch vụ. Các đánh giá mang tính xây dựng, trung thực sẽ được hiển thị
+                                công khai nhằm hỗ trợ khách hàng khác trong quá trình lựa chọn.
                             </p>
                         </section>
 
                         <section id="phi">
                             <h2 class="text-xl font-bold mb-3 text-gray-800 flex items-center">
-                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-sm">4</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-sm">4</span>
                                 <i class="fa-solid fa-headset text-primary mr-2 policy-icon"></i>
                                 Chăm sóc khách hàng sau mua
                             </h2>
 
                             <p class="text-gray-600 leading-relaxed text-justify">
-                                Fleur luôn lắng nghe và tiếp nhận mọi phản hồi từ khách hàng, bao gồm cả những góp ý chưa hài lòng. Trong trường hợp phát sinh vấn đề, đội ngũ chăm sóc khách hàng sẽ chủ động liên hệ để hỗ trợ và đưa ra phương án xử lý phù hợp. Những đánh giá vi phạm quy định về nội dung không phù hợp sẽ được kiểm duyệt nhằm đảm bảo môi trường mua sắm văn minh và tích cực.  
+                                Fleur luôn lắng nghe và tiếp nhận mọi phản hồi từ khách hàng, bao gồm cả những góp ý
+                                chưa hài lòng. Trong trường hợp phát sinh vấn đề, đội ngũ chăm sóc khách hàng sẽ chủ
+                                động liên hệ để hỗ trợ và đưa ra phương án xử lý phù hợp. Những đánh giá vi phạm quy
+                                định về nội dung không phù hợp sẽ được kiểm duyệt nhằm đảm bảo môi trường mua sắm văn
+                                minh và tích cực.
                             </p>
                         </section>
 
                         <section id="quy-trinh">
                             <h2 class="text-xl font-bold mb-3 text-gray-800 flex items-center">
-                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-sm">5</span>
+                                <span
+                                    class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-sm">5</span>
                                 <i class="fa-solid fa-comments text-primary mr-2 policy-icon"></i>
                                 Ghi nhận & phản hồi đánh giá
                             </h2>
 
                             <p class="text-gray-600 leading-relaxed text-justify">
-                                Fleur luôn lắng nghe và tiếp nhận mọi phản hồi từ khách hàng, bao gồm cả những góp ý chưa hài lòng. Trong trường hợp phát sinh vấn đề, đội ngũ chăm sóc khách hàng sẽ chủ động liên hệ để hỗ trợ và đưa ra phương án xử lý phù hợp. Những đánh giá vi phạm quy định về nội dung không phù hợp sẽ được kiểm duyệt nhằm đảm bảo môi trường mua sắm văn minh và tích cực.
+                                Fleur luôn lắng nghe và tiếp nhận mọi phản hồi từ khách hàng, bao gồm cả những góp ý
+                                chưa hài lòng. Trong trường hợp phát sinh vấn đề, đội ngũ chăm sóc khách hàng sẽ chủ
+                                động liên hệ để hỗ trợ và đưa ra phương án xử lý phù hợp. Những đánh giá vi phạm quy
+                                định về nội dung không phù hợp sẽ được kiểm duyệt nhằm đảm bảo môi trường mua sắm văn
+                                minh và tích cực.
                             </p>
                         </section>
                         </section>
@@ -165,23 +212,28 @@
                         Chính sách khác
                     </h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <a href="chinhsachdoitra.html" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
+                        <a href="chinhsachdoitra.html"
+                            class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
                             <i class="fa-solid fa-caret-right text-gray-400 mr-3 group-hover:text-white"></i>
                             <span class="font-medium">Chính sách đổi trả</span>
                         </a>
-                        <a href="chinhsachbaomat.html" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
+                        <a href="chinhsachbaomat.html"
+                            class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
                             <i class="fa-solid fa-caret-right text-gray-400 mr-3 group-hover:text-white"></i>
                             <span class="font-medium">Chính sách bảo mật</span>
                         </a>
-                        <a href="dieukhoansudung.html" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
+                        <a href="dieukhoansudung.html"
+                            class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
                             <i class="fa-solid fa-caret-right text-gray-400 mr-3 group-hover:text-white"></i>
                             <span class="font-medium">Điều khoản sử dụng</span>
                         </a>
-                        <a href="chinhsachthanhtoan.html" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
+                        <a href="chinhsachthanhtoan.html"
+                            class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
                             <i class="fa-solid fa-caret-right text-gray-400 mr-3 group-hover:text-white"></i>
                             <span class="font-medium">Chính sách thanh toán</span>
                         </a>
-                        <a href="chinhsachvanchuyen.html" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
+                        <a href="chinhsachvanchuyen.html"
+                            class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
                             <i class="fa-solid fa-caret-right text-gray-400 mr-3 group-hover:text-white"></i>
                             <span class="font-medium">Chính sách vận chuyển</span>
                         </a>
@@ -215,6 +267,12 @@
             <div class="footer-col">
                 <h3>Hỗ trợ</h3>
                 <a href="hotro.html">Trung tâm hỗ trợ</a>
+                <a href="lienhe.html">Liên hệ</a>
+                <a href="chinhsachdoitra.html">Chính sách đổi trả</a>
+                <a href="chinhsachvanchuyen.html">Chính sách vận chuyển</a>
+                <a href="chinhsachbaomat.html">Chính sách bảo mật</a>
+                <a href="chinhsachthanhtoan.html">Chính sách thanh toán</a>
+                <a href="chinhsachkhachhang.html">Chính sách khách hàng</a>
             </div>
             <div class="footer-col">
                 <h3>Đăng ký nhận ưu đãi và tin tức mới nhất!</h3>
@@ -248,4 +306,5 @@
     <script src="asset/js/gioithieu.js"></script>
     </footer>
 </body>
+
 </html>

@@ -13,7 +13,7 @@
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="header_footer/style.css">
-            <script>
+    <script>
         tailwind.config = {
             theme: {
                 extend: {
@@ -38,46 +38,71 @@
             box-shadow: 0 10px 25px rgba(200, 155, 106, 0.4);
         }
     </style>
-    <body class="bg-[#fafafa] text-[#333] m-0">
 
+<body class="bg-[#fafafa] text-[#333] m-0">
+
+    <!-- Nơi header sẽ được chèn -->
+    <!-- HEADER -->
     <header id="main-header">
         <div class="header-top">
-            <a href="/dangky.html">Đăng Nhập</a>
-            <a href="/dangky.html">Đăng Ký</a>
+            <a href="dangky.html">Đăng Nhập</a>
+            <a href="dangky.html">Đăng Ký</a>
         </div>
 
+        <!-- HEADER BOTTOM -->
         <div class="header-bottom">
             <div class="logo">
-                <a href="Trangchu.html"><img src="asset/img/header_footer/logohoa.png" alt="Logo" /></a>
+                <a href="Trangchu.html">
+                    <img src="asset/img/header_footer/logohoa.png" alt="Logo" />
+                </a>
             </div>
 
             <nav class="nav-links">
                 <a href="gioithieu.html">Giới thiệu</a>
-                <a href="../sanpham/sanpham.html">Sản phẩm</a>
-                <a href="../bosuutap/bosuutap.html">Bộ sưu tập</a>
+                <div class="nav-item dropdown">
+                    <a href="sanpham/sanpham.html">Sản phẩm</a>
+                    <div class="dropdown-menu">
+                        <a href="sanpham/sp1.html">Váy bồng xòe</a>
+                        <a href="sanpham/sp2.html">Váy đuôi cá</a>
+                        <a href="sanpham/sp3.html">Váy chữ A</a>
+                        <a href="sanpham/sp4.html">Váy ngắn</a>
+                        <a href="sanpham/sp5.html">Áo dài cưới</a>
+                        <a href="sanpham/sp6.html">Phụ kiện</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="bosuutap/bosuutap.html">Bộ sưu tập</a>
+                    <div class="dropdown-menu">
+                        <a href="bosuutap/Bst1.html">Hương sắc Á Đông</a>
+                        <a href="bosuutap/Bst2.html">Thanh của tình yêu</a>
+                        <a href="bosuutap/Bst3.html">Hẹn ước trăm năm</a>
+                        <a href="bosuutap/Bst4.html">Lời thì thầm hoa sương</a>
+                        <a href="bosuutap/Bst5.html">Ánh bình minh</a>
+                        <a href="bosuutap/Bst6.html">Khúc hẹn yêu</a>
+                    </div>
+                </div>
                 <a href="cuahang.html">Cửa hàng</a>
-                <a href="lienhe.html">Liên hệ</a>
+                <a href="dieukhoansudung.html">Điều khoản</a>
             </nav>
 
             <div class="icons">
-                <i class="fas fa-search icon-search"></i>
-                <i class="far fa-heart icon-heart"></i>
-                <a href="cart.html">
-                    <i class="fas fa-shopping-cart icon-cart"></i>
-                </a>
-                <i class="fas fa-bars menu-toggle"></i>
-            </div>
-        </div>
+                <!-- SEARCH -->
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Tìm sản phẩm..." autocomplete="off" />
+                    <div class="search-suggest" id="searchSuggest"></div>
+                </div>
 
-        <div class="search-overlay">
-            <input type="text" class="search-box" placeholder="Nhập tên sản phẩm..." />
-            <i class="fa-solid fa-xmark close-search"></i>
+                <a href="cart.html">
+                    <span class="icon-cart">🛒</span>
+                </a>
+                <span class="menu-toggle">☰</span>
+            </div>
         </div>
     </header>
 
     <main class="w-full">
         <div class="max-w-[1200px] mx-auto px-4 py-10">
-            
+
             <div class="text-center mb-8 text-sm text-gray-500">
                 <nav aria-label="breadcrumbs" class="rank-math-breadcrumb">
                     <h1 class="text-3xl font-bold text-center mb-8 text-gray-800 uppercase tracking-wide">
@@ -94,74 +119,87 @@
             <div class="space-y-8">
 
                 <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                    
+
                     <div class="space-y-10">
                         <section id="pham-vi">
                             <h2 class="text-xl font-bold mb-3 text-gray-800 flex items-center">
-                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-xs gap-1">
+                                <span
+                                    class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-xs gap-1">
                                     <i class="fa-solid fa-file-invoice-dollar text-[11px] policy-icon"></i>
                                     <span>1</span>
                                 </span>
-                            Phạm vi áp dụng
+                                Phạm vi áp dụng
                             </h2>
-                        <p class="text-gray-600 leading-relaxed text-justify">
-                            Chính sách thanh toán này được áp dụng cho toàn bộ khách hàng mua sắm sản phẩm và sử dụng dịch vụ tại Fleur Bridal House, bao gồm mua trực tiếp tại cửa hàng và mua hàng thông qua các kênh trực tuyến chính thức của Fleur.
-                        </p>
+                            <p class="text-gray-600 leading-relaxed text-justify">
+                                Chính sách thanh toán này được áp dụng cho toàn bộ khách hàng mua sắm sản phẩm và sử
+                                dụng dịch vụ tại Fleur Bridal House, bao gồm mua trực tiếp tại cửa hàng và mua hàng
+                                thông qua các kênh trực tuyến chính thức của Fleur.
+                            </p>
                         </section>
 
                         <section id="hinh-thuc">
                             <h2 class="text-xl font-bold mb-3 text-gray-800 flex items-center">
-                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-xs gap-1">
+                                <span
+                                    class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-xs gap-1">
                                     <i class="fa-solid fa-credit-card text-[11px] policy-icon"></i>
                                     <span>2</span>
                                 </span>
-                             Hình thức thanh toán
+                                Hình thức thanh toán
                             </h2>
                             <p class="text-gray-600 leading-relaxed text-justify">
                                 Fleur chấp nhận các hình thức thanh toán sau:
-                                    <br>• Thanh toán tiền mặt tại cửa hàng.
-                                    <br>• Chuyển khoản ngân hàng theo thông tin do Fleur cung cấp.
-                                    <br>• Thanh toán qua ví điện tử hoặc cổng thanh toán trực tuyến (nếu có).
+                                <br>• Thanh toán tiền mặt tại cửa hàng.
+                                <br>• Chuyển khoản ngân hàng theo thông tin do Fleur cung cấp.
+                                <br>• Thanh toán qua ví điện tử hoặc cổng thanh toán trực tuyến (nếu có).
                             </p>
                         </section>
 
                         <section id="thoi-gian">
                             <h2 class="text-xl font-bold mb-3 text-gray-800 flex items-center">
-                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-xs gap-1">
+                                <span
+                                    class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-xs gap-1">
                                     <i class="fa-regular fa-clock text-[11px] policy-icon"></i>
                                     <span>3</span>
                                 </span>
                                 Thời điểm thanh toán
                             </h2>
-                        <p class="text-gray-600 leading-relaxed text-justify">
-                            Khách hàng vui lòng hoàn tất thanh toán theo thỏa thuận trước khi Fleur tiến hành giao hàng hoặc cung cấp dịch vụ. Đối với các sản phẩm thiết kế riêng, may đo hoặc đặt trước, Fleur có thể yêu cầu đặt cọc một phần giá trị đơn hàng.
-                        </p>
+                            <p class="text-gray-600 leading-relaxed text-justify">
+                                Khách hàng vui lòng hoàn tất thanh toán theo thỏa thuận trước khi Fleur tiến hành giao
+                                hàng hoặc cung cấp dịch vụ. Đối với các sản phẩm thiết kế riêng, may đo hoặc đặt trước,
+                                Fleur có thể yêu cầu đặt cọc một phần giá trị đơn hàng.
+                            </p>
                         </section>
 
                         <section id="phi">
                             <h2 class="text-xl font-bold mb-3 text-gray-800 flex items-center">
-                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-xs gap-1">
+                                <span
+                                    class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-xs gap-1">
                                     <i class="fa-solid fa-money-bill-transfer text-[11px] policy-icon"></i>
                                     <span>4</span>
                                 </span>
                                 Chính sách hoàn tiền & điều chỉnh
                             </h2>
-                        <p class="text-gray-600 leading-relaxed text-justify">
-                            Việc hoàn tiền (nếu có) sẽ được thực hiện theo Chính sách đổi trả của Fleur. Các khoản phí phát sinh trong quá trình thanh toán, chuyển khoản hoặc dịch vụ trung gian sẽ không được hoàn lại, trừ khi có thỏa thuận khác bằng văn bản.
-                        </p>
+                            <p class="text-gray-600 leading-relaxed text-justify">
+                                Việc hoàn tiền (nếu có) sẽ được thực hiện theo Chính sách đổi trả của Fleur. Các khoản
+                                phí phát sinh trong quá trình thanh toán, chuyển khoản hoặc dịch vụ trung gian sẽ không
+                                được hoàn lại, trừ khi có thỏa thuận khác bằng văn bản.
+                            </p>
                         </section>
 
                         <section id="quy-trinh">
                             <h2 class="text-xl font-bold mb-3 text-gray-800 flex items-center">
-                                <span class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-xs gap-1">
+                                <span
+                                    class="bg-gray-100 text-gray-800 w-8 h-8 flex items-center justify-center rounded-full mr-3 text-xs gap-1">
                                     <i class="fa-solid fa-shield-halved text-[11px] policy-icon"></i>
                                     <span>5</span>
                                 </span>
                                 Bảo mật thông tin thanh toán
                             </h2>
-                        <p class="text-gray-600 leading-relaxed text-justify">
-                            Fleur cam kết bảo mật tuyệt đối thông tin thanh toán của khách hàng. Mọi dữ liệu liên quan đến giao dịch được lưu trữ và xử lý theo quy định bảo mật hiện hành, đảm bảo an toàn và quyền riêng tư cho khách hàng.
-                        </p>
+                            <p class="text-gray-600 leading-relaxed text-justify">
+                                Fleur cam kết bảo mật tuyệt đối thông tin thanh toán của khách hàng. Mọi dữ liệu liên
+                                quan đến giao dịch được lưu trữ và xử lý theo quy định bảo mật hiện hành, đảm bảo an
+                                toàn và quyền riêng tư cho khách hàng.
+                            </p>
                         </section>
                         </section>
                     </div>
@@ -172,23 +210,28 @@
                         Chính sách khác
                     </h3>
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <a href="chinhsachdoitra.html" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
+                        <a href="chinhsachdoitra.html"
+                            class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
                             <i class="fa-solid fa-caret-right text-gray-400 mr-3 group-hover:text-white"></i>
                             <span class="font-medium">Chính sách đổi trả</span>
                         </a>
-                        <a href="chinhsachbaomat.html" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
+                        <a href="chinhsachbaomat.html"
+                            class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
                             <i class="fa-solid fa-caret-right text-gray-400 mr-3 group-hover:text-white"></i>
                             <span class="font-medium">Chính sách bảo mật</span>
                         </a>
-                        <a href="dieukhoansudung.html" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
+                        <a href="dieukhoansudung.html"
+                            class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
                             <i class="fa-solid fa-caret-right text-gray-400 mr-3 group-hover:text-white"></i>
                             <span class="font-medium">Điều khoản sử dụng</span>
                         </a>
-                        <a href="chinhsachvanchuyen.html" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
+                        <a href="chinhsachvanchuyen.html"
+                            class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
                             <i class="fa-solid fa-caret-right text-gray-400 mr-3 group-hover:text-white"></i>
                             <span class="font-medium">Chính sách vận chuyển</span>
                         </a>
-                        <a href="chinhsachkhachhang.html" class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
+                        <a href="chinhsachkhachhang.html"
+                            class="flex items-center p-4 bg-gray-50 rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group">
                             <i class="fa-solid fa-caret-right text-gray-400 mr-3 group-hover:text-white"></i>
                             <span class="font-medium">Chính sách khách hàng</span>
                         </a>
@@ -222,6 +265,12 @@
             <div class="footer-col">
                 <h3>Hỗ trợ</h3>
                 <a href="hotro.html">Trung tâm hỗ trợ</a>
+                <a href="lienhe.html">Liên hệ</a>
+                <a href="chinhsachdoitra.html">Chính sách đổi trả</a>
+                <a href="chinhsachvanchuyen.html">Chính sách vận chuyển</a>
+                <a href="chinhsachbaomat.html">Chính sách bảo mật</a>
+                <a href="chinhsachthanhtoan.html">Chính sách thanh toán</a>
+                <a href="chinhsachkhachhang.html">Chính sách khách hàng</a>
             </div>
             <div class="footer-col">
                 <h3>Đăng ký nhận ưu đãi và tin tức mới nhất!</h3>
@@ -255,4 +304,5 @@
     <script src="asset/js/gioithieu.js"></script>
     </footer>
 </body>
+
 </html>

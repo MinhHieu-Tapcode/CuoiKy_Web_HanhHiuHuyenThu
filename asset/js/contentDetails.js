@@ -145,17 +145,18 @@ function getSelectedValue(containerId) {
   const selected = document.querySelector(`#${containerId} .option-btn.selected`);
   return selected ? selected.dataset.value : '';
 }
-const productDetails = document.querySelector("#productPage #productDetails");
+
+
+ const productDetails = document.querySelector("#productPage #productDetails");
 
 if (productDetails) {
     const buyBtn = document.createElement("button");
-    buyBtn.textContent = "Mua hàng";
+   buyBtn.textContent = "Mua hàng";
 
     buyBtn.addEventListener("click", () => {
         window.location.href = "../pages/thanhtoan.html";
     });
-
-    productDetails.appendChild(buyBtn);
+   productDetails.appendChild(buyBtn);
 }
 
 // ================================
@@ -208,4 +209,46 @@ function addToCart(p) {
   });
 
   document.getElementById("totalPrice").textContent = "Tổng tiền: " + p.price.toLocaleString() + "₫";
+}
+// ================================
+// Mua ngay: thêm vào giỏ và chuyển tới trang thanh toán
+// ================================
+function buyNow(p) {
+  const color = getSelectedValue('colorSelect');
+  const size = getSelectedValue('sizeSelect');
+  const option = getSelectedValue('optionSelect');
+  let quantity = parseInt(document.getElementById("quantity").value) || 1;
+
+  if (!color || !size || !option) {
+    alert("Vui lòng chọn đủ Màu sắc, Kích cỡ và Lựa chọn trước khi mua ngay!");
+    return;
+  }
+  if (quantity < 1) quantity = 1;
+
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let existingItem = cart.find(item =>
+    item.id === p.id && item.color === color && item.size === size && item.option === option
+  );
+
+  if (existingItem) {
+    existingItem.quantity += quantity;
+    existingItem.total = existingItem.quantity * p.price;
+  } else {
+    cart.push({
+      id: p.id,
+      name: p.name,
+      preview: p.preview,
+      color,
+      size,
+      option,
+      quantity,
+      price: p.price,
+      total: p.price * quantity
+    });
+  }
+
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  // Chuyển đến trang thanh toán
+  window.location.href = "../../pages/thanhtoan.html";
 }

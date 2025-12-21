@@ -152,7 +152,7 @@ if (productDetails) {
     buyBtn.textContent = "Mua hàng";
 
     buyBtn.addEventListener("click", () => {
-        window.location.href = "../thanhtoan.html";
+        window.location.href = "../pages/thanhtoan.html";
     });
 
     productDetails.appendChild(buyBtn);

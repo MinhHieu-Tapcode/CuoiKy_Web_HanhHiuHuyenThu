@@ -147,18 +147,17 @@ function getSelectedValue(containerId) {
 }
 
 
-// const productDetails = document.querySelector("#productPage #productDetails");
+ const productDetails = document.querySelector("#productPage #productDetails");
 
-//if (productDetails) {
-//    const buyBtn = document.createElement("button");
-//    buyBtn.textContent = "Mua hàng";
+if (productDetails) {
+    const buyBtn = document.createElement("button");
+   buyBtn.textContent = "Mua hàng";
 
-//    buyBtn.addEventListener("click", () => {
-//        window.location.href = "../thanhtoan.html";
-//    });
-
-//    productDetails.appendChild(buyBtn);
-//}
+    buyBtn.addEventListener("click", () => {
+        window.location.href = "../pages/thanhtoan.html";
+    });
+   productDetails.appendChild(buyBtn);
+}
 
 // ================================
 // Hàm thêm vào giỏ hàng
@@ -251,5 +250,5 @@ function buyNow(p) {
   localStorage.setItem("cart", JSON.stringify(cart));
 
   // Chuyển đến trang thanh toán
-  window.location.href = "../pages/thanhtoan.html";
+  window.location.href = "../../pages/thanhtoan.html";
 }
